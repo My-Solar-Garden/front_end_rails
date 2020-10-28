@@ -1,5 +1,5 @@
 language: ruby
-rvm:
+rbenv:
 - 2.5.3
 addons:
   postgresql: '9.6'
@@ -9,10 +9,9 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: R9fuVTMvvm0c8Ctg4iNfGBT2hvTC6HxZG7SUL9D+xQIhGlGj2DPu5zhwJ7FYlVLcPFAsSqKPM7YRbhUmt0XiRKZcMH6DIj3XXaNFZD9PN1j87te7GrFEhQCdNNMDGqcEu+GfD5sJ2saCEndOL4+1jY7AwdKY5luL7wtnqxzAQP/DTSLAgHV2NhnpcUM8U/wFdzXehRKkX/B2lmivrNKaNStXXjOLsk9Dr8VE/S657JKis1l7ykxXN6zYHz+jP9b2FGDJXcmyVVVug4I1HfzbxSOfMemsneIlAy7mhSNsMnzttE3VMMdzA8er7m7QtAK4JvyUiOHsc4D7DHlR/jNxCKrFWptp+z8RZnPpNHzx7u77LSfdmVSH6kJY7LWZqXvJe9JCjY6AQaO6WukdDs3qWd/1yl3rtUBFngWXikrX02HKTCcc04N4xd6g7c/GC0n2SQP4OQvgxs/edmg+6DyaL9kotBoOBVRQFoKNt1+dPtvyR7cx7Ogr6+GplA4geStoZmC/Uw4kq9TNxzAFKQ2lxGuSESe1XEtZnInRyn/MUSkR1F6STpL6AwUG7Moc8jrQDco6ntXPX1mJFKDKaGjLX/8US2M3+/rVNyaFR0PNZbU+h4QSHjv6r+LxGtFA3TNtCVfxb02lCX07T44dQe/gFiWlplh9OyZ4ePMm+it2TI4=
+    secure: ImsnkxEN3v94RmYDSa8eeNyUPR8W0f+N50I9Vv/meztsKtI12QT+EwK2YyvB23huzXdYZhZNgsxanN23f/SOFVsniB6oL7//sFuz/fqVsbiqly4g0RPHFV0tyhk7KTe192pm87J+KZ5wPRLOpeREjp46KtGUJG030Y4uamoZwWCNqSkN+KtnnbDnpF/IuR5DmbvIvNVWEhdK/TKmNGjWUx5bcTRqEFpCF0TUEdFJ1elmU59E81hndeCTzk+WP7ggcvWN6g5ce8qj/dDfG23wWk9bSUF7XyZ9MtHXSB/9fg6mkZWXodqSC1cUpjjP8tI+MlZOqPhm9RdJ4gBb82lAx2owFIbPnUEThG4J8FCKjgRPEqp9oGqhj6ki9yjV3jBAweFcKzHdAciNQ9q8H7b8Jd050m0vfNYUX835Q7B1YW8lnX82nEKXeeoI/Nqk6u4j4tSnh4f+LSLMHcUWcujBCzYZ+bKnHksIt4JL/ZfPVwD9y/AwQH6LHPfbTzWZ2ls4FGCJ8Rnaf1EYwr9LlDuAA65FxTBnYldOY4WbeU9jm74lkxf/uqS6peaIe6G7XwZ01tSjnYpVYar/nxEfLpAFhaIOR9f3Nj6emXsLqnIqxvZxrQF3HJrCpWcGbJz1PV6uCH2+O7z1B+CC+CoTQ5ASvErEnlraOIbRVzVqTyu8Vxs=
   app: solar-garden-fe
   on:
     repo: My-Solar-Garden/front_end_rails
     branch: main
-  cleanup: false
-  run: rails db:migrate
+  skip_cleanup: true
