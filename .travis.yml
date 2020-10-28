@@ -1,16 +1,13 @@
 language: ruby
 rbenv:
 - 2.5.3
-
-before_script:
-- bundle exec rails db:create
-- bundle exec rails db:migrate
+script:
+- bundle exec rails db:{create,migrate} RAILS_ENV=test
 - bundle exec rspec
-
 deploy:
   provider: heroku
   api_key:
-    secure: "62RWwNboJuQV6h/bo8P7Y4jLfOIpeK1YnwGQc+6qwsVZXxTYMu+MaqJdHKZWP/Ir+qDmmHsCpjh24HXI++vWnSPvSSo90125pip8VfbA5CxUVMRjFBeRFdKWQPvojH7q2pSX0xpFACq/eaQRawgXU2+tewWZv+9kT77pvP11he9X8FXRO1Ykm/Oj4SbWoeVHERhFZfqVBWejs0IRpIOqc+Vc2zp2nwVbp+Xam6wlzOw9uYMeHmrNOZ/aZSRnxCti6s2HQiDNsnjlaTOqIzatDVIvbxP/+S2l1D9VopYK/znVxzDvqJcJFf+jE49xb7l+bAKdmA89wM9cASk2Q78tTMXKuM3qsi1ELp4sMNTTMb+aRdVD2ygSra0YwEKVVhyXi1RldW2uCIau6D1uRH5bViKUVrdmUxyz7WuLPiUTmvMw2JcheKJAvmRPwAofo8UdUS6E0RHXqqzy4Og6LSO1HO5Jm3V5HLNMsG2u3c8R7fH4g4iGiXIj3INlRXzZSWirEuZRUY3w3nWuJNYG/55ULPWd151m/aF5GFw5ZHidr3tZDbrHYEM2dc+I5eQ3I5bCHZW2T92kky2mWBjreWm2cOwEGSgRVeRB2vntksm/7pM1j04YypnDfgKj2aiHFAYcdmjeM5oB39jK6IFmfXqZYddPbixU1mIrrzz/UhpRWY="
+    secure: vO6CmnG906J0f1hxkmivXFb4/1mYYOQM9kLUV2O2VnJ3ZHD4uYiacKXwLdVVMgYc/PQ/svBEp+iZvj5g+GJFdyfumH5ZE/o3IToXFIEeWkeoOVK4FrNwNP4pGvy2Wj0XGdAuQf70k8Bslg53uIdzajxXoil6eXFG5fGjAvL3nUM/FmE/Dvyg0H9yiVEPh7JkG0ZtrU2ixUX2NxpQ7UieZewM4HAZ+mkcolQjLWorxB/MdPkoExcd7osOArPAh1D5tsQcd+5ZgrIcdbBYDKh/wgODc41o+8ST474vmWemWnr4yJKa+jKD5LUk8m/sN4H8C3Xg3UHYbKTjgovUoH+pNMnotwpbdyD6ANfrm17JjAK/M9oshKHTJCtNkKwsgXU7OnznPZzz3xtXz9jEUcLEoytC5k/glHqb/qfJt7V1w26GQGrF8XZWCr1VECqaw9bxyJUVGr8EaQ4Ol7dqwVEUmF2uPsJD8aD/GxKEZghqscXEC/yHbbDrhdPiXmfJ1gnOrFcW9tRXPV/8CDNrnIXrx3zKx2ys8aVIIq+Rk0R5JFEzKBoLheJYdusvnvsd2mAvFApzhj4FMSdjp4FMGdlfnfoamLGSFFn76zkFD29YvPuwLsW/FtHyZGsgqUuhRr50XhPENKhTSaR4ZFgDZCu1nWGSJvIHEB8tWK7kY0BI7Gw=
   app: solar-garden-fe
   on:
     repo: My-Solar-Garden/front_end_rails
