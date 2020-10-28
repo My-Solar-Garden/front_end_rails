@@ -2,7 +2,7 @@ language: ruby
 rbenv:
 - 2.5.3
 script:
-- bundle exec rails db:{create,migrate} RAILS_ENV=test
+- bundle exec rails db:{create,migrate}
 - bundle exec rspec
 deploy:
   provider: heroku
