@@ -1,0 +1,18 @@
+language: ruby
+rbenv:
+- 2.5.3
+addons:
+  postgresql: '9.6'
+script:
+- bundle exec rails db:{create,migrate} RAILS_ENV=test
+- bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: vO6CmnG906J0f1hxkmivXFb4/1mYYOQM9kLUV2O2VnJ3ZHD4uYiacKXwLdVVMgYc/PQ/svBEp+iZvj5g+GJFdyfumH5ZE/o3IToXFIEeWkeoOVK4FrNwNP4pGvy2Wj0XGdAuQf70k8Bslg53uIdzajxXoil6eXFG5fGjAvL3nUM/FmE/Dvyg0H9yiVEPh7JkG0ZtrU2ixUX2NxpQ7UieZewM4HAZ+mkcolQjLWorxB/MdPkoExcd7osOArPAh1D5tsQcd+5ZgrIcdbBYDKh/wgODc41o+8ST474vmWemWnr4yJKa+jKD5LUk8m/sN4H8C3Xg3UHYbKTjgovUoH+pNMnotwpbdyD6ANfrm17JjAK/M9oshKHTJCtNkKwsgXU7OnznPZzz3xtXz9jEUcLEoytC5k/glHqb/qfJt7V1w26GQGrF8XZWCr1VECqaw9bxyJUVGr8EaQ4Ol7dqwVEUmF2uPsJD8aD/GxKEZghqscXEC/yHbbDrhdPiXmfJ1gnOrFcW9tRXPV/8CDNrnIXrx3zKx2ys8aVIIq+Rk0R5JFEzKBoLheJYdusvnvsd2mAvFApzhj4FMSdjp4FMGdlfnfoamLGSFFn76zkFD29YvPuwLsW/FtHyZGsgqUuhRr50XhPENKhTSaR4ZFgDZCu1nWGSJvIHEB8tWK7kY0BI7Gw=
+  app: solar-garden-fe
+  on:
+    repo: My-Solar-Garden/front_end_rails
+    branch: main
+  skip_cleanup: true
+  run: rails db:migrate
