@@ -1,0 +1,19 @@
+language: ruby
+rbenv:
+- 2.5.3
+
+before_script:
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake assets:precompile
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "62RWwNboJuQV6h/bo8P7Y4jLfOIpeK1YnwGQc+6qwsVZXxTYMu+MaqJdHKZWP/Ir+qDmmHsCpjh24HXI++vWnSPvSSo90125pip8VfbA5CxUVMRjFBeRFdKWQPvojH7q2pSX0xpFACq/eaQRawgXU2+tewWZv+9kT77pvP11he9X8FXRO1Ykm/Oj4SbWoeVHERhFZfqVBWejs0IRpIOqc+Vc2zp2nwVbp+Xam6wlzOw9uYMeHmrNOZ/aZSRnxCti6s2HQiDNsnjlaTOqIzatDVIvbxP/+S2l1D9VopYK/znVxzDvqJcJFf+jE49xb7l+bAKdmA89wM9cASk2Q78tTMXKuM3qsi1ELp4sMNTTMb+aRdVD2ygSra0YwEKVVhyXi1RldW2uCIau6D1uRH5bViKUVrdmUxyz7WuLPiUTmvMw2JcheKJAvmRPwAofo8UdUS6E0RHXqqzy4Og6LSO1HO5Jm3V5HLNMsG2u3c8R7fH4g4iGiXIj3INlRXzZSWirEuZRUY3w3nWuJNYG/55ULPWd151m/aF5GFw5ZHidr3tZDbrHYEM2dc+I5eQ3I5bCHZW2T92kky2mWBjreWm2cOwEGSgRVeRB2vntksm/7pM1j04YypnDfgKj2aiHFAYcdmjeM5oB39jK6IFmfXqZYddPbixU1mIrrzz/UhpRWY="
+  app: solar-garden-fe
+  on:
+    repo: My-Solar-Garden/front_end_rails
+    branch: main
+  skip_cleanup: true
+  run: rails db:migrate
