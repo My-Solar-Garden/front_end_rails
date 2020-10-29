@@ -11,17 +11,17 @@ RSpec.describe 'User Dashboard' do
     end
 
     it 'can visit their dashboard' do
-      visit '/gardens'
+      visit dashboard_path
     end
 
     it 'sees a CTA to create a new garden if they have none' do
-      visit '/gardens'
+      visit dashboard_path
       expect(page).to have_content('You have no gardens')
       expect(page).to have_button('Add New Garden')
     end
 
     it 'has a button to create a new garden' do
-      visit '/gardens'
+      visit dashboard_path
       click_button('Add New Garden')
       expect(current_path).to eq(new_garden_path)
     end
@@ -29,7 +29,8 @@ RSpec.describe 'User Dashboard' do
     it 'displays the users gardens' do
       @user.gardens << {id: 1, type: 'garden'}
       @user.gardens << {id: 2, type: 'garden'}
-      visit '/gardens'
+      visit dashboard_path
+
       expect(page).to have_css('.garden', count: 2)
 
       within '#garden-1' do
@@ -43,26 +44,26 @@ RSpec.describe 'User Dashboard' do
 
     it 'has an image to edit and delete a garden' do
       @user.gardens << {id: 1, type: 'garden'}
-      visit '/gardens'
+      visit dashboard_path
 
       within '#garden-1' do
         find(:xpath, "//a[contains(@alt, 'edit-garden')]").click
       end
 
       expect(current_path).to eq("/gardens/1/edit")
-      visit '/gardens'
+      visit dashboard_path
 
       within '#garden-1' do
         find(:xpath, "//a[contains(@alt, 'delete-garden')]").click
       end
-      expect(current_path).to eq(gardens_path)
+      expect(current_path).to eq(dashboard_path)
 
     end
   end
 
   describe 'a visitor' do
     it 'cannot visit a dashboard' do
-      visit '/gardens'
+      visit dashboard_path
       expect(page).to have_content("The page you were looking for doesn't exist.")
     end
   end
