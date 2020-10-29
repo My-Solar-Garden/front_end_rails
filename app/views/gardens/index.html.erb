@@ -1,0 +1,13 @@
+<center>
+  <article class='gardens'>
+    <% if current_user.gardens.empty? %>
+      <h5>You have no gardens</h5>
+    <% else %>
+      <%= current_user.gardens.each do |garden| %>
+
+      <% end %>
+    <% end %>
+
+    <%= button_to 'Add New Garden', new_garden_path %>
+  </article>
+</center>
