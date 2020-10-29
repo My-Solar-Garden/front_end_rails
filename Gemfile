@@ -36,6 +36,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
 gem 'faraday'
 gem 'json'
+gem 'omniauth-google-oauth2'
+gem 'figaro'
 
 
 group :development, :test do
