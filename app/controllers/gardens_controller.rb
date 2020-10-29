@@ -3,6 +3,8 @@ class GardensController < ApplicationController
 
   def new; end
 
+  def show; end
+
   def create
     # hit the POST api/v1/gardens API to create a garden using strong params
     redirect_to dashboard_path
