@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'welcome#index'
+  resources :profile, only: [:show, :destroy]
+  resources :dashboard, only: [:show]
+  resources :gardens, except: [:index]
+  resources :plants, except: [:index]
+  resources :sensors, except: [:index]
+  resources :learn_more, only: [:show]
 end
