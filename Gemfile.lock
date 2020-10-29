@@ -100,6 +100,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (2.3.1)
     json_pure (2.3.1)
+    jwt (2.2.2)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.1.5)
@@ -271,6 +272,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   faraday
+  figaro
   jquery-rails
   json
   launchy
