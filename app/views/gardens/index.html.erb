@@ -3,11 +3,19 @@
     <% if current_user.gardens.empty? %>
       <h5>You have no gardens</h5>
     <% else %>
-      <%= current_user.gardens.each do |garden| %>
-
+      <% current_user.gardens.each do |garden| %>
+        <section class='garden' id='garden-<%= garden[:id] %>'>
+          <div class='garden-image'>
+            <%= image_tag 'https://www.organicconsumers.org/sites/default/files/styles/400x300/public/corndirt_1000x523.png?itok=bogDcAg-' %>
+          </div>
+          <div class="garden-buttons">
+            <%= link_to image_tag('edit-garden.png'), edit_garden_path(garden[:id]), class: 'garden-button' %>
+            <%= link_to image_tag('trash-garden.png'), "/gardens/#{garden[:id]}", method: :delete, class: 'garden-button' %>
+          </div>
+        </section>
       <% end %>
     <% end %>
 
-    <%= button_to 'Add New Garden', new_garden_path %>
+    <%= button_to 'Add New Garden', new_garden_path, method: :get %>
   </article>
 </center>
