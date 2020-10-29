@@ -40,6 +40,24 @@ RSpec.describe 'User Dashboard' do
         expect(page).to have_css('.garden-button', count: 2)
       end
     end
+
+    it 'has an image to edit and delete a garden' do
+      @user.gardens << {id: 1, type: 'garden'}
+      visit '/gardens'
+
+      within '#garden-1' do
+        find(:xpath, "//a[contains(@alt, 'edit-garden')]").click
+      end
+
+      expect(current_path).to eq("/gardens/1/edit")
+      visit '/gardens'
+
+      within '#garden-1' do
+        find(:xpath, "//a[contains(@alt, 'delete-garden')]").click
+      end
+      expect(current_path).to eq(gardens_path)
+
+    end
   end
 
   describe 'a visitor' do

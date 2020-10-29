@@ -4,4 +4,10 @@ class GardensController < ApplicationController
   def index; end
 
   def new; end
+
+  def edit; end
+
+  def destroy
+    redirect_to gardens_path
+  end
 end
