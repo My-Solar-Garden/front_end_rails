@@ -40,7 +40,7 @@ RSpec.describe 'Navbar' do
   end
 
   it "can see my gardens, my impact, learn more, profile and logout" do
-    visit profile_path
+    visit "/users"
 
     within ".navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
@@ -52,7 +52,7 @@ RSpec.describe 'Navbar' do
   end
 
   it "can see my gardens, my impact, learn more, profile and logout" do
-    visit dashboard_path
+    visit "/dashboard"
 
     within ".navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
@@ -172,7 +172,7 @@ RSpec.describe 'Navbar' do
   end
 
   it "can see my gardens, my impact, learn more, profile and logout" do
-    visit learn_more_path
+    visit "/learn_more"
 
     within ".navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
@@ -184,7 +184,7 @@ RSpec.describe 'Navbar' do
   end
 
   it "no longer sees my gardens, my impact, learn more, profile and logout" do
-    visit profile_path
+    visit "/users"
 
     click_on 'Logout'
 
