@@ -35,5 +35,14 @@ RSpec.describe 'Edit Garden Page' do
       expect(page).to have_button('Update Garden')
     end
 
+    it 'fills new garden form, submits and is redirect back to dashboard' do
+      visit "/gardens/#{@garden[:id]}/edit"
+      fill_in :name, with: 'Test'
+      fill_in :longitude, with: 25.0000
+      fill_in :latitude, with: 71.0000
+      fill_in :description, with: 'My first garden'
+      click_button 'Update Garden'
+      expect(current_path).to eq(dashboard_path)
+    end
   end
 end

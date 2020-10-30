@@ -2,7 +2,7 @@
   <h3>Update Your Garden</h3>
 
   <section class="new-garden">
-    <%= form_with url: "/gardens/#{@garden.id}", local: true do |form| %>
+    <%= form_with url: "/gardens/#{@garden.id}", method: :patch ,local: true do |form| %>
       <%= form.label :name %><br>
       <%= form.text_field :name, value: @garden.name, required: true %><br><br>
       <%= form.label :latitude %><br>
