@@ -1,14 +1,18 @@
 class SessionsController < ApplicationController
   def create
-    binding.pry
-    @user = User.find_by(email: auth_hash)
-    self.current_user = @user
-    redirect_to '/dashboard'
+    if auth_hash["credentials"] == nil
+      render 'Google Authorization was unable to be completed.'
+      redirect_to root_path
+    end
+    if auth_hash["credentials"]  
+      render 'You have successfully logged in.'
+    end 
   end
 
-    protected
-
+  private
+  
   def auth_hash
-    request.env['omniauth.auth']['info']['email']
-  end
+    request.env["omniauth.auth"]
+  end 
 end
+
