@@ -66,7 +66,7 @@ RSpec.describe 'Show Garden Page' do
     it "cannot visit a private garden's show page" do
       @private_garden = { id: 2,
       attributes: {
-          name: 'Garden Oasis',
+          name: 'My Garden Oasis',
           latitude: 66.0,
           longitude: 84.0,
           description: 'Field of Dreams',
