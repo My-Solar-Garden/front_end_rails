@@ -47,7 +47,7 @@ RSpec.describe 'User Dashboard' do
                             description: 'Simple Garden',
                             private: false }}
       visit dashboard_path
-
+      
       expect(page).to have_css('.garden', count: 2)
 
       within '#garden-1' do

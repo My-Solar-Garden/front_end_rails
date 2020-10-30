@@ -6,7 +6,7 @@
       <% current_user.gardens.each do |garden| %>
         <section class='garden' id='garden-<%= garden[:id] %>'>
           <div class='garden-image'>
-            <%= image_tag 'https://www.organicconsumers.org/sites/default/files/styles/400x300/public/corndirt_1000x523.png?itok=bogDcAg-' %>
+            <%= link_to image_tag('default-garden.png'), "/gardens/#{garden[:id]}" %>
           </div>
           <div class="garden-buttons">
             <%= link_to image_tag('edit-garden.png'), edit_garden_path(garden[:id]), class: 'garden-button', alt: 'edit-garden' %>
