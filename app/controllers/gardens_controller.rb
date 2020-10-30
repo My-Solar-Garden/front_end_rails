@@ -9,7 +9,12 @@ class GardensController < ApplicationController
     redirect_to dashboard_path
   end
 
-  def edit; end
+  def edit
+    # GET "api/v1/gardens/params[:id]" to obtain garden from id
+
+              # this code is used only for testing
+    @garden = Garden.new(current_user.gardens.first)
+  end
 
   def destroy
     redirect_to dashboard_path
