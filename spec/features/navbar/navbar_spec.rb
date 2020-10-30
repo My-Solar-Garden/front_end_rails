@@ -2,19 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'Navbar' do
   before :each do
-    @user = User.new({id: 1,
-                      attributes: { email: "123@gmail.com" },
-                      relationships: { gardens: { data: [] }}})
-
-    @garden = Garden.new({id: 1,
-                        attributes: {
-                          longitude: 23.573,
-                          latitude: 50.428,
-                          name: 'name',
-                          description: 'description'},
-                        relationships: { plants: { data: []}, sensors: { data: []}
-                        }})
-
     @plant = Plant.new({
                         id:1,
                         attributes: {
@@ -29,17 +16,39 @@ RSpec.describe 'Navbar' do
                           common_pests: 'beetles'
                         }})
 
+    @garden = { id: 1,
+              attributes: {
+                  name: 'My Garden',
+                  latitude: 23.0,
+                  longitude: 24.0,
+                  description: 'Simple Garden',
+                  private: false },
+              relationships: { plants: {
+                                  data: []},
+                               sensors: {
+                                  data: []}}}
+
     @sensor = Sensor.new({id: 1,
                       attributes: {
-                        garden_id: @garden.id,
+                        garden_id: @garden[:id],
                         sensor_type: 1298,
                         min_threshold: 30,
                         max_threshold: 390
                        }})
+
+    @user = User.new({id: 1,
+                    attributes: {
+                        email: '123@gmail.com' },
+                    relationships: {
+                        gardens: {
+                            data: [ @garden ] }}})
+
+    @garden = @user.gardens.first
+
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
   end
 
-  it "can see my gardens, my impact, learn more, profile and logout" do
+  it "can see my gardens, my impact, learn more, profile and logout on profile page" do
     visit "/users"
 
     within "#navbar-#{@user.id}" do
@@ -51,7 +60,7 @@ RSpec.describe 'Navbar' do
     end
   end
 
-  it "can see my gardens, my impact, learn more, profile and logout" do
+  it "can see my gardens, my impact, learn more, profile and logout on dashboard" do
     visit "/dashboard"
 
     within "#navbar-#{@user.id}" do
@@ -63,8 +72,8 @@ RSpec.describe 'Navbar' do
     end
   end
 
-  it "can see my gardens, my impact, learn more, profile and logout" do
-    visit "/gardens/#{@garden.id}"
+  it "can see my gardens, my impact, learn more, profile and logout on garden show page" do
+    visit "/gardens/#{@garden[:id]}"
 
     within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
@@ -75,19 +84,7 @@ RSpec.describe 'Navbar' do
     end
   end
 
-  it "can see my gardens, my impact, learn more, profile and logout" do
-    visit "/gardens/new"
-
-    within "#navbar-#{@user.id}" do
-      expect(page).to have_link('My Gardens')
-      expect(page).to have_link('My Impact')
-      expect(page).to have_link('Learn More')
-      expect(page).to have_link('Profile')
-      expect(page).to have_link('Logout')
-    end
-  end
-
-  it "can see my gardens, my impact, learn more, profile and logout" do
+  it "can see my gardens, my impact, learn more, profile and logout on garden update page" do
     visit "/gardens/update"
 
     within "#navbar-#{@user.id}" do
@@ -99,7 +96,19 @@ RSpec.describe 'Navbar' do
     end
   end
 
-  it "can see my gardens, my impact, learn more, profile and logout" do
+  it "can see my gardens, my impact, learn more, profile and logout on create garden page" do
+    visit "/gardens/new"
+
+    within "#navbar-#{@user.id}" do
+      expect(page).to have_link('My Gardens')
+      expect(page).to have_link('My Impact')
+      expect(page).to have_link('Learn More')
+      expect(page).to have_link('Profile')
+      expect(page).to have_link('Logout')
+    end
+  end
+
+  it "can see my gardens, my impact, learn more, profile and logout on plant show page" do
     visit "/plants/#{@plant.id}"
 
     within "#navbar-#{@user.id}" do
@@ -111,7 +120,7 @@ RSpec.describe 'Navbar' do
     end
   end
 
-  it "can see my gardens, my impact, learn more, profile and logout" do
+  it "can see my gardens, my impact, learn more, profile and logout on plant new page" do
     visit "/plants/new"
 
     within "#navbar-#{@user.id}" do
@@ -123,7 +132,7 @@ RSpec.describe 'Navbar' do
     end
   end
 
-  it "can see my gardens, my impact, learn more, profile and logout" do
+  it "can see my gardens, my impact, learn more, profile and logout on plant update page" do
     visit "/plants/update"
 
     within "#navbar-#{@user.id}" do
@@ -135,7 +144,7 @@ RSpec.describe 'Navbar' do
     end
   end
 
-  it "can see my gardens, my impact, learn more, profile and logout" do
+  it "can see my gardens, my impact, learn more, profile and logout on sensor show page" do
     visit "/sensors/#{@sensor.id}"
 
     within "#navbar-#{@user.id}" do
@@ -147,7 +156,7 @@ RSpec.describe 'Navbar' do
     end
   end
 
-  it "can see my gardens, my impact, learn more, profile and logout" do
+  it "can see my gardens, my impact, learn more, profile and logout on sensor new page" do
     visit "/sensors/new"
 
     within "#navbar-#{@user.id}" do
@@ -159,7 +168,7 @@ RSpec.describe 'Navbar' do
     end
   end
 
-  it "can see my gardens, my impact, learn more, profile and logout" do
+  it "can see my gardens, my impact, learn more, profile and logout on sensor update page" do
     visit "/sensors/update"
 
     within "#navbar-#{@user.id}" do
@@ -171,7 +180,7 @@ RSpec.describe 'Navbar' do
     end
   end
 
-  it "can see my gardens, my impact, learn more, profile and logout" do
+  it "can see my gardens, my impact, learn more, profile and logout on learn more page" do
     visit "/learn_more"
 
     within "#navbar-#{@user.id}" do
@@ -183,7 +192,7 @@ RSpec.describe 'Navbar' do
     end
   end
 
-  it "no longer sees my gardens, my impact, learn more, profile and logout" do
+  it "no longer sees my gardens, my impact, learn more, profile and logout on home page when not logged in" do
     visit "/users"
 
     click_on 'Logout'
@@ -192,6 +201,10 @@ RSpec.describe 'Navbar' do
 
     expect(page).to have_link('Login')
 
-    # expect(page).to_not have("navbar")
+    expect(page).to_not have_link('My Gardens')
+    expect(page).to_not have_link('My Impact')
+    expect(page).to_not have_link('Learn More')
+    expect(page).to_not have_link('Profile')
+    expect(page).to_not have_link('Logout')
   end
 end
