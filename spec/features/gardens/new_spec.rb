@@ -27,7 +27,6 @@ RSpec.describe 'New Garden Page' do
 
     it 'fills new garden form, submits and is redirect back to dashboard' do
       visit new_garden_path
-      save_and_open_page
       fill_in :name, with: 'Test'
       fill_in :longitude, with: 25.0000
       fill_in :latitude, with: 71.0000
