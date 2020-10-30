@@ -17,6 +17,6 @@ class GardensController < ApplicationController
   private
 
   def garden_params
-    params.permit(:name, :latitude, :longitude, :private)
+    params.permit(:name, :latitude, :longitude, :private, :description)
   end
 end

@@ -14,11 +14,12 @@ RSpec.describe 'New Garden Page' do
       visit new_garden_path
     end
 
-    it 'sees three input fields, two radio buttons and a button to submit' do
+    it 'sees four input fields, two radio buttons and a button to submit' do
       visit new_garden_path
       expect(page).to have_selector("input[placeholder='Tomato Garden']")
       expect(page).to have_selector("input[placeholder='39.7392']")
       expect(page).to have_selector("input[placeholder='104.9903']")
+      expect(page).to have_selector("input[placeholder='Describe your garden']")
       expect(page).to have_selector("input[id='private_true']")
       expect(page).to have_selector("input[id='private_false']")
       expect(page).to have_button('Create Garden')
@@ -26,9 +27,11 @@ RSpec.describe 'New Garden Page' do
 
     it 'fills new garden form, submits and is redirect back to dashboard' do
       visit new_garden_path
+      save_and_open_page
       fill_in :name, with: 'Test'
       fill_in :longitude, with: 25.0000
       fill_in :latitude, with: 71.0000
+      fill_in :description, with: 'My first garden'
       click_button 'Create Garden'
       expect(current_path).to eq(dashboard_path)
     end
