@@ -42,7 +42,7 @@ RSpec.describe 'Navbar' do
   it "can see my gardens, my impact, learn more, profile and logout" do
     visit "/users"
 
-    within ".navbar-#{@user.id}" do
+    within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
       expect(page).to have_link('Learn More')
@@ -53,8 +53,8 @@ RSpec.describe 'Navbar' do
 
   it "can see my gardens, my impact, learn more, profile and logout" do
     visit "/dashboard"
-    
-    within ".navbar-#{@user.id}" do
+
+    within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
       expect(page).to have_link('Learn More')
@@ -66,7 +66,7 @@ RSpec.describe 'Navbar' do
   it "can see my gardens, my impact, learn more, profile and logout" do
     visit "/gardens/#{@garden.id}"
 
-    within ".navbar-#{@user.id}" do
+    within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
       expect(page).to have_link('Learn More')
@@ -78,7 +78,7 @@ RSpec.describe 'Navbar' do
   it "can see my gardens, my impact, learn more, profile and logout" do
     visit "/gardens/new"
 
-    within ".navbar-#{@user.id}" do
+    within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
       expect(page).to have_link('Learn More')
@@ -90,7 +90,7 @@ RSpec.describe 'Navbar' do
   it "can see my gardens, my impact, learn more, profile and logout" do
     visit "/gardens/update"
 
-    within ".navbar-#{@user.id}" do
+    within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
       expect(page).to have_link('Learn More')
@@ -102,7 +102,7 @@ RSpec.describe 'Navbar' do
   it "can see my gardens, my impact, learn more, profile and logout" do
     visit "/plants/#{@plant.id}"
 
-    within ".navbar-#{@user.id}" do
+    within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
       expect(page).to have_link('Learn More')
@@ -114,7 +114,7 @@ RSpec.describe 'Navbar' do
   it "can see my gardens, my impact, learn more, profile and logout" do
     visit "/plants/new"
 
-    within ".navbar-#{@user.id}" do
+    within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
       expect(page).to have_link('Learn More')
@@ -126,7 +126,7 @@ RSpec.describe 'Navbar' do
   it "can see my gardens, my impact, learn more, profile and logout" do
     visit "/plants/update"
 
-    within ".navbar-#{@user.id}" do
+    within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
       expect(page).to have_link('Learn More')
@@ -138,7 +138,7 @@ RSpec.describe 'Navbar' do
   it "can see my gardens, my impact, learn more, profile and logout" do
     visit "/sensors/#{@sensor.id}"
 
-    within ".navbar-#{@user.id}" do
+    within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
       expect(page).to have_link('Learn More')
@@ -150,7 +150,7 @@ RSpec.describe 'Navbar' do
   it "can see my gardens, my impact, learn more, profile and logout" do
     visit "/sensors/new"
 
-    within ".navbar-#{@user.id}" do
+    within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
       expect(page).to have_link('Learn More')
@@ -162,7 +162,7 @@ RSpec.describe 'Navbar' do
   it "can see my gardens, my impact, learn more, profile and logout" do
     visit "/sensors/update"
 
-    within ".navbar-#{@user.id}" do
+    within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
       expect(page).to have_link('Learn More')
@@ -174,7 +174,7 @@ RSpec.describe 'Navbar' do
   it "can see my gardens, my impact, learn more, profile and logout" do
     visit "/learn_more"
 
-    within ".navbar-#{@user.id}" do
+    within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
       expect(page).to have_link('Learn More')
@@ -192,6 +192,6 @@ RSpec.describe 'Navbar' do
 
     expect(page).to have_link('Login')
 
-    # expect(page).to_not have(".navbar")
+    # expect(page).to_not have("navbar")
   end
 end
