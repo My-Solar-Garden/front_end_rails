@@ -1,0 +1,43 @@
+<center>
+  <article class='left-col'>
+    <section class='garden-info'>
+      <h1><%= @garden.name %></h1>
+    </section>
+
+    <section class='garden-plants'>
+      <h1>Your Garden Plants</h1>
+      <% if @garden.plants.empty? %>
+        <p>You have no plants</p>
+      <% else %>
+        <% @garden.plants.each do |plant| %>
+          <div class="plant-box">
+            <%= plant[:name] %>
+          </div>
+        <% end %>
+      <% end %>
+
+      <%= button_to 'Add Plant', "#" %>
+    </section>
+
+    <section class='garden-sensors'>
+      <h1>Your Garden Sensors</h1>
+
+      <% if @garden.sensors.empty? %>
+        <p>You have no sensors</p>
+      <% else %>
+        <% @garden.sensors.each do |sensor| %>
+          <div class="sensor-box">
+            <%= sensor[:sensor_type] %>
+          </div>
+        <% end %>
+      <% end %>
+
+      <%= button_to 'Add Sensor', "#" %>
+    </section>
+  </article>
+
+  <article class='right-col'>
+    <h1>Weather Information</h1>
+  </article>
+
+</center>
