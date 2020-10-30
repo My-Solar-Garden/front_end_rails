@@ -19,7 +19,6 @@ RSpec.describe 'New Garden Page' do
       expect(page).to have_selector("input[placeholder='Tomato Garden']")
       expect(page).to have_selector("input[placeholder='39.7392']")
       expect(page).to have_selector("input[placeholder='104.9903']")
-      expect(page).to have_selector("input[placeholder='Describe your garden']")
       expect(page).to have_selector("input[id='private_true']")
       expect(page).to have_selector("input[id='private_false']")
       expect(page).to have_button('Create Garden')
