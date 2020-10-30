@@ -4,8 +4,11 @@ RSpec.describe 'User Dashboard' do
   describe 'a logged in user' do
     before :each do
       @user = User.new({id: 1,
-                      attributes: { email: '123@gmail.com' },
-                      relationships: { gardens: { data: [] }}})
+                      attributes: {
+                          email: '123@gmail.com' },
+                      relationships: {
+                          gardens: {
+                              data: [] }}})
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
@@ -27,10 +30,24 @@ RSpec.describe 'User Dashboard' do
     end
 
     it 'displays the users gardens' do
-      @user.gardens << {id: 1, type: 'garden'}
-      @user.gardens << {id: 2, type: 'garden'}
+      @user.gardens << {id: 1,
+                        type: 'garden',
+                        attributes: {
+                            name: 'My Garden',
+                            latitude: 23.0,
+                            longitude: 24.0,
+                            description: 'Simple Garden',
+                            private: false }}
+      @user.gardens << {id: 2,
+                        type: 'garden',
+                        attributes: {
+                            name: 'My Garden',
+                            latitude: 23.0,
+                            longitude: 24.0,
+                            description: 'Simple Garden',
+                            private: false }}
       visit dashboard_path
-
+      
       expect(page).to have_css('.garden', count: 2)
 
       within '#garden-1' do
@@ -43,7 +60,14 @@ RSpec.describe 'User Dashboard' do
     end
 
     it 'has an image to edit and delete a garden' do
-      @user.gardens << {id: 1, type: 'garden'}
+      @user.gardens << {id: 1,
+                        type: 'garden',
+                        attributes: {
+                            name: 'My Garden',
+                            latitude: 23.0,
+                            longitude: 24.0,
+                            description: 'Simple Garden',
+                            private: false }}
       visit dashboard_path
 
       within '#garden-1' do

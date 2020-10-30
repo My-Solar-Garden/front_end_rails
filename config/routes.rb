@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'welcome#index'
+  get '/privacy', to: 'privacy#index'
   get "/users", to: "users#show"
   resources :user, only: [:show, :update, :destroy]
   get "/dashboard", to: "dashboard#show"

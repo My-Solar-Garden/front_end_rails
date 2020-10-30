@@ -9,6 +9,8 @@
       <%= form.number_field :latitude, placeholder: '39.7392', step: :any, required: true %><br><br>
       <%= form.label :longitude %><br>
       <%= form.number_field :longitude, placeholder: '104.9903', step: :any, required: true %><br><br>
+      <%= form.label :description %><br>
+      <%= form.text_area :description, placeholder: 'Describe your garden', required: true %>
       <p>Would you like your garden to be private?</p>
       <%= form.label :private, 'Yes' %>
       <%= form.radio_button :private, true %>
