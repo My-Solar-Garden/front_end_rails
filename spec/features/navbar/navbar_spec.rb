@@ -53,7 +53,7 @@ RSpec.describe 'Navbar' do
 
   it "can see my gardens, my impact, learn more, profile and logout" do
     visit "/dashboard"
-
+    
     within ".navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
@@ -190,6 +190,8 @@ RSpec.describe 'Navbar' do
 
     expect(current_path).to eq(root_path)
 
-    expect(page).to_not have(".navbar")
+    expect(page).to have_link('Login')
+
+    # expect(page).to_not have(".navbar")
   end
 end
