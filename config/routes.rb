@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :sensors, except: [:index]
   get "/learn_more", to: "learn_more#show"
   resources :learn_more, only: [:show]
+  get "/logout", to: "sessions#destroy"
 end
