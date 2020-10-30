@@ -10,8 +10,6 @@ class GardensController < ApplicationController
 
   def new; end
 
-  def show; end
-
   def create
     # POST "api/v1/gardens" to create a garden using strong params
     # note pass in current_user.id into hash for back-end association
