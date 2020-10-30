@@ -3,18 +3,24 @@ require 'rails_helper'
 RSpec.describe 'Edit Garden Page' do
   describe 'a logged in user' do
     before :each do
+      @garden = { id: 1,
+                attributes: {
+                    name: 'My Garden',
+                    latitude: 23.0,
+                    longitude: 24.0,
+                    description: 'Simple Garden',
+                    private: false },
+                relationships: { plants: {
+                                    data: []},
+                                 sensors: {
+                                    data: []}}}
+
       @user = User.new({id: 1,
                       attributes: {
                           email: '123@gmail.com' },
                       relationships: {
                           gardens: {
-                              data: [ { id: 1,
-                                        attributes: {
-                                            name: 'My Garden',
-                                            latitude: 23.0,
-                                            longitude: 24.0,
-                                            description: 'Simple Garden',
-                                            private: false }}, ] }}})
+                              data: [ @garden ] }}})
 
       @garden = @user.gardens.first
 

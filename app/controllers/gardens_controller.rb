@@ -1,6 +1,13 @@
 class GardensController < ApplicationController
   before_action :require_user
 
+  def show
+    # GET "api/v1/gardens/params[:id]" to get single garden
+
+              # this code is used only for testing
+    @garden = Garden.new(current_user.gardens.first)
+  end
+
   def new; end
 
   def create
