@@ -9,5 +9,6 @@
 # production:
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
-GOOGLE_CLIENT_ID: 991216751486-586jnjla09btcikp7ek4bdjnakr5aq97.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET: b5-wtpIRBZWpCvPFMvCCBOKg
+RAILS_ENGINE_DOMAIN: http://localhost:3000
+GOOGLE_CLIENT_ID: '935541916013-g5go23npmun6gqaq7cva7b3gj8isjof5.apps.googleusercontent.com'
+GOOGLE_CLIENT_SECRET: 'qF4gsKFM3gdnpYufQPlXUF-D'
