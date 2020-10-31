@@ -1,6 +1,7 @@
 class GardensController < ApplicationController
   before_action :require_user, except: [:show]
 
+  def index; end
 
   def show
     # move conn, response, parse to service and facade once we better udnerstand api response structure
