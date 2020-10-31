@@ -13,6 +13,7 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
 RSpec.configure do |config|
   require 'webmock/rspec'
   # rspec-expectations config goes here. You can use an alternate

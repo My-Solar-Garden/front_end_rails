@@ -16,7 +16,7 @@ RSpec.describe 'Navbar' do
                           common_pests: 'beetles'
                         }})
 
-    @garden = { id: 1,
+    @garden = { id: 4,
               attributes: {
                   name: 'My Garden',
                   latitude: 23.0,
@@ -25,6 +25,8 @@ RSpec.describe 'Navbar' do
                   private: false },
               relationships: { plants: {
                                   data: []},
+                                users: {
+                                  data: [{id: "4", type: "user"}]},
                                sensors: {
                                   data: []}}}
 
@@ -36,7 +38,7 @@ RSpec.describe 'Navbar' do
                         max_threshold: 390
                        }})
 
-    @user = User.new({id: 1,
+    @user = User.new({id: 4,
                     attributes: {
                         email: '123@gmail.com' },
                     relationships: {
@@ -46,6 +48,9 @@ RSpec.describe 'Navbar' do
     @garden = @user.gardens.first
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+
+    response = File.read('spec/fixtures/public_garden.json')
+    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/#{@garden[:id]}").to_return(status: 200, body: response)
   end
 
   it "can see my gardens, my impact, learn more, profile and logout on profile page" do
@@ -85,7 +90,7 @@ RSpec.describe 'Navbar' do
   end
 
   it "can see my gardens, my impact, learn more, profile and logout on garden update page" do
-    visit "/gardens/update"
+    visit "/gardens/#{@garden[:id]}/edit"
 
     within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
