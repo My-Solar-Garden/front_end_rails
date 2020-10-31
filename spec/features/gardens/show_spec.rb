@@ -2,20 +2,44 @@ require 'rails_helper'
 
 RSpec.describe 'Show Garden Page' do
   before :each do
-    @garden = { id: 1,
+    @public_garden = Garden.new({ id: 4,
               attributes: {
-                  name: 'My Garden',
-                  latitude: 23.0,
-                  longitude: 24.0,
-                  description: 'Simple Garden',
+                  name: 'Cole Community Garden',
+                  latitude: 39.45,
+                  longitude: -104.58,
+                  description: 'A diverse, dedicated group of students and neighbors who believe in bettering ourselves, our food supply and our community through urban gardening.',
                   private: false },
               relationships: { plants: {
                                   data: []},
+                                users: {
+                                    data: [{id: "4", type: "user"}]},
                                sensors: {
-                                  data: []}}}
+                                  data: []}}})
+
+    @private_garden = Garden.new({ id: 3,
+              attributes: {
+                  name: 'The Grove',
+                  latitude: 39.75,
+                  longitude: -104.996577,
+                  description: 'Corner garden',
+                  is_private: false },
+              relationships: { plants: {
+                                  data: []},
+                                users: {
+                                  data: [{id: "3", type: "user"}]},
+                                sensors: {
+                                  data: []}}})
+
+
+    # change to vcr fixture testing eventually (once there's data available to actually call)
+    public_response = File.read('spec/fixtures/public_garden.json')
+    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/#{@public_garden.id}").to_return(status: 200, body: public_response)
+
+    private_response = File.read('spec/fixtures/private_garden.json')
+    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/#{@private_garden.id}").to_return(status: 200, body: private_response)
   end
 
-  describe 'a logged in user' do
+  describe 'as a logged in user' do
     before :each do
       @user = User.new({id: 1,
                       attributes: {
@@ -29,17 +53,41 @@ RSpec.describe 'Show Garden Page' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
 
-    it 'can visit a garden show page' do
-      visit "/gardens/#{@garden[:id]}"
-      
-      expect(page).to have_content(@garden[:name])
-      expect(page).to have_content(@garden[:description])
-      expect(page).to have_content(@garden[:latitude])
-      expect(page).to have_content(@garden[:longitude])
+    it "can visit a public garden's garden show page" do
+      visit "/gardens/#{@public_garden.id}"
+
+      expect(page).to have_content("Cole Community Garden")
+      expect(page).to have_content("A diverse, dedicated group of students and neighbors who believe in bettering ourselves, our food supply and our community through urban gardening.")
+      expect(page).to have_content('39.45')
+      expect(page).to have_content('-104.58')
+    end
+
+    it "can visit a private garden's show page that they do own" do
+      user2 = User.new({id: 3,
+                        attributes: {
+                            email: 'user@user.com' },
+                        relationships: {
+                            gardens: {
+                                data: [ @private_garden ] }}})
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user2)
+
+      visit "/gardens/#{@private_garden.id}"
+
+      expect(page).to have_content(@private_garden.name)
+      expect(page).to have_content(@private_garden.description)
+      expect(page).to have_content(@private_garden.latitude)
+      expect(page).to have_content(@private_garden.longitude)
+    end
+
+    it "cannot visit a private garden's show page that they do not own" do
+      visit "/gardens/#{@private_garden.id}"
+
+      expect(page.status_code).to eq(404)
     end
 
     it 'displays CTA when garden has no plants or sensors' do
-      visit "/gardens/#{@garden[:id]}"
+      visit "/gardens/#{@public_garden.id}"
 
       within '.garden-plants' do
         expect(page).to have_content('You have no plants')
@@ -55,28 +103,16 @@ RSpec.describe 'Show Garden Page' do
 
   describe 'as an unauthenticated user' do
     it "can visit a public garden's show page" do
-      visit "/gardens/#{@garden[:id]}"
+      visit "/gardens/#{@public_garden.id}"
 
-      expect(page).to have_content(@garden[:name])
-      expect(page).to have_content(@garden[:description])
-      expect(page).to have_content(@garden[:latitude])
-      expect(page).to have_content(@garden[:longitude])
+      expect(page).to have_content("Cole Community Garden")
+      expect(page).to have_content("A diverse, dedicated group of students and neighbors who believe in bettering ourselves, our food supply and our community through urban gardening.")
+      expect(page).to have_content('39.45')
+      expect(page).to have_content('-104.58')
     end
 
     it "cannot visit a private garden's show page" do
-      @private_garden = { id: 2,
-      attributes: {
-          name: 'My Garden Oasis',
-          latitude: 66.0,
-          longitude: 84.0,
-          description: 'Field of Dreams',
-          private: true },
-      relationships: { plants: {
-                          data: []},
-                       sensors: {
-                          data: []}}}
-
-      visit "/gardens/#{@private_garden[:id]}"
+      visit "/gardens/#{@private_garden.id}"
 
       expect(page.status_code).to eq(404)
     end
