@@ -39,9 +39,11 @@ RSpec.describe 'Welcome' do
       expect(page).to have_content("My Solar Garden Project")
     end
 
+    it "expects to see a Learn More button" do
+      visit root_path
+
+      expect(page).to have_button("Be The Change. Learn More")
+    end
 
   end
-
-
-
 end
