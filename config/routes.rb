@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'welcome#index'
   get '/privacy', to: 'privacy#index'
-  get "/users", to: "users#show"
+  resources :users, except: [:index]
   get "/dashboard", to: "dashboard#show"
   resources :gardens, except: [:index]
   resources :plants, except: [:index]
