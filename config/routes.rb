@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root to: 'welcome#index'
+
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
   get '/privacy', to: 'privacy#index'
   resources :users, except: [:index]
   get "/dashboard", to: "dashboard#show"
