@@ -33,7 +33,15 @@ RSpec.describe 'Welcome' do
       expect(current_path).to eq(dashboard_path)
     end
 
+    it "expects to see a My Solar Garden Project banner" do
+      visit root_path
+
+      expect(page).to have_content("My Solar Garden Project")
+    end
+
+
   end
+
 
 
 end
