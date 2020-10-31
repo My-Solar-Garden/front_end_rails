@@ -25,14 +25,6 @@ RSpec.describe 'Welcome' do
       @garden = @user.gardens.first
     end
 
-    it "will send a logged in user to their dashboard instead of showing the welcome page" do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
-
-      visit root_path
-
-      expect(current_path).to eq(dashboard_path)
-    end
-
     it "expects to see a My Solar Garden Project banner" do
       visit root_path
 
