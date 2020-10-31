@@ -70,6 +70,31 @@ Shoulda::Matchers.configure do |config|
 
     with.library :rails
   end
+
+def stub_omniauth
+  OmniAuth.config.test_mode = true
+  omniauth_google_hash = {
+      provider: 'google_oauth2',
+      uid: '100000000000000000000',
+      info: {
+          name: 'John Smith',
+          email: 'john@example.com',
+          first_name: 'John',
+          last_name: 'Smith',
+          image: 'https://lh4.googleusercontent.com/photo.jpg',
+          urls: {
+              google: 'https://plus.google.com/+JohnSmith'
+          }
+      },
+      credentials: {
+          token: 'MOCK_OMNIAUTH_GOOGLE_TOKEN',
+          refresh_token: 'MOCK_OMNIAUTH_GOOGLE_REFRESH TOKEN',
+          expires_at: DateTime.now,
+          expires: true
+      },
+  }
+  OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new(omniauth_google_hash)
+end
 end
 
 RSpec.configure do |config|
