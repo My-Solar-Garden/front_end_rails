@@ -27,13 +27,14 @@ Things you may want to cover:
 2. Obtain Google OAuth credentials
 
   * Visit https://console.developers.google.com/ and create a new project
-  * Open up the project and click on OAuth consent screen, choose external, click create, and proceed with the required info
-  * Go back to Credentials on the left and click 'Create Credentials' at the top. Choose OAuth client ID
-  * You should receive a Client ID and Client secret. These will go in your application.yml file as:
+  * Select the project and on the left click OAuth consent screen, choose external, click create, and proceed with the required fields (if a field is not required you can skip it)
+  * Click on Credentials on the left then click '+Create Credentials' at the top. Choose OAuth client ID, choose Web application, and under Authorized redirect URIs if you plan on testing Google OAuth with localhost you will want to include:
+  * `http://localhost:3000/auth/google_oauth2/callback`
+  * Click Create and you should receive a Client ID and Client secret. These will go in your application.yml file as:
 
-  * `GOOGLE_CLIENT_ID: < your ID>`
-  * `GOOGLE_CLIENT_SECRET: < your ID>`
-  
+  * `GOOGLE_CLIENT_ID: < your ID >`
+  * `GOOGLE_CLIENT_SECRET: < your ID >`
+
 * Configuration
     - `bundle install`
     - `rails db:{create,migrate}`
