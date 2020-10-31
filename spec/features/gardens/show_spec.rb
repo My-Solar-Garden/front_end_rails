@@ -56,10 +56,10 @@ RSpec.describe 'Show Garden Page' do
     it "can visit a public garden's garden show page" do
       visit "/gardens/#{@public_garden.id}"
 
-      expect(page).to have_content("Cole Community Garden")
-      expect(page).to have_content("A diverse, dedicated group of students and neighbors who believe in bettering ourselves, our food supply and our community through urban gardening.")
-      expect(page).to have_content('39.45')
-      expect(page).to have_content('-104.58')
+      expect(page).to have_content(@public_garden.name)
+      expect(page).to have_content(@public_garden.description)
+      expect(page).to have_content(@public_garden.latitude)
+      expect(page).to have_content(@public_garden.longitude)
     end
 
     it "can visit a private garden's show page that they do own" do
@@ -105,10 +105,10 @@ RSpec.describe 'Show Garden Page' do
     it "can visit a public garden's show page" do
       visit "/gardens/#{@public_garden.id}"
 
-      expect(page).to have_content("Cole Community Garden")
-      expect(page).to have_content("A diverse, dedicated group of students and neighbors who believe in bettering ourselves, our food supply and our community through urban gardening.")
-      expect(page).to have_content('39.45')
-      expect(page).to have_content('-104.58')
+      expect(page).to have_content(@public_garden.name)
+      expect(page).to have_content(@public_garden.description)
+      expect(page).to have_content(@public_garden.latitude)
+      expect(page).to have_content(@public_garden.longitude)
     end
 
     it "cannot visit a private garden's show page" do
