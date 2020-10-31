@@ -35,6 +35,7 @@ RSpec.describe 'Edit Garden Page' do
 
     it 'sees four input fields, two radio buttons and a button to submit' do
       visit "/gardens/#{@garden[:id]}/edit"
+      
       expect(page).to have_selector("input[value='#{@garden[:attributes][:name]}']")
       expect(page).to have_selector("input[value='#{@garden[:attributes][:latitude]}']")
       expect(page).to have_selector("input[value='#{@garden[:attributes][:longitude]}']")
