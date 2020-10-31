@@ -37,6 +37,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faraday'
 gem 'json'
 gem 'omniauth-google-oauth2'
+gem 'google-api-client'
 gem 'figaro'
 gem 'jquery-rails'
 
