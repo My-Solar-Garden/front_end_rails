@@ -22,7 +22,7 @@ RSpec.describe 'Show Garden Page' do
                   latitude: 39.75,
                   longitude: -104.996577,
                   description: 'Corner garden',
-                  is_private: false },
+                  private: true },
               relationships: { plants: {
                                   data: []},
                                 users: {
