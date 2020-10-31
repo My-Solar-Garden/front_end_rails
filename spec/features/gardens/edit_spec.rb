@@ -12,6 +12,8 @@ RSpec.describe 'Edit Garden Page' do
                     private: false },
                 relationships: { plants: {
                                     data: []},
+                                  users: {
+                                    data: [{id: "1", type: "user"}]},
                                  sensors: {
                                     data: []}}}
 
