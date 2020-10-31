@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
     json = JSON.parse(response.body, symbolize_names: true)
     user = json[:data][:id]
     session[:user_id] = user
+    flash[:notice] = 'You have successfully logged in'
     redirect_to dashboard_path
   end
 
