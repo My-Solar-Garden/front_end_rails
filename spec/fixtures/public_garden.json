@@ -1,0 +1,40 @@
+{
+  "data": {
+      "id": "4",
+      "type": "garden",
+      "attributes": {
+          "latitude": 39.45,
+          "longitude": -104.58,
+          "name": "Cole Community Garden",
+          "description": "A diverse, dedicated group of students and neighbors who believe in bettering ourselves, our food supply and our community through urban gardening.",
+          "private": false
+      },
+      "relationships": {
+          "user_gardens": {
+              "data": [
+                  {
+                      "id": "4",
+                      "type": "user_garden"
+                  }
+              ]
+          },
+          "users": {
+              "data": [
+                  {
+                      "id": "4",
+                      "type": "user"
+                  }
+              ]
+          },
+          "sensors": {
+              "data": []
+          },
+          "garden_plants": {
+              "data": []
+          },
+          "plants": {
+              "data": []
+          }
+      }
+  }
+}

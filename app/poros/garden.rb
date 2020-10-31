@@ -1,13 +1,13 @@
 class Garden
-
   attr_reader :id,
               :name,
               :latitude,
               :longitude,
               :description,
-              :private,
+              :is_private,
               :plants,
-              :sensors
+              :sensors,
+              :user_ids
 
   def initialize(data)
     @id = data[:id]
@@ -15,9 +15,10 @@ class Garden
     @latitude = data[:attributes][:latitude]
     @longitude = data[:attributes][:longitude]
     @description = data[:attributes][:description]
-    @private = data[:attributes][:private]
+    @is_private = data[:attributes][:private]
     @plants = set_plants(data)
     @sensors = set_sensors(data)
+    @user_ids = set_users(data)
   end
 
   def set_plants(data)
@@ -26,5 +27,9 @@ class Garden
 
   def set_sensors(data)
     data[:relationships][:sensors][:data] rescue nil
+  end
+
+  def set_users(data)
+    data[:relationships][:users][:data].map {|user| user[:id]}
   end
 end

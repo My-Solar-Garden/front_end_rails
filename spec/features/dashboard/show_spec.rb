@@ -60,14 +60,19 @@ RSpec.describe 'User Dashboard' do
     end
 
     it 'has an image to edit and delete a garden' do
-      @user.gardens << {id: 1,
-                        type: 'garden',
-                        attributes: {
-                            name: 'My Garden',
-                            latitude: 23.0,
-                            longitude: 24.0,
-                            description: 'Simple Garden',
-                            private: false }}
+      @user.gardens << { id: 1,
+                            attributes: {
+                                name: 'My Garden',
+                                latitude: 23.0,
+                                longitude: 24.0,
+                                description: 'Simple garden',
+                                is_private: false },
+                            relationships: { plants: {
+                                                data: []},
+                                              users: {
+                                                data: [{id: "#{@user.id}", type: "user"}]},
+                                              sensors: {
+                                                data: []}}}
       visit dashboard_path
 
       within '#garden-1' do
