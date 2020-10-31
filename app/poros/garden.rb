@@ -4,7 +4,7 @@ class Garden
               :latitude,
               :longitude,
               :description,
-              :private,
+              :is_private,
               :plants,
               :sensors,
               :user_ids
@@ -15,7 +15,7 @@ class Garden
     @latitude = data[:attributes][:latitude]
     @longitude = data[:attributes][:longitude]
     @description = data[:attributes][:description]
-    @private = data[:attributes][:private]
+    @is_private = data[:attributes][:private]
     @plants = set_plants(data)
     @sensors = set_sensors(data)
     @user_ids = set_users(data)

@@ -63,8 +63,8 @@ RSpec.describe 'Garden' do
     expect(garden.description).to be_a(String)
     expect(garden.description).to eq('Corner garden')
 
-    expect(garden.private).to be_in([true, false])
-    expect(garden.private).to eq(true)
+    expect(garden.is_private).to be_in([true, false])
+    expect(garden.is_private).to eq(true)
 
     expect(garden.plants).to be_an(Array)
     expect(garden.plants).to eq([])
