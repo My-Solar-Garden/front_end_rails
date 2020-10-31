@@ -2,7 +2,7 @@ require 'google/api_client/client_secrets.rb'
 
 class SessionsController < ApplicationController
   def create
-    conn = Faraday.new(url: "#{ENV['RAILS_ENGINE_DOMAIN']}")
+    conn = Faraday.new(url: "http://localhost:3000")
     response = conn.post('/api/v1/users', auth_hash)
     json = JSON.parse(response.body, symbolize_names: true)
     user = User.new(json[:data])
