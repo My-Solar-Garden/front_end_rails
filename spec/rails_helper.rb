@@ -65,11 +65,10 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 Shoulda::Matchers.configure do |config|
-    config.integrate do |with|
-      with.test_framework :rspec
+  config.integrate do |with|
+    with.test_framework :rspec
 
-      with.library :rails
-    end
+    with.library :rails
   end
 
 def stub_omniauth
@@ -95,4 +94,9 @@ def stub_omniauth
       },
   }
   OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new(omniauth_google_hash)
+end
+end
+
+RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
 end

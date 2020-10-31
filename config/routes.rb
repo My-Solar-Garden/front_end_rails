@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#show'
 
   get '/privacy', to: 'privacy#index'
+  
+  get '/dashboard', to: 'dashboard#show'
+  
+  resources :gardens, expect: :index
 end

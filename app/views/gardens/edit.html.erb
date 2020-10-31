@@ -1,0 +1,24 @@
+<center>
+  <h3>Update Your Garden</h3>
+
+  <section class="new-garden">
+    <%= form_with url: "/gardens/#{@garden.id}", method: :patch ,local: true do |form| %>
+      <%= form.label :name %><br>
+      <%= form.text_field :name, value: @garden.name, required: true %><br><br>
+      <%= form.label :latitude %><br>
+      <%= form.number_field :latitude, value: @garden.latitude, step: :any, required: true %><br><br>
+      <%= form.label :longitude %><br>
+      <%= form.number_field :longitude, value: @garden.longitude, step: :any, required: true %><br><br>
+      <%= form.label :description %><br>
+      <%= form.text_area :description, value: @garden.description, required: true %>
+      <p>Would you like your garden to be private?</p>
+      <%= form.label :private, 'Yes' %>
+      <%= form.radio_button :private, true %>
+      <%= form.label :private, 'No' %>
+      <%= form.radio_button :private, false, checked: true %><br><br>
+      <%= form.submit "Update Garden" %><br><br>
+    <% end %>
+
+    <p>* A private garden means no one else using the app will be able to see your garden and it's information</p>
+  </section>
+</center>
