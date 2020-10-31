@@ -1,5 +1,3 @@
-require 'google/api_client/client_secrets.rb'
-
 class SessionsController < ApplicationController
   def create
     conn = Faraday.new(url: "https://solar-garden-be.herokuapp.com")
@@ -11,9 +9,15 @@ class SessionsController < ApplicationController
     redirect_to dashboard_path
   end
 
+  def destroy
+    #session[:user_id] = nil
+    flash[:success] = "You've made an impact today.  We hope to see you again tomorrow."
+    redirect_to root_path
+  end 
+  
   private
 
   def auth_hash
     request.env["omniauth.auth"]
-  end
+  end 
 end
