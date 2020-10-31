@@ -32,7 +32,7 @@ Things you may want to cover:
   * `http://localhost:3000/auth/google_oauth2/callback`
   * Click Create and you should receive a Client ID and Client secret. These will go in your application.yml file as:
 
-  * `GOOGLE_CLIENT_ID: '< your ID >''`
+  * `GOOGLE_CLIENT_ID: '< your ID >'`
   * `GOOGLE_CLIENT_SECRET: '< your ID >'`
 
 * Configuration
