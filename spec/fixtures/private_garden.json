@@ -1,0 +1,40 @@
+{
+  "data": {
+      "id": "3",
+      "type": "garden",
+      "attributes": {
+          "latitude": 39.75,
+          "longitude": -104.996577,
+          "name": "The Grove",
+          "description": "Corner garden",
+          "private": true
+      },
+      "relationships": {
+          "user_gardens": {
+              "data": [
+                  {
+                      "id": "3",
+                      "type": "user_garden"
+                  }
+              ]
+          },
+          "users": {
+              "data": [
+                  {
+                      "id": "3",
+                      "type": "user"
+                  }
+              ]
+          },
+          "sensors": {
+              "data": []
+          },
+          "garden_plants": {
+              "data": []
+          },
+          "plants": {
+              "data": []
+          }
+      }
+  }
+}

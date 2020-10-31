@@ -1,11 +1,20 @@
 class GardensController < ApplicationController
-  before_action :require_user
+  before_action :require_user, except: [:show]
+
 
   def show
-    # GET "api/v1/gardens/params[:id]" to get single garden
+    # move conn, response, parse to service and facade once we better udnerstand api response structure
+    conn = Faraday.new("https://solar-garden-be.herokuapp.com/api/v1/gardens/#{params[:id]}")
+    response = conn.get
+    parsed = JSON.parse(response.body, symbolize_names: true)
 
-              # this code is used only for testing
-    @garden = Garden.new(current_user.gardens.first)
+    garden = Garden.new(parsed[:data])
+
+    if !garden.is_private || current_users_garden?(garden)
+      @garden = garden
+    else
+      render_404
+    end
   end
 
   def new; end
@@ -37,5 +46,9 @@ class GardensController < ApplicationController
 
   def garden_params
     params.permit(:name, :latitude, :longitude, :private, :description)
+  end
+
+  def current_users_garden?(garden)
+      garden.user_ids.include?(current_user.id.to_s) if current_user
   end
 end
