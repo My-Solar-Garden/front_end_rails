@@ -48,9 +48,13 @@ RSpec.describe 'Welcome' do
     it "expects to see a description block section" do
       visit root_path
 
-      within ".w3-justify" do
-        expect(page).to have_content("Lorem ipsum dolor sit amet")
-      end
+      expect(page).to have_content("Lorem ipsum dolor sit amet")
+    end
+
+    it "expects to see a description of why we're using Google OAuth" do
+      visit root_path
+
+      expect(page).to have_content("Why we use Google for Login:")
     end
 
     it "expects to see an image section with automation" do
