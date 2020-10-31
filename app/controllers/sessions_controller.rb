@@ -1,5 +1,3 @@
-require 'google/api_client/client_secrets.rb'
-
 class SessionsController < ApplicationController
   def create
     conn = Faraday.new(url: "https://solar-garden-be.herokuapp.com")
