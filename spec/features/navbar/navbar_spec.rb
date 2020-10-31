@@ -187,12 +187,13 @@ RSpec.describe 'Navbar' do
 
   it "can see my gardens, my impact, learn more, profile and logout on learn more page" do
     visit "/learn_more"
-
+    save_and_open_page
     within "#navbar-#{@user.id}" do
       expect(page).to have_link('My Gardens')
       expect(page).to have_link('My Impact')
       expect(page).to have_link('Learn More')
       expect(page).to have_link('Profile')
+      expect(page).to have_link('Garden Search')
       expect(page).to have_link('Logout')
     end
   end
