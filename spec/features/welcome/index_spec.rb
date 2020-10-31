@@ -49,7 +49,6 @@ RSpec.describe 'Welcome' do
       visit root_path
 
       click_button "Be The Change. Learn More"
-      save_and_open_page
       expect(current_path).to eq(learn_more_path)
     end
 
