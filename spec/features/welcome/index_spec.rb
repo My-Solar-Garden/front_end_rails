@@ -45,5 +45,13 @@ RSpec.describe 'Welcome' do
       expect(page).to have_button("Be The Change. Learn More")
     end
 
+    it "expects to be sent to the Learn More page when Learn more button is clicked" do
+      visit root_path
+
+      click_button "Be The Change. Learn More"
+      save_and_open_page
+      expect(current_path).to eq(learn_more_path)
+    end
+
   end
 end
