@@ -42,13 +42,13 @@ RSpec.describe 'Welcome' do
     it "expects to see a Learn More button" do
       visit root_path
 
-      expect(page).to have_button("Be The Change. Learn More")
+      expect(page).to have_link("Be The Change. Learn More")
     end
 
     it "expects to be sent to the Learn More page when Learn more button is clicked" do
       visit root_path
 
-      click_button "Be The Change. Learn More"
+      click_link "Be The Change. Learn More"
       expect(current_path).to eq(learn_more_path)
     end
 
