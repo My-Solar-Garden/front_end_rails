@@ -3,6 +3,9 @@
     <section class='garden-info'>
       <h1><%= @garden.name %></h1>
       <h3><%= @garden.description %></h3>
+      <div class='garden-image'>
+        <%= image_tag('default-garden.png') %>
+      </div>
       <p>Latitude: <%= @garden.latitude %></p>
       <p>Longitude: <%= @garden.longitude %></p>
     </section>
