@@ -1,18 +1,16 @@
 class SessionsController < ApplicationController
   def create
-    if auth_hash["credentials"] == nil
-      render 'Google Authorization was unable to be completed.'
-      redirect_to root_path
-    end
-    if auth_hash["credentials"]  
-      render 'You have successfully logged in.'
-    end 
+    conn = Faraday.new(url: "#{ENV['RAILS_ENGINE_DOMAIN']}")
+    response = conn.post('/api/v1/users', auth_hash)
+    json = JSON.parse(response.body, symbolize_names: true)
+    user = json[:data][:id]
+    session[:user_id] = user
+    redirect_to dashboard_path
   end
 
   private
-  
+
   def auth_hash
     request.env["omniauth.auth"]
-  end 
+  end
 end
-
