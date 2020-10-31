@@ -79,11 +79,10 @@ RSpec.describe 'Welcome' do
       expect(page).to have_link("Login with Google")
     end
 
-    it "has a link to pbulic gardens (gardens index page)" do
+    it "has a link to public gardens (gardens index page)" do
       visit root_path
       expect(page).to have_link("Garden Search")
       click_link "Garden Search"
-      save_and_open_page
       expect(current_path).to eq('/gardens')
     end
     # We are not sure how to test this quite yet. I think once the OAuth is complete this can be tested.
