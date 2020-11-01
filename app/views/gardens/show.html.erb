@@ -38,8 +38,7 @@
           </div>
         <% end %>
       <% end %>
-
-      <%= button_to 'Add Sensor', "#" %>
+      <%= button_to 'Add Sensor', "/gardens/#{@garden.id}/sensors", method: :get %>
     </section>
   </article>
 
