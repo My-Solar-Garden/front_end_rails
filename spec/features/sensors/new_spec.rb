@@ -30,7 +30,20 @@ RSpec.describe 'New Sensor Page' do
 
     it 'has fields to add new sensor' do
       visit "/gardens/#{@garden.id}/sensors"
+      expect(page).to have_field('Sensor type')
+      expect(page).to have_field('Min threshold')
+      expect(page).to have_field('Max threshold')
+      expect(page).to have_button('Create Sensor')
+    end
 
+    it 'can fill in the fields and create a sensor' do
+      visit "/gardens/#{@garden.id}/sensors"
+      fill_in :sensor_type, with: 1
+      fill_in :min_threshold, with: 5
+      fill_in :max_threshold, with: 10
+      click_button 'Create Sensor'
+      save_and_open_page
+      expect(current_path).to eq(dashboard_path)
     end
   end
 end
