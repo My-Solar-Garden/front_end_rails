@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   resources :sensors, except: [:index]
   get "/learn_more", to: "learn_more#show"
   get "/logout", to: "sessions#destroy"
+  # namespace :gardens do
+    get '/gardens/:garden_id/sensors', to: 'sensors#new'
+    post '/gardens/:garden_id/sensors', to: 'sensors#create'
+  # end
 end
