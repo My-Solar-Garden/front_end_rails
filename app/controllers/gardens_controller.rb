@@ -3,11 +3,7 @@ class GardensController < ApplicationController
 
 
   def show
-    # move conn, response, parse to service and facade once we better udnerstand api response structure
-    conn = Faraday.new("https://solar-garden-be.herokuapp.com/api/v1/gardens/#{params[:id]}")
-    response = conn.get
-    parsed = JSON.parse(response.body, symbolize_names: true)
-    garden = Garden.new(parsed[:data])
+    garden = GardenFacade.garden_details(params)
     @sensors = garden.sensors.map { |sensor| Sensor.new(sensor)  }
 
     if !garden.is_private || current_users_garden?(garden)
