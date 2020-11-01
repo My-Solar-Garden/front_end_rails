@@ -203,31 +203,19 @@ RSpec.describe 'Navbar' do
     end
   end
 
-  # Turns out if you do the ApplicationController shortcut to make :current_user equal @user, then even if you do the destroy action, there isn't really a way to log the user out, so :current_user is still not nil, so the welcome page won't ever not show the nav bar in this test.  The way around this is to have in the 'before do' the user log in through OAuth or what have you, and then in the test below, have them log out.  That's not working out however.
   describe "logging in with Login button" do
-    before :each do
-      @user = User.new({id: 4,
-                      attributes: {
-                          email: '123@gmail.com' },
-                      relationships: {
-                          gardens: {
-                              data: [ ] }}})
-      visit root_path
+    it "I can log out" do
+      VCR.use_cassette('google_oauth') do
+        visit root_path
+        stub_omniauth
+        click_link 'Login with Google'
+        click_link 'Logout'
 
-      click_link "Login with Google"
-    end
-
-    it "no longer sees my gardens, my impact, learn more, profile and logout on welcome page when not logged in" do
-
-      click_on 'Logout'
-
-      expect(current_path).to eq(root_path)
-
-      expect(page).to_not have_link('My Gardens')
-      expect(page).to_not have_link('My Impact')
-      expect(page).to_not have_link('Learn More')
-      expect(page).to_not have_link('Profile')
-      expect(page).to_not have_link('Logout')
+        expect(page).to_not have_link('My Gardens')
+        expect(page).to_not have_link('My Impact')
+        expect(page).to_not have_link('Profile')
+        expect(page).to_not have_link('Logout')
+      end
     end
   end
 end
