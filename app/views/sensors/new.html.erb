@@ -1,0 +1,13 @@
+<center>
+  <h3>Create A New Sensor</h3>
+
+  <section class="new-garden">
+    <%= form_with url: '/sensors', local: true do |form| %>
+      <%= form.label :sensor_type %><br>
+      <%= form.text_field :sensor_type, required: true %><br><br>
+      <%= form.label :min_threshold %><br>
+      <%= form.number_field :min_threshold, required: true %><br><br>
+      <%= form.label :max_threshold %><br>
+      <%= form.text_field :max_threshold, required: true %><br><br>
+      <%= form.submit "Create Sensor" %><br><br>
+    <% end  %>
