@@ -23,6 +23,30 @@ RSpec.describe 'Learn More page' do
       expect(page).to have_css("img[src*='https://www.trees.com/sites/default/files/2019-09/soil-moisture-meter.jpg']")
       expect(page).to have_css("img[src*='https://www.cooking-hacks.com/media/cooking/images/documentation/open_garden/indoor_plant_4_small.png']")
     end
+
+    it "expects to be sent to the Learn More page when Learn more button is clicked" do
+      visit learn_more_path
+
+      click_link "Back to Welcome"
+      expect(current_path).to eq(root_path)
+    end
+
+    it "expects to see a Login with Google button" do
+      visit root_path
+
+      expect(page).to have_link("Login with Google")
+    end
+
+    it "expects to see a description as to why to log in with google block section" do
+      visit root_path
+
+      expect(page).to have_content("Login with Google to:")
+      expect(page).to have_content("- Set up a garden -")
+      expect(page).to have_content("- Track your sensor data -")
+      expect(page).to have_content("- Connect with your community -")
+      expect(page).to have_content("- Track your garden's carbon impact -")
+      expect(page).to have_content("- Track the health of your plants and soil -")
+    end
   end
 
   describe 'a logged in user' do
