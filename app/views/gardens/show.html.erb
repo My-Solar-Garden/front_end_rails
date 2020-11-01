@@ -28,12 +28,13 @@
     <section class='garden-sensors'>
       <h1>Your Garden Sensors</h1>
 
-      <% if @garden.sensors.empty? %>
+      <% if @sensors.empty? %>
         <p>You have no sensors</p>
       <% else %>
-        <% @garden.sensors.each do |sensor| %>
+        <% @sensors.each do |sensor| %>
           <div class="sensor-box">
-            <%= sensor[:sensor_type] %>
+            <%= sensor.id %>
+            <%= sensor.sensor_type %>
           </div>
         <% end %>
       <% end %>

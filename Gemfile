@@ -38,7 +38,7 @@ gem 'faraday'
 gem 'json'
 gem 'omniauth-google-oauth2'
 gem 'google-api-client', require: 'google/apis/people_v1'
-gem 'figaro'
+gem 'figaro', '~> 1.2.0'
 gem 'jquery-rails'
 
 
