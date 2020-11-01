@@ -1,36 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
-<body>
-
-<!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
   <!-- The App description Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:950px" id="app_info">
+  <div class="w3-container w3-content w3-center " style="max-width:950px" id="app_info">
     <h2 class="w3-wide">My Solar Garden Project</h2>
     <p class="w3-opacity"><i>We love the planet</i></p>
-    <p class="w3-justify">Here is where all of the amazing things we would like to say about our app will go.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p class="w3-justify">
+      My Solar Garden is an impact driven app here to support you in helping to keep our planet thriving.  By signing up with My Solar Garden, you will be able to track your personal garden's health, as well as your personal carbon impact.<br><br>
+
+      My Solar Garden can give you daily updates as to how much moisture and light it's receiving.  It will also provide cultivating innovative regenerative ideas for how to get your garden healthy and thriving to continue to make a positivie impact on our environment.<br><br>
+
+      My Solar Garden also allows you to see the growing community of Solar Gardeners, as well as their carbon impact.<br><br>
+
+      We want to live in balance with the diversity of our environemnet.  It all starts with healthy soil, and that's what we will help you learn how to cultivate. It starts with one person.<br><br>
+
+      That person, is you.
+    </p>
   </div>
 
   <!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center">
     <img src="https://i.imgur.com/ESOXGPn.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/kH35Q3r.jpg" style="width:916px">
   </div>
   <div class="mySlides w3-display-container w3-center">
     <img src="https://i.imgur.com/JZzjPUH.jpg" style="width:916px">
@@ -100,23 +89,33 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-container w3-content w3-center">
     <div class="w3-row w3-padding-32" >
 
+<!-- Visit the Learn More page button -->
+      <div class="w3-panel">
+        <%= link_to "Be The Change. Learn More", "/learn_more", class: "w3-btn w3-light-green w3-block" %>
+      </div>
+
 <!-- Login with Google button -->
       <div class="w3-panel">
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <%= link_to "Login with Google", "/auth/google_oauth2", class: "w3-btn w3-blue-grey w3-block" %>
       </div>
 
-<!-- Visit the Learn More page button -->
-      <div class="w3-panel">
-        <%= link_to "Be The Change. Learn More", "/learn_more", class: "w3-btn w3-light-green w3-block" %>
+      <div class="w3-panel w3-pale-blue w3-block">
+        <h4 >Login with Google to:</h4>
+        <p class="w3-justify w3-center ">
+          - Set up a garden - <br>
+          - Track your sensor data - <br>
+          - Connect with your community - <br>
+          - Track your garden's carbon impact - <br>
+          - Track the health of your plants and soil -
+        </p>
       </div>
-
     </div>
   </div>
 </div>
 <script>
 
-// Automatic Slideshow - change image every 4 seconds
+// Automatic Slideshow - change image every 6 seconds
 var myIndex = 0;
 carousel();
 
@@ -132,5 +131,3 @@ function carousel() {
   setTimeout(carousel, 6000);
 }
 </script>
-</body>
-</html>
