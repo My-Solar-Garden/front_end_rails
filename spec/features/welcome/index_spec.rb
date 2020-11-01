@@ -40,13 +40,18 @@ RSpec.describe 'Welcome' do
     it "expects to see a description block section" do
       visit root_path
 
-      expect(page).to have_content("Lorem ipsum dolor sit amet")
+      expect(page).to have_content("My Solar Garden is an impact")
     end
 
-    it "expects to see a description of why we're using Google OAuth" do
+    it "expects to see a description as to why to log in with google block section" do
       visit root_path
 
-      expect(page).to have_content("Why we use Google for Login:")
+      expect(page).to have_content("Login with Google to:")
+      expect(page).to have_content("- Set up a garden -")
+      expect(page).to have_content("- Track your sensor data -")
+      expect(page).to have_content("- Connect with your community -")
+      expect(page).to have_content("- Track your garden's carbon impact -")
+      expect(page).to have_content("- Track the health of your plants and soil -")
     end
 
     it "expects to see an image section with automation" do
