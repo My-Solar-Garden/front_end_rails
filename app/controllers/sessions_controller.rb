@@ -10,14 +10,14 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    #session[:user_id] = nil
+    session[:user_id] = nil
     flash[:success] = "You've made an impact today.  We hope to see you again tomorrow."
     redirect_to root_path
-  end 
-  
+  end
+
   private
 
   def auth_hash
     request.env["omniauth.auth"]
-  end 
+  end
 end
