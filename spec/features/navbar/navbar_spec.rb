@@ -32,11 +32,15 @@ RSpec.describe 'Navbar' do
 
     @sensor = Sensor.new({id: 1,
                       attributes: {
-                        garden_id: @garden[:id],
                         sensor_type: 1298,
                         min_threshold: 30,
                         max_threshold: 390
-                       }})
+                      },
+                      relationships:
+                      {
+                        garden:{data:{id:@garden[:id]}}
+                      }
+                       })
 
     @user = User.new({id: 4,
                     attributes: {
