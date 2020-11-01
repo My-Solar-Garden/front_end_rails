@@ -79,11 +79,11 @@ RSpec.describe 'Welcome' do
       expect(page).to have_link("Login with Google")
     end
     # We are not sure how to test this quite yet. I think once the OAuth is complete this can be tested.
-    xit "expects to be sent to the Google auth when the button is clicked" do
+    it "expects to be sent to dashboard when the button is clicked/user is logged in" do
       visit root_path
 
       click_link "Login with Google"
-      expect(current_path).to eq('/auth/:provider/callback')
+      expect(current_path).to eq('/dashboard')
     end
   end
 end
