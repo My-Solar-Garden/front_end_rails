@@ -315,7 +315,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   faraday
-  figaro
+  figaro (~> 1.2.0)
   google-api-client
   jquery-rails
   json
