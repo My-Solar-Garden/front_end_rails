@@ -168,5 +168,15 @@ RSpec.describe 'Show Garden Page' do
         expect(page).to have_content(@sensor2[:attributes][:sensor_type])
       end
     end
+
+    it 'can click the Add Sensor button' do
+      json_response = File.read('spec/fixtures/garden_with_sensors.json')
+      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3").to_return(status: 200, body: json_response)
+
+      visit "/gardens/3"
+      
+      click_on "Add Sensor"
+      expect(current_path).to eq("/gardens/3/sensors")
+    end
   end
 end
