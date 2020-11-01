@@ -4,13 +4,13 @@
       <h5>You have no gardens</h5>
     <% else %>
       <% current_user.gardens.each do |garden| %>
-        <section class='garden' id='garden-<%= garden[:id] %>'>
+        <section class='garden' id='garden-<% garden.id %>'>
           <div class='garden-image'>
-            <%= link_to image_tag('default-garden.png'), "/gardens/#{garden[:id]}" %>
+            <%= link_to image_tag('default-garden.png'), "/gardens/#{garden.id}" %>
           </div>
           <div class="garden-buttons">
-            <%= link_to image_tag('edit-garden.png'), edit_garden_path(garden[:id]), class: 'garden-button', alt: 'edit-garden' %>
-            <%= link_to image_tag('trash-garden.png'), "/gardens/#{garden[:id]}", method: :delete, class: 'garden-button', alt: 'delete-garden' %>
+            <%= link_to image_tag('edit-garden.png'), edit_garden_path(garden.id), class: 'garden-button', alt: 'edit-garden' %>
+            <%= link_to image_tag('trash-garden.png'), "/gardens/#{garden.id}", method: :delete, class: 'garden-button', alt: 'delete-garden' %>
           </div>
         </section>
       <% end %>
