@@ -2,7 +2,7 @@ class GardensController < ApplicationController
   before_action :require_user, except: [:show]
 
   def index
-    # right now, gardens are rendering based on user's gardens in json relationship hash. Could turn those into actual garden objects here but wasn't sure if that would impact performance.
+    @gardens = GardenFacade.create_garden_objects(current_user.gardens)
   end
 
   def show
@@ -27,7 +27,7 @@ class GardensController < ApplicationController
     # GET "api/v1/gardens/params[:id]" to obtain garden from id
 
               # this code is used only for testing
-    @garden = Garden.new(current_user.gardens.first)
+  @garden = Garden.new(current_user.gardens.first)
   end
 
   def update

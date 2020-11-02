@@ -5,21 +5,21 @@
     <% if current_user.gardens.empty? %>
       <h5>You have no gardens</h5>
     <% else %>
-      <% current_user.gardens.each do |garden| %>
-        <section class='garden' id='garden-<%= garden[:id] %>'>
-          <h3><%= garden[:attributes][:name] %></h3>
+      <% @gardens.each do |garden| %>
+        <section class='garden' id='garden-<%= garden.id %>'>
+          <h3><%= garden.name %></h3>
           <div class='garden-image'>  
             <%= image_tag 'default-garden.png' %>
           </div>
           <ul>
-            <li>Description: <%= garden[:attributes][:description] %></li>
-            <li>Latitude: <%= garden[:attributes][:latitude] %></li>
-            <li>Longitude: <%= garden[:attributes][:longitude] %></li>
-            <li>Private? <%= garden[:attributes][:private] %></li>
+            <li>Description: <%= garden.description %></li>
+            <li>Latitude: <%= garden.latitude %></li>
+            <li>Longitude: <%= garden.longitude %></li>
+            <li>Private? <%= garden.is_private %></li>
           </ul>
           <div class="garden-buttons">
-            <%= link_to image_tag('edit-garden.png'), edit_garden_path(garden[:id]), class: 'garden-button', alt: 'edit-garden' %>
-            <%= link_to image_tag('trash-garden.png'), "/gardens/#{garden[:id]}", method: :delete, class: 'garden-button', alt: 'delete-garden' %>
+            <%= link_to image_tag('edit-garden.png'), edit_garden_path(garden.id), class: 'garden-button', alt: 'edit-garden' %>
+            <%= link_to image_tag('trash-garden.png'), "/gardens/#{garden.id}", method: :delete, class: 'garden-button', alt: 'delete-garden' %>
           </div>
         </section>
       <% end %>

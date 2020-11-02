@@ -34,7 +34,10 @@ RSpec.describe 'New Garden Page' do
       description = 'My first garden'
 
       expected_output = File.read('spec/fixtures/new_garden.json')
+
       stub_request(:post, "https://solar-garden-be.herokuapp.com/api/v1/gardens?description=#{description}&latitude=#{latitude}&longitude=#{longitude}&name=#{name}&private=false&user_id=#{@user.id}").to_return(status: 200, body: expected_output, headers: {})
+
+      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/50").to_return(status: 200, body: expected_output, headers: {})
 
       visit new_garden_path
       fill_in :name, with: name
@@ -42,22 +45,16 @@ RSpec.describe 'New Garden Page' do
       fill_in :latitude, with: latitude
       fill_in :description, with: 'My first garden'
       find('#private_false').click
-
+      
       @user_with_garden = User.new({id: 1,
       attributes: {
-          email: '123@gmail.com' },
-      relationships: {
+        email: '123@gmail.com' },
+        relationships: {
           gardens: {
-              data: [ { id: 1,
-                        attributes: {
-                            name: name,
-                            latitude: latitude,
-                            longitude: longitude,
-                            description: description,
-                            private: false }} ] }}})
-
+            data: [ {id: '50', type: 'garden'}] }}})
+            
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_garden)
-      
+
       click_button 'Create Garden'
 
       expect(current_path).to eq(gardens_path)
