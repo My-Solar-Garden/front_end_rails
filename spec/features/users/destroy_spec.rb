@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe 'User profile page' do
+RSpec.describe 'User destroy' do
   describe 'a user' do
-    it 'can change their email' do
-      @user = User.new({id: 1,
+    it 'can delete their profile' do
+      user = User.new({id: 1,
                       attributes: {
                           email: '123@gmail.com' },
                       relationships: {
@@ -16,16 +16,15 @@ RSpec.describe 'User profile page' do
                                             description: 'Simple Garden',
                                             private: false }} ] }}})
 
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-      expected_output = File.read('spec/fixtures/user_update.json')
-      stub_request(:patch, "https://solar-garden-be.herokuapp.com/api/v1/users/1?id=1&update_user%5Bemail%5D=abc@gmail.com").
-           to_return(status: 200, body: expected_output, headers: {})
+      stub_request(:delete, "#{ENV['BE_URL']}/api/v1/users/#{user.id}").
+         to_return(status: 200, body: "", headers: {})
 
-      visit edit_user_path(@user.id)
-      fill_in :email, with: 'abc@gmail.com'
-      click_button 'Update Information'
-      expect(current_path).to eq(profile_path)
+      visit profile_path
+      click_button 'Delete Profile'
+      expect(current_path).to eq(root_path)
+      save_and_open_page
     end
   end
 end

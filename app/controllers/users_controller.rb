@@ -13,6 +13,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    Faraday.delete("#{ENV['BE_URL']}/api/v1/users/#{current_user.id}")
+    session[:user_id] = nil
+    flash[:success] = "Successfully deleted account"
     redirect_to root_path
   end
 
