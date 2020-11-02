@@ -1,0 +1,52 @@
+{
+    "data": {
+        "id": "1",
+        "type": "user",
+        "attributes": {
+            "id": 1,
+            "email": "abc@gmail.com"
+        },
+        "relationships": {
+            "user_gardens": {
+                "data": [
+                    {
+                        "id": "2",
+                        "type": "user_garden"
+                    },
+                    {
+                        "id": "3",
+                        "type": "user_garden"
+                    },
+                    {
+                        "id": "4",
+                        "type": "user_garden"
+                    },
+                    {
+                        "id": "5",
+                        "type": "user_garden"
+                    }
+                ]
+            },
+            "gardens": {
+                "data": [
+                    {
+                        "id": "9",
+                        "type": "garden"
+                    },
+                    {
+                        "id": "10",
+                        "type": "garden"
+                    },
+                    {
+                        "id": "11",
+                        "type": "garden"
+                    },
+                    {
+                        "id": "12",
+                        "type": "garden"
+                    }
+                ]
+            }
+        }
+    }
+}

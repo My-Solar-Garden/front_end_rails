@@ -36,7 +36,14 @@ RSpec.describe 'User profile page' do
       expect(email).to_not be_empty
     end
 
-    it 'has button to delete profile' do
+    it 'has button to update their profile' do
+      visit profile_path
+      expect(page).to have_button('Update Profile')
+      click_button('Update Profile')
+      expect(current_path).to eq(edit_user_path(@user.id))
+    end
+
+    it 'has button to delete their profile' do
       visit profile_path
       expect(page).to have_button('Delete Profile')
     end
