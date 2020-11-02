@@ -179,7 +179,7 @@ RSpec.describe 'Show Garden Page' do
 
       click_link @sensor1[:attributes][:sensor_type]
 
-      expect(current_path).to eq("/sensor/#{@sensor[:id]}")
+      expect(current_path).to eq("/sensors/#{@sensor1[:id]}")
     end
   end
 end
