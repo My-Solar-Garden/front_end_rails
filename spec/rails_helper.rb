@@ -7,6 +7,8 @@ require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+require 'webmock/rspec'
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -33,6 +35,8 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -70,6 +74,7 @@ Shoulda::Matchers.configure do |config|
 
     with.library :rails
   end
+end
 
 def stub_omniauth
   OmniAuth.config.test_mode = true
@@ -94,11 +99,6 @@ def stub_omniauth
       },
   }
   OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new(omniauth_google_hash)
-end
-end
-
-RSpec.configure do |config|
-  config.include FactoryBot::Syntax::Methods
 end
 
 VCR.configure do |config|
