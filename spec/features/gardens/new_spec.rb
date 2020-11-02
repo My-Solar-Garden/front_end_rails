@@ -41,6 +41,7 @@ RSpec.describe 'New Garden Page' do
       fill_in :longitude, with: longitude
       fill_in :latitude, with: latitude
       fill_in :description, with: 'My first garden'
+      find('#private_false').click
 
       @user_with_garden = User.new({id: 1,
       attributes: {
