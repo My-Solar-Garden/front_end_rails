@@ -39,7 +39,10 @@ RSpec.describe 'Navbar' do
                         },
                         relationships:
                         {
-                          garden:{data:{id:@garden[:id]}}
+                          garden:{data:{id:@garden[:id]}},
+                          garden_healths: {
+                              data: []
+                          }
                         }
                          })
 
