@@ -24,7 +24,6 @@ RSpec.describe 'User destroy' do
       visit profile_path
       click_button 'Delete Profile'
       expect(current_path).to eq(root_path)
-      save_and_open_page
     end
   end
 end
