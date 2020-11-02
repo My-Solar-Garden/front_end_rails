@@ -33,14 +33,19 @@ RSpec.describe 'New Garden Page' do
       expect(page).to have_button('Create Garden')
     end
 
-    it 'fills new garden form, submits and is redirect back to dashboard' do
+    it 'fills new garden form, submits and is redirected to garden index' do
       visit new_garden_path
       fill_in :name, with: 'Test'
       fill_in :longitude, with: 25.0000
       fill_in :latitude, with: 71.0000
       fill_in :description, with: 'My first garden'
       click_button 'Create Garden'
-      expect(current_path).to eq(dashboard_path)
+
+      expect(current_path).to eq(gardens_path)
+      expect(page).to have_content('The Grove')
+      expect(page).to have_content('My first garden')
+      expect(page).to have_content(25.000)
+      expect(page).to have_content(71.000)
     end
   end
 end

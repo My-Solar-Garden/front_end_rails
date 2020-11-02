@@ -86,7 +86,6 @@ RSpec.describe 'User Dashboard' do
         find(:xpath, "//a[contains(@alt, 'delete-garden')]").click
       end
       expect(current_path).to eq(dashboard_path)
-
     end
   end
 

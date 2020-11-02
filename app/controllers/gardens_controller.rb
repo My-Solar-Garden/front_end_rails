@@ -18,7 +18,7 @@ class GardensController < ApplicationController
   def create
     # POST "api/v1/gardens" to create a garden using strong params
     # note pass in current_user.id into hash for back-end association
-    redirect_to dashboard_path
+    redirect_to gardens_path
   end
 
   def edit
@@ -30,12 +30,12 @@ class GardensController < ApplicationController
 
   def update
     # PATCH "api/v1/gardens/params[:id]" to update the garden using strong params
-    redirect_to dashboard_path
+    redirect_to gardens_path
   end
 
   def destroy
     # DELETE api/v1/gardens/:id' to destroy garden
-    redirect_to dashboard_path
+    redirect_to gardens_path
   end
 
   private
@@ -45,6 +45,6 @@ class GardensController < ApplicationController
   end
 
   def current_users_garden?(garden)
-      garden.user_ids.include?(current_user.id.to_s) if current_user
+    garden.user_ids.include?(current_user.id.to_s) if current_user
   end
 end
