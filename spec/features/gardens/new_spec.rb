@@ -8,13 +8,7 @@ RSpec.describe 'New Garden Page' do
                           email: '123@gmail.com' },
                       relationships: {
                           gardens: {
-                              data: [ { id: 1,
-                                        attributes: {
-                                            name: 'My Garden',
-                                            latitude: 23.0,
-                                            longitude: 24.0,
-                                            description: 'Simple Garden',
-                                            private: false }} ] }}})
+                              data: [] }}})
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
@@ -34,18 +28,40 @@ RSpec.describe 'New Garden Page' do
     end
 
     it 'fills new garden form, submits and is redirected to garden index' do
+      name = 'The Grove'
+      longitude = 25.0000
+      latitude = 71.0000
+      description = 'My first garden'
+
       visit new_garden_path
-      fill_in :name, with: 'Test'
-      fill_in :longitude, with: 25.0000
-      fill_in :latitude, with: 71.0000
+      fill_in :name, with: name
+      fill_in :longitude, with: longitude
+      fill_in :latitude, with: latitude
       fill_in :description, with: 'My first garden'
+
+      @user_with_garden = User.new({id: 1,
+      attributes: {
+          email: '123@gmail.com' },
+      relationships: {
+          gardens: {
+              data: [ { id: 1,
+                        attributes: {
+                            name: name,
+                            latitude: latitude,
+                            longitude: longitude,
+                            description: description,
+                            private: false }} ] }}})
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_garden)
+      
       click_button 'Create Garden'
 
       expect(current_path).to eq(gardens_path)
-      expect(page).to have_content('The Grove')
-      expect(page).to have_content('My first garden')
-      expect(page).to have_content(25.000)
-      expect(page).to have_content(71.000)
+      expect(page).to have_content(name)
+      expect(page).to have_content(description)
+      expect(page).to have_content(longitude)
+      expect(page).to have_content(latitude)
+      expect(page).to have_content(false)
     end
   end
 end

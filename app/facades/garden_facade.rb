@@ -7,4 +7,8 @@ class GardenFacade
   def self.garden(data)
     Garden.new(data[:data])
   end
+
+  def self.new_garden(params, current_user_id)
+    GardenService.new_garden(params, current_user_id)
+  end
 end

@@ -7,9 +7,16 @@
     <% else %>
       <% current_user.gardens.each do |garden| %>
         <section class='garden' id='garden-<%= garden[:id] %>'>
-          <div class='garden-image'>
+          <h3><%= garden[:attributes][:name] %></h3>
+          <div class='garden-image'>  
             <%= image_tag 'default-garden.png' %>
           </div>
+          <ul>
+            <li>Description: <%= garden[:attributes][:description] %></li>
+            <li>Latitude: <%= garden[:attributes][:latitude] %></li>
+            <li>Longitude: <%= garden[:attributes][:longitude] %></li>
+            <li>Private? <%= garden[:attributes][:private] %></li>
+          </ul>
           <div class="garden-buttons">
             <%= link_to image_tag('edit-garden.png'), edit_garden_path(garden[:id]), class: 'garden-button', alt: 'edit-garden' %>
             <%= link_to image_tag('trash-garden.png'), "/gardens/#{garden[:id]}", method: :delete, class: 'garden-button', alt: 'delete-garden' %>

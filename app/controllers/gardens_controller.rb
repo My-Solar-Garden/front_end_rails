@@ -1,6 +1,7 @@
 class GardensController < ApplicationController
   before_action :require_user, except: [:show]
 
+  def index; end
 
   def show
     garden = GardenFacade.garden_details(params)
@@ -16,8 +17,7 @@ class GardensController < ApplicationController
   def new; end
 
   def create
-    # POST "api/v1/gardens" to create a garden using strong params
-    # note pass in current_user.id into hash for back-end association
+    GardenFacade.new_garden(garden_params, current_user.id)
     redirect_to gardens_path
   end
 
