@@ -7,4 +7,9 @@ class GardenFacade
   def self.garden(data)
     Garden.new(data[:data])
   end
+
+  def self.sensor_details
+    require "pry"; binding.pry
+    sensor = Sensor.new(GardenService.sensor_details)
+  end
 end
