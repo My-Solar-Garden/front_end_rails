@@ -164,8 +164,10 @@ RSpec.describe 'Show Garden Page' do
       within '.garden-sensors' do
         expect(page).to have_content(@sensor1[:id])
         expect(page).to have_content(@sensor1[:attributes][:sensor_type])
+        expect(page).to have_link(@sensor1[:attributes][:sensor_type])
         expect(page).to have_content(@sensor2[:id])
         expect(page).to have_content(@sensor2[:attributes][:sensor_type])
+        expect(page).to have_link(@sensor2[:attributes][:sensor_type])
       end
     end
   end
