@@ -8,7 +8,7 @@ class GardensController < ApplicationController
     response = conn.get
     parsed = JSON.parse(response.body, symbolize_names: true)
     garden = Garden.new(parsed[:data])
-    @sensors = garden.sensors.map { |sensor| Sensor.new(sensor)  }
+    @sensors = garden.sensors.map { |sensor| sensor[:id]  }
 
     if !garden.is_private || current_users_garden?(garden)
       @garden = garden

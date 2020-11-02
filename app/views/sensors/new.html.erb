@@ -5,7 +5,7 @@
   <section class="new-garden">
     <% #add drop down for sensor, and min-max threshold %>
 
-    <%= form_with url: '/sensors', local: true do |form| %>
+    <%= form_with url: sensors_path, local: true do |form| %>
       <%# form.label :sensor_type %><br>
       <p>Type of Sensor</p>
       <%= select_tag(:sensor_type, options_for_select(sensor_type_list), {class: "select-field"}) %>
