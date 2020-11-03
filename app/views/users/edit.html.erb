@@ -1,0 +1,11 @@
+<center>
+  <h3>Update Your Information</h3>
+
+  <section class="new-garden">
+    <%= form_with url: "/users/#{current_user.id}", method: :patch ,local: true do |form| %>
+      <%= form.label :email %><br>
+      <%= form.text_field :email, value: current_user.email, required: true %><br><br>
+      <%= form.submit "Update Information" %><br><br>
+    <% end %>
+  </section>
+</center>
