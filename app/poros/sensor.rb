@@ -7,6 +7,7 @@ class Sensor
               :garden_healths
 
   def initialize(data)
+    # require "pry"; binding.pry
     @id = data[:id]
     @garden_id = data[:relationships][:garden][:data][:id]
     @sensor_type = data[:attributes][:sensor_type]
