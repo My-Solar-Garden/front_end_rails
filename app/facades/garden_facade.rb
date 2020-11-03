@@ -1,7 +1,7 @@
 class GardenFacade
   def self.create_garden_objects(users_gardens) 
     users_gardens.map do |garden|
-      response = garden_details(garden)
+      garden_details(garden)
     end
   end
 
