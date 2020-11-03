@@ -4,7 +4,10 @@ class GardenService
   end
 
   def self.new_garden(params, current_user_id)
-    response = conn.post("api/v1/gardens?user_id=#{current_user_id}&longitude=#{params[:longitude]}&latitude=#{params[:latitude]}&name=#{params[:name]}&private=#{params[:private]}&description=#{params[:description]}")
+    response = conn.post("api/v1/gardens") do |req|
+      req.params = params
+      req.params[:user_id] = current_user_id
+    end
     JSON.parse(response.body, symbolize_names: true)
   end
 
