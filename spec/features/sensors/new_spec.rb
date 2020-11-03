@@ -42,9 +42,9 @@ RSpec.describe 'New Sensor Page' do
       fill_in :min_threshold, with: 5
       fill_in :max_threshold, with: 10
       click_button 'Create Sensor'
-      save_and_open_page
+
       expect(current_path).to eq("/gardens/#{@garden.id}")
-      expect(page.all(".sensor").size).to eq(6)
+      expect(page.all(".sensor").size).to eq(11)
     end
   end
 end
