@@ -11,6 +11,6 @@ class GardenService
   end
 
   def self.conn
-    Faraday.new(url: 'https://solar-garden-be.herokuapp.com/')
+    Faraday.new(url: "#{ENV['BE_URL']}")
   end
 end
