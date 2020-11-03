@@ -22,7 +22,7 @@ describe SensorFacade do
                          :garden_healths=>{
                            :data=>[]}}}}
             }
-    sensor = SensorFacade.sensor_details(params)
+    sensor = SensorFacade.sensor(params)
     expect(sensor).to be_a(Sensor)
   end
 end
