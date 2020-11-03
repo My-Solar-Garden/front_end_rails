@@ -3,7 +3,7 @@ require 'rails_helper'
 describe SensorFacade do
   it "should return sensor details for specific sensor" do
     params = {id: 1}
-    garden = SensorFacade.sensor_details(params)
+    sensor = SensorFacade.sensor_details(params)
 
     expect(sensor).to be_a(Sensor)
   end
@@ -23,5 +23,6 @@ describe SensorFacade do
                            :data=>[]}}}}
             }
     sensor = SensorFacade.sensor_details(params)
+    expect(sensor).to be_a(Sensor)
   end
 end
