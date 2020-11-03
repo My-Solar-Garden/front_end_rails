@@ -4,9 +4,10 @@ class SensorService
   end
 
   def self.post_parsed_json(url, sensor_params)
-    conn.post do |req|
+    response = conn.post do |req|
       req.params = sensor_params
     end
+    JSON.parse(response.body, symbolize_names: true)[:data]
   end
 
   def self.conn

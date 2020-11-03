@@ -8,7 +8,16 @@ class GardensController < ApplicationController
     response = conn.get
     parsed = JSON.parse(response.body, symbolize_names: true)
     garden = Garden.new(parsed[:data])
-    @sensors = garden.sensors.map { |sensor| sensor[:id]  }
+
+
+
+    conn1 = Faraday.new("https://solar-garden-be.herokuapp.com/api/v1/gardens/#{params[:id]}/sensors")
+    response1 = conn1.get
+    parsed1 = JSON.parse(response1.body, symbolize_names: true)
+    # binding.pry
+    # garden = Sensor.new(parsed[:data])
+    @sensors = parsed1[:data].map { |sensor| Sensor.new(sensor) }
+    # binding.pry 
 
     if !garden.is_private || current_users_garden?(garden)
       @garden = garden

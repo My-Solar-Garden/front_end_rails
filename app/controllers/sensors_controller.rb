@@ -7,8 +7,10 @@ class SensorsController < ApplicationController
   end
 
   def create
+    @garden_id = params[:garden_id]
+
     SensorFacade.new_sensor(sensor_params)
-    redirect_to "/gardens/#{params[:garden_id]}"
+    redirect_to garden_path(@garden_id)
   end
 
   def edit; end

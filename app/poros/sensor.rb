@@ -7,6 +7,7 @@ class Sensor
 
   def initialize(data)
     @id = data[:id]
+    # binding.pry 
     @garden_id = data[:relationships][:garden][:data][:id]
     @sensor_type = data[:attributes][:sensor_type]
     @min_threshold = data[:attributes][:min_threshold]
