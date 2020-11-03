@@ -59,7 +59,7 @@ RSpec.describe 'Navbar' do
     end
 
     it "can see my gardens, my impact, learn more, profile and logout on profile page" do
-      visit "/users/#{@user.id}"
+      visit profile_path
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('My Gardens')

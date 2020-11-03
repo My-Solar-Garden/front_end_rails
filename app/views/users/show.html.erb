@@ -1,0 +1,13 @@
+<section class='profile'>
+  <h1>Your Information</h1>
+
+  <ul>
+    <li class='id'>ID# <%= current_user.id %></li>
+    <li class='email'> Email: <%= current_user.email %></li>
+  </ul>
+
+  <%= button_to 'Update Profile', edit_user_path(current_user.id), method: :get %>
+  <br><br>
+  <%= button_to 'Delete Profile', "/users/#{current_user.id}", method: :delete %>
+  <p>** Note: Deleting your profile will also delete your gardens and all associated data that have been collected or entered in. Be sure you want to delete before hitting button.</p>
+</section>
