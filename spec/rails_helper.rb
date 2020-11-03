@@ -101,10 +101,10 @@ def stub_omniauth
   OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new(omniauth_google_hash)
 end
 
-VCR.configure do |config|
-  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
-  config.hook_into :webmock
-  config.default_cassette_options = { re_record_interval: 7.days, record: :new_episodes }
-  config.configure_rspec_metadata!
-  config.allow_http_connections_when_no_cassette = true
-end
+# VCR.configure do |config|
+#   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+#   config.hook_into :webmock
+#   config.default_cassette_options = { re_record_interval: 7.days, record: :new_episodes }
+#   config.configure_rspec_metadata!
+#   config.allow_http_connections_when_no_cassette = true
+# end

@@ -3,86 +3,76 @@ require 'rails_helper'
 RSpec.describe 'User Dashboard' do
   describe 'a logged in user' do
     before :each do
-      @user = User.new({id: 1,
+      @user_without_gardens = User.new({id: 1,
                       attributes: {
                           email: '123@gmail.com' },
                       relationships: {
                           gardens: {
                               data: [] }}})
 
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+      @user_with_gardens = User.new({id: 2,
+      attributes: {
+        email: 'planter@gmail.com' },
+        relationships: {
+          gardens: {
+            data: [ {id: '3', type: 'garden'}, {id: '4', type: 'garden'}] }}})
+
+      garden1 = File.read('spec/fixtures/public_garden.json')
+      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3").to_return(status: 200, body: garden1)
+
+      garden2 = File.read('spec/fixtures/private_garden.json')
+      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/4").to_return(status: 200, body: garden2)
     end
 
     it 'can visit their dashboard' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_without_gardens)
       visit dashboard_path
     end
 
     it 'sees a CTA to create a new garden if they have none' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_without_gardens)
       visit dashboard_path
       expect(page).to have_content('You have no gardens')
       expect(page).to have_button('Add New Garden')
     end
 
     it 'has a button to create a new garden' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_without_gardens)
       visit dashboard_path
       click_button('Add New Garden')
       expect(current_path).to eq(new_garden_path)
     end
 
     it 'displays the users gardens' do
-      @user.gardens << {id: 1,
-                        type: 'garden',
-                        attributes: {
-                            name: 'My Garden',
-                            latitude: 23.0,
-                            longitude: 24.0,
-                            description: 'Simple Garden',
-                            private: false }}
-      @user.gardens << {id: 2,
-                        type: 'garden',
-                        attributes: {
-                            name: 'My Garden',
-                            latitude: 23.0,
-                            longitude: 24.0,
-                            description: 'Simple Garden',
-                            private: false }}
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_gardens)
+
       visit dashboard_path
       
       expect(page).to have_css('.garden', count: 2)
 
-      within '#garden-1' do
+      within '#garden-3' do
         expect(page).to have_css('.garden-button', count: 2)
       end
 
-      within '#garden-2' do
+      within '#garden-4' do
         expect(page).to have_css('.garden-button', count: 2)
       end
     end
 
-    it 'has an image to edit and delete a garden' do
-      @user.gardens << { id: 1,
-                            attributes: {
-                                name: 'My Garden',
-                                latitude: 23.0,
-                                longitude: 24.0,
-                                description: 'Simple garden',
-                                is_private: false },
-                            relationships: { plants: {
-                                                data: []},
-                                              users: {
-                                                data: [{id: "#{@user.id}", type: "user"}]},
-                                              sensors: {
-                                                data: []}}}
+    xit 'has an image to edit and delete a garden' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_gardens)
+
+ 
       visit dashboard_path
 
-      within '#garden-1' do
+      within '#garden-3' do
         find(:xpath, "//a[contains(@alt, 'edit-garden')]").click
       end
 
-      expect(current_path).to eq("/gardens/1/edit")
+      expect(current_path).to eq("/gardens/3/edit")
       visit dashboard_path
 
-      within '#garden-1' do
+      within '#garden-4' do
         find(:xpath, "//a[contains(@alt, 'delete-garden')]").click
       end
       expect(current_path).to eq(dashboard_path)
