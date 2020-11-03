@@ -18,72 +18,13 @@
   </div>
 
   <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/ESOXGPn.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/JZzjPUH.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/y8P9c7q.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/5gjnhlp.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/Yl4Zwic.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/Ewyct7X.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/E9nPGky.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/r1IZlFr.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/43ja22n.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/v2jd9mo.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/rjBlkqp.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/yxPE2zw.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/vxkPqcp.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/RCxvJMX.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/4EOtT70.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/MbOwjJK.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/LidCyvh.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/n4Rlajh.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/TiNcO3V.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/ORgmfoY.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/IqmfCSG.jpg" style="width:916px">
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://i.imgur.com/uf6q7DV.jpg" style="width:916px">
-  </div>
+  <% images = ['ESOXGPn', 'JZzjPUH', 'y8P9c7q', '5gjnhlp', 'Yl4Zwic', 'Ewyct7X', 'E9nPGky', 'r1IZlFr', '43ja22n', 'v2jd9mo', 'rjBlkqp', 'yxPE2zw', 'vxkPqcp', 'RCxvJMX', '4EOtT70', 'MbOwjJK', 'LidCyvh', 'n4Rlajh', 'TiNcO3V', 'ORgmfoY', 'IqmfCSG','uf6q7DV']%>
+
+  <% images.each do |image|  %>
+    <div class="mySlides w3-display-container w3-center">
+      <img src=<%= "https://i.imgur.com/#{image}.jpg" %> style="width:916px">
+    </div>
+  <% end %>
 
 <!-- Clickable buttons -->
   <div class="w3-container w3-content w3-center">
