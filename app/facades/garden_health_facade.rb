@@ -4,6 +4,11 @@ class GardenHealthFacade
     garden_health(parsed_json, sensor_id)
   end
 
+  def self.garden_health_search(start, stop, sensor_id)
+    parsed_json = GardenHealthService.garden_health_search(start, stop, sensor_id)
+    garden_health(parsed_json, sensor_id)
+  end
+
   def self.garden_health(data, sensor_id)
     GardenHealth.new(data[:data])
   end
