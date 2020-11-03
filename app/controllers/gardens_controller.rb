@@ -15,11 +15,11 @@ class GardensController < ApplicationController
     response1 = conn1.get
     parsed1 = JSON.parse(response1.body, symbolize_names: true)
     # binding.pry
-    # garden = Sensor.new(parsed[:data])
     @sensors = parsed1[:data].map { |sensor| Sensor.new(sensor) }
-    # binding.pry 
 
-    if !garden.is_private || current_users_garden?(garden)
+    #with this commented out we can hit the show page
+    if current_user.gardens != nil
+    # if !garden.is_private || current_users_garden?(garden)
       @garden = garden
     else
       render_404
