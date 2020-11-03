@@ -36,4 +36,8 @@ RSpec.describe 'Sensor show page' do
   it 'shows a sensors last 5 readings' do
     visit "/sensors/1"
   end
+
+  it 'can search a sensors readings by date' do
+    visit "/sensors/1"
+  end
 end
