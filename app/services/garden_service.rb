@@ -10,11 +10,15 @@ class GardenService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.sensor_details
-    get_parsed_json("api/v1/sensors/#{params[:id]}")
+  def self.garden_health_details(params)
+    get_parsed_json("/api/v1/garden_healths/#{params[:id]}")
+  end
+
+  def self.sensor_details(params)
+    get_parsed_json("/api/v1/sensors/#{params[:id]}")
   end
 
   def self.conn
-    Faraday.new(url: 'https://solar-garden-be.herokuapp.com/')
+    Faraday.new(url: 'https://solar-garden-be.herokuapp.com')
   end
 end
