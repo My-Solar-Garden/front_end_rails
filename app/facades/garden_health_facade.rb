@@ -10,6 +10,6 @@ class GardenHealthFacade
   end
 
   def self.garden_health(data, sensor_id)
-    GardenHealth.new(data[:data])
+    GardenHealth.new(data[:data], sensor_id)
   end
 end

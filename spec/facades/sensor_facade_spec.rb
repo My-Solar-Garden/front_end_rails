@@ -23,6 +23,7 @@ describe SensorFacade do
                            :data=>[]}}}}
             }
     sensor = SensorFacade.sensor(params)
+
     expect(sensor).to be_a(Sensor)
   end
 end

@@ -38,6 +38,32 @@ RSpec.describe 'Sensor show page' do
   end
 
   it 'can search a sensors readings by date' do
-    visit "/sensors/1"
+    params = {:data=>
+                    {:id=>"1",
+                     :type=>"garden_health",
+                     :attributes=>{
+                       :id=>1,
+                       :reading=>700.0,
+                       :reading_type=>"light",
+                       created_at: "2020-10-29",
+                     }
+                   }
+            }
+    garden_health = GardenHealthFacade.garden_health(params, 1)
+    params = {:data=>
+                    {:id=>"1",
+                     :type=>"sensor",
+                     :attributes=>{
+                       :min_threshold=>1,
+                       :max_threshold=>4,
+                       :sensor_type=>"light",
+                     :relationships=>{
+                       :garden=>{
+                         :data=>[id: 1]},
+                         :garden_healths=>{
+                           :data=>[]}}}}
+            }
+    sensor = SensorFacade.sensor(params)
+    visit "/sensors/1/garden_healths/search?start=2020-10-10&end=2020-10-30&sensor_id=1"
   end
 end

@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   resources :gardens, except: [:index]
   resources :plants, except: [:index]
   resources :sensors, except: [:index] do
-    get '/garden_health/search', to: 'garden_health#index'
+    get '/garden_healths/search', to: 'garden_healths#show'
   end
 end
