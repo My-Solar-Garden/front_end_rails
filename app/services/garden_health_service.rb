@@ -1,13 +1,13 @@
-class GardenService
-  def self.garden_details(params)
-    get_parsed_json("api/v1/gardens/#{params[:id]}")
-  end
-
+class GardenHealthService
   def self.get_parsed_json(url, params = {})
     response = conn.get(url) do |req|
       req.params = params
     end
     JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.garden_health_details(params)
+    get_parsed_json("/api/v1/garden_healths/#{params[:id]}")
   end
 
   def self.conn
