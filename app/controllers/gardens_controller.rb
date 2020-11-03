@@ -7,7 +7,11 @@ class GardensController < ApplicationController
 
   def show
     garden = GardenFacade.garden_details(params)
-    @sensors = garden.sensors.map { |sensor| Sensor.new(sensor)  }
+
+    conn1 = Faraday.new("https://solar-garden-be.herokuapp.com/api/v1/gardens/#{params[:id]}/sensors")
+    response1 = conn1.get
+    parsed1 = JSON.parse(response1.body, symbolize_names: true)
+    @sensors = parsed1[:data].map { |sensor| Sensor.new(sensor) }
 
     if !garden.is_private || current_users_garden?(garden)
       @garden = garden
