@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def create
     conn = Faraday.new(url: "https://solar-garden-be.herokuapp.com")
+      # refactor into a facade, environ variable    ^
     response = conn.post('/api/v1/users', auth_hash)
     json = JSON.parse(response.body, symbolize_names: true)
     user = User.new(json[:data])

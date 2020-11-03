@@ -34,7 +34,7 @@
         <% @sensors.each do |sensor| %>
           <div class="sensor-box">
             <%= sensor.id %>
-            <%= sensor.sensor_type %>
+            <%= link_to sensor.sensor_type, "/sensors/#{sensor.id}" %>
           </div>
         <% end %>
       <% end %>

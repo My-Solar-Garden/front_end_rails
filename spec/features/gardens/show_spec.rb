@@ -164,9 +164,22 @@ RSpec.describe 'Show Garden Page' do
       within '.garden-sensors' do
         expect(page).to have_content(@sensor1[:id])
         expect(page).to have_content(@sensor1[:attributes][:sensor_type])
+        expect(page).to have_link(@sensor1[:attributes][:sensor_type])
         expect(page).to have_content(@sensor2[:id])
         expect(page).to have_content(@sensor2[:attributes][:sensor_type])
+        expect(page).to have_link(@sensor2[:attributes][:sensor_type])
       end
+    end
+
+    it "expects sensor link to link to sensor show page" do
+      json_response = File.read('spec/fixtures/garden_with_sensors.json')
+      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3").to_return(status: 200, body: json_response)
+
+      visit "/gardens/3"
+
+      click_link @sensor1[:attributes][:sensor_type]
+
+      expect(current_path).to eq("/sensors/#{@sensor1[:id]}")
     end
   end
 end
