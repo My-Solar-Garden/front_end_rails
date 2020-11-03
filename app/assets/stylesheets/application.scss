@@ -15,3 +15,7 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 .solar-nav {float: right}
+
+ul {
+  list-style-type: none;
+}
