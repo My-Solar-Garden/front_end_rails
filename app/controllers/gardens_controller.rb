@@ -7,23 +7,20 @@ class GardensController < ApplicationController
     conn = Faraday.new("https://solar-garden-be.herokuapp.com/api/v1/gardens/#{params[:id]}")
     response = conn.get
     parsed = JSON.parse(response.body, symbolize_names: true)
-    garden = Garden.new(parsed[:data])
+    @garden = Garden.new(parsed[:data])
 
 
 
     conn1 = Faraday.new("https://solar-garden-be.herokuapp.com/api/v1/gardens/#{params[:id]}/sensors")
     response1 = conn1.get
     parsed1 = JSON.parse(response1.body, symbolize_names: true)
-    # binding.pry
     @sensors = parsed1[:data].map { |sensor| Sensor.new(sensor) }
 
-    #with this commented out we can hit the show page
-    if current_user.gardens != nil
-    # if !garden.is_private || current_users_garden?(garden)
-      @garden = garden
-    else
-      render_404
-    end
+#     if !garden.is_private || current_users_garden?(garden)
+#       @garden = garden
+#     else
+#       render_404
+#     end
   end
 
   def new; end
