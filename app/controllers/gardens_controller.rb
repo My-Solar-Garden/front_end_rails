@@ -24,10 +24,7 @@ class GardensController < ApplicationController
   end
 
   def edit
-    # GET "api/v1/gardens/params[:id]" to obtain garden from id
-
-              # this code is used only for testing
-  @garden = Garden.new(current_user.gardens.first)
+    @garden = GardenFacade.garden_details(params)
   end
 
   def update

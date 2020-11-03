@@ -59,21 +59,20 @@ RSpec.describe 'User Dashboard' do
       end
     end
 
-    xit 'has an image to edit and delete a garden' do
+    it 'has an image to edit and delete a garden' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_gardens)
 
- 
       visit dashboard_path
 
       within '#garden-3' do
-        find(:xpath, "//a[contains(@alt, 'edit-garden')]").click
+        find('.edit-button').click
       end
 
       expect(current_path).to eq("/gardens/3/edit")
       visit dashboard_path
 
       within '#garden-4' do
-        find(:xpath, "//a[contains(@alt, 'delete-garden')]").click
+        find('.delete-button').click
       end
       expect(current_path).to eq(dashboard_path)
     end
