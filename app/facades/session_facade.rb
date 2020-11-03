@@ -1,10 +1,10 @@
 class SessionFacade
-  def self.session_details(params, auth_hash)
-    parsed_json = SessionService.session_details(params, auth_hash)
-    session(parsed_json)
+  def self.session_details(auth_hash)
+    session_response = SessionService.session_details(auth_hash)
+    session(session_response)
   end
 
-  def self.session(data)
-    User.new(data[:data])
+  def self.session(session_response)
+    User.new(session_response[:data])
   end
 end
