@@ -3,7 +3,6 @@ class GardenHealthService
     response = conn.get(url) do |req|
       req.params = params
     end
-    require "pry"; binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 
