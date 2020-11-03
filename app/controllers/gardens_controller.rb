@@ -1,6 +1,9 @@
 class GardensController < ApplicationController
   before_action :require_user, except: [:show]
 
+  # def index
+  #   @gardens = GardenFacade.create_garden_objects(current_user.gardens)
+  # end
 
   def show
     garden = GardenFacade.garden_details(params)
@@ -16,16 +19,12 @@ class GardensController < ApplicationController
   def new; end
 
   def create
-    # POST "api/v1/gardens" to create a garden using strong params
-    # note pass in current_user.id into hash for back-end association
+    GardenFacade.new_garden(garden_params, current_user.id)
     redirect_to dashboard_path
   end
 
   def edit
-    # GET "api/v1/gardens/params[:id]" to obtain garden from id
-
-              # this code is used only for testing
-    @garden = Garden.new(current_user.gardens.first)
+    @garden = GardenFacade.garden_details(params)
   end
 
   def update
@@ -35,7 +34,7 @@ class GardensController < ApplicationController
 
   def destroy
     # DELETE api/v1/gardens/:id' to destroy garden
-    redirect_to dashboard_path
+    redirect_back(fallback_location: dashboard_path)
   end
 
   private
@@ -45,6 +44,6 @@ class GardensController < ApplicationController
   end
 
   def current_users_garden?(garden)
-      garden.user_ids.include?(current_user.id.to_s) if current_user
+    garden.user_ids.include?(current_user.id.to_s) if current_user
   end
 end
