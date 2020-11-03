@@ -9,6 +9,6 @@ class SessionService
   end
 
   def self.conn
-    Faraday.new(url: "#{ENV['BE_URL']}" )
+    Faraday.new(url: ENV['BE_URL'])
   end
 end
