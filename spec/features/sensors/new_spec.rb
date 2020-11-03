@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'New Sensor Page' do
   describe 'a logged in user' do
     before :each do
-    @public_garden = Garden.new({ id: 1,
+    @public_garden = Garden.new({ id: 4,
               attributes: {
                   name: 'Cole Community Garden',
                   latitude: 39.45,
@@ -38,15 +38,13 @@ RSpec.describe 'New Sensor Page' do
 
     it 'can fill in the fields and create a sensor' do
       visit "/gardens/#{@garden.id}/sensors"
-      # save_and_open_page
       select 'moisture', from: :sensor_type
       fill_in :min_threshold, with: 5
       fill_in :max_threshold, with: 10
       click_button 'Create Sensor'
-      expect(current_path).to eq("/gardens/#{@garden.id}")
-      # visit "/gardens/#{@garden.id}"
       save_and_open_page
-      # expect(page.all(".sensor").size).to eq(38)
+      expect(current_path).to eq("/gardens/#{@garden.id}")
+      expect(page.all(".sensor").size).to eq(6)
     end
   end
 end
