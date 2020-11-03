@@ -8,8 +8,9 @@ class Plant
               :water_requirements,
               :when_to_plant,
               :harvest_time,
-              :comment_pests
-              
+              :common_pests,
+              :gardens
+
   def initialize(data)
     @id = data[:id]
     @image = data[:attributes][:image]
@@ -20,6 +21,11 @@ class Plant
     @water_requirements = data[:attributes][:water_requirements]
     @when_to_plant = data[:attributes][:when_to_plant]
     @harvest_time = data[:attributes][:harvest_time]
-    @comment_pests = data[:attributes][:comment_pests]
+    @common_pests = data[:attributes][:common_pests]
+    @gardens = set_gardens(data)
+  end
+
+  def set_gardens(data)
+    data[:relationships][:gardens][:data] rescue nil
   end
 end
