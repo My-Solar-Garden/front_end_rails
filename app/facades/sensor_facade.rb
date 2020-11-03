@@ -4,6 +4,11 @@ class SensorFacade
     sensor(parsed_json)
   end
 
+  def self.all_sensors_for_garden(params)
+    parsed_json = SensorService.all_sensors_for_garden(params)
+    parsed_json.map { |sensor_data| sensor(sensor_data) }
+  end
+
   def self.sensor(data)
     Sensor.new(data)
   end

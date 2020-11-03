@@ -12,4 +12,15 @@ describe SensorFacade do
 
     expect(sensor).to be_a(Sensor)
   end
+
+  it "can return all sensors belonging to a garden" do
+    params = {id: 1}
+    sensors = File.read('spec/fixtures/sensors.json')
+
+    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/#{params[:id]}/sensors").to_return(status: 200, body: sensors, headers: {})
+
+    sensors = SensorFacade.all_sensors_for_garden(params)
+    expect(sensors).to be_an(Array)
+    expect(sensors.all? { |sensor| sensor.class == Sensor }).to be_truthy
+  end
 end
