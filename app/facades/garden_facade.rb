@@ -8,8 +8,11 @@ class GardenFacade
     Garden.new(data[:data])
   end
 
-  def self.sensor_details
-    require "pry"; binding.pry
-    sensor = Sensor.new(GardenService.sensor_details)
+  def self.sensor_details(params)
+    sensor = Sensor.new(GardenService.sensor_details(params)[:data])
+  end
+
+  def self.garden_health_details(params, sensor_id)
+    garden_healths = GardenHealth.new(GardenService.garden_health_details(params)[:data], sensor_id)
   end
 end
