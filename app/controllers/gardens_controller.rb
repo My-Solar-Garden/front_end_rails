@@ -1,9 +1,9 @@
 class GardensController < ApplicationController
   before_action :require_user, except: [:show]
 
-  def index
-    @gardens = GardenFacade.create_garden_objects(current_user.gardens)
-  end
+  # def index
+  #   @gardens = GardenFacade.create_garden_objects(current_user.gardens)
+  # end
 
   def show
     garden = GardenFacade.garden_details(params)
@@ -20,7 +20,7 @@ class GardensController < ApplicationController
 
   def create
     GardenFacade.new_garden(garden_params, current_user.id)
-    redirect_to gardens_path
+    redirect_to dashboard_path
   end
 
   def edit
@@ -29,7 +29,7 @@ class GardensController < ApplicationController
 
   def update
     # PATCH "api/v1/gardens/params[:id]" to update the garden using strong params
-    redirect_to gardens_path
+    redirect_to dashboard_path
   end
 
   def destroy

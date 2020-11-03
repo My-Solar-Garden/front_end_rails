@@ -27,7 +27,7 @@ RSpec.describe 'New Garden Page' do
       expect(page).to have_button('Create Garden')
     end
 
-    it 'fills new garden form, submits and is redirected to garden index' do
+    it 'fills new garden form, submits and is redirected to dashboard' do
       name = 'The Grove'
       longitude = 25.0000
       latitude = 71.0000
@@ -54,10 +54,9 @@ RSpec.describe 'New Garden Page' do
             data: [ {id: '50', type: 'garden'}] }}})
             
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_garden)
-
       click_button 'Create Garden'
 
-      expect(current_path).to eq(gardens_path)
+      expect(current_path).to eq(dashboard_path)
       expect(page).to have_content(name)
       expect(page).to have_content(description)
       expect(page).to have_content(longitude)
