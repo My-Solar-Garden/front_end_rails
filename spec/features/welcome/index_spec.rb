@@ -83,7 +83,7 @@ RSpec.describe 'Welcome' do
       visit root_path
 
       click_link "Login with Google"
-      expect(current_path).to eq('/dashboard')
+      expect(current_path).to eq(dashboard_path)
     end
   end
 end
