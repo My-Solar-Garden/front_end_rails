@@ -1,10 +1,10 @@
 class SessionsController < ApplicationController
   def create
-    conn = Faraday.new(url: "https://solar-garden-be.herokuapp.com")
-      # refactor into a facade, environ variable    ^
-    response = conn.post('/api/v1/users', auth_hash)
-    json = JSON.parse(response.body, symbolize_names: true)
-    user = User.new(json[:data])
+    user = SessionFacade.session_details(params, auth_hash)
+    # conn = Faraday.new(url: "https://solar-garden-be.herokuapp.com")
+    # response = conn.post('/api/v1/users', auth_hash)
+    # json = JSON.parse(response.body, symbolize_names: true)
+    # user = User.new(json[:data])
     session[:user_id] = user.id
     flash[:notice] = 'You have successfully logged in'
     redirect_to dashboard_path

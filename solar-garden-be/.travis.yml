@@ -1,0 +1,25 @@
+language: ruby
+rbenv:
+- 2.5.3
+addons:
+  postgresql: 9.6
+notifications:
+  email:
+    on_success: never
+    on_failure: never
+cache:
+- bundler
+script:
+- bundle exec rails db:{create,migrate} RAILS_ENV=test
+- bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: vdqF+9PKlTKJsJHOxR1VsUvvx4pxYm/L2p2DtDwoM1dZv+XVordTCClbmJ9inV0InXyZcye/V/0fthwftUBaryMNeZMZfPZLHGM/0cfcyScTxAgA6LoQ+QfoRqUNF8QlEjxCVW/bdKBSK4RPQ3l1StWrtiHFbtyatqeU4uMj2m7K3ZovvaWYQNV5dc4tNjVO+Klw/zQlEe+2Y+8DafMLc6/0G36R9zQcfex9w5ZUPAiCjZipLNtd4VSgyGmtghQ3MuRGuuTTGYyoPOQl4LWu6+gj8MdMwnYbwP/N2RGinBw6ljO4MLSBEW1Pz1ezMr+2x0jop+K6Y9Dj8Ai6KJc6IwDP/LfzFxmCmUWCK2PKMwsPzD9rSbhd343D/36iJxBUXHxR2qTVsnq6d8hrSFASLRnIG7JqdpvSkwVy2PxaD6TleEAp5Y9LTTAK1nCxZZw8O/aCX+19i4XIHLDi1Hr7qSPEEPrzXf8V4SthVGX28EzpyF6vSrUqcrgEiD4kjZWAok8KWNTfC7f+4mZnGQE3MuPPs7fGAqklA+zjGxLexfkKOovNxtoAgaUy+tgYbYgw4sB7ISI7bQtTIKxPGnDpFp0aIL7J3P/uMGMdIu3YT0y6KzeJctWQDmEs9yJKwDkiMNm5Tj+80G7aeYJSRgjxH2EcuEzcM2W2izzldC9ddII=
+  app: solar-garden-be
+  on:
+    repo: My-Solar-Garden/rails_backend
+    branch: main
+  skip_cleanup: 'true'
+  run:
+  - bundle exec rails db:migrate
