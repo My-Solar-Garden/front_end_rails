@@ -26,12 +26,14 @@ RSpec.describe 'Sensor show page' do
     @garden = @user.gardens.first
 
     public_response = File.read('spec/fixtures/sensors_with_readings.json')
-    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/sensors/#{@sensor.id}").to_return(status: 200, body: public_response)
+    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/sensors/1").to_return(status: 200, body: public_response)
+    public_response = File.read('spec/fixtures/garden_healths.json')
+    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/garden_healths/1").to_return(status: 200, body: public_response)
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
   end
 
   it 'shows a sensors last 5 readings' do
-    visit "/api/v1/sensors/#{@sensor.id}"
+    visit "/sensors/1"
   end
 end
