@@ -2,7 +2,7 @@ class SensorsController < ApplicationController
   before_action :require_user
 
   def show
-    @sensor = GardenFacade.sensor_details(params)
+    @sensor = SensorFacade.sensor_details(params)
   end
 
   def new; end
