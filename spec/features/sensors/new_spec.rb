@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'New Sensor Page' do
   describe 'a logged in user' do
     before :each do
-    @public_garden = Garden.new({ id: 4,
+    @public_garden = Garden.new({ id: 7,
               attributes: {
                   name: 'Cole Community Garden',
                   latitude: 39.45,
@@ -37,14 +37,29 @@ RSpec.describe 'New Sensor Page' do
     end
 
     it 'can fill in the fields and create a sensor' do
-      visit "/gardens/#{@garden.id}/sensors"
-      select 'moisture', from: :sensor_type
-      fill_in :min_threshold, with: 5
-      fill_in :max_threshold, with: 10
-      click_button 'Create Sensor'
+      sensor_type = 'moisture'
+      min = 5
+      max = 10
 
+      visit "/gardens/#{@garden.id}/sensors"
+
+      select sensor_type, from: :sensor_type
+      fill_in :min_threshold, with: min
+      fill_in :max_threshold, with: max
+
+      new_sensor = File.read('spec/fixtures/new_sensor.json')
+
+      stub_request(:post, "https://solar-garden-be.herokuapp.com/api/v1/sensors?garden_id=#{@garden.id}&sensor_type=#{sensor_type}&min_threshold=#{min}&max_threshold=#{max}").to_return(status: 200, body: new_sensor, headers: {})
+
+      click_button 'Create Sensor'
       expect(current_path).to eq("/gardens/#{@garden.id}")
-      expect(page.all(".sensor").size).to eq(11)
+
+      garden_with_sensors = File.read('spec/fixtures/garden_with_sensors.json')
+
+      stub_request(:post, "https://solar-garden-be.herokuapp.com/api/v1/gardens/#{@garden.id}").to_return(status: 200, body: garden_with_sensors, headers: {})
+
+      visit "/gardens/#{@garden.id}"
+      expect(page.all(".sensor").size).to eq(3)
     end
   end
 end
