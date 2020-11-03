@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
   resources :users, except: [:index, :show]
   resources :gardens, except: [:index]
-  resources :plants, except: [:index]
   resources :sensors, except: [:index]
+  namespace :plants do
+    get '/search', to: 'search#index'
+  end
+  resources :plants, except: [:index]
 end

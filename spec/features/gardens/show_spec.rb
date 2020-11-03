@@ -92,7 +92,7 @@ RSpec.describe 'Show Garden Page' do
 
         within '.garden-plants' do
           expect(page).to have_content('You have no plants')
-          expect(page).to have_button('Add Plant')
+          expect(page).to have_button('Find Plants')
         end
 
         within '.garden-sensors' do
@@ -176,10 +176,21 @@ RSpec.describe 'Show Garden Page' do
       stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3").to_return(status: 200, body: json_response)
 
       visit "/gardens/3"
-
       click_link @sensor1[:attributes][:sensor_type]
 
       expect(current_path).to eq("/sensors/#{@sensor1[:id]}")
+    end
+
+    it "has search for plants field and add button with correct path" do
+      json_response = File.read('spec/fixtures/garden_with_sensors.json')
+      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3").to_return(status: 200, body: json_response)
+
+      visit "/gardens/3"
+      
+      expect(page).to have_field('search_term')
+      expect(page).to have_button('Find Plants')
+      click_on "Find Plants"
+      expect(current_path).to eq('/plants/search')
     end
   end
 end
