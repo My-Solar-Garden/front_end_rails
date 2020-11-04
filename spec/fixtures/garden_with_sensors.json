@@ -1,65 +1,43 @@
 {
-  "data": {
-      "id": "3",
-      "type": "garden",
-      "attributes": {
-          "latitude": 39.75,
-          "longitude": -104.996577,
-          "name": "The Grove",
-          "description": "Corner garden",
-          "private": false
-      },
-      "relationships": {
-          "user_gardens": {
-              "data": [
-                  {
-                      "id": "3",
-                      "type": "user_garden"
-                  }
-              ]
-          },
-          "users": {
-              "data": [
-                  {
-                      "id": "3",
-                      "type": "user"
-                  }
-              ]
-          },
-          "sensors": {
-              "data": [
-                {
-                  "id": "1",
-                  "type": "sensor",
-                  "attributes":
-                  {
-                    "min_threshold": 9, "max_threshold": 12, "sensor_type": "moisture"
-                  },
-                  "relationships":
-                  {
-                    "garden": {"data": {"id": "3","type": "garden"}}, "garden_healths": {"data": []}
-                  }
-                },
-                {
-                  "id": "2",
-                  "type": "sensor",
-                  "attributes":
-                  {
-                    "min_threshold": 9, "max_threshold": 12, "sensor_type": "temperature"
-                  },
-                  "relationships":
-                  {
-                    "garden": {"data": {"id": "3","type": "garden"}}, "garden_healths": {"data": []}
-                  }
-                }
-              ]
-          },
-          "garden_plants": {
-              "data": []
-          },
-          "plants": {
-              "data": []
-          }
-      }
-  }
+    "data": {
+        "id": "1",
+        "type": "garden",
+        "attributes": {
+            "latitude": 2.0,
+            "longitude": 2.0,
+            "name": "hello",
+            "description": "hello",
+            "private": false
+        },
+        "relationships": {
+            "user_gardens": {
+                "data": []
+            },
+            "users": {
+                "data": []
+            },
+            "sensors": {
+                "data": [
+                    {
+                        "id": "1",
+                        "type": "sensor"
+                    },
+                    {
+                        "id": "2",
+                        "type": "sensor"
+                    },
+                    {
+                        "id": "3",
+                        "type": "sensor"
+                    }
+                ]
+            },
+            "garden_plants": {
+                "data": []
+            },
+            "plants": {
+                "data": []
+            }
+        }
+    }
 }

@@ -1,6 +1,6 @@
 class UserService
   def self.conn
-    Faraday.new("#{ENV['BE_URL']}")
+    Faraday.new(ENV['BE_URL'])
   end
 
   def self.update_email(id, email)
