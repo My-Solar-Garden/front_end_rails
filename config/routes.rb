@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   delete '/gardens/:garden_id/sensors/:id', to: 'sensors#destroy'
   get '/gardens/:garden_id/sensors/:id', to: 'sensors#show'
 
-  get '/gardens/:garden_id/plants', to: 'sensors#new'
+  get '/gardens/:garden_id/plants', to: 'plants#new'
   get '/gardens/:garden_id/plants/:id', to: 'plants#show'
 
   namespace :gardens do
