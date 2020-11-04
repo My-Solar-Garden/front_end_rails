@@ -1,0 +1,11 @@
+<center>
+  <section class='plants-search'>
+    <% @plants.each do |plant| %>
+      <section class="plant-<%= plant.id %>">
+        <h2><%= plant.name %></h2>
+        <p><%= plant.description %></p>
+        <%= button_to 'Add To Garden', "/gardens/#{@garden_id}/plants/#{plant.id}", method: :post %>
+      </section>
+    <% end %>
+  </section>
+</center>

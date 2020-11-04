@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get '/profile', to: 'users#show'
 
   resources :users, except: [:index, :show]
+  namespace :gardens do 
+    post '/:id/plants/:plant_id', to: 'plants#create'
+  end
   resources :gardens, except: [:index]
   resources :sensors, except: [:index]
   namespace :plants do
