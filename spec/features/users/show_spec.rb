@@ -1,24 +1,31 @@
 require 'rails_helper'
 
 RSpec.describe 'User profile page' do
-  before :each do
-    @user = User.new({id: 1,
-                    attributes: {
-                        email: '123@gmail.com' },
-                    relationships: {
-                        gardens: {
-                            data: [ { id: 1,
-                                      attributes: {
-                                          name: 'My Garden',
-                                          latitude: 23.0,
-                                          longitude: 24.0,
-                                          description: 'Simple Garden',
-                                          private: false }} ] }}})
-
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+  describe 'a visitor' do
+    it 'cannot visit a profile page' do
+      visit profile_path
+      expect(page).to have_content("The page you were looking for doesn't exist.")
+    end
   end
 
   describe 'a user' do
+    before :each do
+      @user = User.new({id: 1,
+        attributes: {
+          email: '123@gmail.com' },
+          relationships: {
+            gardens: {
+              data: [ { id: 1,
+                attributes: {
+                  name: 'My Garden',
+                  latitude: 23.0,
+                  longitude: 24.0,
+                  description: 'Simple Garden',
+                  private: false }} ] }}})
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+    end
+
     it 'can visit their profile page' do
       visit profile_path
     end

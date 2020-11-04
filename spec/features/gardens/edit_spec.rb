@@ -1,6 +1,29 @@
 require 'rails_helper'
 
 RSpec.describe 'Edit Garden Page' do
+  describe 'a visitor' do
+    before :each do
+      @garden = { id: 3,
+                attributes: {
+                    name: "Cole Community Garden",
+                    latitude: 39.45,
+                    longitude: -104.58,
+                    description: "A diverse, dedicated group of students and neighbors who believe in bettering ourselves, our food supply and our community through urban gardening.",
+                    private: false },
+                relationships: { plants: {
+                                    data: []},
+                                  users: {
+                                    data: [{id: "4", type: "user"}]},
+                                 sensors: {
+                                    data: []}}}
+    end
+
+    it 'cannot visit edit garden page' do
+      visit "/gardens/#{@garden[:id]}/edit"
+      expect(page).to have_content("The page you were looking for doesn't exist.")
+    end
+  end
+
   describe 'a logged in user' do
     before :each do
       @garden = { id: 4,
