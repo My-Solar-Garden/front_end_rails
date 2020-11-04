@@ -17,4 +17,14 @@ describe GardenService do
 
     garden_details_response_structure_check(response)
   end
+
+  it 'can delete a garden and receive a blank response' do
+    params = {"id" => "1", "name"=>"The Grove", "latitude"=>"71.0", "longitude"=>"25.0", "private"=>"false", "description"=>"My first garden"}
+
+    expected_output = File.read('spec/fixtures/delete_garden.json')
+    stub_request(:delete, "https://solar-garden-be.herokuapp.com/api/v1/gardens/#{params["id"]}").to_return(status: 204, body: expected_output, headers: {})
+
+    response = GardenService.destroy(params["id"])
+    expect(response.body).to eq("")
+  end
 end
