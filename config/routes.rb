@@ -13,10 +13,6 @@ Rails.application.routes.draw do
   get '/profile', to: 'users#show'
 
   resources :users, except: [:index, :show]
-  # resources :gardens, except: [:index] do
-  #   resources :sensors, only: [:destroy]
-  #   require "pry"; binding.pry
-  # end
   resources :plants, except: [:index]
   resources :sensors, except: [:index]
   get "/learn_more", to: "learn_more#show"
