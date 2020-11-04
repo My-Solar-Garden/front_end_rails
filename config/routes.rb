@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   get "/logout", to: "sessions#destroy"
   get '/privacy', to: 'privacy#index'
   get "/dashboard", to: "dashboard#show"
-  
+
   resources :gardens, except: [:destroy]
   delete 'gardens/:id', to: 'gardens#destroy', as: :garden_destroy
   get 'gardens/:id', to: 'gardens#show', as: :garden_show
-  
+
   get "/learn_more", to: "learn_more#show"
   get '/profile', to: 'users#show'
 
@@ -23,5 +23,6 @@ Rails.application.routes.draw do
     get '/gardens/:garden_id/sensors', to: 'sensors#new'
     post '/gardens/:garden_id/sensors', to: 'sensors#create'
     delete '/gardens/:garden_id/sensors/:id', to: 'sensors#destroy'
+    get '/gardens/:garden_id/sensors/:id', to: 'sensors#show'
   # end
 end
