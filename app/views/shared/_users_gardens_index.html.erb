@@ -5,8 +5,8 @@
     <% else %>
       <% @gardens.each do |garden| %>
         <section class='garden' id='garden-<%= garden.id %>'>
-          <h3><%= garden.name %></h3>
-          <div class='garden-image'>  
+          <h3><%= link_to garden.name, garden_path(garden.id) %></h3>
+          <div class='garden-image'>
             <%= image_tag 'default-garden.png' %>
           </div>
           <ul>
