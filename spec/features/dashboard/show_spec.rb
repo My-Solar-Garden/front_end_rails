@@ -47,7 +47,7 @@ RSpec.describe 'User Dashboard' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_gardens)
 
       visit dashboard_path
-      
+
       expect(page).to have_css('.garden', count: 2)
 
       within '#garden-3' do
@@ -75,6 +75,15 @@ RSpec.describe 'User Dashboard' do
         find('.delete-button').click
       end
       expect(current_path).to eq(dashboard_path)
+    end
+
+    it "can clink on the garden name to get redirected to the garden show page" do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_gardens)
+
+      visit dashboard_path
+
+      click_link "The Grove"
+      expect(current_path).to eq(garden_path(3))
     end
   end
 

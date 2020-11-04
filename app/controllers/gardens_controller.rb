@@ -7,7 +7,7 @@ class GardensController < ApplicationController
 
   def show
     garden = GardenFacade.garden_details(params)
-    @sensors = garden.sensors.map { |sensor| Sensor.new(sensor)  }
+    @sensors = SensorFacade.all_sensors_for_garden(params)
 
     if !garden.is_private || current_users_garden?(garden)
       @garden = garden
