@@ -8,7 +8,7 @@
       </div>
       <p>Latitude: <%= @garden.latitude %></p>
       <p>Longitude: <%= @garden.longitude %></p>
-      <%= render :partial => "edit_delete_icons", locals: { 
+      <%= render :partial => "shared/edit_delete_icons", locals: { 
         garden: @garden } %>
     </section>
 

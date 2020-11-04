@@ -15,7 +15,8 @@
             <li>Longitude: <%= garden.longitude %></li>
             <li>Private? <%= garden.is_private %></li>
           </ul>
-          <%= render 'edit_delete_icons' %>
+          <%= render :partial => "shared/edit_delete_icons", locals: { 
+            garden: garden } %>
         </section>
       <% end %>
     <% end %>
