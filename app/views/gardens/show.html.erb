@@ -35,6 +35,7 @@
           <div class="sensor-box sensor">
             <%= sensor.id %>
             <%= link_to sensor.sensor_type, "/sensors/#{sensor.id}" %>
+            <%= button_to 'Delete', "/gardens/#{@garden.id}/sensors/#{sensor.id}", method: :delete %>
           </div>
         <% end %>
       <% end %>
