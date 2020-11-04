@@ -84,7 +84,7 @@ That person, is you.
 ### How to run the test suite
   * Clone the My Solar Garden FE repo
     * My Solar Garden FE connects to the Back End Repository via the the [Backend Heroku App](https://solar-garden-be.herokuapp.com/)
-  * In the terminal while ```CD'd``` into the FE repo, run ```bundle exec rspec```. This will run all of the tests within the FE r
+  * In the terminal while ```CD'd``` into the FE repo, run ```bundle exec rspec```. This will run all of the tests within the FE repository
 
 ### Link to My Solar Garden App on Heroku
 1. [Follow this link to visit My Solar Garden](https://solar-garden-fe.herokuapp.com/)
