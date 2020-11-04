@@ -15,7 +15,7 @@ RSpec.describe 'New Sensor Page' do
                                   users: {
                                       data: [{id: "1", type: "user"}]},
                                  sensors: {
-                                    data: []}}})
+                                    data: [{id: "1", type: "sensor"}]}}})
       @user = User.new({id: 1,
                       attributes: {
                           email: '123@gmail.com' },
