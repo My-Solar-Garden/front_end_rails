@@ -9,8 +9,7 @@ class User
 
   def self.find(user_id)
     # call facade once facade + service pattens implemented
-    conn = Faraday.new(url: "https://solar-garden-be.herokuapp.com")
-    #this should be an environment variable  ^   
+    conn = Faraday.new(url: ENV['BE_URL'])
     response = conn.get("/api/v1/users/#{user_id}")
     json = JSON.parse(response.body, symbolize_names: true)
     user = User.new(json[:data])
