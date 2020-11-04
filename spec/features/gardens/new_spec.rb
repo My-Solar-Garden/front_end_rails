@@ -1,6 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe 'New Garden Page' do
+  describe 'a visitor' do
+    it 'cannot visit new garden page' do
+      visit new_garden_path
+      expect(page).to have_content("The page you were looking for doesn't exist.")
+    end
+  end
+
   describe 'a logged in user' do
     before :each do
       @user = User.new({id: 1,
@@ -45,14 +52,14 @@ RSpec.describe 'New Garden Page' do
       fill_in :latitude, with: latitude
       fill_in :description, with: 'My first garden'
       find('#private_false').click
-      
+
       @user_with_garden = User.new({id: 1,
       attributes: {
         email: '123@gmail.com' },
         relationships: {
           gardens: {
             data: [ {id: '50', type: 'garden'}] }}})
-            
+
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_garden)
       click_button 'Create Garden'
 
