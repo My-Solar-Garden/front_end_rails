@@ -196,5 +196,20 @@ RSpec.describe 'Show Garden Page' do
       click_on "Add Sensor"
       expect(current_path).to eq("/gardens/3/sensors")
     end
+
+    it "displays garden temperature through sensor reading" do
+      user = User.new({id: 10,
+                      attributes: {
+                          email: '123@gmail.com' },
+                      relationships: {
+                          gardens: {
+                              data: [ @garden ] }}})
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit garden_path(248)
+
+      save_and_open_page
+      expect(page).to have_content('Current Garden Temperature:')
+    end
   end
 end
