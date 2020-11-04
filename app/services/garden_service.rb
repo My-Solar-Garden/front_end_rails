@@ -18,6 +18,12 @@ class GardenService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.destroy(garden_id)
+    conn.delete("api/v1/gardens/#{garden_id}")
+  end
+
+  private
+
   def self.conn
     Faraday.new(url: "#{ENV['BE_URL']}")
   end

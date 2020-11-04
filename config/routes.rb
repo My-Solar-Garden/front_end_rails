@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get '/privacy', to: 'privacy#index'
   get "/dashboard", to: "dashboard#show"
   
-  resources :gardens
+  resources :gardens, except: [:destroy]
+  delete 'gardens/:id', to: 'gardens#destroy', as: :garden_destroy
   
   get "/learn_more", to: "learn_more#show"
   get '/profile', to: 'users#show'
