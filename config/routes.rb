@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get "/logout", to: "sessions#destroy"
   get '/privacy', to: 'privacy#index'
   get "/dashboard", to: "dashboard#show"
+
+  resources :gardens
+
   get "/learn_more", to: "learn_more#show"
   get '/profile', to: 'users#show'
 
@@ -15,4 +18,10 @@ Rails.application.routes.draw do
   resources :sensors, except: [:index] do
     get '/garden_healths/search', to: 'garden_healths#show'
   end
+  get "/learn_more", to: "learn_more#show"
+  get "/logout", to: "sessions#destroy"
+  # namespace :gardens do
+    get '/gardens/:garden_id/sensors', to: 'sensors#new'
+    post '/gardens/:garden_id/sensors', to: 'sensors#create'
+  # end
 end

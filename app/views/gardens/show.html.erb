@@ -32,14 +32,13 @@
         <p>You have no sensors</p>
       <% else %>
         <% @sensors.each do |sensor| %>
-          <div class="sensor-box">
+          <div class="sensor-box sensor">
             <%= sensor.id %>
-            <%= sensor.sensor_type %>
+            <%= link_to sensor.sensor_type, "/sensors/#{sensor.id}" %>
           </div>
         <% end %>
       <% end %>
-
-      <%= button_to 'Add Sensor', "#" %>
+      <%= button_to 'Add Sensor', "/gardens/#{@garden.id}/sensors", method: :get %>
     </section>
   </article>
 

@@ -1,0 +1,40 @@
+{
+  "data": {
+      "id": "50",
+      "type": "garden",
+      "attributes": {
+          "latitude": 71.0,
+          "longitude": 25.0,
+          "name": "The Grove",
+          "description": "My first garden",
+          "private": false
+      },
+      "relationships": {
+          "user_gardens": {
+              "data": [
+                  {
+                      "id": "43",
+                      "type": "user_garden"
+                }
+              ]
+          },
+          "users": {
+              "data": [
+                  {
+                      "id": "1",
+                      "type": "user"
+                  }
+              ]
+          },
+          "sensors": {
+              "data": []
+          },
+          "garden_plants": {
+              "data": []
+          },
+          "plants": {
+              "data": []
+          }
+      }
+  }
+}
