@@ -76,5 +76,34 @@ module Helpers
 
     expect(response[:data][:relationships][:gardens]).to have_key(:data)
     expect(response[:data][:relationships][:gardens][:data]).to be_a(Array)
+
+  def sensor_structure_check(response)
+    expect(response).to be_an(Hash)
+
+    expect(response).to have_key(:id)
+    expect(response[:id]).to be_a(String)
+
+    expect(response).to have_key(:type)
+    expect(response[:type]).to be_a(String)
+
+    expect(response).to have_key(:attributes)
+    expect(response[:attributes]).to be_a(Hash)
+
+    expect(response[:attributes]).to have_key(:min_threshold)
+    expect(response[:attributes][:min_threshold]).to be_a(Integer)
+
+    expect(response[:attributes]).to have_key(:max_threshold)
+    expect(response[:attributes][:max_threshold]).to be_a(Integer)
+
+    expect(response[:attributes]).to have_key(:sensor_type)
+    expect(response[:attributes][:sensor_type]).to be_a(String)
+
+    expect(response).to have_key(:relationships)
+    expect(response[:relationships]).to have_key(:garden)
+    expect(response[:relationships][:garden]).to have_key(:data)
+    expect(response[:relationships][:garden][:data]).to have_key(:id)
+    expect(response[:relationships][:garden][:data]).to have_key(:type)
+    expect(response[:relationships][:garden][:data][:id]).to be_a(String)
+    expect(response[:relationships][:garden][:data][:type]).to be_a(String)
   end
 end

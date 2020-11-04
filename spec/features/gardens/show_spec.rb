@@ -88,6 +88,8 @@ RSpec.describe 'Show Garden Page' do
       end
 
       it 'displays CTA when garden has no plants or sensors' do
+        stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/#{@public_garden.id}/sensors").to_return(status: 200, body: '{"data":[]}')
+
         visit "/gardens/#{@public_garden.id}"
 
         within '.garden-plants' do
@@ -122,7 +124,7 @@ RSpec.describe 'Show Garden Page' do
 
   describe 'a logged in user with plants and sensors' do
     before :each do
-      @sensor1 = {:id=> 1,
+      @sensor1 = {:id=> 4,
                   :type=>"sensor",
                   :attributes=>{
                     :min_threshold=>2,
@@ -134,12 +136,12 @@ RSpec.describe 'Show Garden Page' do
                     }
                   }
 
-      @sensor2 = {:id=> 2,
+      @sensor2 = {:id=> 5,
                   :type=>"sensor",
                   :attributes=>{
                     :min_threshold=>2,
                     :max_threshold=>15,
-                    :sensor_type=>"moisture"
+                    :sensor_type=>"temperature"
                     },
                   :relationships=>{
                     :garden=>{:data=>{:id=> 3, :type=>"garden"}}, :garden_healths=>{:data=>[]}
@@ -159,6 +161,9 @@ RSpec.describe 'Show Garden Page' do
       json_response = File.read('spec/fixtures/garden_with_sensors.json')
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: json_response)
 
+      sensors = File.read('spec/fixtures/sensors.json')
+      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3/sensors").to_return(status: 200, body: sensors)
+
       visit "/gardens/3"
 
       within '.garden-sensors' do
@@ -175,11 +180,21 @@ RSpec.describe 'Show Garden Page' do
       json_response = File.read('spec/fixtures/garden_with_sensors.json')
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: json_response)
 
+
+      sensors = File.read('spec/fixtures/sensors.json')
+      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3/sensors").to_return(status: 200, body: sensors)
+
       visit "/gardens/3"
 
       click_link @sensor1[:attributes][:sensor_type]
 
       expect(current_path).to eq("/sensors/#{@sensor1[:id]}")
+    end
+
+    it 'can click the Add Sensor button' do
+      visit "/gardens/3"
+      click_on "Add Sensor"
+      expect(current_path).to eq("/gardens/3/sensors")
     end
   end
 end
