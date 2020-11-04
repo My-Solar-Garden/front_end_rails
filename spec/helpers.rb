@@ -76,6 +76,7 @@ module Helpers
 
     expect(response[:data][:relationships][:gardens]).to have_key(:data)
     expect(response[:data][:relationships][:gardens][:data]).to be_a(Array)
+  end
 
   def sensor_structure_check(response)
     expect(response).to be_an(Hash)
