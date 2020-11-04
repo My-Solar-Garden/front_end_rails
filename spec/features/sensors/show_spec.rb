@@ -56,14 +56,15 @@ RSpec.describe 'Sensor show page' do
                      :attributes=>{
                        :min_threshold=>1,
                        :max_threshold=>4,
-                       :sensor_type=>"light",
+                       :sensor_type=>"light"
+                     },
                      :relationships=>{
                        :garden=>{
-                         :data=>[id: 1]},
+                         :data=>{id: 1}},
                          :garden_healths=>{
-                           :data=>[]}}}}
+                           :data=>[]}}}
             }
     sensor = SensorFacade.sensor(params)
-    visit "/sensors/1/garden_healths/search?start=2020-10-10&end=2020-10-30&sensor_id=1"
+    visit "/sensors/1/garden_healths/search?start=2020-10-10&stop=2020-10-30&sensor_id=1"
   end
 end

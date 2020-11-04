@@ -11,7 +11,8 @@ class GardenHealthService
   end
 
   def self.garden_health_search(start, stop, sensor_id)
-    get_parsed_json("/api/v1/garden_healths/search?start=#{start}&stop=#{stop}&sensor_id=#{sensor_id}")
+    response = conn.get("/api/v1/garden_healths/search?start=#{start}&stop=#{stop}&sensor_id=#{sensor_id}")
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def self.conn

@@ -15,12 +15,13 @@ describe SensorFacade do
                      :attributes=>{
                        :min_threshold=>1,
                        :max_threshold=>4,
-                       :sensor_type=>"light",
+                       :sensor_type=>"light"
+                     },
                      :relationships=>{
                        :garden=>{
-                         :data=>[]},
+                         :data=>[id: 1]},
                          :garden_healths=>{
-                           :data=>[]}}}}
+                           :data=>[]}}}
             }
     sensor = SensorFacade.sensor(params)
 
