@@ -29,8 +29,8 @@ describe GardenService do
     expect(garden_data[:data][:attributes]).to have_key(:description)
     expect(garden_data[:data][:attributes][:description]).to be_a(String)
 
-   expect(garden_data[:data][:attributes]).to have_key(:private)
-   expect(garden_data[:data][:attributes][:private]).to be_in([true, false])
+    expect(garden_data[:data][:attributes]).to have_key(:private)
+    expect(garden_data[:data][:attributes][:private]).to be_in([true, false])
 
     expect(garden_data[:data]).to have_key(:relationships)
     expect(garden_data[:data][:relationships]).to be_a(Hash)
