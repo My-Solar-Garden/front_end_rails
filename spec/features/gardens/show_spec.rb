@@ -88,7 +88,7 @@ RSpec.describe 'Show Garden Page' do
       end
 
       it 'displays CTA when garden has no plants or sensors' do
-        stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/#{@public_garden.id}/sensors").to_return(status: 200, body: '{"data":[]}')
+        stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/#{@public_garden.id}/sensors").to_return(status: 200, body: '{"data":[]}')
 
         visit "/gardens/#{@public_garden.id}"
 
@@ -162,7 +162,7 @@ RSpec.describe 'Show Garden Page' do
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: json_response)
 
       sensors = File.read('spec/fixtures/sensors.json')
-      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3/sensors").to_return(status: 200, body: sensors)
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3/sensors").to_return(status: 200, body: sensors)
 
       visit "/gardens/3"
 
@@ -182,7 +182,7 @@ RSpec.describe 'Show Garden Page' do
 
 
       sensors = File.read('spec/fixtures/sensors.json')
-      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3/sensors").to_return(status: 200, body: sensors)
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3/sensors").to_return(status: 200, body: sensors)
 
       visit "/gardens/3"
 
