@@ -7,7 +7,7 @@ describe GardenService do
     garden_details_response_structure_check(response)
   end
 
-  xit 'returns create new garden response' do
+  it 'returns create new garden response' do
     params = {"name"=>"The Grove", "latitude"=>"71.0", "longitude"=>"25.0", "private"=>"false", "description"=>"My first garden"}
 
     expected_output = File.read('spec/fixtures/new_garden.json')
