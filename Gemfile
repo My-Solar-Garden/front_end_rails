@@ -34,6 +34,7 @@ gem 'mini_racer', platforms: :ruby
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
+gem 'font-awesome-rails'
 gem 'faraday'
 gem 'json'
 gem 'omniauth-google-oauth2'

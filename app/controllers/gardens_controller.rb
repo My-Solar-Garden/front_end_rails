@@ -33,7 +33,8 @@ class GardensController < ApplicationController
   end
 
   def destroy
-    # DELETE api/v1/gardens/:id' to destroy garden
+    GardenFacade.destroy(params[:id])
+    refresh_current_user
     redirect_back(fallback_location: dashboard_path)
   end
 
