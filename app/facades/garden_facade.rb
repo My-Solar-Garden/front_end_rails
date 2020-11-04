@@ -18,6 +18,10 @@ class GardenFacade
     GardenService.new_garden(params, current_user_id)
   end
 
+  def self.update(garden)
+    require 'pry'; binding.pry
+  end
+
   def self.destroy(garden_id)
     GardenService.destroy(garden_id)
   end
