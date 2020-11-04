@@ -44,7 +44,7 @@ class GardensController < ApplicationController
     params.permit(:name, :latitude, :longitude, :private, :description)
   end
 
-  def current_users_garden?(garden) 
+  def current_users_garden?(garden)
     garden.user_ids.include?(current_user.id.to_s) if current_user
   end
 end
