@@ -15,10 +15,8 @@ class SensorsController < ApplicationController
   def edit; end
 
   def destroy
-    require "pry"; binding.pry
     SensorFacade.delete_sensor(params)
-    # redirect_back(fallback_location: dashboard_path)
-    redirect_to garden_path(params[:id])
+    redirect_back(fallback_location: dashboard_path)
   end
 
   private
