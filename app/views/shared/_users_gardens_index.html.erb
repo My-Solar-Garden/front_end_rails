@@ -19,7 +19,7 @@
             <%= link_to edit_garden_path(garden.id) do %>
               <span class="fa fa-edit icon"></span>
             <% end %>
-            <%= link_to garden_destroy_path(garden.id), method: :delete, data: { confirm: 'Are you sure you'd like to delete this garden?' } do %>
+            <%= link_to garden_destroy_path(garden.id), method: :delete, data: { confirm: "Are you sure that you'd like to delete this garden" } do %>
               <span class="fa fa-trash icon"></span>
             <% end %>
           </div>
