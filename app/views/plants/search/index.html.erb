@@ -4,7 +4,18 @@
       <section class="plant-<%= plant.id %>">
         <h2><%= plant.name %></h2>
         <p><%= plant.description %></p>
-        <%= button_to 'Add To Garden', "/gardens/#{@garden_id}/plants/#{plant.id}", method: :post %>
+        <%= form_tag "/gardens/#{@garden_id}/plants/#{plant.id}", method: :post do %>
+          <%= hidden_field_tag 'name', plant.name %>
+          <%= hidden_field_tag 'image', plant.image %>
+          <%= hidden_field_tag 'species', plant.species %>
+          <%= hidden_field_tag 'description', plant.description %>
+          <%= hidden_field_tag 'light_requirements', plant.light_requirements %>
+          <%= hidden_field_tag 'water_requirements', plant.water_requirements %>
+          <%= hidden_field_tag 'when_to_plant', plant.when_to_plant %>
+          <%= hidden_field_tag 'harvest_time', plant.harvest_time %>
+          <%= hidden_field_tag 'common_pests', plant.common_pests %>
+          <%= submit_tag "Add To Garden" %>
+        <% end %>
       </section>
     <% end %>
   </section>
