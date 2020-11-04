@@ -22,4 +22,7 @@ Rails.application.routes.draw do
     get '/gardens/:garden_id/sensors', to: 'sensors#new'
     post '/gardens/:garden_id/sensors', to: 'sensors#create'
   # end
+  namespace :gardens do
+    get '/:id/plants/:plants_id', to: 'plants#show', as: :plant_show
+  end
 end
