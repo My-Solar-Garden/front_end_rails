@@ -35,7 +35,7 @@ class GardensController < ApplicationController
   def destroy
     GardenFacade.destroy(params[:id])
     refresh_current_user
-    redirect_back(fallback_location: dashboard_path)
+    redirect_to dashboard_path
   end
 
   private

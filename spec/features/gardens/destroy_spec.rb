@@ -40,5 +40,22 @@ RSpec.describe 'Delete garden functionality' do
       expect(page).to have_css("#garden-#{@user_with_gardens.gardens[1][:id]}")
       expect(page).to_not have_css("#garden-#{@user_with_gardens.gardens[0][:id]}")
     end
+
+    xit 'can delete a garden from garden show page' do
+      visit garden_show_path(@user_with_gardens.gardens[0][:id])
+
+      @user_with_deleted_garden = User.new({id: 4,
+      attributes: {
+        email: 'planter@gmail.com' },
+      relationships: {
+        gardens: {
+          data: [ {id: '4', type: 'garden'}] }}})
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_deleted_garden)
+
+      find('.fa-trash').click
+
+      expect(current_path).to eq(dashboard_path)
+    end
   end
 end
