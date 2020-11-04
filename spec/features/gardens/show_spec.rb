@@ -94,7 +94,7 @@ RSpec.describe 'Show Garden Page' do
 
         within '.garden-plants' do
           expect(page).to have_content('You have no plants')
-          expect(page).to have_button('Add Plant')
+          expect(page).to have_button('Find Plants')
         end
 
         within '.garden-sensors' do
