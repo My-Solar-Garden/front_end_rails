@@ -1,6 +1,28 @@
 require 'rails_helper'
 
 RSpec.describe 'User profile page' do
+  describe "as a visitor" do
+    before :each do
+      @user = User.new({id: 1,
+                      attributes: {
+                          email: '123@gmail.com' },
+                      relationships: {
+                          gardens: {
+                              data: [ { id: 1,
+                                        attributes: {
+                                            name: 'My Garden',
+                                            latitude: 23.0,
+                                            longitude: 24.0,
+                                            description: 'Simple Garden',
+                                            private: false }} ] }}})
+    end
+
+    it 'cannot visit page' do
+      visit edit_user_path(@user.id)
+      expect(page).to have_content("The page you were looking for doesn't exist.")
+    end
+  end
+
   describe 'a user' do
     it 'can change their email' do
       @user = User.new({id: 1,
