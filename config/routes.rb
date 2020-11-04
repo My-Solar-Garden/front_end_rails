@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   
   resources :gardens, except: [:destroy]
   delete 'gardens/:id', to: 'gardens#destroy', as: :garden_destroy
+  get 'gardens/:id', to: 'gardens#show', as: :garden_show
   
   get "/learn_more", to: "learn_more#show"
   get '/profile', to: 'users#show'
