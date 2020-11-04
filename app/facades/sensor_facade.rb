@@ -9,6 +9,10 @@ class SensorFacade
     parsed_json.map { |sensor_data| sensor(sensor_data) }
   end
 
+  def self.delete_sensor(params)
+    SensorService.delete_sensor(params)
+  end
+
   def self.sensor(data)
     Sensor.new(data)
   end

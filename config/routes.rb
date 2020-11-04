@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   get '/profile', to: 'users#show'
 
   resources :users, except: [:index, :show]
-  resources :gardens, except: [:index]
   resources :plants, except: [:index]
   resources :sensors, except: [:index]
   get "/learn_more", to: "learn_more#show"
@@ -23,5 +22,6 @@ Rails.application.routes.draw do
   # namespace :gardens do
     get '/gardens/:garden_id/sensors', to: 'sensors#new'
     post '/gardens/:garden_id/sensors', to: 'sensors#create'
+    delete '/gardens/:garden_id/sensors/:id', to: 'sensors#destroy'
   # end
 end
