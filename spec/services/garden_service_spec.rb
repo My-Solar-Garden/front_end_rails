@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe GardenService do
   it "returns garden details data" do
-    params = {id: 1}
+    params = {id: 2}
     response = GardenService.garden_details(params)
     garden_details_response_structure_check(response)
   end
