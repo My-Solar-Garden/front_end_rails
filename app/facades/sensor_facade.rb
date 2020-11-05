@@ -4,8 +4,8 @@ class SensorFacade
     sensor(parsed_json)
   end
 
-  def self.new_sensor(sensor_params)
-    parsed_json = SensorService.new_sensor(sensor_params)
+  def self.new_sensor(params)
+    parsed_json = SensorService.new_sensor(params)
     sensor(parsed_json)
   end
 
@@ -22,14 +22,8 @@ class SensorFacade
     Sensor.new(data)
   end
 
-  def self.edit_sensor(sensor_params)
-    parsed_json = SensorService.edit_sensor(sensor_params)
-    sensor(parsed_json)
-  end
-
-  def self.sensor_details(sensor_params)
-    # binding.pry
-    parsed_json = SensorService.sensor_details(sensor_params)
+  def self.edit_sensor(params)
+    parsed_json = SensorService.edit_sensor(params)
     sensor(parsed_json)
   end
 end
