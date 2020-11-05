@@ -1,6 +1,7 @@
 <center>
   <h3>Your <%= @sensor.sensor_type %> sensor</h3>
-  
+  <%= link_to "Edit Sensor", "/gardens/#{@sensor.garden_id}/sensors/#{@sensor.id}" %>
+
     <% if !@sensor.garden_healths.nil? %>
       <div class="container">
         <div class="row">
@@ -8,7 +9,7 @@
             <div class="single category">
                 <h3 class="side-title">Last 5 Readings</h3>
                   <ul class="list-unstyled">
-                    <% @sensor.garden_healths[-5..-1].reverse.each do |reading| %>
+                    <% @sensor.garden_healths.reverse.take(5).each do |reading| %>
                         <% time = reading.created_at.to_time.to_s.split(" ")[1] %>
                         <%= reading.created_at.to_date %> <%= time %><span class="pull-right"><%= reading.reading %></span><br>
                     <% end %>
