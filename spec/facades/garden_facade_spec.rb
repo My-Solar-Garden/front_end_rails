@@ -37,7 +37,7 @@ describe GardenFacade do
     response = GardenFacade.destroy(params["id"])
     expect(response.body).to eq("")
   end
-  
+
   it 'can edit a garden' do
     params = {"id" => "4", "name"=>"The Grove", "latitude"=>"71.0", "longitude"=>"25.0", "private"=>"false", "description"=>"My first garden"}
 
