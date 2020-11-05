@@ -133,4 +133,141 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[{"id":"57","type":"garden_health","attributes":{"id":57,"reading_type":null,"reading":99.0,"created_at":"2020-11-04T00:00:00.000Z"}}]}'
   recorded_at: Thu, 05 Nov 2020 01:49:35 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/57
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 19:36:19 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5ddb228cf2af1920a956ff78eadfd3b7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d506a064-c55c-44cb-a68b-7ef1d4d90225
+      X-Runtime:
+      - '0.027788'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"57","type":"garden_health","attributes":{"id":57,"reading_type":null,"reading":99.0,"created_at":"2020-11-04T00:00:00.000Z"}}}'
+  recorded_at: Thu, 05 Nov 2020 19:36:20 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/58
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 19:36:20 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c21493c8230e49ec5e536bef42404019"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d99f04b6-caef-4afd-974d-e9966c1ba3f1
+      X-Runtime:
+      - '0.054674'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"58","type":"garden_health","attributes":{"id":58,"reading_type":null,"reading":680.0,"created_at":"2020-11-03T00:00:00.000Z"}}}'
+  recorded_at: Thu, 05 Nov 2020 19:36:20 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/onecall?appid=d56c5a1373ab072efa767c9937038b8e&exclude=minutely,hourly&lat=3.0&lon=3.0&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 05 Nov 2020 19:36:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '3704'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/onecall?exclude=minutely%2Chourly&lat=3&lon=3&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":3,"lon":3,"timezone":"Etc/GMT","timezone_offset":0,"current":{"dt":1604604980,"sunrise":1604554292,"sunset":1604597499,"temp":79.79,"feels_like":83.79,"pressure":1012,"humidity":85,"dew_point":74.88,"uvi":11.73,"clouds":100,"visibility":3296,"wind_speed":11.16,"wind_deg":188,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10n"}],"rain":{"1h":3.38}},"daily":[{"dt":1604574000,"sunrise":1604554292,"sunset":1604597499,"temp":{"day":81.36,"min":79.79,"max":81.66,"night":80.28,"eve":79.79,"morn":81.1},"feels_like":{"day":85.05,"night":84.51,"eve":84.27,"morn":86.61},"pressure":1010,"humidity":80,"dew_point":74.86,"wind_speed":11.41,"wind_deg":178,"weather":[{"id":502,"main":"Rain","description":"heavy
+        intensity rain","icon":"10d"}],"clouds":96,"pop":1,"rain":17.89,"uvi":11.73},{"dt":1604660400,"sunrise":1604640699,"sunset":1604683898,"temp":{"day":80.58,"min":80.58,"max":81.19,"night":81.18,"eve":81.16,"morn":80.78},"feels_like":{"day":84.27,"night":85.17,"eve":85.93,"morn":84.27},"pressure":1011,"humidity":83,"dew_point":75.02,"wind_speed":11.74,"wind_deg":210,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"clouds":78,"pop":1,"rain":3.81,"uvi":12.48},{"dt":1604746800,"sunrise":1604727107,"sunset":1604770299,"temp":{"day":80.62,"min":80.2,"max":80.91,"night":80.47,"eve":80.74,"morn":80.38},"feels_like":{"day":83.73,"night":85.51,"eve":86.13,"morn":84.88},"pressure":1013,"humidity":81,"dew_point":74.61,"wind_speed":12.08,"wind_deg":208,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":91,"pop":0.8,"rain":1.76,"uvi":12.55},{"dt":1604833200,"sunrise":1604813516,"sunset":1604856700,"temp":{"day":81,"min":80.02,"max":81.81,"night":81.39,"eve":81.81,"morn":80.02},"feels_like":{"day":86,"night":86.68,"eve":87.06,"morn":84.99},"pressure":1012,"humidity":76,"dew_point":72.79,"wind_speed":7.2,"wind_deg":176,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":45,"pop":0.2,"uvi":12.74},{"dt":1604919600,"sunrise":1604899925,"sunset":1604943102,"temp":{"day":80.91,"min":80.29,"max":81.05,"night":80.29,"eve":80.56,"morn":80.64},"feels_like":{"day":85.24,"night":84.96,"eve":85.21,"morn":85.28},"pressure":1012,"humidity":78,"dew_point":73.45,"wind_speed":9.04,"wind_deg":185,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"clouds":50,"pop":1,"rain":3.25,"uvi":12.43},{"dt":1605006000,"sunrise":1604986336,"sunset":1605029506,"temp":{"day":80.4,"min":79.99,"max":80.46,"night":80.46,"eve":80.29,"morn":79.99},"feels_like":{"day":83.82,"night":84.6,"eve":84.07,"morn":84.74},"pressure":1010,"humidity":81,"dew_point":74.41,"wind_speed":11.3,"wind_deg":191,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"clouds":58,"pop":1,"rain":9.07,"uvi":12.36},{"dt":1605092400,"sunrise":1605072747,"sunset":1605115910,"temp":{"day":80.62,"min":79.99,"max":80.62,"night":80.58,"eve":80.42,"morn":80.08},"feels_like":{"day":84.18,"night":85.53,"eve":84.38,"morn":83.68},"pressure":1010,"humidity":81,"dew_point":74.57,"wind_speed":11.27,"wind_deg":198,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"clouds":1,"pop":0.84,"rain":3.83,"uvi":11.87},{"dt":1605178800,"sunrise":1605159158,"sunset":1605202314,"temp":{"day":81.5,"min":80.56,"max":81.61,"night":81.03,"eve":81.05,"morn":80.56},"feels_like":{"day":85.17,"night":86.88,"eve":85.98,"morn":86.34},"pressure":1010,"humidity":76,"dew_point":73.4,"wind_speed":10.04,"wind_deg":214,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"clouds":61,"pop":0.92,"rain":7.94,"uvi":12.36}]}'
+  recorded_at: Thu, 05 Nov 2020 19:36:20 GMT
 recorded_with: VCR 6.0.0
