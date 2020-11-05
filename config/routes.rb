@@ -22,4 +22,9 @@ Rails.application.routes.draw do
     get '/gardens/:garden_id/sensors', to: 'sensors#new'
     post '/gardens/:garden_id/sensors', to: 'sensors#create'
   # end
+
+  namespace :gardens do
+    get '/:id/plants/:plant_id', to: 'plants#show'
+    delete '/:id/plants/:plant_id', to: 'plants#destroy'
+  end
 end
