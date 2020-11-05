@@ -81,7 +81,9 @@ RSpec.describe 'Sensor show page' do
     click_link 'Last 90 Days'
     expect(current_path).to eq("/gardens/9/sensors/1")
   end
-  
+end
+
+RSpec.describe 'Sensor show page' do
   describe "a visitor" do
     before :each do
       @public_garden = Garden.new({ id: 7,
@@ -97,18 +99,11 @@ RSpec.describe 'Sensor show page' do
                                       data: [{id: "1", type: "user"}]},
                                  sensors: {
                                     data: [{id: "1", type: "sensor"}]}}})
-      @user = User.new({id: 1,
-                      attributes: {
-                          email: '123@gmail.com' },
-                      relationships: {
-                          gardens: {
-                              data: [ @public_garden ] }}})
-
-      @garden = @user.gardens.first
+      @user = nil
     end
 
     it "cannot visit page" do
-      visit "/gardens/#{@garden.id}/sensors/#{@garden.sensors[0][:id]}"
+      visit "/gardens/#{@public_garden.id}/sensors/#{@public_garden.sensors[0][:id]}"
       expect(page).to have_content("The page you were looking for doesn't exist.")
     end
   end
