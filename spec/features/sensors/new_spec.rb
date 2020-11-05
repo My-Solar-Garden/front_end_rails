@@ -90,7 +90,7 @@ RSpec.describe 'New Sensor Page' do
       stub_request(:post, "#{ENV['BE_URL']}/api/v1/gardens/#{@garden.id}").to_return(status: 200, body: garden_with_sensors, headers: {})
 
       visit "/gardens/#{@garden.id}"
-      save_and_open_page
+
       expect(page.all(".sensor").size).to eq(3)
     end
   end
