@@ -13,6 +13,10 @@ describe SensorFacade do
 
   it "should return sensor details for specific sensor" do
     params = {id: 1}
+    sensor = File.read('spec/fixtures/sensor.json')
+
+    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/sensors/#{params[:id]}").to_return(status: 200, body: sensor, headers: {})
+
     sensor = SensorFacade.sensor_details(params)
     expect(sensor).to be_a(Sensor)
   end
@@ -27,7 +31,7 @@ describe SensorFacade do
     expect(sensors).to be_an(Array)
     expect(sensors.all? { |sensor| sensor.class == Sensor }).to be_truthy
   end
-  
+
   it "should generate sensor poros" do
     params = {:data=>
                     {:id=>"1",
@@ -39,11 +43,11 @@ describe SensorFacade do
                      },
                      :relationships=>{
                        :garden=>{
-                         :data=>[id: 1]},
+                         :data=>{id: 1}},
                          :garden_healths=>{
                            :data=>[]}}}
             }
-    sensor = SensorFacade.sensor(params)
+    sensor = SensorFacade.sensor(params[:data])
 
     expect(sensor).to be_a(Sensor)
   end
