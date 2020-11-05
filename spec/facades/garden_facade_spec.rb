@@ -37,4 +37,14 @@ describe GardenFacade do
     response = GardenFacade.destroy(params["id"])
     expect(response.body).to eq("")
   end
+  
+  it 'can edit a garden' do
+    params = {"id" => "4", "name"=>"The Grove", "latitude"=>"71.0", "longitude"=>"25.0", "private"=>"false", "description"=>"My first garden"}
+
+    expected_output = File.read('spec/fixtures/updated_garden.json')
+    stub_request(:delete, "https://solar-garden-be.herokuapp.com/api/v1/gardens/#{params["id"]}").to_return(status: 204, body: expected_output, headers: {})
+
+    response = GardenFacade.update(params, "4")
+    garden_details_response_structure_check(response)
+  end
 end
