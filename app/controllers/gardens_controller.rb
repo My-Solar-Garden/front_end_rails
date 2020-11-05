@@ -8,6 +8,11 @@ class GardensController < ApplicationController
   def show
     garden = GardenFacade.garden_details(params)
     @sensors = SensorFacade.all_sensors_for_garden(params)
+    temp_sensor = @sensors.find { |sensor| sensor.sensor_type == 'temperature' }
+    @temperature = GardenHealthFacade.last_reading(temp_sensor) if temp_sensor && !temp_sensor.garden_healths.nil?
+
+    light_sensor = @sensors.find { |sensor| sensor.sensor_type == 'light' }
+    @light = GardenHealthFacade.last_reading(light_sensor) if light_sensor && !light_sensor.garden_healths.nil?
 
     if !garden.is_private || current_users_garden?(garden)
       @garden = garden
@@ -28,8 +33,8 @@ class GardensController < ApplicationController
   end
 
   def update
-    # PATCH "api/v1/gardens/params[:id]" to update the garden using strong params
-    redirect_to dashboard_path
+    GardenFacade.update(params, current_user.id)
+    redirect_to garden_show_path(params[:id])
   end
 
   def destroy

@@ -94,7 +94,7 @@ RSpec.describe 'Show Garden Page' do
 
         within '.garden-plants' do
           expect(page).to have_content('You have no plants')
-          expect(page).to have_button('Add Plant')
+          expect(page).to have_button('Find Plants')
         end
 
         within '.garden-sensors' do
@@ -147,6 +147,17 @@ RSpec.describe 'Show Garden Page' do
                     :garden=>{:data=>{:id=> 3, :type=>"garden"}}, :garden_healths=>{:data=>[]}
                     }
                   }
+      @sensor3 = {:id=> 6,
+                  :type=>"sensor",
+                  :attributes=>{
+                    :min_threshold=>2,
+                    :max_threshold=>15,
+                    :sensor_type=>"light"
+                    },
+                  :relationships=>{
+                    :garden=>{:data=>{:id=> 3, :type=>"garden"}}, :garden_healths=>{:data=>[]}
+                    }
+                  }
       @user = User.new({id: 1,
                       attributes: {
                           email: '123@gmail.com' },
@@ -184,17 +195,60 @@ RSpec.describe 'Show Garden Page' do
       sensors = File.read('spec/fixtures/sensors.json')
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3/sensors").to_return(status: 200, body: sensors)
 
+      sensor = File.read('spec/fixtures/sensor.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/#{@sensor1[:id]}").to_return(status: 200, body: sensor)
+
       visit "/gardens/3"
 
       click_link @sensor1[:attributes][:sensor_type]
 
-      expect(current_path).to eq("/sensors/#{@sensor1[:id]}")
+      expect(current_path).to eq("/gardens/1/sensors/#{@sensor1[:id]}")
     end
 
     it 'can click the Add Sensor button' do
       visit "/gardens/3"
       click_on "Add Sensor"
       expect(current_path).to eq("/gardens/3/sensors")
+    end
+
+    it "displays garden temperature through sensor reading", :vcr do
+      user = User.new({id: 10,
+                      attributes: {
+                          email: '123@gmail.com' },
+                      relationships: {
+                          gardens: {
+                              data: [ @garden ] }}})
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit garden_path(248)
+
+      expect(page).to have_content('Current Garden Temperature:')
+      expect(page).to have_content('99')
+    end
+
+    it "displays garden light percentage through sensor reading", :vcr do
+      user = User.new({id: 10,
+                      attributes: {
+                          email: '123@gmail.com' },
+                      relationships: {
+                          gardens: {
+                              data: [ @garden ] }}})
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit garden_path(248)
+
+      expect(page).to have_content('Current Garden Light Percentage:')
+      expect(page).to have_content('90.91%')
+    end
+
+    it "has search for plants field and add button" do
+      json_response = File.read('spec/fixtures/garden_with_sensors.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: json_response)
+
+      visit "/gardens/3"
+
+      expect(page).to have_field('search_term')
+      expect(page).to have_button('Find Plants')
     end
   end
 end

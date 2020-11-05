@@ -4,23 +4,28 @@
       <h5>You have no gardens</h5>
     <% else %>
       <% @gardens.each do |garden| %>
-        <section class='garden' id='garden-<%= garden.id %>'>
-          <h3><%= link_to garden.name, garden_path(garden.id) %></h3>
+        <section class='garden card' style="width: 25rem;" id='garden-<%= garden.id %>'>
           <div class='garden-image'>
-            <%= image_tag 'default-garden.png' %>
+            <a href="<%=garden_path(garden.id)%>">
+              <img alt="Image-<%= garden.id %>" src="/assets/default-garden-5bbbceb5c8def07b7a99e836154844af647a4598ec1250edaf878c68467caad9.png">
+            </a>
           </div>
-          <ul>
-            <li>Description: <%= garden.description %></li>
-            <li>Latitude: <%= garden.latitude %></li>
-            <li>Longitude: <%= garden.longitude %></li>
-            <li>Private? <%= garden.is_private %></li>
-          </ul>
-          <%= render :partial => "shared/edit_delete_icons", locals: { 
-            garden: garden } %>
+
+          <div class="card-body"></div>
+            <h3 class="card-title"><%= link_to garden.name, garden_path(garden.id) %></h3>
+            <ul>
+              <li class="card-text">Description: <%= garden.description %></li>
+              <li class="card-text">Latitude: <%= garden.latitude %></li>
+              <li class="card-text">Longitude: <%= garden.longitude %></li>
+              <li class="card-text">Private? <%= garden.is_private %></li>
+            </ul>
+            <%= render :partial => "shared/edit_delete_icons", locals: {
+              garden: garden } %>
+          </div>
         </section>
       <% end %>
     <% end %>
 
-    <%= button_to 'Add New Garden', new_garden_path, method: :get %>
+    <%= button_to 'Add New Garden', new_garden_path, method: :get, :class => "btn btn-primary" %>
   </article>
 </center>

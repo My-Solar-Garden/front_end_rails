@@ -8,7 +8,7 @@
       </div>
       <p>Latitude: <%= @garden.latitude %></p>
       <p>Longitude: <%= @garden.longitude %></p>
-      <%= render :partial => "shared/edit_delete_icons", locals: { 
+      <%= render :partial => "shared/edit_delete_icons", locals: {
         garden: @garden } %>
     </section>
 
@@ -24,7 +24,10 @@
         <% end %>
       <% end %>
 
-      <%= button_to 'Add Plant', "#" %>
+      <%= form_tag '/plants/search', method: :get do %>
+        <%= search_field_tag :search_term, nil, placeholder: 'Search to add plants' %>
+        <%= submit_tag 'Find Plants', data: { disable_with: "Please enter keyword" } %>
+      <% end %>
     </section>
 
     <section class='garden-sensors'>
@@ -36,13 +39,26 @@
         <% @sensors.each do |sensor| %>
           <div class="sensor-box sensor">
             <%= sensor.id %>
-            <%= link_to sensor.sensor_type, "/sensors/#{sensor.id}" %>
+            <%= link_to sensor.sensor_type, "/gardens/#{@garden.id}/sensors/#{sensor.id}" %>
+            <%= button_to 'Delete', "/gardens/#{@garden.id}/sensors/#{sensor.id}", method: :delete %>
           </div>
         <% end %>
       <% end %>
       <%= button_to 'Add Sensor', "/gardens/#{@garden.id}/sensors", method: :get %>
     </section>
   </article>
+
+  <% if @temperature %>
+    <section class='garden-temperature'>
+      <p>Current Garden Temperature: <%= @temperature.reading %>°C </p>
+    </section>
+  <% end %>
+
+  <% if @light %>
+    <section class='garden-temperature'>
+      <p>Current Garden Light Percentage: <%= @light.reading %></p>
+    </section>
+  <% end %>
 
   <article class='right-col'>
     <h1>Weather Information</h1>

@@ -18,10 +18,10 @@ RSpec.describe 'User Dashboard' do
             data: [ {id: '3', type: 'garden'}, {id: '4', type: 'garden'}] }}})
 
       garden1 = File.read('spec/fixtures/public_garden.json')
-      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3").to_return(status: 200, body: garden1)
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: garden1)
 
       garden2 = File.read('spec/fixtures/private_garden.json')
-      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/4").to_return(status: 200, body: garden2)
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/4").to_return(status: 200, body: garden2)
     end
 
     it 'can visit their dashboard' do
@@ -68,8 +68,6 @@ RSpec.describe 'User Dashboard' do
         find('.fa-edit').click
       end
 
-      # edit garden functionality not yet implemented
-      # expect(current_path).to eq("/gardens/3/edit")
       visit dashboard_path
 
       within '#garden-4' do
@@ -84,6 +82,16 @@ RSpec.describe 'User Dashboard' do
       visit dashboard_path
 
       click_link "The Grove"
+      expect(current_path).to eq(garden_path(3))
+    end
+
+    it "can clink on the garden image to get redirected to the garden show page" do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_gardens)
+
+      visit dashboard_path
+
+      find(:xpath, "//a/img[@alt='Image-3']/..").click
+
       expect(current_path).to eq(garden_path(3))
     end
   end
