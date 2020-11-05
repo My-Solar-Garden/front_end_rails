@@ -50,7 +50,7 @@ RSpec.describe 'Edit Garden Page' do
       @garden = @user.gardens.first
 
       garden1 = File.read('spec/fixtures/public_garden.json')
-      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3").to_return(status: 200, body: garden1)
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: garden1)
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end

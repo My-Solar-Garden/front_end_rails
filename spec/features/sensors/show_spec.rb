@@ -26,10 +26,10 @@ RSpec.describe 'Sensor show page' do
     @garden = @user.gardens.first
 
     public_response = File.read('spec/fixtures/sensors_with_readings.json')
-    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/sensors/1").to_return(status: 200, body: public_response)
+    stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/1").to_return(status: 200, body: public_response)
 
     public_response = File.read('spec/fixtures/garden_healths.json')
-    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/garden_healths/1").to_return(status: 200, body: public_response)
+    stub_request(:get, "#{ENV['BE_URL']}/api/v1/garden_healths/1").to_return(status: 200, body: public_response)
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
   end
@@ -52,31 +52,31 @@ RSpec.describe 'Sensor show page' do
 
     params = {history: 1}
     search_response = File.read('spec/fixtures/search.json')
-    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
+    stub_request(:get, "#{ENV['BE_URL']}/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
 
     click_link 'Last 24 Hours'
     expect(current_path).to eq("/gardens/9/sensors/1")
 
     params = {history: 7}
-    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
+    stub_request(:get, "#{ENV['BE_URL']}/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
 
     click_link 'Last 7 Days'
     expect(current_path).to eq("/gardens/9/sensors/1")
 
     params = {history: 14}
-    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
+    stub_request(:get, "#{ENV['BE_URL']}/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
 
     click_link 'Last 14 Days'
     expect(current_path).to eq("/gardens/9/sensors/1")
 
     params = {history: 30}
-    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
+    stub_request(:get, "#{ENV['BE_URL']}/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
 
     click_link 'Last 30 Days'
     expect(current_path).to eq("/gardens/9/sensors/1")
 
     params = {history: 90}
-    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
+    stub_request(:get, "#{ENV['BE_URL']}/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
 
     click_link 'Last 90 Days'
     expect(current_path).to eq("/gardens/9/sensors/1")

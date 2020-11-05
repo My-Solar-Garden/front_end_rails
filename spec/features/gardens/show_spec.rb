@@ -185,7 +185,7 @@ RSpec.describe 'Show Garden Page' do
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3/sensors").to_return(status: 200, body: sensors)
 
       sensor = File.read('spec/fixtures/sensor.json')
-      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/sensors/#{@sensor1[:id]}").to_return(status: 200, body: sensor)
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/#{@sensor1[:id]}").to_return(status: 200, body: sensor)
 
       visit "/gardens/3"
 

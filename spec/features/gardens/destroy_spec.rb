@@ -11,10 +11,10 @@ RSpec.describe 'Delete garden functionality' do
           data: [ {id: '3', type: 'garden'}, {id: '4', type: 'garden'}] }}})
 
       garden1 = File.read('spec/fixtures/public_garden.json')
-      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3").to_return(status: 200, body: garden1)
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: garden1)
 
       garden2 = File.read('spec/fixtures/private_garden.json')
-      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/4").to_return(status: 200, body: garden2)
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/4").to_return(status: 200, body: garden2)
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_gardens)
     end

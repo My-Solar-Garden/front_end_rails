@@ -6,7 +6,7 @@ describe SensorFacade do
 
     new_sensor = File.read('spec/fixtures/new_sensor.json')
 
-    stub_request(:post, "https://solar-garden-be.herokuapp.com/api/v1/sensors?garden_id=#{sensor_params[:garden_id]}&sensor_type=#{sensor_params[:sensor_type]}&min_threshold=#{sensor_params[:min_threshold]}&max_threshold=#{sensor_params[:max_threshold]}").to_return(status: 200, body: new_sensor, headers: {})
+    stub_request(:post, "#{ENV['BE_URL']}/api/v1/sensors?garden_id=#{sensor_params[:garden_id]}&sensor_type=#{sensor_params[:sensor_type]}&min_threshold=#{sensor_params[:min_threshold]}&max_threshold=#{sensor_params[:max_threshold]}").to_return(status: 200, body: new_sensor, headers: {})
 
     sensor = SensorFacade.new_sensor(sensor_params)
   end
@@ -15,7 +15,7 @@ describe SensorFacade do
     params = {id: 1}
     sensor = File.read('spec/fixtures/sensor.json')
 
-    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/sensors/#{params[:id]}").to_return(status: 200, body: sensor, headers: {})
+    stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/#{params[:id]}").to_return(status: 200, body: sensor, headers: {})
 
     sensor = SensorFacade.sensor_details(params)
     expect(sensor).to be_a(Sensor)
@@ -25,7 +25,7 @@ describe SensorFacade do
     params = {id: 1}
     sensors = File.read('spec/fixtures/sensors.json')
 
-    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/#{params[:id]}/sensors").to_return(status: 200, body: sensors, headers: {})
+    stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/#{params[:id]}/sensors").to_return(status: 200, body: sensors, headers: {})
 
     sensors = SensorFacade.all_sensors_for_garden(params)
     expect(sensors).to be_an(Array)
@@ -51,7 +51,7 @@ describe SensorFacade do
 
     expect(sensor).to be_a(Sensor)
   end
-  
+
   it "can delete a sensor", :vcr do
     garden = {id: 1}
     sensors = SensorFacade.all_sensors_for_garden(garden)

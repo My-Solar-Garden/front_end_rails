@@ -22,7 +22,7 @@ describe GardenFacade do
     params = {"name"=>"The Grove", "latitude"=>"71.0", "longitude"=>"25.0", "private"=>"false", "description"=>"My first garden"}
 
     expected_output = File.read('spec/fixtures/new_garden.json')
-    stub_request(:post, "https://solar-garden-be.herokuapp.com/api/v1/gardens?description=#{params['description']}&latitude=#{params['latitude']}&longitude=#{params['longitude']}&name=#{params['name']}&private=false&user_id=1").to_return(status: 200, body: expected_output, headers: {})
+    stub_request(:post, "#{ENV['BE_URL']}/api/v1/gardens?description=#{params['description']}&latitude=#{params['latitude']}&longitude=#{params['longitude']}&name=#{params['name']}&private=false&user_id=1").to_return(status: 200, body: expected_output, headers: {})
 
     response = GardenFacade.new_garden(params.symbolize_keys, "1")
     garden_details_response_structure_check(response)
@@ -32,7 +32,7 @@ describe GardenFacade do
     params = {"id" => "1", "name"=>"The Grove", "latitude"=>"71.0", "longitude"=>"25.0", "private"=>"false", "description"=>"My first garden"}
 
     expected_output = File.read('spec/fixtures/delete_garden.json')
-    stub_request(:delete, "https://solar-garden-be.herokuapp.com/api/v1/gardens/#{params["id"]}").to_return(status: 204, body: expected_output, headers: {})
+    stub_request(:delete, "#{ENV['BE_URL']}/api/v1/gardens/#{params["id"]}").to_return(status: 204, body: expected_output, headers: {})
 
     response = GardenFacade.destroy(params["id"])
     expect(response.body).to eq("")
