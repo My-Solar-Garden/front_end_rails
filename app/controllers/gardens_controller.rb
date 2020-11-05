@@ -14,6 +14,8 @@ class GardensController < ApplicationController
     light_sensor = @sensors.find { |sensor| sensor.sensor_type == 'light' }
     @light = GardenHealthFacade.last_reading(light_sensor) if light_sensor && !light_sensor.garden_healths.nil?
 
+    @plants = PlantFacade.all_plants_for_garden(params)
+
     if !garden.is_private || current_users_garden?(garden)
       @garden = garden
     else

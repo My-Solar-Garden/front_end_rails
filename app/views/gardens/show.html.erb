@@ -35,12 +35,12 @@
 
     <section class='garden-plants'>
       <h1>Your Garden Plants</h1>
-      <% if @garden.plants.empty? %>
+      <% if @plants.empty? %>
         <p>You have no plants</p>
       <% else %>
-        <% @garden.plants.each do |plant| %>
+        <% @plants.each do |plant| %>
           <div class="plant-box">
-            <%= plant[:name] %>
+            <%= plant.name %>
           </div>
         <% end %>
       <% end %>
