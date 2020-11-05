@@ -1,5 +1,5 @@
 class SensorsController < ApplicationController
-  # before_action :require_user
+  before_action :require_user
 
   def show
     @sensor = SensorFacade.sensor_details(params)
