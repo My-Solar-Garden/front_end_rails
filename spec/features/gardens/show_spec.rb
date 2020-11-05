@@ -250,5 +250,17 @@ RSpec.describe 'Show Garden Page' do
       expect(page).to have_field('search_term')
       expect(page).to have_button('Find Plants')
     end
+
+    it "displays plants for gardens with plants" do
+      json_response = File.read('spec/fixtures/garden_with_plants.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/247").to_return(status: 200, body: json_response)
+
+      json_response = File.read('spec/fixtures/plants.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/247/plants").to_return(status: 200, body: json_response)
+
+      visit "/gardens/247"
+
+      expect(page).to have_content('Carrots')
+    end
   end
 end

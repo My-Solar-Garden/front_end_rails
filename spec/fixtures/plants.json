@@ -1,0 +1,156 @@
+{
+    "data": [
+        {
+            "id": "42",
+            "type": "plant",
+            "attributes": {
+                "image": "harvest_helper_production/42_tarragon",
+                "name": "Tarragon",
+                "species": "",
+                "description": "Tarragon is a perennial herb with long, light green leaves and tiny greenish or yellowish white flowers. For cooking, use French tarragon. Russian tarragon can easily be mistaken for French, but Russian tarragon is coarser and less flavorful than French tarragon.",
+                "light_requirements": "Full-Part Sun",
+                "water_requirements": "Be sure to water the young plants regularly until they are fully grown so that they don't dry out.",
+                "when_to_plant": "You can tarragon mint as soon as the soil is workable in the spring.",
+                "harvest_time": "Harvest your plant regularly. Two or three plants will suffice if you regularly prune them. Tarragon is best used fresh in the summer.",
+                "common_pests": "",
+                "id": 42
+            },
+            "relationships": {
+                "garden_plants": {
+                    "data": [
+                        {
+                            "id": "1",
+                            "type": "garden_plant"
+                        }
+                    ]
+                },
+                "gardens": {
+                    "data": [
+                        {
+                            "id": "247",
+                            "type": "garden"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "4",
+            "type": "plant",
+            "attributes": {
+                "image": "harvest_helper_production/04_carrot",
+                "name": "Carrots",
+                "species": "",
+                "description": "Carrots are a popular root vegetable that are easy to grow in sandy soil. They are resistant to most pests and diseases, and are a good late season crop that can tolerate frost. Not all carrots are orange; varieties vary in color from purple to white.",
+                "light_requirements": "Full Sun(at least 6 hours a day)",
+                "water_requirements": "Water at least one inch per week.",
+                "when_to_plant": "Plan to plant seeds outdoors 3 to 5 weeks before the last spring frost date.",
+                "harvest_time": "Carrots are mature at around 2 ½ months and ½ inch in diameter. You may harvest whenever desired maturity is reached.\r\nYou may leave mature carrots in the soil for storage if the ground will not freeze.",
+                "common_pests": "Wireworms, Flea Beetles",
+                "id": 4
+            },
+            "relationships": {
+                "garden_plants": {
+                    "data": [
+                        {
+                            "id": "16",
+                            "type": "garden_plant"
+                        }
+                    ]
+                },
+                "gardens": {
+                    "data": [
+                        {
+                            "id": "247",
+                            "type": "garden"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "21",
+            "type": "plant",
+            "attributes": {
+                "image": "harvest_helper_production/21_cantaloupe",
+                "name": "Cantaloupe",
+                "species": "",
+                "description": "What we commonly refer to as ‘cantaloupe’ is actually not true cantaloupe, rather, a type of muskmelon. (True cantaloupe has a rough, warty rind and is not widely grown or commercially available in the US.) Muskmelons are a heat-loving fruit with a long growing season. Their cultural and growing requirements are very similar to other melons. They have a net-like, tan rind, and sweet orange flesh. The names muskmelon and cantaloupe are used interchangeably. We will use the name cantaloupe for this page to avoid confusion.",
+                "light_requirements": "Full Sun(at least 6 hours a day)",
+                "water_requirements": "While melon plants are growing, blooming, and setting fruit, they need 1 to 2 inches of water per week. Water in the morning, and try to avoid wetting the leaves. Reduce watering once fruit are growing. Dry weather produces the sweetest melon. If you’ve had an exceptional amount of rainfall during the ripening stage, this could cause the bland fruit.",
+                "when_to_plant": "If you are in a cooler zone, start seeds indoors about a month before transplanting. Cantaloupe vines are very tender and should not be transplanted until all danger of frost has passed. If you live in warmer climes, you can direct sow seeds outdoors, but wait until the soil temperature warms to at least 65 degrees to avoid poor germination.",
+                "harvest_time": "When rinds begin to change from green to tan or yellow, the melon is probably ripe, but be careful not to pick too early. Look for a crack in the stem where it attaches to the fruit. This is a sign of ripeness as well. The fruit should be easy to separate from the vine, but if they fall off by themselves they are usually overripe. Harvest melon when vines are dry, and be careful not to damage them.",
+                "common_pests": "Aphids, Cucumber Beetles, Squash Borers",
+                "id": 21
+            },
+            "relationships": {
+                "garden_plants": {
+                    "data": [
+                        {
+                            "id": "25",
+                            "type": "garden_plant"
+                        },
+                        {
+                            "id": "26",
+                            "type": "garden_plant"
+                        }
+                    ]
+                },
+                "gardens": {
+                    "data": [
+                        {
+                            "id": "247",
+                            "type": "garden"
+                        },
+                        {
+                            "id": "247",
+                            "type": "garden"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "21",
+            "type": "plant",
+            "attributes": {
+                "image": "harvest_helper_production/21_cantaloupe",
+                "name": "Cantaloupe",
+                "species": "",
+                "description": "What we commonly refer to as ‘cantaloupe’ is actually not true cantaloupe, rather, a type of muskmelon. (True cantaloupe has a rough, warty rind and is not widely grown or commercially available in the US.) Muskmelons are a heat-loving fruit with a long growing season. Their cultural and growing requirements are very similar to other melons. They have a net-like, tan rind, and sweet orange flesh. The names muskmelon and cantaloupe are used interchangeably. We will use the name cantaloupe for this page to avoid confusion.",
+                "light_requirements": "Full Sun(at least 6 hours a day)",
+                "water_requirements": "While melon plants are growing, blooming, and setting fruit, they need 1 to 2 inches of water per week. Water in the morning, and try to avoid wetting the leaves. Reduce watering once fruit are growing. Dry weather produces the sweetest melon. If you’ve had an exceptional amount of rainfall during the ripening stage, this could cause the bland fruit.",
+                "when_to_plant": "If you are in a cooler zone, start seeds indoors about a month before transplanting. Cantaloupe vines are very tender and should not be transplanted until all danger of frost has passed. If you live in warmer climes, you can direct sow seeds outdoors, but wait until the soil temperature warms to at least 65 degrees to avoid poor germination.",
+                "harvest_time": "When rinds begin to change from green to tan or yellow, the melon is probably ripe, but be careful not to pick too early. Look for a crack in the stem where it attaches to the fruit. This is a sign of ripeness as well. The fruit should be easy to separate from the vine, but if they fall off by themselves they are usually overripe. Harvest melon when vines are dry, and be careful not to damage them.",
+                "common_pests": "Aphids, Cucumber Beetles, Squash Borers",
+                "id": 21
+            },
+            "relationships": {
+                "garden_plants": {
+                    "data": [
+                        {
+                            "id": "25",
+                            "type": "garden_plant"
+                        },
+                        {
+                            "id": "26",
+                            "type": "garden_plant"
+                        }
+                    ]
+                },
+                "gardens": {
+                    "data": [
+                        {
+                            "id": "247",
+                            "type": "garden"
+                        },
+                        {
+                            "id": "247",
+                            "type": "garden"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
