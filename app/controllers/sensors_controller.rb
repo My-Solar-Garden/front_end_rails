@@ -12,7 +12,18 @@ class SensorsController < ApplicationController
     redirect_to "/gardens/#{@garden_id}"
   end
 
-  def edit; end
+  def edit
+    # binding.pry
+    @sensor_id = params[:sensor_id]
+    @garden_id = params[:garden_id]
+    @sensor = SensorFacade.sensor_details(params[:sensor_id])
+  end
+
+  def update
+    # binding.pry
+    SensorFacade.edit_sensor(sensor_params)
+    redirect_to "/gardens/#{@garden_id}"
+  end
 
   def destroy
     redirect_to dashboard_path

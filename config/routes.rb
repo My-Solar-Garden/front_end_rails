@@ -23,6 +23,6 @@ Rails.application.routes.draw do
 
   get '/gardens/:garden_id/sensors', to: 'sensors#new'
   post '/gardens/:garden_id/sensors', to: 'sensors#create'
-  get '/sensors/:sensor_id/edit', to: 'sensors#edit'
-  patch '/sensors/:sensor_id', to: 'sensors#update'
+  get '/gardens/:garden_id/sensors/:sensor_id/edit', to: 'sensors#edit'
+  patch '/gardens/:garden_id/sensors/:sensor_id/edit', to: 'sensors#update'
 end

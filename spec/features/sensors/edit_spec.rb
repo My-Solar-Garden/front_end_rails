@@ -56,13 +56,30 @@ RSpec.describe 'Edit Sensor Page' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
 
-    it 'can visit edit a sensor page' do
-      visit "/sensors/#{@sensor[:data][:id]}/edit"
+    it 'can visit edit a sensor page and see 3 input fileds and a submit button' do
+      visit "/gardens/#{@garden[:id]}/sensors/#{@sensor[:data][:id]}/edit"
       expect(page).to have_select(:sensor_type)
       expect(page).to have_field('Min threshold')
       expect(page).to have_field('Max threshold')
       expect(page).to have_button('Update Sensor')
     end
 
+    it 'fills in edit sensor form, submits and is redirected to garden show page' do
+      min = 9
+      max = 20
+      sensor_type = 'moisture'
+
+      visit "/gardens/#{@garden[:id]}/sensors/#{@sensor[:data][:id]}/edit"
+      # save_and_open_page
+      fill_in :min_threshold, with: min
+      fill_in :max_threshold, with: max
+
+      updated_sensor = File.read('spec/fixtures/edit_sensor.json')
+
+      stub_request(:post, "https://solar-garden-be.herokuapp.com/api/v1/sensors?garden_id=#{@garden[:id]}&sensor_type=#{sensor_type}&min_threshold=#{min}&max_threshold=#{max}").to_return(status: 200, body: updated_sensor, headers: {})
+
+      click_button 'Update Sensor'
+      expect(current_path).to eq("/gardens/#{@garden.id}")
+    end
   end
 end
