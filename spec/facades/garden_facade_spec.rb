@@ -2,7 +2,9 @@ require 'rails_helper'
 
 describe GardenFacade do
   it "should return garden details for specific garden" do
-    params = {id: 2}
+    params = {id: 3}
+    expected_output = File.read('spec/fixtures/updated_garden.json')
+    stub_request(:post, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: expected_output, headers: {})
     garden = GardenFacade.garden_details(params)
 
     expect(garden).to be_a(Garden)

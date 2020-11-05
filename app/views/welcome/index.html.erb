@@ -14,6 +14,9 @@
       We want to live in balance with the diversity of our environment.  It all starts with healthy soil, and that's what we will help you learn how to cultivate. It starts with one person.<br><br>
 
       That person, is you.
+      <% if current_user.nil? %>
+        <%= render 'shared/login_with_google_button' %>
+      <% end %>
     </p>
   </div>
 
@@ -26,26 +29,12 @@
     </div>
   <% end %>
 
-<!-- Clickable buttons -->
   <div class="w3-container w3-content w3-center">
     <div class="w3-row w3-padding-32" >
-
 <!-- Visit the Learn More page button -->
       <div class="w3-panel">
-        <% if current_user.nil? %>
-          <%= link_to "Be The Change. Learn More", "/learn_more", class: "w3-btn w3-light-green w3-block" %>
-        <% end %>
+        <%= link_to "Be The Change. Learn More", "/learn_more", class: "btn btn-info" %>
       </div>
-
-<!-- Visit the Privacy Policy page button -->
-      <div class="w3-panel">
-        <%= link_to "Visit our Privacy Policy Page", "/privacy", class: "w3-btn w3-light-green w3-block" %>
-      </div>
-
-<!-- Login with Google button -->
-      <% if current_user.nil? %>
-        <%= render 'shared/login_with_google_button' %>
-      <% end %>
     </div>
   </div>
 </div>
@@ -67,3 +56,5 @@ function carousel() {
   setTimeout(carousel, 6000);
 }
 </script>
+
+<%= link_to "Visit our Privacy Policy Page", "/privacy", class: "w3-btn w3-light-green w3-block" %>
