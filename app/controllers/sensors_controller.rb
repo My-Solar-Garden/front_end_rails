@@ -1,6 +1,14 @@
 class SensorsController < ApplicationController
   before_action :require_user
-  def show; end
+
+  def show
+    @sensor = SensorFacade.sensor_details(params)
+    if params['history']
+      stop = DateTime.now.to_s[0..9]
+      start = (DateTime.now - params['history'].to_i).to_s[0..9]
+      @history = GardenHealthFacade.garden_health_search(start, stop, @sensor.id)
+    end
+  end
 
   def new
     @garden_id = params[:garden_id]
@@ -11,7 +19,6 @@ class SensorsController < ApplicationController
     SensorFacade.new_sensor(sensor_params)
     redirect_to "/gardens/#{@garden_id}"
   end
-
   def edit; end
 
   def destroy
