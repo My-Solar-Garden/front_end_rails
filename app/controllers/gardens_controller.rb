@@ -25,11 +25,10 @@ class GardensController < ApplicationController
 
   def edit
     @garden = GardenFacade.garden_details(params)
-    require 'pry'; binding.pry
-    GardenFacade.update()
   end
-
+  
   def update
+    GardenFacade.update(params, current_user.id)
     redirect_to garden_show_path(params[:id])
   end
 
