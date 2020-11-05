@@ -16,6 +16,7 @@
 
 @import "bootstrap";
 @import "font-awesome";
+@import "theme";
 
 // .solar-nav {float: right}
 
@@ -82,4 +83,17 @@ ul {
 
 .icon {
   margin: 5px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  padding: 0px;
+}
+
+.card-body {
+  padding: 15px;
 }
