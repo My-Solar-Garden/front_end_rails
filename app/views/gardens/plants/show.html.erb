@@ -16,4 +16,5 @@
        <h4>Best Time to Harvest</h4><%= @plant.harvest_time %>
        <h4>Pests:</h4><%= @plant.common_pests %>
      </div>
+     <%= button_to 'Remove This Plant From Your Garden', "", method: :delete %>
    </div>
