@@ -31,7 +31,7 @@ RSpec.describe 'Navbar' do
                                  sensors: {
                                     data: []}}}
 
-      @sensor = Sensor.new({id: 1,
+      @sensor = Sensor.new({id: 4,
                         attributes: {
                           sensor_type: 1298,
                           min_threshold: 30,
@@ -59,6 +59,9 @@ RSpec.describe 'Navbar' do
 
       response = File.read('spec/fixtures/public_garden.json')
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/#{@garden[:id]}").to_return(status: 200, body: response)
+
+      sensor = File.read('spec/fixtures/sensor.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/#{@sensor.id}").to_return(status: 200, body: sensor)
     end
 
     it "can see my dash, my impact, learn more, profile and logout on profile page" do
@@ -172,7 +175,7 @@ RSpec.describe 'Navbar' do
     end
 
     it "can see my dash, my impact, learn more, profile and logout on sensor update page" do
-      visit "/sensors/update"
+      visit "/sensors/1/edit"
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')

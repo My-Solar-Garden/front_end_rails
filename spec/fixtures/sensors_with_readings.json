@@ -1,0 +1,47 @@
+{
+    "data": {
+        "id": "1",
+        "type": "sensor",
+        "attributes": {
+            "min_threshold": 13,
+            "max_threshold": 153,
+            "sensor_type": "light"
+        },
+        "relationships": {
+            "garden": {
+                "data": {
+                    "id": "9",
+                    "type": "garden"
+                }
+            },
+            "garden_healths": {
+                "data": [
+                    {
+                        "id": "1",
+                        "type": "garden_health"
+                    },
+                    {
+                        "id": "1",
+                        "type": "garden_health"
+                    },
+                    {
+                        "id": "1",
+                        "type": "garden_health"
+                    },
+                    {
+                        "id": "1",
+                        "type": "garden_health"
+                    },
+                    {
+                        "id": "1",
+                        "type": "garden_health"
+                    },
+                    {
+                        "id": "1",
+                        "type": "garden_health"
+                    }
+                ]
+            }
+        }
+    }
+}

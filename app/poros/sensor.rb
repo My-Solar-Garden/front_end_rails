@@ -16,6 +16,10 @@ class Sensor
   end
 
   def set_garden_healths(data)
-    data[:relationships][:garden_healths][:data] rescue nil
+    if data[:relationships][:garden_healths][:data] != []
+      data[:relationships][:garden_healths][:data].map do |garden_health|
+        GardenHealthFacade.garden_health_details(garden_health, @id)
+      end
+    end
   end
 end

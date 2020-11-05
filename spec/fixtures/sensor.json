@@ -1,0 +1,22 @@
+{
+    "data": {
+            "id": "4",
+            "type": "sensor",
+            "attributes": {
+                "min_threshold": 5,
+                "max_threshold": 15,
+                "sensor_type": "moisture"
+            },
+            "relationships": {
+                "garden": {
+                    "data": {
+                        "id": "3",
+                        "type": "garden"
+                    }
+                },
+                "garden_healths": {
+                    "data": []
+                }
+            }
+        }
+    }

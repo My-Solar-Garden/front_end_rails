@@ -8,6 +8,9 @@ class GardensController < ApplicationController
   def show
     garden = GardenFacade.garden_details(params)
     @sensors = SensorFacade.all_sensors_for_garden(params)
+    sensor = @sensors.find { |sensor| sensor.sensor_type == 'temperature' }
+    @temperature = GardenHealthFacade.last_reading(sensor) if sensor && !sensor.garden_healths.nil?
+
     @weather = WeatherFacade.create_weather_objects([garden.latitude, garden.longitude])
 
     if !garden.is_private || current_users_garden?(garden)

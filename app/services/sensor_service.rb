@@ -1,4 +1,8 @@
 class SensorService
+  def self.sensor_details(params)
+    get_parsed_json("/api/v1/sensors/#{params[:id]}")
+  end
+  
   def self.new_sensor(sensor_params)
     post_parsed_json("/api/v1/sensors", sensor_params)
   end

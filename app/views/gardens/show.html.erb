@@ -69,6 +69,12 @@
     </section>
   </article>
 
+  <% if @temperature %>
+    <section class='garden-temperature'>
+      <p>Current Garden Temperature: <%= @temperature.reading %>°C </p>
+    </section>
+  <% end %>
+
   <article class='right-col'>
     <h1>Weather Information</h1>
   </article>

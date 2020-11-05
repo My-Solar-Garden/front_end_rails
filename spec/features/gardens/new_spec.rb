@@ -42,9 +42,9 @@ RSpec.describe 'New Garden Page' do
 
       expected_output = File.read('spec/fixtures/new_garden.json')
 
-      stub_request(:post, "https://solar-garden-be.herokuapp.com/api/v1/gardens?description=#{description}&latitude=#{latitude}&longitude=#{longitude}&name=#{name}&private=false&user_id=#{@user.id}").to_return(status: 200, body: expected_output, headers: {})
+      stub_request(:post, "#{ENV['BE_URL']}/api/v1/gardens?description=#{description}&latitude=#{latitude}&longitude=#{longitude}&name=#{name}&private=false&user_id=#{@user.id}").to_return(status: 200, body: expected_output, headers: {})
 
-      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/50").to_return(status: 200, body: expected_output, headers: {})
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/50").to_return(status: 200, body: expected_output, headers: {})
 
       visit new_garden_path
       fill_in :name, with: name
