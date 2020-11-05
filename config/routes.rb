@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   resources :users, except: [:index, :show]
   resources :sensors, except: [:index]
+  get '/garden_healths/search', to: 'garden_healths#show'
+  resources :sensors, except: [:index]
   get "/learn_more", to: "learn_more#show"
   get "/logout", to: "sessions#destroy"
 

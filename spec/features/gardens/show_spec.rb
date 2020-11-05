@@ -184,6 +184,9 @@ RSpec.describe 'Show Garden Page' do
       sensors = File.read('spec/fixtures/sensors.json')
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3/sensors").to_return(status: 200, body: sensors)
 
+      sensor = File.read('spec/fixtures/sensor.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/#{@sensor1[:id]}").to_return(status: 200, body: sensor)
+
       visit "/gardens/3"
 
       click_link @sensor1[:attributes][:sensor_type]
