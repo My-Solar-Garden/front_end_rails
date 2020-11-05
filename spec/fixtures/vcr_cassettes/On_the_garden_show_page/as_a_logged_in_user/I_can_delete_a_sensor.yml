@@ -218,4 +218,528 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[{"id":"34","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"35","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"36","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"37","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"38","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"39","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"40","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"41","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"42","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"43","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"44","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"45","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"46","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"47","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"48","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"49","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"50","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"51","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"52","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"53","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"54","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"55","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"56","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"57","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"58","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"59","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"60","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"61","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"62","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"63","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"80","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"81","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"82","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"86","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"87","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"88","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"13","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"light"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[{"id":"40","type":"garden_health"},{"id":"42","type":"garden_health"},{"id":"44","type":"garden_health"},{"id":"46","type":"garden_health"},{"id":"48","type":"garden_health"},{"id":"50","type":"garden_health"},{"id":"52","type":"garden_health"},{"id":"54","type":"garden_health"}]}}}]}'
   recorded_at: Wed, 04 Nov 2020 23:54:21 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/40
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 19:43:47 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 216d469b-488e-4936-8476-bad06f10de7c
+      X-Runtime:
+      - '0.014169'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 05 Nov 2020 19:43:47 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 19:49:01 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"15b67548da2c9ffda6ea750979f29f6c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 492ba3ad-f6b2-4a8c-b9da-13b6599a392d
+      X-Runtime:
+      - '0.027083'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"garden","attributes":{"latitude":97.5,"longitude":100.0,"name":"hi","description":"it''s
+        a garden, what else do you want to know?","private":false},"relationships":{"user_gardens":{"data":[]},"users":{"data":[]},"sensors":{"data":[]},"garden_plants":{"data":[]},"plants":{"data":[]}}}}'
+  recorded_at: Thu, 05 Nov 2020 19:49:01 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/3/sensors
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 19:49:01 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3fff5103-0953-458a-a306-49479ebb400f
+      X-Runtime:
+      - '0.013514'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Thu, 05 Nov 2020 19:49:01 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 20:02:40 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b4a4b8c0ff29ce402a7202487376ad98"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c5267d37-0295-40fb-b6a2-0ab034b8b8b3
+      X-Runtime:
+      - '0.043013'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"garden","attributes":{"latitude":97.5,"longitude":100.0,"name":"Garden
+        1","description":"it''s a garden, what else do you want to know?","private":false},"relationships":{"user_gardens":{"data":[]},"users":{"data":[]},"sensors":{"data":[]},"garden_plants":{"data":[]},"plants":{"data":[]}}}}'
+  recorded_at: Thu, 05 Nov 2020 20:02:41 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/2/sensors
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 20:02:41 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1a6b0b8c-37be-4dea-80d2-0468bdd6faed
+      X-Runtime:
+      - '0.017041'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Thu, 05 Nov 2020 20:02:41 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/50/sensors
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 20:32:04 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dad0a393-1e1f-40b1-b7b2-612d7d624b06
+      X-Runtime:
+      - '0.038039'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Thu, 05 Nov 2020 20:32:04 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/43/sensors
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 20:38:24 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a8ce31db-9ea9-47a5-9c22-bccd283673b8
+      X-Runtime:
+      - '0.015852'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Thu, 05 Nov 2020 20:38:25 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 20:51:41 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"09602b3aabb25cf0ad4eca7c10d6ecd2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f3ab234f-131e-4b12-8d4f-fb00de68f960
+      X-Runtime:
+      - '0.022121'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"garden","attributes":{"latitude":71.0,"longitude":25.0,"name":"The
+        Grove","description":"My first garden","private":false},"relationships":{"user_gardens":{"data":[]},"users":{"data":[]},"sensors":{"data":[{"id":"65","type":"sensor"},{"id":"66","type":"sensor"},{"id":"67","type":"sensor"},{"id":"68","type":"sensor"},{"id":"69","type":"sensor"},{"id":"70","type":"sensor"},{"id":"71","type":"sensor"},{"id":"72","type":"sensor"},{"id":"73","type":"sensor"},{"id":"74","type":"sensor"},{"id":"75","type":"sensor"},{"id":"76","type":"sensor"},{"id":"77","type":"sensor"},{"id":"78","type":"sensor"},{"id":"79","type":"sensor"}]},"garden_plants":{"data":[]},"plants":{"data":[]}}}}'
+  recorded_at: Thu, 05 Nov 2020 20:51:41 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/4/sensors
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 20:51:44 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"cf47574d67b6e399a9402ac9e08760d8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e2db71ff-6b0b-4096-a68f-843546581588
+      X-Runtime:
+      - '0.091957'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"65","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"66","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"67","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"68","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"69","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"70","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"71","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"72","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"73","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"74","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"75","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"76","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"77","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"78","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"79","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}}]}'
+  recorded_at: Thu, 05 Nov 2020 20:51:45 GMT
+- request:
+    method: delete
+    uri: https://solar-garden-be.herokuapp.com/api/v1/sensors/65
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 20:51:45 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - b63e8d41-0d92-4737-a49a-d1c16a565d1d
+      X-Runtime:
+      - '0.045000'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 05 Nov 2020 20:51:46 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 20:51:45 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"7ad9d257ffc1dd587209d5b27f667166"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3cc2e1ff-c0d5-4597-85a4-008a0178c30c
+      X-Runtime:
+      - '0.029640'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"garden","attributes":{"latitude":71.0,"longitude":25.0,"name":"The
+        Grove","description":"My first garden","private":false},"relationships":{"user_gardens":{"data":[]},"users":{"data":[]},"sensors":{"data":[{"id":"66","type":"sensor"},{"id":"67","type":"sensor"},{"id":"68","type":"sensor"},{"id":"69","type":"sensor"},{"id":"70","type":"sensor"},{"id":"71","type":"sensor"},{"id":"72","type":"sensor"},{"id":"73","type":"sensor"},{"id":"74","type":"sensor"},{"id":"75","type":"sensor"},{"id":"76","type":"sensor"},{"id":"77","type":"sensor"},{"id":"78","type":"sensor"},{"id":"79","type":"sensor"}]},"garden_plants":{"data":[]},"plants":{"data":[]}}}}'
+  recorded_at: Thu, 05 Nov 2020 20:51:46 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/4/sensors
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 20:51:48 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6708b6bc1689fac9cf62eea80059c122"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5cc4942e-2f9b-4f61-9363-d6617058e2ff
+      X-Runtime:
+      - '0.049858'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"66","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"67","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"68","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"69","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"70","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"71","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"72","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"73","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"74","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"75","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"76","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"77","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"78","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"79","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"4","type":"garden"}},"garden_healths":{"data":[]}}}]}'
+  recorded_at: Thu, 05 Nov 2020 20:51:49 GMT
 recorded_with: VCR 6.0.0

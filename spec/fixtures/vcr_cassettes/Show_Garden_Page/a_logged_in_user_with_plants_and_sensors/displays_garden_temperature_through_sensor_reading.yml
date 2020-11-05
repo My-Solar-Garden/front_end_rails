@@ -133,4 +133,92 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[{"id":"57","type":"garden_health","attributes":{"id":57,"reading_type":null,"reading":99.0,"created_at":"2020-11-04T00:00:00.000Z"}}]}'
   recorded_at: Thu, 05 Nov 2020 01:49:35 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/57
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 19:43:43 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5ddb228cf2af1920a956ff78eadfd3b7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 64226ad6-b502-4257-894f-0261886504d8
+      X-Runtime:
+      - '0.020745'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"57","type":"garden_health","attributes":{"id":57,"reading_type":null,"reading":99.0,"created_at":"2020-11-04T00:00:00.000Z"}}}'
+  recorded_at: Thu, 05 Nov 2020 19:43:43 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/58
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 19:43:43 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c21493c8230e49ec5e536bef42404019"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a3618277-95dc-4a26-877e-bc6d501ab9a5
+      X-Runtime:
+      - '0.010587'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"58","type":"garden_health","attributes":{"id":58,"reading_type":null,"reading":680.0,"created_at":"2020-11-03T00:00:00.000Z"}}}'
+  recorded_at: Thu, 05 Nov 2020 19:43:44 GMT
 recorded_with: VCR 6.0.0
