@@ -175,7 +175,7 @@ RSpec.describe 'Navbar' do
     end
 
     it "can see my dash, my impact, learn more, profile and logout on sensor update page" do
-      visit "/sensors/1/edit"
+      visit "/sensors/3/edit"
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')
