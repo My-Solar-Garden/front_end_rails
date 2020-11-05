@@ -1,7 +1,7 @@
-require 'spec_helper'
+require 'rails_helper'
 
-RSpec.describe GardenHealthService do
-  xit "returns the last reading" do
+describe GardenHealthService do
+  it "returns the last reading", :vcr do
     attr = {
     "data": {
         "id": "89",
@@ -27,7 +27,6 @@ RSpec.describe GardenHealthService do
     sensor = Sensor.new(attr.deep_symbolize_keys[:data])
 
     reading = GardenHealthService.last_reading(sensor)
-    require "pry"; binding.pry
-    expect(reading).to eq('99')
+    expect(reading[:attributes][:reading]).to eq(99)
   end
 end
