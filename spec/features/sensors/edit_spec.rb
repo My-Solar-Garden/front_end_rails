@@ -52,7 +52,6 @@ RSpec.describe 'Edit Sensor Page' do
       sensor1 = File.read('spec/fixtures/new_sensor.json')
 
       stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3/sensors/3").to_return(status: 200, body: garden1)
-      # stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/1").to_return(status: 200, body: public_response)
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
