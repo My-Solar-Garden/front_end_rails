@@ -1,5 +1,6 @@
 <center>
   <h3>Your <%= @sensor.sensor_type %> sensor</h3>
+  <%= link_to "Edit Sensor", "/gardens/#{@sensor.garden_id}/sensors/#{@sensor.id}" %>
 
     <% if !@sensor.garden_healths.nil? %>
       <div class="container">
