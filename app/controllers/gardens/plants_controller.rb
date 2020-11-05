@@ -1,7 +1,7 @@
 class Gardens::PlantsController < ApplicationController
   before_action :require_user
   def show
-    @plant = PlantFacade.plant_details(params[:id])
+    @plant = PlantFacade.plant_details(params[:plant_id])
   end
 
   def new; end
