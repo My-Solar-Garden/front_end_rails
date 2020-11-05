@@ -32,7 +32,7 @@ RSpec.describe 'Edit Sensor Page' do
               attributes: {
                   min_threshold: 5,
                   max_threshold: 10,
-                  sensor_type: "moisture"
+                  sensor_type: 0
               },
               relationships: {
                   garden: {
@@ -51,7 +51,8 @@ RSpec.describe 'Edit Sensor Page' do
       garden1 = File.read('spec/fixtures/public_garden.json')
       sensor1 = File.read('spec/fixtures/new_sensor.json')
 
-      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3").to_return(status: 200, body: garden1)
+      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3/sensors/3").to_return(status: 200, body: garden1)
+      # stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/1").to_return(status: 200, body: public_response)
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
@@ -67,19 +68,17 @@ RSpec.describe 'Edit Sensor Page' do
     it 'fills in edit sensor form, submits and is redirected to garden show page' do
       min = 9
       max = 20
-      sensor_type = 'moisture'
 
       visit "/gardens/#{@garden[:id]}/sensors/#{@sensor[:data][:id]}/edit"
-      # save_and_open_page
       fill_in :min_threshold, with: min
       fill_in :max_threshold, with: max
 
       updated_sensor = File.read('spec/fixtures/edit_sensor.json')
 
-      stub_request(:post, "https://solar-garden-be.herokuapp.com/api/v1/sensors?garden_id=#{@garden[:id]}&sensor_type=#{sensor_type}&min_threshold=#{min}&max_threshold=#{max}").to_return(status: 200, body: updated_sensor, headers: {})
+      stub_request(:patch, "https://solar-garden-be.herokuapp.com/api/v1/sensors?garden_id=#{@garden[:id]}&sensor_type=moisture&min_threshold=#{min}&max_threshold=#{max}").to_return(status: 200, body: updated_sensor, headers: {})
 
       click_button 'Update Sensor'
-      expect(current_path).to eq("/gardens/#{@garden.id}")
+      expect(current_path).to eq("/gardens/#{@garden[:id]}")
     end
   end
 end
