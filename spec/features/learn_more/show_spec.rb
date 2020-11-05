@@ -8,7 +8,6 @@ RSpec.describe 'Learn More page' do
     end
 
     it "visitor does not see a navbar" do
-      expect(page).to_not have_link("My Gardens")
       expect(page).to_not have_link("Learn More")
       expect(page).to_not have_link("Logout")
       expect(page).to_not have_link("Profile")
