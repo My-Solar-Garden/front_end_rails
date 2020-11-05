@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe GardenFacade do
   it "should return garden details for specific garden" do
-    params = {id: 1}
+    params = {id: 2}
     garden = GardenFacade.garden_details(params)
 
     expect(garden).to be_a(Garden)
