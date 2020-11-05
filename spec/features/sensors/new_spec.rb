@@ -82,6 +82,7 @@ RSpec.describe 'New Sensor Page' do
       expect(current_path).to eq("/gardens/#{@garden.id}")
 
       visit "/gardens/#{@garden.id}"
+
       expect(page.all(".sensor").size).to eq(6)
     end
   end

@@ -488,6 +488,17 @@ RSpec.describe 'Show Garden Page' do
                     :garden=>{:data=>{:id=> 3, :type=>"garden"}}, :garden_healths=>{:data=>[]}
                     }
                   }
+      @sensor3 = {:id=> 6,
+                  :type=>"sensor",
+                  :attributes=>{
+                    :min_threshold=>2,
+                    :max_threshold=>15,
+                    :sensor_type=>"light"
+                    },
+                  :relationships=>{
+                    :garden=>{:data=>{:id=> 3, :type=>"garden"}}, :garden_healths=>{:data=>[]}
+                    }
+                  }
       @user = User.new({id: 1,
                       attributes: {
                           email: '123@gmail.com' },
@@ -554,6 +565,21 @@ RSpec.describe 'Show Garden Page' do
 
       expect(page).to have_content('Current Garden Temperature:')
       expect(page).to have_content('99')
+    end
+
+    it "displays garden light percentage through sensor reading", :vcr do
+      user = User.new({id: 10,
+                      attributes: {
+                          email: '123@gmail.com' },
+                      relationships: {
+                          gardens: {
+                              data: [ @garden ] }}})
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit garden_path(248)
+
+      expect(page).to have_content('Current Garden Light Percentage:')
+      expect(page).to have_content('90.91%')
     end
 
     it "has search for plants field and add button" do
