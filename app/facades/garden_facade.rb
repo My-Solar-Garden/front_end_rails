@@ -1,5 +1,5 @@
 class GardenFacade
-  def self.create_garden_objects(users_gardens) 
+  def self.create_garden_objects(users_gardens)
     users_gardens.map do |garden|
       garden_details(garden)
     end
