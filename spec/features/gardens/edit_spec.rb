@@ -56,7 +56,7 @@ RSpec.describe 'Edit Garden Page' do
     xit 'can visit edit a garden page from dashboard' do
       visit dashboard_path
 
-      # it seems like this syntax isn't actually clicking the edit icon
+      # it seems like this syntax isn't actually clicking the edit icon?
       find('.fa-edit').click
 
       expect(current_path).to eq("/gardens/#{@garden[:id]}/edit")
