@@ -1,8 +1,13 @@
 class SensorsController < ApplicationController
-  before_action :require_user
+  # before_action :require_user
 
   def show
     @sensor = SensorFacade.sensor_details(params)
+    if params['history']
+      stop = DateTime.now.to_s[0..9]
+      start = (DateTime.now - params['history'].to_i).to_s[0..9]
+      @history = GardenHealthFacade.garden_health_search(start, stop, @sensor.id)
+    end
   end
 
   def new
