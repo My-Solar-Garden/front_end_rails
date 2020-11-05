@@ -75,6 +75,12 @@
     </section>
   <% end %>
 
+  <% if @light %>
+    <section class='garden-temperature'>
+      <p>Current Garden Light Percentage: <%= @light.reading %></p>
+    </section>
+  <% end %>
+
   <article class='right-col'>
     <h1>Weather Information</h1>
   </article>
