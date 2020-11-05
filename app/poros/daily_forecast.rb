@@ -5,13 +5,13 @@ class DailyForecast
               :description
 
   def initialize(data)
-    @date = formatted_date(data[:dt])
-    @temperature = data[:temp][:day]
+    @date = formatted_date(data[:date])
+    @temperature = data[:temperature]
     @humidity = data[:humidity]
-    @description = data[:weather][0][:description].titleize
+    @description = data[:description].titleize
   end
 
-  def formatted_date(iso)
-    Time.at(iso).to_s.split(" ")[0]
+  def formatted_date(date)
+    date.split("T")[0]
   end
 end
