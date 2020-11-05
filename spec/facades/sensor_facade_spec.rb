@@ -23,4 +23,14 @@ describe SensorFacade do
     expect(sensors).to be_an(Array)
     expect(sensors.all? { |sensor| sensor.class == Sensor }).to be_truthy
   end
+
+  it "can delete a sensor", :vcr do
+    garden = {id: 1}
+    sensors = SensorFacade.all_sensors_for_garden(garden)
+    total = sensors.size
+    params = { id: sensors.first.id }
+    SensorFacade.delete_sensor(params)
+    new_total = SensorFacade.all_sensors_for_garden(garden).size
+    expect(new_total).to eq(total - 1)
+  end
 end
