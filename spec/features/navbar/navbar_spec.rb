@@ -73,7 +73,6 @@ RSpec.describe 'Navbar' do
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
-        expect(page).to have_link("Temp: 75.31°F")
       end
     end
 
@@ -85,7 +84,6 @@ RSpec.describe 'Navbar' do
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
-        expect(page).to have_link("Temp: 75.31°F")
       end
     end
 
@@ -97,7 +95,6 @@ RSpec.describe 'Navbar' do
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
-        expect(page).to have_link("Temp: 75.31°F")
       end
     end
 
@@ -109,7 +106,6 @@ RSpec.describe 'Navbar' do
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
-        expect(page).to have_link("Temp: 75.31°F")
       end
     end
 
@@ -121,7 +117,6 @@ RSpec.describe 'Navbar' do
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
-        expect(page).to have_link("Temp: 75.31°F")
       end
     end
 
@@ -133,7 +128,6 @@ RSpec.describe 'Navbar' do
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
-        expect(page).to have_link("Temp: 75.31°F")
       end
     end
 
@@ -145,7 +139,6 @@ RSpec.describe 'Navbar' do
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
-        expect(page).to have_link("Temp: 75.31°F")
       end
     end
 
@@ -157,7 +150,6 @@ RSpec.describe 'Navbar' do
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
-        expect(page).to have_link("Temp: 75.31°F")
       end
     end
 
@@ -169,7 +161,6 @@ RSpec.describe 'Navbar' do
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
-        expect(page).to have_link("Temp: 75.31°F")
       end
     end
 
@@ -181,7 +172,6 @@ RSpec.describe 'Navbar' do
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
-        expect(page).to have_link("Temp: 75.31°F")
       end
     end
 
@@ -193,7 +183,6 @@ RSpec.describe 'Navbar' do
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
-        expect(page).to have_link("Temp: 75.31°F")
       end
     end
 
@@ -205,7 +194,6 @@ RSpec.describe 'Navbar' do
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
-        expect(page).to have_link("Temp: 75.31°F")
       end
     end
   end
@@ -221,7 +209,6 @@ RSpec.describe 'Navbar' do
         expect(page).to_not have_link('Dashboard')
         expect(page).to_not have_link('Profile')
         expect(page).to_not have_link('Logout')
-        expect(page).to_not have_link("Temp: 75.31°F")
       end
     end
   end
