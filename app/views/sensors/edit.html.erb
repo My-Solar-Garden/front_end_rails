@@ -7,7 +7,7 @@
       <%= form.label :min_threshold %><br>
       <%= form.number_field :min_threshold, required: true %><br><br>
       <%= form.label :max_threshold %><br>
-      <%= form.text_field :max_threshold, required: true %><br><br>
+      <%= form.number_field :max_threshold, required: true %><br><br>
       <%= form.hidden_field :garden_id, value: @garden_id %>
       <%= form.submit "Update Sensor" %><br><br>
     <% end  %>
