@@ -21,16 +21,12 @@ class SensorsController < ApplicationController
   end
 
   def edit
-    # binding.pry
-    @sensor_id = params[:sensor_id]
-    @garden_id = params[:garden_id]
-    @sensor = SensorFacade.sensor_details(params[:sensor_id])
+    @sensor = SensorFacade.sensor_details(params)
   end
 
   def update
-    # binding.pry
     SensorFacade.edit_sensor(sensor_params)
-    redirect_to "/gardens/#{@garden_id}"
+    redirect_to "/gardens/#{params[:garden_id]}"
   end
 
   def destroy
