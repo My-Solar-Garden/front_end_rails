@@ -309,4 +309,97 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[{"id":"62","type":"garden_health","attributes":{"id":62,"reading_type":"light","reading":700.0,"created_at":"2020-11-04T00:00:05.000Z"}}]}'
   recorded_at: Thu, 05 Nov 2020 21:30:05 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/?lat=3.0&lon=3.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 23:02:46 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Request-Id:
+      - c436f78e-2991-441c-8a12-f178dc7d0ec8
+      X-Runtime:
+      - '0.003325'
+      Vary:
+      - Origin
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 05 Nov 2020 23:02:47 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/forecast?lat=3.0&lon=3.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 23:21:27 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d1b692ffa33bd436b228f8a54c211977"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 57912fc7-54b5-4e1a-9ada-f189215fd2ef
+      X-Runtime:
+      - '0.172734'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"weather","attributes":{"id":null,"description":"overcast
+        clouds","humidity":81,"temperature":80.89,"daily":[{"date":"2020-11-05T11:00:00.000+00:00","temperature":81.36,"humidity":80,"description":"heavy
+        intensity rain"},{"date":"2020-11-06T11:00:00.000+00:00","temperature":80.58,"humidity":83,"description":"moderate
+        rain"},{"date":"2020-11-07T11:00:00.000+00:00","temperature":80.62,"humidity":81,"description":"light
+        rain"},{"date":"2020-11-08T11:00:00.000+00:00","temperature":81,"humidity":76,"description":"scattered
+        clouds"},{"date":"2020-11-09T11:00:00.000+00:00","temperature":80.91,"humidity":78,"description":"moderate
+        rain"},{"date":"2020-11-10T11:00:00.000+00:00","temperature":80.4,"humidity":81,"description":"moderate
+        rain"},{"date":"2020-11-11T11:00:00.000+00:00","temperature":80.62,"humidity":81,"description":"moderate
+        rain"},{"date":"2020-11-12T11:00:00.000+00:00","temperature":81.5,"humidity":76,"description":"moderate
+        rain"}]}}}'
+  recorded_at: Thu, 05 Nov 2020 23:21:28 GMT
 recorded_with: VCR 6.0.0

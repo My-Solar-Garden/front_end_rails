@@ -319,4 +319,97 @@ http_interactions:
         rain","icon":"10d"}],"clouds":1,"pop":0.84,"rain":3.83,"uvi":11.87},{"dt":1605178800,"sunrise":1605159158,"sunset":1605202314,"temp":{"day":81.5,"min":80.56,"max":81.61,"night":81.03,"eve":81.05,"morn":80.56},"feels_like":{"day":85.17,"night":86.88,"eve":85.98,"morn":86.34},"pressure":1010,"humidity":76,"dew_point":73.4,"wind_speed":10.04,"wind_deg":214,"weather":[{"id":501,"main":"Rain","description":"moderate
         rain","icon":"10d"}],"clouds":61,"pop":0.92,"rain":7.94,"uvi":12.36}]}'
   recorded_at: Thu, 05 Nov 2020 22:10:58 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/?lat=3.0&lon=3.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 23:02:46 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Request-Id:
+      - f440d432-3d7a-4065-99c5-f731d89b1128
+      X-Runtime:
+      - '0.002452'
+      Vary:
+      - Origin
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 05 Nov 2020 23:02:46 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/forecast?lat=3.0&lon=3.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 23:21:27 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d1b692ffa33bd436b228f8a54c211977"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f05fe5f5-2dc5-4cf5-8b6e-2a5e732bc600
+      X-Runtime:
+      - '0.211335'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"weather","attributes":{"id":null,"description":"overcast
+        clouds","humidity":81,"temperature":80.89,"daily":[{"date":"2020-11-05T11:00:00.000+00:00","temperature":81.36,"humidity":80,"description":"heavy
+        intensity rain"},{"date":"2020-11-06T11:00:00.000+00:00","temperature":80.58,"humidity":83,"description":"moderate
+        rain"},{"date":"2020-11-07T11:00:00.000+00:00","temperature":80.62,"humidity":81,"description":"light
+        rain"},{"date":"2020-11-08T11:00:00.000+00:00","temperature":81,"humidity":76,"description":"scattered
+        clouds"},{"date":"2020-11-09T11:00:00.000+00:00","temperature":80.91,"humidity":78,"description":"moderate
+        rain"},{"date":"2020-11-10T11:00:00.000+00:00","temperature":80.4,"humidity":81,"description":"moderate
+        rain"},{"date":"2020-11-11T11:00:00.000+00:00","temperature":80.62,"humidity":81,"description":"moderate
+        rain"},{"date":"2020-11-12T11:00:00.000+00:00","temperature":81.5,"humidity":76,"description":"moderate
+        rain"}]}}}'
+  recorded_at: Thu, 05 Nov 2020 23:21:27 GMT
 recorded_with: VCR 6.0.0

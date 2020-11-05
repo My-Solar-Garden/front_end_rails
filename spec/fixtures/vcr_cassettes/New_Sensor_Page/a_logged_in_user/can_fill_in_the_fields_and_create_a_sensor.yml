@@ -432,4 +432,150 @@ http_interactions:
         Friday afternoon west strong gale force 9 is expected, with locally gusts
         of 30-35 m/s, first in west. The wind decreases late Friday evening."}]}'
   recorded_at: Thu, 05 Nov 2020 22:11:35 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/?lat=71.0&lon=25.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 23:02:50 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Request-Id:
+      - 635ec7f4-4986-43b5-929d-1a109f12daa4
+      X-Runtime:
+      - '0.002725'
+      Vary:
+      - Origin
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 05 Nov 2020 23:02:50 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/forecast?lat=71.0&lon=25.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 23:21:32 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0f1f57ed84510c8879dee1c0fc91d89f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6c3dc63d-7007-4a05-bbdb-0976898f2dbf
+      X-Runtime:
+      - '0.281592'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"weather","attributes":{"id":null,"description":"shower
+        rain","humidity":87,"temperature":42.8,"daily":[{"date":"2020-11-06T10:00:00.000+00:00","temperature":40.03,"humidity":73,"description":"moderate
+        rain"},{"date":"2020-11-07T10:00:00.000+00:00","temperature":39.54,"humidity":72,"description":"light
+        rain"},{"date":"2020-11-08T10:00:00.000+00:00","temperature":34.56,"humidity":88,"description":"overcast
+        clouds"},{"date":"2020-11-09T10:00:00.000+00:00","temperature":35.33,"humidity":89,"description":"overcast
+        clouds"},{"date":"2020-11-10T10:00:00.000+00:00","temperature":34.21,"humidity":88,"description":"overcast
+        clouds"},{"date":"2020-11-11T10:00:00.000+00:00","temperature":40.19,"humidity":74,"description":"light
+        rain"},{"date":"2020-11-12T10:00:00.000+00:00","temperature":42.6,"humidity":70,"description":"few
+        clouds"},{"date":"2020-11-13T10:00:00.000+00:00","temperature":36.46,"humidity":83,"description":"overcast
+        clouds"}]}}}'
+  recorded_at: Thu, 05 Nov 2020 23:21:32 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/forecast?lat=71.0&lon=25.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 23:36:27 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0f1f57ed84510c8879dee1c0fc91d89f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 56c65e6e-921b-4c09-ba49-9d1684203ae9
+      X-Runtime:
+      - '0.277106'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"weather","attributes":{"id":null,"description":"shower
+        rain","humidity":87,"temperature":42.8,"daily":[{"date":"2020-11-06T10:00:00.000+00:00","temperature":40.03,"humidity":73,"description":"moderate
+        rain"},{"date":"2020-11-07T10:00:00.000+00:00","temperature":39.54,"humidity":72,"description":"light
+        rain"},{"date":"2020-11-08T10:00:00.000+00:00","temperature":34.56,"humidity":88,"description":"overcast
+        clouds"},{"date":"2020-11-09T10:00:00.000+00:00","temperature":35.33,"humidity":89,"description":"overcast
+        clouds"},{"date":"2020-11-10T10:00:00.000+00:00","temperature":34.21,"humidity":88,"description":"overcast
+        clouds"},{"date":"2020-11-11T10:00:00.000+00:00","temperature":40.19,"humidity":74,"description":"light
+        rain"},{"date":"2020-11-12T10:00:00.000+00:00","temperature":42.6,"humidity":70,"description":"few
+        clouds"},{"date":"2020-11-13T10:00:00.000+00:00","temperature":36.46,"humidity":83,"description":"overcast
+        clouds"}]}}}'
+  recorded_at: Thu, 05 Nov 2020 23:36:28 GMT
 recorded_with: VCR 6.0.0
