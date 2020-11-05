@@ -4,6 +4,10 @@ RSpec.describe 'On the garden show page' do
   describe "as a logged in user" do
     before :each do
       @user_with_gardens = User.new({id: 2,
+      location: {
+             lat: 39.74,
+             lon: -104.98
+           },
       attributes: {
         email: 'planter@gmail.com' },
         relationships: {

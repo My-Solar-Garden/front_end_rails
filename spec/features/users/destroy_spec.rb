@@ -4,6 +4,10 @@ RSpec.describe 'User destroy' do
   describe 'a user' do
     it 'can delete their profile' do
       user = User.new({id: 1,
+                      location: {
+                              lat: 39.74,
+                              lon: -104.98
+                            },
                       attributes: {
                           email: '123@gmail.com' },
                       relationships: {

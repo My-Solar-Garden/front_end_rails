@@ -11,6 +11,10 @@ RSpec.describe 'New Garden Page' do
   describe 'a logged in user' do
     before :each do
       @user = User.new({id: 1,
+                      location: {
+                        lat: 39.74,
+                        lon: -104.98
+                      },
                       attributes: {
                           email: '123@gmail.com' },
                       relationships: {
@@ -54,6 +58,10 @@ RSpec.describe 'New Garden Page' do
       find('#private_false').click
 
       @user_with_garden = User.new({id: 1,
+        location: {
+          lat: 39.74,
+          lon: -104.98
+        },
       attributes: {
         email: '123@gmail.com' },
         relationships: {

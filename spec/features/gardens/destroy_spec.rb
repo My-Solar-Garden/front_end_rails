@@ -4,6 +4,10 @@ RSpec.describe 'Delete garden functionality' do
   describe 'a logged in user' do
     before :each do
       @user_with_gardens = User.new({id: 4,
+        location: {
+          lat: 39.74,
+          lon: -104.98
+        },
       attributes: {
         email: 'planter@gmail.com' },
       relationships: {
@@ -23,6 +27,10 @@ RSpec.describe 'Delete garden functionality' do
       visit dashboard_path
 
       @user_with_deleted_garden = User.new({id: 4,
+        location: {
+          lat: 39.74,
+          lon: -104.98
+        },
       attributes: {
         email: 'planter@gmail.com' },
       relationships: {
@@ -45,6 +53,10 @@ RSpec.describe 'Delete garden functionality' do
       visit garden_show_path(@user_with_gardens.gardens[0][:id])
 
       @user_with_deleted_garden = User.new({id: 4,
+        location: {
+          lat: 39.74,
+          lon: -104.98
+        },
       attributes: {
         email: 'planter@gmail.com' },
       relationships: {

@@ -41,6 +41,10 @@ RSpec.describe 'Edit Garden Page' do
                                     data: []}}}
 
       @user = User.new({id: 4,
+                      location: {
+                        lat: 39.74,
+                        lon: -104.98
+                      },
                       attributes: {
                           email: '123@gmail.com' },
                       relationships: {

@@ -4,6 +4,10 @@ RSpec.describe 'User Dashboard' do
   describe 'a logged in user' do
     before :each do
       @user_without_gardens = User.new({id: 1,
+                      location: {
+                        lat: 39.74,
+                        lon: -104.98
+                      },
                       attributes: {
                           email: '123@gmail.com' },
                       relationships: {
@@ -11,7 +15,11 @@ RSpec.describe 'User Dashboard' do
                               data: [] }}})
 
       @user_with_gardens = User.new({id: 2,
-      attributes: {
+        location: {
+          lat: 39.74,
+          lon: -104.98
+        },
+        attributes: {
         email: 'planter@gmail.com' },
         relationships: {
           gardens: {

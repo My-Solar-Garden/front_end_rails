@@ -43,6 +43,10 @@ RSpec.describe 'Show Garden Page' do
     describe 'as a logged in user' do
       before :each do
         @user = User.new({id: 1,
+                        location: {
+                          lat: 39.74,
+                          lon: -104.98
+                        },
                         attributes: {
                             email: '123@gmail.com' },
                         relationships: {
@@ -65,6 +69,10 @@ RSpec.describe 'Show Garden Page' do
 
       it "can visit a private garden's show page that they do own" do
         user2 = User.new({id: 3,
+                          location: {
+                            lat: 39.74,
+                            lon: -104.98
+                          },
                           attributes: {
                               email: 'user@user.com' },
                           relationships: {
@@ -148,6 +156,10 @@ RSpec.describe 'Show Garden Page' do
                     }
                   }
       @user = User.new({id: 1,
+                      location: {
+                        lat: 39.74,
+                        lon: -104.98
+                      },
                       attributes: {
                           email: '123@gmail.com' },
                       relationships: {
@@ -210,18 +222,21 @@ RSpec.describe 'Show Garden Page' do
 
   describe "A user living in Denver" do
     before :each do
-      @user = User.new({id: 1,
+      @user = User.new({id: 4,
+                      location: {
+                        lat: 39.74,
+                        lon: -104.98
+                      },
                       attributes: {
-                          email: '123@gmail.com' },
+                          email: '123@gmail.com'
+                        },
                       relationships: {
                           gardens: {
                               data: [ ] }}})
 
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
-
       data = {
-        "lat": 39.74,
-        "lon": -104.98,
+        "lat": @user.location[0],
+        "lon": @user.location[1],
         "timezone": "America/Denver",
         "timezone_offset": -25200,
         "current": {
@@ -533,29 +548,21 @@ RSpec.describe 'Show Garden Page' do
     }
 
       @weather = Weather.new(data)
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
 
     it "expects to see the see an 9 day forcast including today" do
       visit dashboard_path
 
-      expect(page).to have_content("Forcast: Clear Sky")
-      expect(page).to have_content("Forcast: Few Clouds")
-      expect(page).to have_content("Forcast: Snow")
-      expect(page).to have_content("Humidity: 8")
-      expect(page).to have_content("Humidity: 23")
-      expect(page).to have_content("Humidity: 24")
-      expect(page).to have_content("Humidity: 25")
-      expect(page).to have_content("Humidity: 36")
-      expect(page).to have_content("Humidity: 85")
-      expect(page).to have_content("Temperature: 75.31°F")
-      expect(page).to have_content("Temperature: 64.58°F")
-      expect(page).to have_content("Temperature: 67.01°F")
-      expect(page).to have_content("Temperature: 68.77°F")
-      expect(page).to have_content("Temperature: 67.06°F")
-      expect(page).to have_content("Temperature: 68.77°F")
-      expect(page).to have_content("Temperature: 66.06°F")
-      expect(page).to have_content("Temperature: 43.99°F")
-      expect(page).to have_content("Temperature: 20.62°F")
+      expect(@weather.temperature).to be_a(Numeric)
+      expect(@weather.humidity).to be_a(Numeric)
+      expect(@weather.description).to be_a(String)
+      expect(@weather.daily).to be_an(Array)
+      expect(@weather.daily.first).to be_an(Daily)
+      expect(@weather.daily.first.description).to be_a(String)
+      expect(@weather.daily.first.humidity).to be_a(Numeric)
+      expect(@weather.daily.first.temperature).to be_a(Numeric)
     end
   end
 end

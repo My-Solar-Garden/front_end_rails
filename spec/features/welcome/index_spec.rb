@@ -16,6 +16,10 @@ RSpec.describe 'Welcome' do
                                    data: []}}}
 
       @user = User.new({id: 1,
+                      location: {
+                              lat: 39.74,
+                              lon: -104.98
+                            },
                       attributes: {
                            email: '123@gmail.com' },
                       relationships: {
