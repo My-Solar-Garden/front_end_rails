@@ -8,6 +8,7 @@ class GardensController < ApplicationController
   def show
     garden = GardenFacade.garden_details(params)
     @sensors = SensorFacade.all_sensors_for_garden(params)
+    @weather = WeatherFacade.create_weather_objects([garden.latitude, garden.longitude])
 
     if !garden.is_private || current_users_garden?(garden)
       @garden = garden
@@ -26,7 +27,7 @@ class GardensController < ApplicationController
   def edit
     @garden = GardenFacade.garden_details(params)
   end
-  
+
   def update
     GardenFacade.update(params, current_user.id)
     redirect_to garden_show_path(params[:id])
