@@ -1,7 +1,7 @@
 class SensorFacade
   def self.sensor_details(params)
     parsed_json = SensorService.sensor_details(params)
-    sensor(parsed_json[:data])
+    sensor(parsed_json)
   end
 
   def self.new_sensor(sensor_params)
