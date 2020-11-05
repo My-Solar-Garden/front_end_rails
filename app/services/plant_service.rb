@@ -10,6 +10,10 @@ class PlantService
     end
   end
 
+  def self.all_plants_for_garden(params)
+    get_parsed_json("/api/v1/gardens/#{params[:id]}/plants")
+  end
+
   def self.get_parsed_json(url, params = {})
     response = conn.get(url) do |req|
       req.params = params
