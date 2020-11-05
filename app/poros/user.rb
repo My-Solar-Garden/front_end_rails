@@ -1,10 +1,11 @@
 class User
-  attr_reader :id, :email, :gardens
+  attr_reader :id, :email, :gardens, :location
 
   def initialize(data)
     @id = data[:id]
     @email = data[:attributes][:email]
     @gardens = data[:relationships][:gardens][:data]
+    @location = [data[:location][:lat],  data[:location][:lon]]
   end
 
   def self.find(user_id)
