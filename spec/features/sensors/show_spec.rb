@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Sensor show page' do
   before :each do
-    @garden = { id: 1,
+    @garden = { id: 9,
               attributes: {
                   name: 'My Garden',
                   latitude: 23.0,
@@ -27,6 +27,7 @@ RSpec.describe 'Sensor show page' do
 
     public_response = File.read('spec/fixtures/sensors_with_readings.json')
     stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/sensors/1").to_return(status: 200, body: public_response)
+
     public_response = File.read('spec/fixtures/garden_healths.json')
     stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/garden_healths/1").to_return(status: 200, body: public_response)
 
@@ -34,37 +35,50 @@ RSpec.describe 'Sensor show page' do
   end
 
   it 'shows a sensors last 5 readings' do
-    visit "/sensors/1"
+    params = {id: 1}
+    sensor = SensorFacade.sensor_details(params)
+    visit "/gardens/9/sensors/1"
+
+    expect(page).to have_content("You're #{sensor.sensor_type} sensor")
+    expect(page).to have_content("Last 5 Readings")
+
+    sensor.garden_healths[-5..-1].reverse.each do |reading|
+      expect(page).to have_content(reading.reading)
+    end
   end
 
   it 'can search a sensors readings by date' do
-    params = {:data=>
-                    {:id=>"1",
-                     :type=>"garden_health",
-                     :attributes=>{
-                       :id=>1,
-                       :reading=>700.0,
-                       :reading_type=>"light",
-                       created_at: "2020-10-29",
-                     }
-                   }
-            }
-    garden_health = GardenHealthFacade.garden_health(params, 1)
-    params = {:data=>
-                    {:id=>"1",
-                     :type=>"sensor",
-                     :attributes=>{
-                       :min_threshold=>1,
-                       :max_threshold=>4,
-                       :sensor_type=>"light"
-                     },
-                     :relationships=>{
-                       :garden=>{
-                         :data=>{id: 1}},
-                         :garden_healths=>{
-                           :data=>[]}}}
-            }
-    sensor = SensorFacade.sensor(params)
-    visit "/sensors/1/garden_healths/search?start=2020-10-10&stop=2020-10-30&sensor_id=1"
+    visit "/gardens/9/sensors/1"
+
+    params = {history: 1}
+    search_response = File.read('spec/fixtures/search.json')
+    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
+
+    click_link 'Last 24 Hours'
+    expect(current_path).to eq("/gardens/9/sensors/1")
+
+    params = {history: 7}
+    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
+
+    click_link 'Last 7 Days'
+    expect(current_path).to eq("/gardens/9/sensors/1")
+
+    params = {history: 14}
+    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
+
+    click_link 'Last 14 Days'
+    expect(current_path).to eq("/gardens/9/sensors/1")
+
+    params = {history: 30}
+    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
+
+    click_link 'Last 30 Days'
+    expect(current_path).to eq("/gardens/9/sensors/1")
+
+    params = {history: 90}
+    stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/garden_healths/search?start=#{(DateTime.now - params[:history].to_i).to_s[0..9]}&stop=#{DateTime.now.to_s[0..9]}&sensor_id=1").to_return(status: 200, body: search_response)
+
+    click_link 'Last 90 Days'
+    expect(current_path).to eq("/gardens/9/sensors/1")
   end
 end
