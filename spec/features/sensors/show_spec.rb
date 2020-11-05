@@ -39,7 +39,7 @@ RSpec.describe 'Sensor show page' do
     sensor = SensorFacade.sensor_details(params)
     visit "/gardens/9/sensors/1"
 
-    expect(page).to have_content("You're #{sensor.sensor_type} sensor")
+    expect(page).to have_content("Your #{sensor.sensor_type} sensor")
     expect(page).to have_content("Last 5 Readings")
 
     sensor.garden_healths[-5..-1].reverse.each do |reading|

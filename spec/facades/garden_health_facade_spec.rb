@@ -20,7 +20,7 @@ describe GardenHealthFacade do
                      }
                    }
             }
-    garden_health = GardenHealthFacade.garden_health(params, 1)
+    garden_health = GardenHealthFacade.garden_health(params[:data], 1)
     expect(garden_health).to be_a(GardenHealth)
   end
 

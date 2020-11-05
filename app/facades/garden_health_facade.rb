@@ -1,7 +1,7 @@
 class GardenHealthFacade
   def self.garden_health_details(params, sensor_id)
     parsed_json = GardenHealthService.garden_health_details(params)
-    garden_health(parsed_json, sensor_id)
+    garden_health(parsed_json[:data], sensor_id)
   end
 
   def self.garden_health_search(start, stop, sensor_id)
@@ -10,7 +10,7 @@ class GardenHealthFacade
   end
 
   def self.garden_health(data, sensor_id)
-    GardenHealth.new(data[:data], sensor_id)
+    GardenHealth.new(data, sensor_id)
   end
 
   def self.garden_health_mapped(data, sensor_id)
@@ -18,13 +18,9 @@ class GardenHealthFacade
       GardenHealth.new(garden_health, sensor_id)
     end
   end
-  
+
   def self.last_reading(sensor)
     parsed_json = GardenHealthService.last_reading(sensor)
-    garden_health2(parsed_json)
-  end
-
-  def self.garden_health2(data)
-    GardenHealth.new(data)
+    garden_health(parsed_json, sensor.id)
   end
 end
