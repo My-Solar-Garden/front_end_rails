@@ -32,7 +32,6 @@ RSpec.describe 'Plant Show Page' do
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/plants/1").
          to_return(status: 200, body: response, headers: {})
       visit gardens_plant_show_path(@garden[:id], @garden[:relationships][:plants][:data].first[:id])
-      # visit plant_path(@garden[:relationships][:plants][:data].first[:id])
 
       expect(page).to have_content("tomato")
       expect(page).to have_content("tomatous redus")
