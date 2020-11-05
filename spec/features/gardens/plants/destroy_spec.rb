@@ -11,7 +11,7 @@ RSpec.describe 'Remove a plant from a garden' do
                     description: "A diverse, dedicated group of students and neighbors who believe in bettering ourselves, our food supply and our community through urban gardening.",
                     private: false },
                 relationships: { plants: {
-                                    data: [{id: "1", type: "plant"}]},
+                                    data: [{id: "1", type: "plant"}, {id: "2", type: "plant"}]},
                                   users: {
                                     data: [{id: "4", type: "user"}]},
                                  sensors: {
@@ -39,6 +39,8 @@ RSpec.describe 'Remove a plant from a garden' do
 
       expect(page).to have_content(plant[:data][:attributes][:name])
       expect(page).to have_button('Remove This Plant From Your Garden')
+      click_on 'Remove This Plant From Your Garden'
+      expect(current_path).to eq(garden_path("#{@garden[:id]}"))
     end
   end
 end
