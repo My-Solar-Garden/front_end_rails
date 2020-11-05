@@ -18,8 +18,8 @@ class GardenFacade
     GardenService.new_garden(params, current_user_id)
   end
 
-  def self.update(garden)
-    require 'pry'; binding.pry
+  def self.update(params, current_user_id)
+    GardenService.update(params, current_user_id)
   end
 
   def self.destroy(garden_id)
