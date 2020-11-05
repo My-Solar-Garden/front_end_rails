@@ -87,12 +87,6 @@ RSpec.describe 'Welcome' do
     end
 
     it "expects to not see Login With Google if logged in" do
-      @user = User.new({id: 2,
-                        attributes: {
-                          email: 'planter@gmail.com' },
-                          relationships: {
-                            gardens: {
-                              data: [ {id: '3', type: 'garden'}, {id: '4', type: 'garden'}] }}})
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
       visit root_path
 
