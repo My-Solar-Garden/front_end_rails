@@ -62,6 +62,7 @@ RSpec.describe 'Learn More page' do
     end
 
     it "a logged in user can see a navbar" do
+      expect(page).to have_link("Welcome")
       expect(page).to have_link("Dashboard")
       expect(page).to have_link("Learn More")
       expect(page).to have_link("Logout")
