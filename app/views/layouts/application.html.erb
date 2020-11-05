@@ -32,19 +32,23 @@
           </li>
         </ul>
         <ul class="nav justify-content-end">
-          <li class="nav-item">
+          <li class="nav-item w3-text-gray">
             <a class="nav-link" href="<%=profile_path%>">Profile</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item w3-text-gray">
             <a class="nav-link" href="<%=logout_path%>">Logout</a>
           </li>
         </ul>
       </div>
     </nav>
   <% end %>
-  <% flash.each do |type, message| %>
-     <p><%= message %></p>
-   <% end %>
+  <center>
+    <div class="nav-item w3-light-green" style="width:500px">
+      <% flash.each do |type, message| %>
+        <p><%= message %></p>
+      <% end %>
+    </div>
+  </center>
   <%= yield %>
 </body>
 </html>
