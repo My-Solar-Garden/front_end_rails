@@ -7,13 +7,14 @@ Rails.application.routes.draw do
   get '/privacy', to: 'privacy#index'
   get "/dashboard", to: "dashboard#show"
 
-  resources :gardens
+  resources :gardens, except: [:destroy]
+  delete 'gardens/:id', to: 'gardens#destroy', as: :garden_destroy
+  get 'gardens/:id', to: 'gardens#show', as: :garden_show
 
   get "/learn_more", to: "learn_more#show"
   get '/profile', to: 'users#show'
 
   resources :users, except: [:index, :show]
-  resources :gardens, except: [:index]
   resources :plants, except: [:index]
   resources :sensors, except: [:index]
   get '/garden_healths/search', to: 'garden_healths#show'
@@ -23,6 +24,12 @@ Rails.application.routes.draw do
   # namespace :gardens do
     get '/gardens/:garden_id/sensors', to: 'sensors#new'
     post '/gardens/:garden_id/sensors', to: 'sensors#create'
+
+    delete '/gardens/:garden_id/sensors/:id', to: 'sensors#destroy'
     get '/gardens/:garden_id/sensors/:id', to: 'sensors#show'
+    
+    get '/gardens/:garden_id/plants', to: 'sensors#new'
+    get '/gardens/:garden_id/plants/:id', to: 'plants#show'
+
   # end
 end

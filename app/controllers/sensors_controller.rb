@@ -22,7 +22,8 @@ class SensorsController < ApplicationController
   def edit; end
 
   def destroy
-    redirect_to dashboard_path
+    SensorFacade.delete_sensor(params)
+    redirect_back(fallback_location: dashboard_path)
   end
 
   private

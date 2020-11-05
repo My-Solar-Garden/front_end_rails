@@ -16,7 +16,6 @@ RSpec.describe 'Learn More page' do
     end
 
     it "a visitor can see" do
-      #this will be a header for the page itself
       expect(page).to have_content("Learn More")
       expect(page).to have_link("Login with Google")
       expect(page).to have_css("img[src*='https://media.wired.com/photos/593258d526780e6c04d2b157/191:100/w_1280,c_limit/garden-sensor-ft.jpg']")
