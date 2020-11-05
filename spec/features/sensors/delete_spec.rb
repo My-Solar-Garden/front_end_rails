@@ -14,14 +14,14 @@ RSpec.describe 'On the garden show page' do
     end
 
     it "I can delete a sensor", :vcr do
-      visit garden_path(1)
+      visit garden_path(4)
 
       sensors = page.all('.sensor')
       total = sensors.size
 
       first('.sensor').click_button('Delete')
 
-      expect(current_path).to eq(garden_path(1))
+      expect(current_path).to eq(garden_path(4))
       expect(page.all('.sensor').size).to eq(total - 1)
     end
   end
