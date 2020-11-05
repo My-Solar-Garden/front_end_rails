@@ -43,7 +43,7 @@ describe SensorFacade do
                      },
                      :relationships=>{
                        :garden=>{
-                         :data=>{id: 1}},
+                         :data=>{id: 4}},
                          :garden_healths=>{
                            :data=>[]}}}
             }
@@ -53,7 +53,7 @@ describe SensorFacade do
   end
 
   it "can delete a sensor", :vcr do
-    garden = {id: 1}
+    garden = {id: 4}
     sensors = SensorFacade.all_sensors_for_garden(garden)
     total = sensors.size
     params = { id: sensors.first.id }

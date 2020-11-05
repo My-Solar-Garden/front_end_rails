@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://solar-garden-be.herokuapp.com/api/v1/users
+    body:
+      encoding: UTF-8
+      string: credentials%5Bexpires%5D=true&credentials%5Bexpires_at%5D=2020-11-05T14%3A10%3A40-07%3A00&credentials%5Brefresh_token%5D=MOCK_OMNIAUTH_GOOGLE_REFRESH+TOKEN&credentials%5Btoken%5D=MOCK_OMNIAUTH_GOOGLE_TOKEN&info%5Bemail%5D=john%40example.com&info%5Bfirst_name%5D=John&info%5Bimage%5D=https%3A%2F%2Flh4.googleusercontent.com%2Fphoto.jpg&info%5Blast_name%5D=Smith&info%5Bname%5D=John+Smith&info%5Burls%5D%5Bgoogle%5D=https%3A%2F%2Fplus.google.com%2F%2BJohnSmith&provider=google_oauth2&uid=100000000000000000000
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 21:10:40 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2ffd6464deffa12f420210774c62e61c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6c06419d-f44c-4b1d-af6c-d82d5214a0ae
+      X-Runtime:
+      - '0.020362'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"user","attributes":{"id":2,"email":"john@example.com"},"relationships":{"user_gardens":{"data":[]},"gardens":{"data":[]}}}}'
+  recorded_at: Thu, 05 Nov 2020 21:10:41 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/users/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 21:10:40 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2ffd6464deffa12f420210774c62e61c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7ea6ee4f-4ccb-4005-92a8-98288c35e9ca
+      X-Runtime:
+      - '0.013210'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"user","attributes":{"id":2,"email":"john@example.com"},"relationships":{"user_gardens":{"data":[]},"gardens":{"data":[]}}}}'
+  recorded_at: Thu, 05 Nov 2020 21:10:41 GMT
+recorded_with: VCR 6.0.0

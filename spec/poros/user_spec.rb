@@ -40,10 +40,10 @@ RSpec.describe 'User' do
     describe 'find(user_id)' do
       it 'can fetch a user from backend api' do
         VCR.use_cassette('fetch_user') do
-          user = User.find('1')
+          user = User.find('2')
           expect(user).to be_a(User)
-          expect(user.id).to eq('1')
-          expect(user.email).to eq('billy@gmail.com')
+          expect(user.id).to eq('2')
+          expect(user.email).to eq('john@example.com')
           expect(user.gardens).to eq([])
         end
       end

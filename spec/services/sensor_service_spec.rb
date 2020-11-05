@@ -32,7 +32,7 @@ describe SensorService do
   end
 
   it "deletes a sensor", :vcr do
-    garden = {id: 1}
+    garden = {id: 4}
     sensors = SensorService.all_sensors_for_garden(garden)
     total = sensors.size
     params = { id: sensors.first[:id] }

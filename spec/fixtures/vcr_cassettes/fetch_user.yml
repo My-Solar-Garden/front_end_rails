@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 21:10:47 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 8bf621a2-2c6f-4444-9345-4e9cbc8fa0e8
+      X-Runtime:
+      - '0.012125'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 05 Nov 2020 21:10:47 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/users/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 21:22:15 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2ffd6464deffa12f420210774c62e61c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bb40fb4a-45bb-4d7f-a68a-7c1154b94c29
+      X-Runtime:
+      - '0.019818'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"user","attributes":{"id":2,"email":"john@example.com"},"relationships":{"user_gardens":{"data":[]},"gardens":{"data":[]}}}}'
+  recorded_at: Thu, 05 Nov 2020 21:22:15 GMT
+recorded_with: VCR 6.0.0

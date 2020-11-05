@@ -2,7 +2,9 @@ require 'rails_helper'
 
 describe GardenService do
   it "returns garden details data" do
-    params = {id: 1}
+    params = {id: 3}
+    expected_output = File.read('spec/fixtures/updated_garden.json')
+    stub_request(:post, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: expected_output, headers: {})
     response = GardenService.garden_details(params)
     garden_details_response_structure_check(response)
   end
