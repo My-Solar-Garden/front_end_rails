@@ -23,6 +23,9 @@ Rails.application.routes.draw do
 
   get '/gardens/:garden_id/sensors', to: 'sensors#new'
   post '/gardens/:garden_id/sensors', to: 'sensors#create'
+
+  get '/gardens/:garden_id/sensors/:id/edit', to: 'sensors#edit'
+  patch '/gardens/:garden_id/sensors/:id/edit', to: 'sensors#update'
   delete '/gardens/:garden_id/sensors/:id', to: 'sensors#destroy'
   get '/gardens/:garden_id/sensors/:id', to: 'sensors#show'
 

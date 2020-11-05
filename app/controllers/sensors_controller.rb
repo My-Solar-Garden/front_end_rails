@@ -19,7 +19,15 @@ class SensorsController < ApplicationController
     SensorFacade.new_sensor(sensor_params)
     redirect_to "/gardens/#{@garden_id}"
   end
-  def edit; end
+
+  def edit
+    @sensor = SensorFacade.sensor_details(params)
+  end
+
+  def update
+    SensorFacade.edit_sensor(sensor_params)
+    redirect_to "/gardens/#{params[:garden_id]}"
+  end
 
   def destroy
     SensorFacade.delete_sensor(params)

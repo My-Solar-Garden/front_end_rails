@@ -61,4 +61,14 @@ describe SensorFacade do
     new_total = SensorFacade.all_sensors_for_garden(garden).size
     expect(new_total).to eq(total - 1)
   end
+
+  it "can edit a sensor" do
+    sensor_params = {sensor_type: 'moisture', min_threshold: 9, max_threshold: 20, garden_id: 1}
+
+    edit_sensor = File.read('spec/fixtures/edit_sensor.json')
+
+    stub_request(:patch, "#{ENV['BE_URL']}/api/v1/sensors?garden_id=#{sensor_params[:garden_id]}&sensor_type=#{sensor_params[:sensor_type]}&min_threshold=#{sensor_params[:min_threshold]}&max_threshold=#{sensor_params[:max_threshold]}").to_return(status: 200, body: edit_sensor, headers: {})
+
+    sensor = SensorFacade.edit_sensor(sensor_params)
+  end
 end
