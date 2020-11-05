@@ -535,25 +535,27 @@ RSpec.describe 'Show Garden Page' do
       @weather = Weather.new(data)
     end
 
-    it "expects to see the see an 8 day forcast" do
+    it "expects to see the see an 9 day forcast including today" do
       visit dashboard_path
 
-      expect(page).to have_content("Forcast: clear sky")
-      expect(page).to have_content("Forcast: few clouds")
-      expect(page).to have_content("Forcast: sno")
+      expect(page).to have_content("Forcast: Clear Sky")
+      expect(page).to have_content("Forcast: Few Clouds")
+      expect(page).to have_content("Forcast: Snow")
+      expect(page).to have_content("Humidity: 8")
       expect(page).to have_content("Humidity: 23")
       expect(page).to have_content("Humidity: 24")
       expect(page).to have_content("Humidity: 25")
       expect(page).to have_content("Humidity: 36")
       expect(page).to have_content("Humidity: 85")
-      expect(page).to have_content("Temperature: 64.58")
-      expect(page).to have_content("Temperature: 67.01")
-      expect(page).to have_content("Temperature: 68.77")
-      expect(page).to have_content("Temperature: 67.06")
-      expect(page).to have_content("Temperature: 68.77")
-      expect(page).to have_content("Temperature: 66.06")
-      expect(page).to have_content("Temperature: 43.99")
-      expect(page).to have_content("Temperature: 20.62")
+      expect(page).to have_content("Temperature: 75.31°F")
+      expect(page).to have_content("Temperature: 64.58°F")
+      expect(page).to have_content("Temperature: 67.01°F")
+      expect(page).to have_content("Temperature: 68.77°F")
+      expect(page).to have_content("Temperature: 67.06°F")
+      expect(page).to have_content("Temperature: 68.77°F")
+      expect(page).to have_content("Temperature: 66.06°F")
+      expect(page).to have_content("Temperature: 43.99°F")
+      expect(page).to have_content("Temperature: 20.62°F")
     end
   end
 end
