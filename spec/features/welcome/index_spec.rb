@@ -25,12 +25,6 @@ RSpec.describe 'Welcome' do
       @garden = @user.gardens.first
     end
 
-    it "expects to see a My Solar Garden Project banner" do
-      visit root_path
-
-      expect(page).to have_content("My Solar Garden Project")
-    end
-
     it "expects to see a description motto section" do
       visit root_path
 
@@ -79,7 +73,7 @@ RSpec.describe 'Welcome' do
 
     it "can see link to visit privacy policy page" do
       visit root_path
-      
+
       expect(page).to have_link("Visit our Privacy Policy Page")
 
       click_link "Visit our Privacy Policy Page"
