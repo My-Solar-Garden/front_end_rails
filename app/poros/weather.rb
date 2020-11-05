@@ -3,11 +3,12 @@ class Weather
               :humidity,
               :description,
               :daily
+
   def initialize(data)
-    @temperature = data[:current][:temp]
-    @humidity = data[:current][:humidity]
-    @description = data[:current][:weather][0][:description].titleize
-    @daily = eight_day_forecast(data[:daily])
+    @temperature = data[:data][:attributes][:temperature]
+    @humidity = data[:data][:attributes][:humidity]
+    @description = data[:data][:attributes][:description].titleize
+    @daily = eight_day_forecast(data[:data][:attributes][:daily])
   end
 
   def eight_day_forecast(data)
