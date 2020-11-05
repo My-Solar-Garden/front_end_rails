@@ -26,5 +26,7 @@ Rails.application.routes.draw do
   namespace :gardens do
     get '/:id/plants/:plant_id', to: 'plants#show'
     delete '/:id/plants/:plant_id', to: 'plants#destroy'
+  namespace :gardens do
+    get '/:id/plants/:plants_id', to: 'plants#show', as: :plant_show
   end
 end

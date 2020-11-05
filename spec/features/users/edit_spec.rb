@@ -19,7 +19,7 @@ RSpec.describe 'User profile page' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
       expected_output = File.read('spec/fixtures/user_update.json')
-      stub_request(:patch, "https://solar-garden-be.herokuapp.com/api/v1/users/1?id=1&update_user%5Bemail%5D=abc@gmail.com").
+      stub_request(:patch, "#{ENV['BE_URL']}/api/v1/users/1?id=1&update_user%5Bemail%5D=abc@gmail.com").
            to_return(status: 200, body: expected_output, headers: {})
 
       visit edit_user_path(@user.id)
