@@ -21,6 +21,5 @@ class Sensor
         GardenHealthFacade.garden_health_details(garden_health, @id)
       end
     end
-    # data[:relationships][:garden_healths][:data] rescue nil
   end
 end
