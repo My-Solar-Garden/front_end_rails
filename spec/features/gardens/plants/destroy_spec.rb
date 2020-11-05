@@ -3,19 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Remove a plant from a garden' do
   describe 'As a logged in user' do
     before :each do
-      @plant = Plant.new({ id: 1,
-              attributes: {
-                image: "url",
-                name: "name",
-                species: "species",
-                description: "description",
-                light_requirements: "alot",
-                water_requirements: "medium",
-                when_to_plant: "spring",
-                harvest_time: "now",
-                common_pests: "beetles"}})
-
-      @garden = Garden.new({ id: 3,
+      @garden = { id: 3,
                 attributes: {
                     name: "Cole Community Garden",
                     latitude: 39.45,
@@ -27,7 +15,7 @@ RSpec.describe 'Remove a plant from a garden' do
                                   users: {
                                     data: [{id: "4", type: "user"}]},
                                  sensors: {
-                                   data: []}}})
+                                   data: []}}}
 
       @user = User.new({id: 4,
                       attributes: {
@@ -42,9 +30,14 @@ RSpec.describe 'Remove a plant from a garden' do
     end
 
     it 'I can delete a plant from my garden' do
-      visit "/gardens/#{@garden.id}/plants/#{@plant.id}"
+      response = File.read('spec/fixtures/plant_show.json')
+      plant = JSON.parse(response, symbolize_names: true)
 
-      expect(page).to have_content(@plant.name)
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/plants/1").
+         to_return(status: 200, body: response, headers: {})
+      visit gardens_plant_show_path(@garden[:id], @garden[:relationships][:plants][:data].first[:id])
+
+      expect(page).to have_content(plant[:data][:attributes][:name])
       expect(page).to have_button('Remove This Plant From Your Garden')
     end
   end
