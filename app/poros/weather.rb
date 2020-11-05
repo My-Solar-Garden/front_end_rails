@@ -12,7 +12,7 @@ class Weather
 
   def eight_day_forecast(data)
     data.map do |day|
-      Daily.new(day)
+      DailyForecast.new(day)
     end
   end
 end

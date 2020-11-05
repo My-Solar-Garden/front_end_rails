@@ -425,7 +425,7 @@ RSpec.describe 'Show Garden Page' do
         expect(@weather.humidity).to be_a(Numeric)
         expect(@weather.description).to be_a(String)
         expect(@weather.daily).to be_an(Array)
-        expect(@weather.daily.first).to be_an(Daily)
+        expect(@weather.daily.first).to be_an(DailyForecast)
         expect(@weather.daily.first.description).to be_a(String)
         expect(@weather.daily.first.humidity).to be_a(Numeric)
         expect(@weather.daily.first.temperature).to be_a(Numeric)
