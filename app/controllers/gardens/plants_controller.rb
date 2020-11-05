@@ -7,6 +7,6 @@ class Gardens::PlantsController < ApplicationController
   def new; end
   def edit; end
   def destroy
-    redirect_to dashboard_path
+    redirect_to garden_path
   end
 end
