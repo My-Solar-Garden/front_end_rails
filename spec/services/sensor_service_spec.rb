@@ -30,4 +30,14 @@ describe SensorService do
       sensor_structure_check(sensor_data)
     end
   end
+
+  it "deletes a sensor", :vcr do
+    garden = {id: 1}
+    sensors = SensorService.all_sensors_for_garden(garden)
+    total = sensors.size
+    params = { id: sensors.first[:id] }
+    SensorService.delete_sensor(params)
+    new_total = SensorService.all_sensors_for_garden(garden).size
+    expect(new_total).to eq(total - 1)
+  end
 end

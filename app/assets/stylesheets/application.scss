@@ -13,8 +13,12 @@
  */
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
+
 @import "bootstrap";
+@import "font-awesome";
+
 .solar-nav {float: right}
+
 
 .col-sm-4 {
   border-style: solid;
@@ -70,4 +74,12 @@
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   background-color: #0c8dc9;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.icon {
+  margin: 5px;
 }
