@@ -8,7 +8,6 @@ RSpec.describe 'Learn More page' do
     end
 
     it "visitor does not see a navbar" do
-      expect(page).to_not have_link("My Gardens")
       expect(page).to_not have_link("Learn More")
       expect(page).to_not have_link("Logout")
       expect(page).to_not have_link("Profile")
@@ -17,9 +16,9 @@ RSpec.describe 'Learn More page' do
     it "a visitor can see" do
       expect(page).to have_content("Learn More")
       expect(page).to have_link("Login with Google")
-      expect(page).to have_css("img[src*='https://media.wired.com/photos/593258d526780e6c04d2b157/191:100/w_1280,c_limit/garden-sensor-ft.jpg']")
-      expect(page).to have_css("img[src*='https://www.trees.com/sites/default/files/2019-09/soil-moisture-meter.jpg']")
-      expect(page).to have_css("img[src*='https://www.cooking-hacks.com/media/cooking/images/documentation/open_garden/indoor_plant_4_small.png']")
+      expect(page).to have_css("img[src*='https://www.backtoedenfilm.com/uploads/1/2/1/7/12171992/no-till-gardening_orig.png']")
+      expect(page).to have_css("img[src*='https://i.pinimg.com/originals/39/c8/24/39c824083830d38102cfe1a2266077ef.jpg']")
+      expect(page).to have_css("img[src*='https://hackster.imgix.net/uploads/attachments/228021/s72hqE6cgvSCK3uoLExL.uploads/tmp/15eebe6d-0e94-44df-a495-bb7d8008cbb2/tmp_image_0?auto=compress%2Cformat&w=900&h=675&fit=min']")
     end
 
     it "expects to be sent to the Learn More page when Learn more button is clicked" do
@@ -63,6 +62,7 @@ RSpec.describe 'Learn More page' do
     end
 
     it "a logged in user can see a navbar" do
+      expect(page).to have_link("Welcome")
       expect(page).to have_link("Dashboard")
       expect(page).to have_link("Learn More")
       expect(page).to have_link("Logout")
@@ -71,9 +71,10 @@ RSpec.describe 'Learn More page' do
 
     it "a logged in user can see" do
       expect(page).to have_content("Learn More")
-      expect(page).to have_css("img[src*='https://media.wired.com/photos/593258d526780e6c04d2b157/191:100/w_1280,c_limit/garden-sensor-ft.jpg']")
-      expect(page).to have_css("img[src*='https://www.trees.com/sites/default/files/2019-09/soil-moisture-meter.jpg']")
-      expect(page).to have_css("img[src*='https://www.cooking-hacks.com/media/cooking/images/documentation/open_garden/indoor_plant_4_small.png']")
+      expect(page).to have_css("img[src*='https://www.backtoedenfilm.com/uploads/1/2/1/7/12171992/no-till-gardening_orig.png']")
+      expect(page).to have_css("img[src*='https://i.pinimg.com/originals/39/c8/24/39c824083830d38102cfe1a2266077ef.jpg']")
+      expect(page).to have_css("img[src*='https://hackster.imgix.net/uploads/attachments/228021/s72hqE6cgvSCK3uoLExL.uploads/tmp/15eebe6d-0e94-44df-a495-bb7d8008cbb2/tmp_image_0?auto=compress%2Cformat&w=900&h=675&fit=min']")
+      expect(page).to have_no_link("Be The Change. Learn More")
     end
   end
 end
