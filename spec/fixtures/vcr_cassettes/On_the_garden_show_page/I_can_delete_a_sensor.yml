@@ -1,0 +1,221 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 04 Nov 2020 18:51:10 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f91991fdbc47bda65a6117e4ef84e2fd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1b88c86d-a481-4a50-80ab-8d55d4d00f60
+      X-Runtime:
+      - '0.015451'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"garden","attributes":{"latitude":41.0,"longitude":41.0,"name":"A
+        garden","description":"a garden","private":false},"relationships":{"user_gardens":{"data":[{"id":"291","type":"user_garden"}]},"users":{"data":[{"id":"2","type":"user"}]},"sensors":{"data":[{"id":"6","type":"sensor"},{"id":"7","type":"sensor"},{"id":"8","type":"sensor"},{"id":"9","type":"sensor"},{"id":"10","type":"sensor"},{"id":"11","type":"sensor"},{"id":"12","type":"sensor"},{"id":"13","type":"sensor"},{"id":"14","type":"sensor"},{"id":"15","type":"sensor"},{"id":"17","type":"sensor"},{"id":"18","type":"sensor"},{"id":"19","type":"sensor"},{"id":"20","type":"sensor"},{"id":"21","type":"sensor"},{"id":"22","type":"sensor"},{"id":"23","type":"sensor"},{"id":"24","type":"sensor"},{"id":"25","type":"sensor"},{"id":"26","type":"sensor"},{"id":"27","type":"sensor"},{"id":"28","type":"sensor"},{"id":"29","type":"sensor"},{"id":"30","type":"sensor"},{"id":"31","type":"sensor"},{"id":"32","type":"sensor"},{"id":"33","type":"sensor"},{"id":"34","type":"sensor"},{"id":"35","type":"sensor"},{"id":"36","type":"sensor"},{"id":"37","type":"sensor"},{"id":"38","type":"sensor"},{"id":"39","type":"sensor"},{"id":"40","type":"sensor"},{"id":"41","type":"sensor"},{"id":"42","type":"sensor"},{"id":"43","type":"sensor"},{"id":"44","type":"sensor"},{"id":"45","type":"sensor"},{"id":"46","type":"sensor"},{"id":"47","type":"sensor"},{"id":"48","type":"sensor"},{"id":"49","type":"sensor"},{"id":"50","type":"sensor"},{"id":"51","type":"sensor"},{"id":"52","type":"sensor"},{"id":"53","type":"sensor"},{"id":"54","type":"sensor"},{"id":"55","type":"sensor"},{"id":"56","type":"sensor"},{"id":"57","type":"sensor"},{"id":"58","type":"sensor"},{"id":"59","type":"sensor"},{"id":"60","type":"sensor"},{"id":"61","type":"sensor"},{"id":"62","type":"sensor"},{"id":"63","type":"sensor"},{"id":"80","type":"sensor"},{"id":"81","type":"sensor"},{"id":"82","type":"sensor"},{"id":"86","type":"sensor"},{"id":"87","type":"sensor"},{"id":"88","type":"sensor"}]},"garden_plants":{"data":[]},"plants":{"data":[]}}}}'
+  recorded_at: Wed, 04 Nov 2020 18:51:11 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/1/sensors
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 04 Nov 2020 18:51:11 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a8e07f48dfdf0f0c58910a8ce8cf05f9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 736e9fc9-c1cf-44da-9f96-b5188efbdc3f
+      X-Runtime:
+      - '0.097853'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"6","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"7","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"8","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"9","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"10","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"11","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"12","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"13","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"14","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"15","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"17","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"18","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"19","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"20","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"21","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"22","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"23","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"24","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"25","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"26","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"27","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"28","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"29","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"30","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"31","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"32","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"33","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"34","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"35","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"36","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"37","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"38","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"39","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"40","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"41","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"42","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"43","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"44","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"45","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"46","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"47","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"48","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"49","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"50","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"51","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"52","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"53","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"54","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"55","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"56","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"57","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"58","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"59","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"60","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"61","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"62","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"63","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"80","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"81","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"82","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"86","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"87","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"88","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}}]}'
+  recorded_at: Wed, 04 Nov 2020 18:51:11 GMT
+- request:
+    method: delete
+    uri: https://solar-garden-be.herokuapp.com/api/v1/sensors/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 04 Nov 2020 18:51:11 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - c001ae37-e1a0-4c30-a183-02a6f338240a
+      X-Runtime:
+      - '0.010513'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 04 Nov 2020 18:51:12 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 04 Nov 2020 18:51:12 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5aa9501c4fd00eb4477c6e0fe66064ca"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a32e0b8a-b714-4724-b804-6207c7f1e324
+      X-Runtime:
+      - '0.013821'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"garden","attributes":{"latitude":41.0,"longitude":41.0,"name":"A
+        garden","description":"a garden","private":false},"relationships":{"user_gardens":{"data":[{"id":"291","type":"user_garden"}]},"users":{"data":[{"id":"2","type":"user"}]},"sensors":{"data":[{"id":"7","type":"sensor"},{"id":"8","type":"sensor"},{"id":"9","type":"sensor"},{"id":"10","type":"sensor"},{"id":"11","type":"sensor"},{"id":"12","type":"sensor"},{"id":"13","type":"sensor"},{"id":"14","type":"sensor"},{"id":"15","type":"sensor"},{"id":"17","type":"sensor"},{"id":"18","type":"sensor"},{"id":"19","type":"sensor"},{"id":"20","type":"sensor"},{"id":"21","type":"sensor"},{"id":"22","type":"sensor"},{"id":"23","type":"sensor"},{"id":"24","type":"sensor"},{"id":"25","type":"sensor"},{"id":"26","type":"sensor"},{"id":"27","type":"sensor"},{"id":"28","type":"sensor"},{"id":"29","type":"sensor"},{"id":"30","type":"sensor"},{"id":"31","type":"sensor"},{"id":"32","type":"sensor"},{"id":"33","type":"sensor"},{"id":"34","type":"sensor"},{"id":"35","type":"sensor"},{"id":"36","type":"sensor"},{"id":"37","type":"sensor"},{"id":"38","type":"sensor"},{"id":"39","type":"sensor"},{"id":"40","type":"sensor"},{"id":"41","type":"sensor"},{"id":"42","type":"sensor"},{"id":"43","type":"sensor"},{"id":"44","type":"sensor"},{"id":"45","type":"sensor"},{"id":"46","type":"sensor"},{"id":"47","type":"sensor"},{"id":"48","type":"sensor"},{"id":"49","type":"sensor"},{"id":"50","type":"sensor"},{"id":"51","type":"sensor"},{"id":"52","type":"sensor"},{"id":"53","type":"sensor"},{"id":"54","type":"sensor"},{"id":"55","type":"sensor"},{"id":"56","type":"sensor"},{"id":"57","type":"sensor"},{"id":"58","type":"sensor"},{"id":"59","type":"sensor"},{"id":"60","type":"sensor"},{"id":"61","type":"sensor"},{"id":"62","type":"sensor"},{"id":"63","type":"sensor"},{"id":"80","type":"sensor"},{"id":"81","type":"sensor"},{"id":"82","type":"sensor"},{"id":"86","type":"sensor"},{"id":"87","type":"sensor"},{"id":"88","type":"sensor"}]},"garden_plants":{"data":[]},"plants":{"data":[]}}}}'
+  recorded_at: Wed, 04 Nov 2020 18:51:12 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/1/sensors
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 04 Nov 2020 18:51:13 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d9222ab3ecdca70c31df11f9fac0ab2b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 67ad8dc0-84f0-4109-885c-4589655ee8d4
+      X-Runtime:
+      - '0.113244'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"7","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"8","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"9","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"10","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"11","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"12","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"13","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"14","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"15","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"17","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"18","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"19","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"20","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"21","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"22","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"23","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"24","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"25","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"26","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"27","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"28","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"29","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"30","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"31","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"32","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"33","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"34","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"35","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"36","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"37","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"38","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"39","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"40","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"41","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"42","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"43","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"44","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"45","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"46","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"47","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"48","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"49","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"50","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"51","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"52","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"53","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"54","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"55","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"56","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"57","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"58","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"59","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"60","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"61","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"62","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"63","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"80","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"81","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"82","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"86","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"87","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"88","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}}]}'
+  recorded_at: Wed, 04 Nov 2020 18:51:13 GMT
+recorded_with: VCR 6.0.0

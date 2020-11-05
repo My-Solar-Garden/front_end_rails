@@ -15,10 +15,8 @@
             <li>Longitude: <%= garden.longitude %></li>
             <li>Private? <%= garden.is_private %></li>
           </ul>
-          <div class="garden-buttons">
-            <%= link_to image_tag('edit-garden.png'), edit_garden_path(garden.id), class: 'garden-button edit-button', alt: 'edit-garden' %>
-            <%= link_to image_tag('trash-garden.png'), "/gardens/#{garden.id}", method: :delete, class: 'garden-button delete-button', alt: 'delete-garden' %>
-          </div>
+          <%= render :partial => "shared/edit_delete_icons", locals: { 
+            garden: garden } %>
         </section>
       <% end %>
     <% end %>

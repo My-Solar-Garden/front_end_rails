@@ -1,5 +1,5 @@
 class GardenFacade
-  def self.create_garden_objects(users_gardens) 
+  def self.create_garden_objects(users_gardens)
     users_gardens.map do |garden|
       garden_details(garden)
     end
@@ -16,5 +16,13 @@ class GardenFacade
 
   def self.new_garden(params, current_user_id)
     GardenService.new_garden(params, current_user_id)
+  end
+
+  def self.update(params, current_user_id)
+    GardenService.update(params, current_user_id)
+  end
+
+  def self.destroy(garden_id)
+    GardenService.destroy(garden_id)
   end
 end

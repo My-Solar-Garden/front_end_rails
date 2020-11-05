@@ -8,6 +8,8 @@
       </div>
       <p>Latitude: <%= @garden.latitude %></p>
       <p>Longitude: <%= @garden.longitude %></p>
+      <%= render :partial => "shared/edit_delete_icons", locals: { 
+        garden: @garden } %>
     </section>
 
     <section class='garden-plants'>
@@ -22,7 +24,10 @@
         <% end %>
       <% end %>
 
-      <%= button_to 'Add Plant', "#" %>
+      <%= form_tag '/plants/search', method: :get do %>
+        <%= search_field_tag :search_term, nil, placeholder: 'Search to add plants' %>
+        <%= submit_tag 'Find Plants', data: { disable_with: "Please enter keyword" } %>
+      <% end %>
     </section>
 
     <section class='garden-sensors'>
@@ -35,6 +40,7 @@
           <div class="sensor-box sensor">
             <%= sensor.id %>
             <%= link_to sensor.sensor_type, "/sensors/#{sensor.id}" %>
+            <%= button_to 'Delete', "/sensors/#{sensor.id}", method: :delete %>
           </div>
         <% end %>
       <% end %>

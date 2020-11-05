@@ -26,15 +26,16 @@ class GardensController < ApplicationController
   def edit
     @garden = GardenFacade.garden_details(params)
   end
-
+  
   def update
-    # PATCH "api/v1/gardens/params[:id]" to update the garden using strong params
-    redirect_to dashboard_path
+    GardenFacade.update(params, current_user.id)
+    redirect_to garden_show_path(params[:id])
   end
 
   def destroy
-    # DELETE api/v1/gardens/:id' to destroy garden
-    redirect_back(fallback_location: dashboard_path)
+    GardenFacade.destroy(params[:id])
+    refresh_current_user
+    redirect_to dashboard_path
   end
 
   private

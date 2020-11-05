@@ -7,6 +7,11 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
+  def refresh_current_user
+    user_id = current_user.id
+    current_user = User.find(user_id)
+  end
+
   def render_404
     respond_to do |format|
       format.html { render :file => "#{Rails.root}/public/404", :layout => false, :status => :not_found }
