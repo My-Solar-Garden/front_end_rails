@@ -32,7 +32,9 @@
 
 <!-- Visit the Learn More page button -->
       <div class="w3-panel">
-        <%= link_to "Be The Change. Learn More", "/learn_more", class: "w3-btn w3-light-green w3-block" %>
+        <% if current_user.nil? %>
+          <%= link_to "Be The Change. Learn More", "/learn_more", class: "w3-btn w3-light-green w3-block" %>
+        <% end %>
       </div>
 
 <!-- Visit the Privacy Policy page button -->

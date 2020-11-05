@@ -17,12 +17,8 @@
 </head>
 <body>
   <% if !current_user.nil? %>
-    <nav class="navbar navbar-expand-xl bg-dark navbar-dark sticky-top" id="navbar-<%= current_user.id %>">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top" id="navbar-<%= current_user.id %>">
       <a class="navbar-brand" href="<%=root_path%>">Welcome</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse navbar-expand-xl" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="<%=dashboard_path%>">Dashboard</a>
@@ -31,15 +27,14 @@
             <a class="nav-link" href="<%=learn_more_path%>">Learn More</a>
           </li>
         </ul>
-        <ul class="nav justify-content-end">
-          <li class="nav-item w3-text-gray">
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
             <a class="nav-link" href="<%=profile_path%>">Profile</a>
           </li>
-          <li class="nav-item w3-text-gray">
+          <li class="nav-item">
             <a class="nav-link" href="<%=logout_path%>">Logout</a>
           </li>
         </ul>
-      </div>
     </nav>
   <% end %>
   <center>
