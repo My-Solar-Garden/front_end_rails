@@ -68,8 +68,6 @@ RSpec.describe 'User Dashboard' do
         find('.fa-edit').click
       end
 
-      # edit garden functionality not yet implemented
-      # expect(current_path).to eq("/gardens/3/edit")
       visit dashboard_path
 
       within '#garden-4' do
@@ -84,6 +82,16 @@ RSpec.describe 'User Dashboard' do
       visit dashboard_path
 
       click_link "The Grove"
+      expect(current_path).to eq(garden_path(3))
+    end
+
+    it "can clink on the garden image to get redirected to the garden show page" do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_gardens)
+
+      visit dashboard_path
+
+      find(:xpath, "//a/img[@alt='Image-3']/..").click
+
       expect(current_path).to eq(garden_path(3))
     end
   end

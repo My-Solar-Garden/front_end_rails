@@ -49,8 +49,6 @@ RSpec.describe 'Welcome' do
       expect(page).to have_content("Login with Google to:")
       expect(page).to have_content("- Set up a garden -")
       expect(page).to have_content("- Track your sensor data -")
-      expect(page).to have_content("- Connect with your community -")
-      expect(page).to have_content("- Track your garden's carbon impact -")
       expect(page).to have_content("- Track the health of your plants and soil -")
     end
 
@@ -84,6 +82,19 @@ RSpec.describe 'Welcome' do
 
       click_link "Login with Google"
       expect(current_path).to eq(dashboard_path)
+    end
+
+    it "expects to not see Login With Google if logged in" do
+      @user = User.new({id: 2,
+                        attributes: {
+                          email: 'planter@gmail.com' },
+                          relationships: {
+                            gardens: {
+                              data: [ {id: '3', type: 'garden'}, {id: '4', type: 'garden'}] }}})
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+      visit root_path
+
+      expect(page).to_not have_content("Login with Google")
     end
   end
 end

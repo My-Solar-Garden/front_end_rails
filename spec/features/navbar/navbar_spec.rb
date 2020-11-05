@@ -69,7 +69,6 @@ RSpec.describe 'Navbar' do
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')
-        expect(page).to have_link('My Impact')
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
@@ -81,7 +80,6 @@ RSpec.describe 'Navbar' do
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')
-        expect(page).to have_link('My Impact')
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
@@ -93,7 +91,6 @@ RSpec.describe 'Navbar' do
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')
-        expect(page).to have_link('My Impact')
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
@@ -105,7 +102,6 @@ RSpec.describe 'Navbar' do
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')
-        expect(page).to have_link('My Impact')
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
@@ -117,7 +113,6 @@ RSpec.describe 'Navbar' do
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')
-        expect(page).to have_link('My Impact')
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
@@ -129,7 +124,6 @@ RSpec.describe 'Navbar' do
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')
-        expect(page).to have_link('My Impact')
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
@@ -141,7 +135,6 @@ RSpec.describe 'Navbar' do
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')
-        expect(page).to have_link('My Impact')
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
@@ -153,7 +146,6 @@ RSpec.describe 'Navbar' do
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')
-        expect(page).to have_link('My Impact')
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
@@ -165,7 +157,6 @@ RSpec.describe 'Navbar' do
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')
-        expect(page).to have_link('My Impact')
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
@@ -177,7 +168,6 @@ RSpec.describe 'Navbar' do
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')
-        expect(page).to have_link('My Impact')
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
@@ -189,7 +179,6 @@ RSpec.describe 'Navbar' do
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')
-        expect(page).to have_link('My Impact')
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
@@ -201,7 +190,6 @@ RSpec.describe 'Navbar' do
 
       within "#navbar-#{@user.id}" do
         expect(page).to have_link('Dashboard')
-        expect(page).to have_link('My Impact')
         expect(page).to have_link('Learn More')
         expect(page).to have_link('Profile')
         expect(page).to have_link('Logout')
@@ -218,7 +206,6 @@ RSpec.describe 'Navbar' do
         click_link 'Logout'
 
         expect(page).to_not have_link('My Gardens')
-        expect(page).to_not have_link('My Impact')
         expect(page).to_not have_link('Profile')
         expect(page).to_not have_link('Logout')
       end

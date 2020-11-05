@@ -36,7 +36,9 @@
       </div>
 
 <!-- Login with Google button -->
+      <% if current_user.nil? %>
         <%= render 'shared/login_with_google_button' %>
+      <% end %>
     </div>
   </div>
 </div>

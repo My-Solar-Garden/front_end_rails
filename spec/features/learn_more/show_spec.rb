@@ -9,7 +9,6 @@ RSpec.describe 'Learn More page' do
 
     it "visitor does not see a navbar" do
       expect(page).to_not have_link("My Gardens")
-      expect(page).to_not have_link("My Impact")
       expect(page).to_not have_link("Learn More")
       expect(page).to_not have_link("Logout")
       expect(page).to_not have_link("Profile")
@@ -42,8 +41,6 @@ RSpec.describe 'Learn More page' do
       expect(page).to have_content("Login with Google to:")
       expect(page).to have_content("- Set up a garden -")
       expect(page).to have_content("- Track your sensor data -")
-      expect(page).to have_content("- Connect with your community -")
-      expect(page).to have_content("- Track your garden's carbon impact -")
       expect(page).to have_content("- Track the health of your plants and soil -")
     end
   end
@@ -67,7 +64,6 @@ RSpec.describe 'Learn More page' do
 
     it "a logged in user can see a navbar" do
       expect(page).to have_link("Dashboard")
-      expect(page).to have_link("My Impact")
       expect(page).to have_link("Learn More")
       expect(page).to have_link("Logout")
       expect(page).to have_link("Profile")
