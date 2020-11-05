@@ -94,7 +94,7 @@ RSpec.describe 'Show Garden Page' do
 
         within '.garden-plants' do
           expect(page).to have_content('You have no plants')
-          expect(page).to have_button('Add Plant')
+          expect(page).to have_button('Find Plants')
         end
 
         within '.garden-sensors' do
@@ -198,6 +198,16 @@ RSpec.describe 'Show Garden Page' do
       visit "/gardens/3"
       click_on "Add Sensor"
       expect(current_path).to eq("/gardens/3/sensors")
+    end
+
+    it "has search for plants field and add button" do
+      json_response = File.read('spec/fixtures/garden_with_sensors.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: json_response)
+
+      visit "/gardens/3"
+
+      expect(page).to have_field('search_term')
+      expect(page).to have_button('Find Plants')
     end
   end
 end
