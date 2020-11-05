@@ -197,6 +197,21 @@ RSpec.describe 'Show Garden Page' do
       expect(current_path).to eq("/gardens/3/sensors")
     end
 
+    it "displays garden temperature through sensor reading", :vcr do
+      user = User.new({id: 10,
+                      attributes: {
+                          email: '123@gmail.com' },
+                      relationships: {
+                          gardens: {
+                              data: [ @garden ] }}})
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit garden_path(248)
+
+      expect(page).to have_content('Current Garden Temperature:')
+      expect(page).to have_content('99')
+    end
+
     it "has search for plants field and add button" do
       json_response = File.read('spec/fixtures/garden_with_sensors.json')
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: json_response)
