@@ -1,7 +1,7 @@
 <center>
   <h3>Edit Your Sensor</h3>
   <section class="new-garden">
-    <%= form_with url: "/gardens/#{@garden[:id]}/sensors/#{@sensor[:date][:id]}/edit", method: :patch, local: true do |form| %>
+    <%= form_with url: "/gardens/#{@sensor.garden_id}/sensors/#{@sensor.id}/edit", method: :patch, local: true do |form| %>
       <p>Type of Sensor</p>
       <%= select_tag(:sensor_type, options_for_select(sensor_type_list), {class: "select-field"}) %><br>
       <%= form.label :min_threshold %><br>
