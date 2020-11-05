@@ -6,6 +6,10 @@ RSpec.describe 'User' do
       "data": {
           "id": "1",
           "type": "user",
+          "location": {
+               "lat": 39.74,
+               "lon": -104.98
+             },
           "attributes": {
               "id": 1,
               "email": "billy@gmail.com"
@@ -28,6 +32,9 @@ RSpec.describe 'User' do
     expect(user.id).to be_a(String)
     expect(user.id).to eq('1')
 
+    expect(user.location).to be_a(Array)
+    expect(user.location).to eq([39.74, -104.98])
+
     expect(user.email).to be_a(String)
     expect(user.email).to eq('billy@gmail.com')
 
@@ -36,13 +43,13 @@ RSpec.describe 'User' do
   end
 
   describe 'class methods' do
-
     describe 'find(user_id)' do
       it 'can fetch a user from backend api' do
         VCR.use_cassette('fetch_user') do
           user = User.find('1')
           expect(user).to be_a(User)
           expect(user.id).to eq('1')
+          expect(user.location).to eq([39.74, -104.98])
           expect(user.email).to eq('billy@gmail.com')
           expect(user.gardens).to eq([])
         end
