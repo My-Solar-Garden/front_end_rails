@@ -218,4 +218,102 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[{"id":"34","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"35","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"36","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"37","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"38","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"39","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"40","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"41","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"42","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"43","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"44","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"45","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"46","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"47","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"48","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"49","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"50","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"51","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"52","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"53","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"54","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"55","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"56","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"57","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"58","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"59","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"60","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"61","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"62","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"63","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"80","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"81","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"82","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"86","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"87","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"88","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"moisture"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"13","type":"sensor","attributes":{"min_threshold":5,"max_threshold":10,"sensor_type":"light"},"relationships":{"garden":{"data":{"id":"1","type":"garden"}},"garden_healths":{"data":[{"id":"40","type":"garden_health"},{"id":"42","type":"garden_health"},{"id":"44","type":"garden_health"},{"id":"46","type":"garden_health"},{"id":"48","type":"garden_health"},{"id":"50","type":"garden_health"},{"id":"52","type":"garden_health"},{"id":"54","type":"garden_health"}]}}}]}'
   recorded_at: Wed, 04 Nov 2020 23:54:21 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/onecall?appid=d56c5a1373ab072efa767c9937038b8e&exclude=minutely,hourly&lat=41.0&lon=41.0&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 05 Nov 2020 18:43:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '3652'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/onecall?exclude=minutely%2Chourly&lat=41&lon=41&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":41,"lon":41,"timezone":"Europe/Istanbul","timezone_offset":10800,"current":{"dt":1604601830,"sunrise":1604548306,"sunset":1604585245,"temp":51.96,"feels_like":51.01,"pressure":1015,"humidity":89,"dew_point":48.83,"uvi":2.67,"clouds":100,"visibility":153,"wind_speed":1.3,"wind_deg":325,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}]},"daily":[{"dt":1604563200,"sunrise":1604548306,"sunset":1604585245,"temp":{"day":58.53,"min":51.57,"max":58.53,"night":51.96,"eve":52.9,"morn":51.57},"feels_like":{"day":55.63,"night":50.74,"eve":51.78,"morn":48.34},"pressure":1016,"humidity":71,"dew_point":49.44,"wind_speed":4.9,"wind_deg":330,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":100,"pop":0.48,"rain":0.88,"uvi":2.67},{"dt":1604649600,"sunrise":1604634778,"sunset":1604671579,"temp":{"day":45.63,"min":45.63,"max":52.05,"night":46.04,"eve":46.56,"morn":48.33},"feels_like":{"day":40.77,"night":41.18,"eve":41.72,"morn":44.47},"pressure":1016,"humidity":87,"dew_point":42.13,"wind_speed":5.39,"wind_deg":194,"weather":[{"id":504,"main":"Rain","description":"extreme
+        rain","icon":"10d"}],"clouds":100,"pop":1,"rain":169.38,"uvi":2.61},{"dt":1604736000,"sunrise":1604721251,"sunset":1604757914,"temp":{"day":45.46,"min":40.3,"max":45.46,"night":40.3,"eve":42.19,"morn":42.3},"feels_like":{"day":41.58,"night":33.94,"eve":38.35,"morn":38.55},"pressure":1024,"humidity":84,"dew_point":41.18,"wind_speed":3.29,"wind_deg":316,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"clouds":100,"pop":0.84,"rain":6.7,"uvi":2.35},{"dt":1604822400,"sunrise":1604807723,"sunset":1604844252,"temp":{"day":51.08,"min":39.83,"max":51.08,"night":44.53,"eve":44.76,"morn":43.48},"feels_like":{"day":46.65,"night":37.81,"eve":39.79,"morn":39.67},"pressure":1027,"humidity":69,"dew_point":41.58,"wind_speed":4.36,"wind_deg":336,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":30,"pop":0.4,"uvi":2.42},{"dt":1604908800,"sunrise":1604894196,"sunset":1604930591,"temp":{"day":57.67,"min":44.42,"max":57.67,"night":46.44,"eve":47.57,"morn":44.82},"feels_like":{"day":53.35,"night":40.6,"eve":42.33,"morn":37.67},"pressure":1024,"humidity":51,"dew_point":40.08,"wind_speed":3.62,"wind_deg":334,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":2.36},{"dt":1604995200,"sunrise":1604980668,"sunset":1605016931,"temp":{"day":53.89,"min":43.21,"max":53.89,"night":45.41,"eve":47.93,"morn":43.21},"feels_like":{"day":49.5,"night":42.46,"eve":45.91,"morn":37.96},"pressure":1020,"humidity":64,"dew_point":42.15,"wind_speed":4.56,"wind_deg":337,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":2.29},{"dt":1605085200,"sunrise":1605067141,"sunset":1605103274,"temp":{"day":48.92,"min":41.77,"max":48.92,"night":43.41,"eve":44.85,"morn":41.77},"feels_like":{"day":44.71,"night":40.53,"eve":42.44,"morn":36.97},"pressure":1019,"humidity":77,"dew_point":42.31,"wind_speed":4.25,"wind_deg":337,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":75,"pop":0.48,"rain":1.51,"uvi":2.09},{"dt":1605171600,"sunrise":1605153613,"sunset":1605189618,"temp":{"day":38.17,"min":34.16,"max":43.5,"night":34.16,"eve":35.2,"morn":40.1},"feels_like":{"day":33.01,"night":29.03,"eve":30.29,"morn":33.57},"pressure":1025,"humidity":89,"dew_point":35.33,"wind_speed":3.71,"wind_deg":299,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":100,"pop":0.84,"rain":1.75,"uvi":2.19}]}'
+  recorded_at: Thu, 05 Nov 2020 18:43:51 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/onecall?appid=d56c5a1373ab072efa767c9937038b8e&exclude=minutely,hourly&lat=41.0&lon=41.0&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 05 Nov 2020 18:43:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '3652'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/onecall?exclude=minutely%2Chourly&lat=41&lon=41&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":41,"lon":41,"timezone":"Europe/Istanbul","timezone_offset":10800,"current":{"dt":1604601830,"sunrise":1604548306,"sunset":1604585245,"temp":51.96,"feels_like":51.01,"pressure":1015,"humidity":89,"dew_point":48.83,"uvi":2.67,"clouds":100,"visibility":153,"wind_speed":1.3,"wind_deg":325,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}]},"daily":[{"dt":1604563200,"sunrise":1604548306,"sunset":1604585245,"temp":{"day":58.53,"min":51.57,"max":58.53,"night":51.96,"eve":52.9,"morn":51.57},"feels_like":{"day":55.63,"night":50.74,"eve":51.78,"morn":48.34},"pressure":1016,"humidity":71,"dew_point":49.44,"wind_speed":4.9,"wind_deg":330,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":100,"pop":0.48,"rain":0.88,"uvi":2.67},{"dt":1604649600,"sunrise":1604634778,"sunset":1604671579,"temp":{"day":45.63,"min":45.63,"max":52.05,"night":46.04,"eve":46.56,"morn":48.33},"feels_like":{"day":40.77,"night":41.18,"eve":41.72,"morn":44.47},"pressure":1016,"humidity":87,"dew_point":42.13,"wind_speed":5.39,"wind_deg":194,"weather":[{"id":504,"main":"Rain","description":"extreme
+        rain","icon":"10d"}],"clouds":100,"pop":1,"rain":169.38,"uvi":2.61},{"dt":1604736000,"sunrise":1604721251,"sunset":1604757914,"temp":{"day":45.46,"min":40.3,"max":45.46,"night":40.3,"eve":42.19,"morn":42.3},"feels_like":{"day":41.58,"night":33.94,"eve":38.35,"morn":38.55},"pressure":1024,"humidity":84,"dew_point":41.18,"wind_speed":3.29,"wind_deg":316,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"clouds":100,"pop":0.84,"rain":6.7,"uvi":2.35},{"dt":1604822400,"sunrise":1604807723,"sunset":1604844252,"temp":{"day":51.08,"min":39.83,"max":51.08,"night":44.53,"eve":44.76,"morn":43.48},"feels_like":{"day":46.65,"night":37.81,"eve":39.79,"morn":39.67},"pressure":1027,"humidity":69,"dew_point":41.58,"wind_speed":4.36,"wind_deg":336,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":30,"pop":0.4,"uvi":2.42},{"dt":1604908800,"sunrise":1604894196,"sunset":1604930591,"temp":{"day":57.67,"min":44.42,"max":57.67,"night":46.44,"eve":47.57,"morn":44.82},"feels_like":{"day":53.35,"night":40.6,"eve":42.33,"morn":37.67},"pressure":1024,"humidity":51,"dew_point":40.08,"wind_speed":3.62,"wind_deg":334,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":2.36},{"dt":1604995200,"sunrise":1604980668,"sunset":1605016931,"temp":{"day":53.89,"min":43.21,"max":53.89,"night":45.41,"eve":47.93,"morn":43.21},"feels_like":{"day":49.5,"night":42.46,"eve":45.91,"morn":37.96},"pressure":1020,"humidity":64,"dew_point":42.15,"wind_speed":4.56,"wind_deg":337,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":2.29},{"dt":1605085200,"sunrise":1605067141,"sunset":1605103274,"temp":{"day":48.92,"min":41.77,"max":48.92,"night":43.41,"eve":44.85,"morn":41.77},"feels_like":{"day":44.71,"night":40.53,"eve":42.44,"morn":36.97},"pressure":1019,"humidity":77,"dew_point":42.31,"wind_speed":4.25,"wind_deg":337,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":75,"pop":0.48,"rain":1.51,"uvi":2.09},{"dt":1605171600,"sunrise":1605153613,"sunset":1605189618,"temp":{"day":38.17,"min":34.16,"max":43.5,"night":34.16,"eve":35.2,"morn":40.1},"feels_like":{"day":33.01,"night":29.03,"eve":30.29,"morn":33.57},"pressure":1025,"humidity":89,"dew_point":35.33,"wind_speed":3.71,"wind_deg":299,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":100,"pop":0.84,"rain":1.75,"uvi":2.19}]}'
+  recorded_at: Thu, 05 Nov 2020 18:43:51 GMT
 recorded_with: VCR 6.0.0
