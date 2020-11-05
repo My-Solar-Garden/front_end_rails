@@ -9,7 +9,6 @@ RSpec.describe 'Learn More page' do
 
     it "visitor does not see a navbar" do
       expect(page).to_not have_link("My Gardens")
-      expect(page).to_not have_link("My Impact")
       expect(page).to_not have_link("Learn More")
       expect(page).to_not have_link("Logout")
       expect(page).to_not have_link("Profile")
@@ -67,7 +66,6 @@ RSpec.describe 'Learn More page' do
 
     it "a logged in user can see a navbar" do
       expect(page).to have_link("Dashboard")
-      expect(page).to have_link("My Impact")
       expect(page).to have_link("Learn More")
       expect(page).to have_link("Logout")
       expect(page).to have_link("Profile")
