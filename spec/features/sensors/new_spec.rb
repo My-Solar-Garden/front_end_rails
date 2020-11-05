@@ -91,7 +91,7 @@ RSpec.describe 'New Sensor Page' do
 
       visit "/gardens/#{@garden.id}"
 
-      expect(page.all(".sensor").size).to eq(3)
+      expect(page.all(".sensor").size).to eq(6)
     end
   end
 end
