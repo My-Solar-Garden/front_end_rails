@@ -21,7 +21,13 @@
         1. Fall or Late Winter: Cover with Plastic. Instead, in January, February or early March (or even in the fall after harvest if you’re really on the ball), throw a piece of black plastic over the bed (you’ll want a thicker plastic like this 6 ml roll) Then let time, sun, and heat do their magic.<br><br>
         2. Prep bed in Spring: Remove Dead Debris. When it’s time to plant, pull back the plastic on your beds to reveal a bed of brown, dead debris. The old covered debris is much easier to remove after a few months under the plastic. Haul away any large debris (pull the soaker hose if you have them) and start raking all the dead weed debris. There may be a few (very few) pernicious weeds like dandelion and thistle that you should dig by hand.<br><br>
         3. Layer on 1/2 to 1 inch of Garden Compost. Add a fresh layer of compost to the bed and rake it smooth. It ends up being about 1/2″ layer, though in the first years as I was establishing the beds I added more – about 1 full inch. Do this every year to build the soil and just leave it on top. When you dig the furrows and holes for planting, it will get mixed in more.<br><br>
-        4. Plant, water, maintain: Plant seeds and starts. After the bed is fully covered with compost, it’s time to plant. Lay soaker hoses or drip system for watering. Watering this way puts the water where we want it- not in the space between plants or paths where weeds want to grow- so it’s a major player in keeping weeding to a minimum. Overhead watering not only waters too much, it also isn’t as good for plants, encouraging mildew and diseases.
+        4. Plant, water, maintain: Plant seeds and starts. After the bed is fully covered with compost, it’s time to plant. Lay soaker hoses or drip system for watering. Watering this way puts the water where we want it- not in the space between plants or paths where weeds want to grow- so it’s a major player in keeping weeding to a minimum. Overhead watering not only waters too much, it also isn’t as good for plants, encouraging mildew and diseases.<br><br>
+        <% if current_user.nil? %>
+        <div class="w3-panel w3-block w3-center">
+          <%= link_to "Back to Welcome", "/", class: "btn-primary btn" %>
+          <%= render 'shared/login_with_google_button' %>
+        </div>
+        <% end %>
     </p>
     <div class="w3-row w3-padding-52">
       <div class="w3-third">
@@ -41,11 +47,5 @@
         <img src="https://hackster.imgix.net/uploads/attachments/228021/s72hqE6cgvSCK3uoLExL.uploads/tmp/15eebe6d-0e94-44df-a495-bb7d8008cbb2/tmp_image_0?auto=compress%2Cformat&w=900&h=675&fit=min" class="w3-round" alt="Random Name" style="width:500px">
       </div>
     </div>
-    <% if current_user.nil? %>
-      <div class="w3-panel">
-        <%= link_to "Back to Welcome", "/", class: "w3-btn w3-light-green w3-block" %>
-      </div>
-      <%= render 'shared/login_with_google_button' %>
-    <% end %>
   </div>
 </div>
