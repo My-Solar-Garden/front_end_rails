@@ -1,31 +1,33 @@
 <center>
-  <article class='left-col'>
+  <article class='left-col text-primary'>
     <section class='garden-info'>
-      <h1><%= @garden.name %></h1>
-      <h3><%= @garden.description %></h3>
+      <h1><%= @garden.name %></h1><br>
+      <h3><%= @garden.description %></h3><br>
       <div class='garden-image'>
         <%= image_tag('default-garden.png') %>
-      </div>
+      </div><br>
       <p>Latitude: <%= @garden.latitude %></p>
       <p>Longitude: <%= @garden.longitude %></p>
+      <%= render :partial => "shared/edit_delete_icons", locals: {
+        garden: @garden } %>
     </section>
-
-    <section class='garden-plants'>
+    <section class='garden-plants card'>
       <h1>Your Garden Plants</h1>
-      <% if @garden.plants.empty? %>
+      <% if @plants.empty? %>
         <p>You have no plants</p>
       <% else %>
-        <% @garden.plants.each do |plant| %>
+        <% @plants.each do |plant| %>
           <div class="plant-box">
-            <%= plant[:name] %>
+            <h3><%= plant.name %></h3>
           </div>
         <% end %>
       <% end %>
-
-      <%= button_to 'Add Plant', "#" %>
+      <%= form_tag '/plants/search', method: :get do %>
+        <%= search_field_tag :search_term, nil, placeholder: 'Search to add plants' %>
+        <%= submit_tag 'Find Plants', data: { disable_with: "Please enter keyword" }, :class => "btn btn-primary" %>
+      <% end %>
     </section>
-
-    <section class='garden-sensors'>
+    <section class='garden-sensors card'>
       <h1>Your Garden Sensors</h1>
 
       <% if @sensors.empty? %>
@@ -33,17 +35,48 @@
       <% else %>
         <% @sensors.each do |sensor| %>
           <div class="sensor-box sensor">
-            <%= sensor.id %>
-            <%= link_to sensor.sensor_type, "/sensors/#{sensor.id}" %>
+            <h4>Current Garden Sensor: <%= sensor.id %></h4><br>
+            <h4><%= link_to sensor.sensor_type, "/gardens/#{@garden.id}/sensors/#{sensor.id}" %></h4><br>
+            <%= button_to 'Delete', "/gardens/#{@garden.id}/sensors/#{sensor.id}", method: :delete, :class => "btn btn-primary" %>
           </div>
         <% end %>
       <% end %>
-      <%= button_to 'Add Sensor', "/gardens/#{@garden.id}/sensors", method: :get %>
+      <br>
+      <%= button_to 'Add Sensor', "/gardens/#{@garden.id}/sensors", method: :get, :class => "btn btn-primary" %>
     </section>
   </article>
 
-  <article class='right-col'>
-    <h1>Weather Information</h1>
-  </article>
+  <% if @temperature %>
+    <section class='garden-temperature'>
+      <p>Current Garden Temperature: <%= @temperature.reading %>°C </p>
+    </section>
+  <% end %>
 
+  <% if @light %>
+    <section class='garden-temperature'>
+      <p>Current Garden Light Percentage: <%= @light.reading %></p>
+    </section>
+  <% end %>
+
+  <article class='Weather card text-primary card' style="width: 40%;">
+    <h1>Weather Information</h1>
+
+    <h2>Forecast:</h2>
+    <h3>Today:</h3>
+    <p><%= @weather.description %></p>
+    <p>Humidity: <%= @weather.humidity %>%</p>
+    <p>Temperature: <%= @weather.temperature %>°F</p>
+
+    <h3>The Next Eight Days:</h3>
+    <% @weather.daily.each do |day|%>
+    <section class='day' id='day-<%= day.date %>'>
+
+      <p>Date: <%= day.date %></p>
+      <p><%= day.description %></p>
+      <p>Humidity: <%= day.humidity %>%</p>
+      <p>Temperature: <%= day.temperature %>°F</p>
+      <p>---------------</p>
+    </section>
+    <% end %>
+  </article>
 </center>

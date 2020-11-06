@@ -2,39 +2,50 @@
 
   <!-- The Learn More Section -->
   <div class="w3-container w3-content w3-center w3-padding-21" style="max-width:916px" id="learn more">
-    <h2 class="w3-wide">Learn More</h2>
+    <h1 class="display-3 font-italic text-primary">Learn More</h1>
   </div>
 
-  <div class="w3-container w3-content w3-padding-21" style="max-width:916px" id="learn more">
-    <p class="w3-justify"><h3>Question 1:</h3>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat.<br><br>
-    <h3>Question 2:</h3>
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br>
-    <h3>Question 3:</h3>
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>
-    <h3>Question 4:</h3>
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <div class="w3-row w3-padding-32">
+  <div class="w3-container w3-content w3-padding-21 text-primary" style="max-width:916px" id="learn more">
+    <p class="w3-justify">
+      <h3><u>So What About Soil?</u></h3>
+        1. Soil sustains life. Soil is the source of essentially EVERYTHING. For example, wool may come from sheep and pencils from trees, but what these two have in common are that they both rely on plants that grow in the soil for their nourishment.<br><br>
+        2. Soil allows food to grow and ultimately, feed the world. Without soil, plants would not have the essential nutrients they need to grow and prosper. Likewise, soil is known as an “anchorage” – allowing the root systems to extend downward through the soil and in turn stabilize plants so that they can grow efficiently.<br><br>
+        3. Soil contains many nutrients needed by all plants to grow. Food, water, and a list of other vital nutrients. Not only does soil cover a majority of the world’s land surface – but it also provides life to all plants. Soil gives back to the plants – supplying them with many of the nutrients they need.<br><br>
+        4. Healthy soil aids in the cleanliness of the environment – decreasing erosion and air pollution. Known best for recycling raw materials and filtering water, soil continues to keep our environment as clean as possible. The brown, crumbly matter beneath us prevents erosion and works to convert waste into newer and better things so that it can easily be reused by nature.<br><br>
+        5. The healthier the soil, the more nutrients ANY plant can soak up. Healthy soil will contain a plethora of organic matter, harboring an ideal home and food for various organisms, such as earthworms. It will also contain lumps and clumps of different sizes and be rich in nutrients that various plants can use as their sole source of food.<br><br>
+      <h3><u>How Does Having a Garden Help The Environment?</u></h3>
+        Gardens help the environment by reducing air and noise pollution, erosion, and energy costs, minimizing carbon footprint, filtering the groundwater, and providing a food and home source for various animals and insects.<br><br>
+      <h3><u>Annuals vs Perennials</u></h3>
+        It is best to plant things that will come back each year; perennials. This prevents the need to til up the soil in your garden which sequesters the atmospheric carbon that it pulls. However, you can have a mixture of both perennials and annuals.<br><br>
+      <h3><u>How Do You Plant Without Tilling?</u></h3>
+        1. Fall or Late Winter: Cover with Plastic. Instead, in January, February or early March (or even in the fall after harvest if you’re really on the ball), throw a piece of black plastic over the bed (you’ll want a thicker plastic like this 6 ml roll) Then let time, sun, and heat do their magic.<br><br>
+        2. Prep bed in Spring: Remove Dead Debris. When it’s time to plant, pull back the plastic on your beds to reveal a bed of brown, dead debris. The old covered debris is much easier to remove after a few months under the plastic. Haul away any large debris (pull the soaker hose if you have them) and start raking all the dead weed debris. There may be a few (very few) pernicious weeds like dandelion and thistle that you should dig by hand.<br><br>
+        3. Layer on 1/2 to 1 inch of Garden Compost. Add a fresh layer of compost to the bed and rake it smooth. It ends up being about 1/2″ layer, though in the first years as I was establishing the beds I added more – about 1 full inch. Do this every year to build the soil and just leave it on top. When you dig the furrows and holes for planting, it will get mixed in more.<br><br>
+        4. Plant, water, maintain: Plant seeds and starts. After the bed is fully covered with compost, it’s time to plant. Lay soaker hoses or drip system for watering. Watering this way puts the water where we want it- not in the space between plants or paths where weeds want to grow- so it’s a major player in keeping weeding to a minimum. Overhead watering not only waters too much, it also isn’t as good for plants, encouraging mildew and diseases.<br><br>
+        <% if current_user.nil? %>
+        <div class="w3-panel w3-block w3-center">
+          <%= link_to "Back to Welcome", root_path, class: "btn-primary btn" %>
+          <%= render 'shared/login_with_google_button' %>
+        </div>
+        <% end %>
+    </p>
+    <div class="w3-row w3-padding-52">
       <div class="w3-third">
-        <p>Name</p>
-        <img src="https://media.wired.com/photos/593258d526780e6c04d2b157/191:100/w_1280,c_limit/garden-sensor-ft.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:250px">
-      </div>
-      <div class="w3-third">
-        <p>Name</p>
-        <img src="https://www.trees.com/sites/default/files/2019-09/soil-moisture-meter.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:250px">
-      </div>
-      <div class="w3-third">
-        <p>Name</p>
-        <img src="https://www.cooking-hacks.com/media/cooking/images/documentation/open_garden/indoor_plant_4_small.png" class="w3-round" alt="Random Name" style="width:250px">
+        <h3>No Til Concept</h3>
+        <img src="https://www.backtoedenfilm.com/uploads/1/2/1/7/12171992/no-till-gardening_orig.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:400px">
       </div>
     </div>
-    <% if current_user.nil? %>
-      <div class="w3-panel">
-        <%= link_to "Back to Welcome", "/", class: "w3-btn w3-light-green w3-block" %>
+    <div class="w3-row w3-padding-52">
+      <div class="w3-third">
+        <h3>Carbon Farming</h3>
+        <img src="https://i.pinimg.com/originals/39/c8/24/39c824083830d38102cfe1a2266077ef.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:400px">
       </div>
-      <%= render 'shared/login_with_google_button' %>
-    <% end %>
+    </div>
+    <div class="w3-row w3-padding-52">
+      <div class="w3-third">
+        <h3>How The Sensors Work with Your Garden</h3>
+        <img src="https://hackster.imgix.net/uploads/attachments/228021/s72hqE6cgvSCK3uoLExL.uploads/tmp/15eebe6d-0e94-44df-a495-bb7d8008cbb2/tmp_image_0?auto=compress%2Cformat&w=900&h=675&fit=min" class="w3-round" alt="Random Name" style="width:500px">
+      </div>
+    </div>
   </div>
 </div>

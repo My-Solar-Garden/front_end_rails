@@ -13,10 +13,126 @@
  */
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
+
 @import "bootstrap";
-.solar-nav {float: right}
+@import "font-awesome";
+@import "theme";
+
+// .solar-nav {float: right}
 .plant-show {
    margin-left: auto;
    margin-right: auto;
    width: 8em
+}
+.col-sm-4 {
+  border-style: solid;
+}
+
+.row {
+  display: block;
+  margin-inline-end: auto;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #03adfc;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #0c8dc9;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.icon {
+  margin: 5px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  padding: 0px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+#welcome-logo {
+  width: 60%;
+}
+
+.garden-info {
+  margin-bottom: 20px;
+  width: 40%;
+  padding-bottom: 40px;
+}
+
+.garden-plants {
+  margin-bottom: 20px;
+  width: 40%;
+  padding-bottom: 10px;
+}
+
+.garden-sensors {
+  margin-bottom: 20px;
+  width: 40%;
+  padding-bottom: 10px;
+}
+
+.profile {
+  padding-top: 10px;
+  margin-bottom: 20px;
+  width: 40%;
+  padding-bottom: 10px;
+}
+
+.new-garden {
+  margin-bottom: 20px;
+  width: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

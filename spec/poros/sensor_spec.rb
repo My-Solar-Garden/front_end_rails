@@ -19,11 +19,13 @@ RSpec.describe Sensor do
                 }
             },
             "garden_healths": {
-                "data": []
+                "data": [{
+                    "id": "36",
+                    "type": "garden_health"
+                }]
             }
         }
     }}
-
     sensor = Sensor.new(attr.deep_symbolize_keys[:data])
 
     expect(sensor).to be_a(Sensor)
@@ -38,6 +40,6 @@ RSpec.describe Sensor do
     expect(sensor.garden_id).to be_a(String)
     expect(sensor.garden_id).to eq('1')
     expect(sensor.garden_healths).to be_a(Array)
-    expect(sensor.garden_healths).to eq([])
+    expect(sensor.garden_healths.first).to be_a(GardenHealth)
   end
 end

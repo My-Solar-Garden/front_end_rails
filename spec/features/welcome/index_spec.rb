@@ -25,12 +25,6 @@ RSpec.describe 'Welcome' do
       @garden = @user.gardens.first
     end
 
-    it "expects to see a My Solar Garden Project banner" do
-      visit root_path
-
-      expect(page).to have_content("My Solar Garden Project")
-    end
-
     it "expects to see a description motto section" do
       visit root_path
 
@@ -49,8 +43,6 @@ RSpec.describe 'Welcome' do
       expect(page).to have_content("Login with Google to:")
       expect(page).to have_content("- Set up a garden -")
       expect(page).to have_content("- Track your sensor data -")
-      expect(page).to have_content("- Connect with your community -")
-      expect(page).to have_content("- Track your garden's carbon impact -")
       expect(page).to have_content("- Track the health of your plants and soil -")
     end
 
@@ -78,12 +70,28 @@ RSpec.describe 'Welcome' do
 
       expect(page).to have_link("Login with Google")
     end
-    # We are not sure how to test this quite yet. I think once the OAuth is complete this can be tested.
-    it "expects to be sent to dashboard when the button is clicked/user is logged in" do
+
+    it "can see link to visit privacy policy page" do
       visit root_path
 
-      click_link "Login with Google"
-      expect(current_path).to eq(dashboard_path)
+      expect(page).to have_link("Visit our Privacy Policy Page")
+
+      click_link "Visit our Privacy Policy Page"
+
+      expect(current_path).to eq('/privacy')
+    end
+
+    it "expects to not see Login With Google if logged in" do
+      @user = User.new({id: 2,
+                        attributes: {
+                          email: 'planter@gmail.com' },
+                          relationships: {
+                            gardens: {
+                              data: [ {id: '3', type: 'garden'}, {id: '4', type: 'garden'}] }}})
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+      visit root_path
+
+      expect(page).to_not have_content("Login with Google")
     end
   end
 end

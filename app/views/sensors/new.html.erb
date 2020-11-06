@@ -1,17 +1,18 @@
-
 <center>
-  <h3>Create A New Sensor</h3>
+  <div class="new-sensor text-primary">
+    <h3>Create A New Sensor</h3>
+  </div>
 
-  <section class="new-garden">
+  <section class="new-garden text-primary card">
     <%= form_with url: sensors_path, local: true do |form| %>
-      <p>Type of Sensor</p>
-      <%= select_tag(:sensor_type, options_for_select(sensor_type_list), {class: "select-field"}) %>
+      <p>Type of Sensor</p><br>
+      <%= select_tag(:sensor_type, options_for_select(sensor_type_list), {class: "select-field"}) %><br><br>
       <%= form.label :min_threshold %><br>
       <%= form.number_field :min_threshold, required: true %><br><br>
       <%= form.label :max_threshold %><br>
-      <%= form.text_field :max_threshold, required: true %><br><br>
-      <%= form.hidden_field :garden_id, value: @garden_id %>
-      <%= form.submit "Create Sensor" %><br><br>
+      <%= form.number_field :max_threshold, required: true %><br><br>
+      <%= form.hidden_field :garden_id, value: @garden_id %><br>
+      <%= form.submit "Create Sensor", class: 'btn btn-primary' %><br><br>
     <% end  %>
   </section>
 </center>

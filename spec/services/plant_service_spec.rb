@@ -1,11 +1,26 @@
 require 'rails_helper'
 
 describe PlantService do
-  it "returns plant details data" do
-    response = File.read('spec/fixtures/plant_show.json')
-    stub_request(:get, "#{ENV['BE_URL']}/api/v1/plants/1").
-       to_return(status: 200, body: response, headers: {})
-    plant = PlantService.plant_details('1')
+  it "returns all plants related to a garden" do
+    json_response = File.read('spec/fixtures/plants.json')
+
+    stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/247/plants").to_return(status: 200, body: json_response)
+
+    params = {id: 247}
+
+    response = PlantService.all_plants_for_garden(params)
+
+    expect(response[:data]).to be_an(Array)
+  end
+
+  xit "returns plant details data" do
+    json_response = File.read('spec/fixtures/plants.json')
+    # response = File.read('spec/fixtures/plant_show.json')
+
+    stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/247/plants/1").to_return(status: 200, body: json_response)
+
+    params = {id: 1}
+    response = PlantService.plant_details(params)
 
     expect(plant).to be_a(Hash)
     expect(plant).to have_key(:data)
@@ -32,5 +47,5 @@ describe PlantService do
     expect(plant[:data][:attributes][:harvest_time]).to be_a(String)
     expect(plant[:data][:attributes]).to have_key(:common_pests)
     expect(plant[:data][:attributes][:common_pests]).to be_a(String)
-  end
+  end 
 end

@@ -1,9 +1,32 @@
 require 'rails_helper'
 
 RSpec.describe 'Edit Garden Page' do
-  describe 'a logged in user' do
+  describe 'a visitor' do
     before :each do
       @garden = { id: 3,
+                attributes: {
+                    name: "Cole Community Garden",
+                    latitude: 39.45,
+                    longitude: -104.58,
+                    description: "A diverse, dedicated group of students and neighbors who believe in bettering ourselves, our food supply and our community through urban gardening.",
+                    private: false },
+                relationships: { plants: {
+                                    data: []},
+                                  users: {
+                                    data: [{id: "4", type: "user"}]},
+                                 sensors: {
+                                    data: []}}}
+    end
+
+    it 'cannot visit edit garden page' do
+      visit "/gardens/#{@garden[:id]}/edit"
+      expect(page).to have_content("The page you were looking for doesn't exist.")
+    end
+  end
+
+  describe 'a logged in user' do
+    before :each do
+      @garden = { id: 4,
                 attributes: {
                     name: "Cole Community Garden",
                     latitude: 39.45,
@@ -22,18 +45,29 @@ RSpec.describe 'Edit Garden Page' do
                           email: '123@gmail.com' },
                       relationships: {
                           gardens: {
-                              data: [ @garden ] }}})
-
-      @garden = @user.gardens.first
+                              data: [ {id: "4", type: "garden"} ] }}})
 
       garden1 = File.read('spec/fixtures/public_garden.json')
-      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/3").to_return(status: 200, body: garden1)
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/#{@garden[:id]}").to_return(status: 200, body: garden1)
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
 
-    it 'can visit edit a garden page' do
-      visit "/gardens/#{@garden[:id]}/edit"
+    xit 'can visit edit a garden page from dashboard' do
+      visit dashboard_path
+
+      # it seems like this syntax isn't actually clicking the edit icon?
+      find('.fa-edit').click
+
+      expect(current_path).to eq("/gardens/#{@garden[:id]}/edit")
+    end
+
+    xit 'can visit edit a garden page from garden show' do
+      visit garden_show_path(@garden[:id])
+
+      find('.fa-edit').click
+
+      expect(current_path).to eq("/gardens/#{@garden[:id]}/edit")
     end
 
     it 'sees four input fields, two radio buttons and a button to submit' do
@@ -49,12 +83,18 @@ RSpec.describe 'Edit Garden Page' do
 
     it 'fills in edit garden form, submits and is redirected to garden show page' do
       visit "/gardens/#{@garden[:id]}/edit"
-      fill_in :name, with: 'Test'
-      fill_in :longitude, with: 25.0000
-      fill_in :latitude, with: 71.0000
-      fill_in :description, with: 'My first garden'
+
+      fill_in :name, with: 'Denver Community Garden'
+
+      garden1 = File.read('spec/fixtures/updated_garden.json')
+      stub_request(:get, "https://solar-garden-be.herokuapp.com/api/v1/gardens/#{@garden[:id]}").to_return(status: 200, body: garden1)
+
       click_button 'Update Garden'
-      expect(current_path).to eq(dashboard_path)
+
+      expect(current_path).to eq(garden_show_path(@garden[:id]))
+
+      expect(page).to have_content("Denver Community Garden")
+      expect(page).to_not have_content("Cole Community Garden")
     end
   end
 end

@@ -134,4 +134,136 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"user","attributes":{"id":2,"email":"john@example.com"},"relationships":{"user_gardens":{"data":[]},"gardens":{"data":[]}}}}'
   recorded_at: Sun, 01 Nov 2020 02:27:36 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/users/9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 21:30:19 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1acff4d14528fd9691e35b05d2cd5167"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4e80b5b7-fe3f-4867-9150-6e9bb4b0bb0c
+      X-Runtime:
+      - '0.039734'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"9","type":"user","attributes":{"id":9,"email":"lkriffell@gmail.com"},"relationships":{"user_gardens":{"data":[{"id":"1","type":"user_garden"},{"id":"481","type":"user_garden"},{"id":"176","type":"user_garden"}]},"gardens":{"data":[{"id":"7","type":"garden"},{"id":"488","type":"garden"},{"id":"183","type":"garden"}]}}}}'
+  recorded_at: Thu, 05 Nov 2020 21:30:19 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/users/9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 21:30:19 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1acff4d14528fd9691e35b05d2cd5167"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6bae2edc-4084-4960-8e8d-ac264b528494
+      X-Runtime:
+      - '0.047856'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"9","type":"user","attributes":{"id":9,"email":"lkriffell@gmail.com"},"relationships":{"user_gardens":{"data":[{"id":"1","type":"user_garden"},{"id":"481","type":"user_garden"},{"id":"176","type":"user_garden"}]},"gardens":{"data":[{"id":"7","type":"garden"},{"id":"488","type":"garden"},{"id":"183","type":"garden"}]}}}}'
+  recorded_at: Thu, 05 Nov 2020 21:30:20 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/users/9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 21:30:20 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1acff4d14528fd9691e35b05d2cd5167"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 45e2becd-ce5e-4c4c-9df9-041c140086ea
+      X-Runtime:
+      - '0.052559'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"9","type":"user","attributes":{"id":9,"email":"lkriffell@gmail.com"},"relationships":{"user_gardens":{"data":[{"id":"1","type":"user_garden"},{"id":"481","type":"user_garden"},{"id":"176","type":"user_garden"}]},"gardens":{"data":[{"id":"7","type":"garden"},{"id":"488","type":"garden"},{"id":"183","type":"garden"}]}}}}'
+  recorded_at: Thu, 05 Nov 2020 21:30:20 GMT
 recorded_with: VCR 6.0.0

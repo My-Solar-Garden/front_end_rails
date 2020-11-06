@@ -1,0 +1,58 @@
+{
+    "data": {
+        "id": "247",
+        "type": "garden",
+        "attributes": {
+            "latitude": 37.0,
+            "longitude": 29.0,
+            "name": "My new Garden",
+            "description": "The most beautiful garden ever",
+            "private": false
+        },
+        "relationships": {
+            "user_gardens": {
+                "data": [
+                    {
+                        "id": "240",
+                        "type": "user_garden"
+                    }
+                ]
+            },
+            "users": {
+                "data": [
+                    {
+                        "id": "10",
+                        "type": "user"
+                    }
+                ]
+            },
+            "sensors": {
+                "data": []
+            },
+            "garden_plants": {
+                "data": [
+                    {
+                        "id": "1",
+                        "type": "garden_plant"
+                    },
+                    {
+                        "id": "16",
+                        "type": "garden_plant"
+                    }
+                ]
+            },
+            "plants": {
+                "data": [
+                    {
+                        "id": "42",
+                        "type": "plant"
+                    },
+                    {
+                        "id": "4",
+                        "type": "plant"
+                    }
+                ]
+            }
+        }
+    }
+}
