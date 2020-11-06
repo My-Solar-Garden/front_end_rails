@@ -1,8 +1,8 @@
 <center>
   <article class='left-col text-primary'>
-    <section class='garden-info' style="width: 25rem;">
-      <h1><%= @garden.name %></h1>
-      <h3><%= @garden.description %></h3>
+    <section class='garden-info'>
+      <h1><%= @garden.name %></h1><br>
+      <h3><%= @garden.description %></h3><br>
       <div class='garden-image'>
         <%= image_tag('default-garden.png') %>
       </div><br>
@@ -11,28 +11,6 @@
       <%= render :partial => "shared/edit_delete_icons", locals: {
         garden: @garden } %>
     </section>
-
-    <article class='Weather card' style="width: 40%;">
-
-      <h2>Forecast:</h2>
-      <h3>Today:</h3>
-      <p><%= @weather.description %></p>
-      <p>Humidity: <%= @weather.humidity %>%</p>
-      <p>Temperature: <%= @weather.temperature %>°F</p>
-
-      <h3>The Next Eight Days:</h3>
-      <% @weather.daily.each do |day|%>
-        <section class='day' id='day-<%= day.date %>'>
-
-          <p>Date: <%= day.date %></p>
-          <p><%= day.description %></p>
-          <p>Humidity: <%= day.humidity %>%</p>
-          <p>Temperature: <%= day.temperature %>°F</p>
-          <p>---------------</p>
-        </section>
-      <% end %>
-    </article>
-
     <section class='garden-plants card'>
       <h1>Your Garden Plants</h1>
       <% if @plants.empty? %>
@@ -80,8 +58,25 @@
     </section>
   <% end %>
 
-  <article class='right-col text-primary card'>
+  <article class='Weather card text-primary card' style="width: 40%;">
     <h1>Weather Information</h1>
-  </article>
 
+    <h2>Forecast:</h2>
+    <h3>Today:</h3>
+    <p><%= @weather.description %></p>
+    <p>Humidity: <%= @weather.humidity %>%</p>
+    <p>Temperature: <%= @weather.temperature %>°F</p>
+
+    <h3>The Next Eight Days:</h3>
+    <% @weather.daily.each do |day|%>
+    <section class='day' id='day-<%= day.date %>'>
+
+      <p>Date: <%= day.date %></p>
+      <p><%= day.description %></p>
+      <p>Humidity: <%= day.humidity %>%</p>
+      <p>Temperature: <%= day.temperature %>°F</p>
+      <p>---------------</p>
+    </section>
+    <% end %>
+  </article>
 </center>
