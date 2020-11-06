@@ -15,6 +15,11 @@
     </style>
     <%= javascript_include_tag 'application' %>
 </head>
+<style>
+  body {
+    background-color: aliceblue;
+  }
+</style>
 <body>
   <% if !current_user.nil? %>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top" id="navbar-<%= current_user.id %>">
