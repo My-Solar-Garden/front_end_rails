@@ -12,12 +12,12 @@
           </div>
 
           <div class="card-body"></div>
-            <h3 class="card-title"><%= link_to garden.name, garden_path(garden.id) %></h3>
+            <h3 class="card-title text-primary"><%= link_to garden.name, garden_path(garden.id) %></h3>
             <ul>
-              <li class="card-text">Description: <%= garden.description %></li>
-              <li class="card-text">Latitude: <%= garden.latitude %></li>
-              <li class="card-text">Longitude: <%= garden.longitude %></li>
-              <li class="card-text">Private? <%= garden.is_private %></li>
+              <li class="card-text text-primary">Description: <%= garden.description %></li>
+              <li class="card-text text-primary">Latitude: <%= garden.latitude %></li>
+              <li class="card-text text-primary">Longitude: <%= garden.longitude %></li>
+              <li class="card-text text-primary">Private? <%= garden.is_private %></li>
             </ul>
             <%= render :partial => "shared/edit_delete_icons", locals: {
               garden: garden } %>
@@ -25,7 +25,7 @@
         </section>
       <% end %>
     <% end %>
-
+    <br>
     <%= button_to 'Add New Garden', new_garden_path, method: :get, :class => "btn btn-primary" %>
   </article>
 </center>

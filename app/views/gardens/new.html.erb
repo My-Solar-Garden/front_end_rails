@@ -4,7 +4,7 @@
   </div>
 
   <section class='new-garden card' style="width: 25rem;">
-    <div class="card-body">
+    <div class="card-body text-primary">
       <%= form_with method: :post, url: '/gardens', local: true do |form| %>
         <%= form.label :name %><br>
         <%= form.text_field :name, placeholder: 'Tomato Garden', required: true %><br><br>
@@ -13,13 +13,13 @@
         <%= form.label :longitude %><br>
         <%= form.number_field :longitude, placeholder: '104.9903', step: :any, required: true %><br><br>
         <%= form.label :description %><br>
-        <%= form.text_area :description, placeholder: 'Describe your garden', required: true %>
+        <%= form.text_area :description, placeholder: 'Describe your garden', required: true %><br><br>
         <p>Would you like your garden to be private?</p>
         <%= form.label :private, 'Yes' %>
         <%= form.radio_button :private, true %>
         <%= form.label :private, 'No' %>
         <%= form.radio_button :private, false, checked: true %><br><br>
-        <%= form.submit "Create Garden" %><br><br>
+        <%= form.submit "Create Garden", class: "btn btn-primary"%><br><br>
       <% end %>
       <p>* A private garden means no one else using the app will be able to see your garden and it's information</p>
     </div>
