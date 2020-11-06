@@ -21,13 +21,13 @@ RSpec.describe 'Show Garden Page' do
                 attributes: {
                     name: 'The Grove',
                     latitude: 39.75,
-                    longitude: -104.996577,
+                    longitude: -104.99,
                     description: 'Corner garden',
                     private: true },
                 relationships: { plants: {
                                     data: []},
                                   users: {
-                                    data: [{id: "3", type: "user"}]},
+                                    data: [{id: "1", type: "user"}]},
                                   sensors: {
                                     data: []}}})
 
@@ -38,20 +38,23 @@ RSpec.describe 'Show Garden Page' do
 
       private_response = File.read('spec/fixtures/private_garden.json')
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/#{@private_garden.id}").to_return(status: 200, body: private_response)
+
+      weather_response = File.read('spec/fixtures/weather.json')
+      stub_request(:get, "#{ENV['BE_URL']}/a/api/v1/forecast/}").to_return(status: 200, body: weather_response)
     end
 
     describe 'as a logged in user' do
       before :each do
-        @user = User.new({id: 1,
+        @user_mary = User.new({id: 90,
                         attributes: {
                             email: '123@gmail.com' },
                         relationships: {
                             gardens: {
                                 data: [ @garden ] }}})
 
-        @garden = @user.gardens.first
+        @garden = @user_mary.gardens.first
 
-        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_mary)
       end
 
       it "can visit a public garden's garden show page" do
@@ -61,6 +64,12 @@ RSpec.describe 'Show Garden Page' do
         expect(page).to have_content(@public_garden.description)
         expect(page).to have_content(@public_garden.latitude)
         expect(page).to have_content(@public_garden.longitude)
+      end
+
+      it "cannot visit a private garden's show page that they do not own" do
+        visit "/gardens/#{@private_garden.id}"
+
+        expect(page.status_code).to eq(404)
       end
 
       it "can visit a private garden's show page that they do own" do
@@ -81,12 +90,6 @@ RSpec.describe 'Show Garden Page' do
         expect(page).to have_content(@private_garden.longitude)
       end
 
-      it "cannot visit a private garden's show page that they do not own" do
-        visit "/gardens/#{@private_garden.id}"
-
-        expect(page.status_code).to eq(404)
-      end
-
       it 'displays CTA when garden has no plants or sensors' do
         stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/#{@public_garden.id}/sensors").to_return(status: 200, body: '{"data":[]}')
 
@@ -101,6 +104,19 @@ RSpec.describe 'Show Garden Page' do
           expect(page).to have_content('You have no sensors')
           expect(page).to have_button('Add Sensor')
         end
+      end
+
+      xit "expects to see the see an 9 day forcast including today" do
+        visit "/gardens/#{@public_garden.id}"
+
+        expect(@weather.temperature).to be_a(Numeric)
+        expect(@weather.humidity).to be_a(Numeric)
+        expect(@weather.description).to be_a(String)
+        expect(@weather.daily).to be_an(Array)
+        expect(@weather.daily.first).to be_an(DailyForecast)
+        expect(@weather.daily.first.description).to be_a(String)
+        expect(@weather.daily.first.humidity).to be_a(Numeric)
+        expect(@weather.daily.first.temperature).to be_a(Numeric)
       end
     end
 
@@ -124,6 +140,19 @@ RSpec.describe 'Show Garden Page' do
 
   describe 'a logged in user with plants and sensors' do
     before :each do
+      @public_garden_2 = Garden.new({ id: 10,
+                attributes: {
+                    name: 'Cole Community Garden',
+                    latitude: 39.45,
+                    longitude: -104.58,
+                    description: 'A diverse, dedicated group of students and neighbors who believe in bettering ourselves, our food supply and our community through urban gardening.',
+                    private: false },
+                relationships: { plants: {
+                                    data: []},
+                                  users: {
+                                      data: [{id: "4", type: "user"}]},
+                                 sensors: {
+                                    data: []}}})
       @sensor1 = {:id=> 4,
                   :type=>"sensor",
                   :attributes=>{
@@ -206,9 +235,9 @@ RSpec.describe 'Show Garden Page' do
     end
 
     it 'can click the Add Sensor button' do
-      visit "/gardens/3"
+      visit "/gardens/#{@public_garden_2.id}"
       click_on "Add Sensor"
-      expect(current_path).to eq("/gardens/3/sensors")
+      expect(current_path).to eq("/gardens/#{@public_garden_2.id}/sensors")
     end
 
     it "displays garden temperature through sensor reading", :vcr do

@@ -311,7 +311,47 @@ http_interactions:
   recorded_at: Thu, 05 Nov 2020 21:30:05 GMT
 - request:
     method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/248/plants
+    uri: https://solar-garden-be.herokuapp.com/?lat=3.0&lon=3.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 05 Nov 2020 23:02:46 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Request-Id:
+      - c436f78e-2991-441c-8a12-f178dc7d0ec8
+      X-Runtime:
+      - '0.003325'
+      Vary:
+      - Origin
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 05 Nov 2020 23:02:47 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/forecast?lat=3.0&lon=3.0
     body:
       encoding: US-ASCII
       string: ''
@@ -330,19 +370,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 05 Nov 2020 23:18:34 GMT
+      - Thu, 05 Nov 2020 23:21:27 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6e6987c6262433ec47343ff5b6a20fd7"
+      - W/"d1b692ffa33bd436b228f8a54c211977"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fec01a80-49b6-4d6b-80f4-e59ce222a28c
+      - 57912fc7-54b5-4e1a-9ada-f189215fd2ef
       X-Runtime:
-      - '0.021162'
+      - '0.172734'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -350,8 +390,16 @@ http_interactions:
       Via:
       - 1.1 vegur
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJkYXRhIjpbeyJpZCI6IjE4IiwidHlwZSI6InBsYW50IiwiYXR0cmlidXRlcyI6eyJpbWFnZSI6ImhhcnZlc3RfaGVscGVyX3Byb2R1Y3Rpb24vMThfb25pb24iLCJuYW1lIjoiT25pb24iLCJzcGVjaWVzIjoiIiwiZGVzY3JpcHRpb24iOiJPbmlvbnMgYXJlIGEgY29sZC1zZWFzb24gY3JvcCwgZWFzeSB0byBncm93IGJlY2F1c2Ugb2YgdGhlaXIgaGFyZGluZXNzLiBXZSByZWNvbW1lbmQgdXNpbmcgb25pb24gc2V0cywgd2hpY2ggY2FuIGJlIHBsYW50ZWQgd2l0aG91dCB3b3JyeSBvZiBmcm9zdCBkYW1hZ2UgYW5kIGhhdmUgYSBoaWdoZXIgc3VjY2VzcyByYXRlIHRoYW4gZGlyZWN0IHNlZWQgb3IgdHJhbnNwbGFudHMuIE9uaW9ucyBncm93IHdlbGwgb24gcmFpc2VkIGJlZHMgb3IgcmFpc2VkIHJvd3MgYXQgbGVhc3QgNCBpbmNoZXMgaGlnaC4iLCJsaWdodF9yZXF1aXJlbWVudHMiOiJGdWxsIFN1bihhdCBsZWFzdCA2IGhvdXJzIGEgZGF5KSIsIndhdGVyX3JlcXVpcmVtZW50cyI6IkdlbmVyYWxseSwgb25pb25zIGRvIG5vdCBuZWVkIGNvbnNpc3RlbnQgd2F0ZXJpbmcgaWYgbXVsY2ggaXMgdXNlZC4gQWJvdXQgb25lIGluY2ggb2Ygd2F0ZXIgcGVyIHdlZWsgKGluY2x1ZGluZyByYWluIHdhdGVyKSBpcyBzdWZmaWNpZW50LiBJZiB5b3Ugd2FudCBzd2VldGVyIG9uaW9ucywgd2F0ZXIgbW9yZS4gT25pb25zIHdpbGwgbG9vayBoZWFsdGh5IGV2ZW4gaWYgdGhleSBhcmUgYm9uZSBkcnksIGJlIHN1cmUgdG8gd2F0ZXIgZHVyaW5nIGRyb3VnaHQgY29uZGl0aW9ucy4iLCJ3aGVuX3RvX3BsYW50IjoiUGxhbnQgb25pb25zIGFzIHNvb24gYXMgdGhlIGdyb3VuZCBjYW4gYmUgd29ya2VkIGluIHRoZSBzcHJpbmcsIHVzdWFsbHkgbGF0ZSBNYXJjaCBvciBBcHJpbC4gTWFrZSBzdXJlIHRlbXBlcmF0dXJlIGRvZXNu4oCZdCBnbyBiZWxvdyAyMCBkZWdyZWVzIEYuIiwiaGFydmVzdF90aW1lIjoiV2hlbiB0b3BzIGFyZSBicm93biwgcHVsbCB0aGUgb25pb25zLiBCZSBzdXJlIHRvIGhhcnZlc3QgaW4gbGF0ZSBzdW1tZXIsIGJlZm9yZSBjb29sIHdlYXRoZXIuIE1hdHVyZSBvbmlvbnMgbWF5IHNwb2lsIGluIGZhbGwgd2VhdGhlci4iLCJjb21tb25fcGVzdHMiOiJPbmlvbiBNYWdnb3RzIiwiaWQiOjE4fSwicmVsYXRpb25zaGlwcyI6eyJnYXJkZW5fcGxhbnRzIjp7ImRhdGEiOlt7ImlkIjoiNzciLCJ0eXBlIjoiZ2FyZGVuX3BsYW50In1dfSwiZ2FyZGVucyI6eyJkYXRhIjpbeyJpZCI6IjI0OCIsInR5cGUiOiJnYXJkZW4ifV19fX1dfQ==
-  recorded_at: Thu, 05 Nov 2020 23:18:35 GMT
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"weather","attributes":{"id":null,"description":"overcast
+        clouds","humidity":81,"temperature":80.89,"daily":[{"date":"2020-11-05T11:00:00.000+00:00","temperature":81.36,"humidity":80,"description":"heavy
+        intensity rain"},{"date":"2020-11-06T11:00:00.000+00:00","temperature":80.58,"humidity":83,"description":"moderate
+        rain"},{"date":"2020-11-07T11:00:00.000+00:00","temperature":80.62,"humidity":81,"description":"light
+        rain"},{"date":"2020-11-08T11:00:00.000+00:00","temperature":81,"humidity":76,"description":"scattered
+        clouds"},{"date":"2020-11-09T11:00:00.000+00:00","temperature":80.91,"humidity":78,"description":"moderate
+        rain"},{"date":"2020-11-10T11:00:00.000+00:00","temperature":80.4,"humidity":81,"description":"moderate
+        rain"},{"date":"2020-11-11T11:00:00.000+00:00","temperature":80.62,"humidity":81,"description":"moderate
+        rain"},{"date":"2020-11-12T11:00:00.000+00:00","temperature":81.5,"humidity":76,"description":"moderate
+        rain"}]}}}'
+  recorded_at: Thu, 05 Nov 2020 23:21:28 GMT
 recorded_with: VCR 6.0.0
