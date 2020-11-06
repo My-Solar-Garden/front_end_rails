@@ -1,7 +1,8 @@
 <center>
-  <h3>Your <%= @sensor.sensor_type %> sensor</h3>
-  <%= link_to "Edit Sensor", "/gardens/#{@sensor.garden_id}/sensors/#{@sensor.id}" %>
-
+  <div class="text-primary">
+    <h2>Your <%= @sensor.sensor_type %> sensor</h2><br>
+    <%= link_to "Edit Sensor", "/gardens/#{@sensor.garden_id}/sensors/#{@sensor.id}" %>
+  </div><br>
     <% if !@sensor.garden_healths.nil? %>
       <div class="container">
         <div class="row">
@@ -21,7 +22,7 @@
     <% end %><br>
 
     <div class="dropdown">
-      <button class="dropbtn">Sensor History</button>
+      <button class="btn btn-primary">Sensor History</button>
       <div class="dropdown-content">
         <% path = "/gardens/#{@sensor.garden_id}/sensors/#{@sensor.id}" %>
         <a <%= link_to 'Last 24 Hours', "#{path}?history=1" %></a>
