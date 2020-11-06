@@ -24,7 +24,7 @@
         4. Plant, water, maintain: Plant seeds and starts. After the bed is fully covered with compost, it’s time to plant. Lay soaker hoses or drip system for watering. Watering this way puts the water where we want it- not in the space between plants or paths where weeds want to grow- so it’s a major player in keeping weeding to a minimum. Overhead watering not only waters too much, it also isn’t as good for plants, encouraging mildew and diseases.<br><br>
         <% if current_user.nil? %>
         <div class="w3-panel w3-block w3-center">
-          <%= link_to "Back to Welcome", "/", class: "btn-primary btn" %>
+          <%= link_to "Back to Welcome", root_path, class: "btn-primary btn" %>
           <%= render 'shared/login_with_google_button' %>
         </div>
         <% end %>
