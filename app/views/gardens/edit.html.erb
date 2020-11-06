@@ -1,7 +1,9 @@
 <center>
-  <h3>Update Your Garden</h3>
+  <div class="text-primary">
+    <h2>Update Your Garden</h2>
+  </div>
 
-  <section class="new-garden">
+  <section class="new-garden text-primary card">
     <%= form_with url: "/gardens/#{@garden.id}", method: :patch,local: true do |form| %>
       <%= form.label :name %><br>
       <%= form.text_field :name, value: @garden.name, required: true %><br><br>
@@ -16,9 +18,9 @@
       <%= form.radio_button :private, true %>
       <%= form.label :private, 'No' %>
       <%= form.radio_button :private, false, checked: true %><br><br>
-      <%= form.submit "Update Garden" %><br><br>
+      <%= form.submit "Update Garden", class: "btn btn-primary" %><br><br>
     <% end %>
-
+    <br>
     <p>* A private garden means no one else using the app will be able to see your garden and it's information</p>
   </section>
 </center>

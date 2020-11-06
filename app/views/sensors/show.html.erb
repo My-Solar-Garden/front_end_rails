@@ -1,7 +1,8 @@
 <center>
-  <h3>Your <%= @sensor.sensor_type %> sensor</h3>
-  <%= link_to "Edit Sensor", "/gardens/#{@sensor.garden_id}/sensors/#{@sensor.id}" %>
-
+  <div class="text-primary">
+    <h2>Your <%= @sensor.sensor_type %> sensor</h2><br>
+    <%= link_to "Edit Sensor", "/gardens/#{@sensor.garden_id}/sensors/#{@sensor.id}" %>
+  </div><br>
     <% if !@sensor.garden_healths.nil? %>
       <div class="container">
         <div class="row">
@@ -21,7 +22,7 @@
     <% end %><br>
 
     <div class="dropdown">
-      <button class="dropbtn">Sensor History</button>
+      <button class="btn btn-primary">Sensor History</button>
       <div class="dropdown-content">
         <% path = "/gardens/#{@sensor.garden_id}/sensors/#{@sensor.id}" %>
         <a <%= link_to 'Last 24 Hours', "#{path}?history=1" %></a>
@@ -30,14 +31,14 @@
         <a <%= link_to 'Last 30 Days', "#{path}?history=30" %></a>
         <a <%= link_to 'Last 90 Days', "#{path}?history=90" %></a>
       </div>
-    </div>
+    </div><br><br>
 
     <% if @history %>
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
             <div class="single category">
-                <h3 class="side-title">History</h3>
+                <h4 class="side-title text-primary">History</h4>
                   <ul class="list-unstyled">
                     <% @history.each do |reading| %>
                         <% time = reading.created_at.to_time.to_s.split(" ")[1] %>
