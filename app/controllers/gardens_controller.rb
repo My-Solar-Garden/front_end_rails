@@ -8,9 +8,9 @@ class GardensController < ApplicationController
   def show
     garden = GardenFacade.garden_details(params)
     @sensors = SensorFacade.all_sensors_for_garden(params)
+    @weather = WeatherFacade.create_weather_objects([garden.latitude, garden.longitude])
     temp_sensor = @sensors.find { |sensor| sensor.sensor_type == 'temperature' }
     @temperature = GardenHealthFacade.last_reading(temp_sensor) if temp_sensor && !temp_sensor.garden_healths.nil?
-
     light_sensor = @sensors.find { |sensor| sensor.sensor_type == 'light' }
     @light = GardenHealthFacade.last_reading(light_sensor) if light_sensor && !light_sensor.garden_healths.nil?
 

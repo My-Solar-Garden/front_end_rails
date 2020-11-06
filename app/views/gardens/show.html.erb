@@ -11,7 +11,29 @@
       <%= render :partial => "shared/edit_delete_icons", locals: {
         garden: @garden } %>
     </section>
-    <section class='garden-plants card'>
+
+    <article class="Weather">
+
+      <h2>Forecast:</h2>
+      <h3>Today:</h3>
+      <p><%= @weather.description %></p>
+      <p>Humidity: <%= @weather.humidity %>%</p>
+      <p>Temperature: <%= @weather.temperature %>°F</p>
+
+      <h3>The Next Eight Days:</h3>
+      <% @weather.daily.each do |day|%>
+        <section class='day' id='day-<%= day.date %>'>
+
+          <p>Date: <%= day.date %></p>
+          <p><%= day.description %></p>
+          <p>Humidity: <%= day.humidity %>%</p>
+          <p>Temperature: <%= day.temperature %>°F</p>
+          <p>---------------</p>
+        </section>
+      <% end %>
+    </article>
+
+    <section class='garden-plants'>
       <h1>Your Garden Plants</h1>
       <% if @plants.empty? %>
         <p>You have no plants</p>
