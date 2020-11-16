@@ -3,6 +3,8 @@ require 'rails_helper'
 describe GardenHealthFacade do
   it "should return garden_health details for specific garden_health" do
     params = {id: 36}
+    expected_output = File.read('spec/fixtures/garden_healths.json')
+    stub_request(:get, "#{ENV['BE_URL']}/api/v1/garden_healths/36").to_return(status: 200, body: expected_output, headers: {})
     garden_health = GardenHealthFacade.garden_health_details(params, 1)
 
     expect(garden_health).to be_a(GardenHealth)
@@ -49,8 +51,11 @@ describe GardenHealthFacade do
 
     sensor = Sensor.new(attr.deep_symbolize_keys[:data])
 
+    expected_output = File.read('spec/fixtures/garden_health_last.json')
+    stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/89/garden_healths/last").to_return(status: 200, body: expected_output, headers: {})
+
     reading = GardenHealthFacade.last_reading(sensor)
 
-    expect(reading.reading).to eq(99)
+    expect(reading.reading).to eq(25)
   end
 end
