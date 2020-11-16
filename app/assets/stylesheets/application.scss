@@ -19,6 +19,12 @@
 @import "theme";
 
 // .solar-nav {float: right}
+body {
+  font-family: "Lato", sans-serif;
+  background-color: aliceblue;
+}
+.mySlides {display: none}
+
 .plant-show {
    margin-left: auto;
    margin-right: auto;
@@ -88,21 +94,21 @@ ul {
   margin: 5px;
 }
 
-.card {
-  margin-bottom: 20px;
-}
-
-.card img {
-  width: 100%;
-  padding: 0px;
-}
-
-.card-body {
-  padding: 15px;
-}
+// .card {
+//   margin-bottom: 20px;
+// }
+//
+// .card img {
+//   width: 100%;
+//   padding: 0px;
+// }
+//
+// .card-body {
+//   padding: 15px;
+// }
 
 #welcome-logo {
-  width: 60%;
+  // width: 60%;
 }
 
 .garden-info {
@@ -135,4 +141,41 @@ ul {
   width: 40%;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.img-60 {
+  max-width: 60%;
+  height: auto;
+}
+
+.img-80 {
+max-width: 80%;
+height: auto;
+}
+
+.pad-25-top {
+  padding-top: 25px;
+}
+
+.pad-50-bottom {
+  padding-bottom: 50px;
+}
+
+.garden-card {
+  width: 20rem;
+  border: solid 1px #999;
+  // box-shadow:  0 0 10px  rgba(0,50,0,0.6);
+  // -moz-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  // -webkit-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  // -o-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  border-bottom-left-radius:15px;
+  border-bottom-right-radius:15px;
+}
+
+.margin-30-bottom {
+  margin-bottom: 30px;
+}
+
+.card-columns .card {
+  padding: 0 !important;
 }
