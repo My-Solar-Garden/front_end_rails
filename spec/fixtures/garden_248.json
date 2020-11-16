@@ -1,0 +1,59 @@
+{
+    "data": {
+        "id": "248",
+        "type": "garden",
+        "attributes": {
+            "latitude": 41.0,
+            "longitude": 86.0,
+            "name": "Onion Garden",
+            "description": "Boggest onions in the land",
+            "private": false
+        },
+        "relationships": {
+            "user_gardens": {
+                "data": [
+                    {
+                        "id": "241",
+                        "type": "user_garden"
+                    }
+                ]
+            },
+            "users": {
+                "data": [
+                    {
+                        "id": "10",
+                        "type": "user"
+                    }
+                ]
+            },
+            "sensors": {
+                "data": [
+                    {
+                        "id": "101",
+                        "type": "sensor"
+                    },
+                    {
+                        "id": "89",
+                        "type": "sensor"
+                    }
+                ]
+            },
+            "garden_plants": {
+                "data": [
+                    {
+                        "id": "77",
+                        "type": "garden_plant"
+                    }
+                ]
+            },
+            "plants": {
+                "data": [
+                    {
+                        "id": "18",
+                        "type": "plant"
+                    }
+                ]
+            }
+        }
+    }
+}

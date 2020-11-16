@@ -1,0 +1,350 @@
+{
+    "data": [
+        {
+            "id": "101",
+            "type": "sensor",
+            "attributes": {
+                "min_threshold": 6,
+                "max_threshold": 7,
+                "sensor_type": "light"
+            },
+            "relationships": {
+                "garden": {
+                    "data": {
+                        "id": "248",
+                        "type": "garden"
+                    }
+                },
+                "garden_healths": {
+                    "data": [
+                        {
+                            "id": "362",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "364",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "366",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "368",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "370",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "372",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "374",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "376",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "378",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "380",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "382",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "384",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "386",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "388",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "390",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "392",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "394",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "396",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "398",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "400",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "402",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "404",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "406",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "408",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "410",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "412",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "414",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "416",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "418",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "420",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "422",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "424",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "426",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "428",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "430",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "432",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "434",
+                            "type": "garden_health"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "89",
+            "type": "sensor",
+            "attributes": {
+                "min_threshold": 6,
+                "max_threshold": 7,
+                "sensor_type": "temperature"
+            },
+            "relationships": {
+                "garden": {
+                    "data": {
+                        "id": "248",
+                        "type": "garden"
+                    }
+                },
+                "garden_healths": {
+                    "data": [
+                        {
+                            "id": "57",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "58",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "363",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "365",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "367",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "369",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "371",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "373",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "375",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "377",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "379",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "381",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "383",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "385",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "387",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "389",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "391",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "393",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "395",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "397",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "399",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "401",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "403",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "405",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "407",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "409",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "411",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "413",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "415",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "417",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "419",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "421",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "423",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "425",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "427",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "429",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "431",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "433",
+                            "type": "garden_health"
+                        },
+                        {
+                            "id": "435",
+                            "type": "garden_health"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
