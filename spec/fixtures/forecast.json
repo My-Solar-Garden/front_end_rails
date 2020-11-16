@@ -1,0 +1,62 @@
+{
+    "data": {
+        "id": null,
+        "type": "weather",
+        "attributes": {
+            "id": null,
+            "description": "clear sky",
+            "humidity": 27,
+            "temperature": 62.56,
+            "daily": [
+                {
+                    "date": "2020-11-16T18:00:00.000+00:00",
+                    "temperature": 57.61,
+                    "humidity": 34,
+                    "description": "clear sky"
+                },
+                {
+                    "date": "2020-11-17T18:00:00.000+00:00",
+                    "temperature": 60.39,
+                    "humidity": 28,
+                    "description": "clear sky"
+                },
+                {
+                    "date": "2020-11-18T18:00:00.000+00:00",
+                    "temperature": 63.66,
+                    "humidity": 27,
+                    "description": "broken clouds"
+                },
+                {
+                    "date": "2020-11-19T18:00:00.000+00:00",
+                    "temperature": 58.24,
+                    "humidity": 33,
+                    "description": "broken clouds"
+                },
+                {
+                    "date": "2020-11-20T18:00:00.000+00:00",
+                    "temperature": 46,
+                    "humidity": 55,
+                    "description": "scattered clouds"
+                },
+                {
+                    "date": "2020-11-21T18:00:00.000+00:00",
+                    "temperature": 30.34,
+                    "humidity": 99,
+                    "description": "light snow"
+                },
+                {
+                    "date": "2020-11-22T18:00:00.000+00:00",
+                    "temperature": 32.22,
+                    "humidity": 96,
+                    "description": "clear sky"
+                },
+                {
+                    "date": "2020-11-23T18:00:00.000+00:00",
+                    "temperature": 35.35,
+                    "humidity": 86,
+                    "description": "broken clouds"
+                }
+            ]
+        }
+    }
+}

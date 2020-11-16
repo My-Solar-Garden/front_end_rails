@@ -79,6 +79,15 @@ RSpec.describe 'User Dashboard' do
     it "can clink on the garden name to get redirected to the garden show page" do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_gardens)
 
+      expected_output = File.read('spec/fixtures/sensors.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3/sensors").to_return(status: 200, body: expected_output, headers: {})
+
+      expected_output = File.read('spec/fixtures/plants.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3/plants").to_return(status: 200, body: expected_output, headers: {})
+
+      expected_output = File.read('spec/fixtures/forecast.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/forecast?lat=39.45&lon=-104.58").to_return(status: 200, body: expected_output, headers: {})
+
       visit dashboard_path
 
       click_link "The Grove"
@@ -87,6 +96,15 @@ RSpec.describe 'User Dashboard' do
 
     it "can clink on the garden image to get redirected to the garden show page" do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_gardens)
+
+      expected_output = File.read('spec/fixtures/sensors.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3/sensors").to_return(status: 200, body: expected_output, headers: {})
+
+      expected_output = File.read('spec/fixtures/plants.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3/plants").to_return(status: 200, body: expected_output, headers: {})
+
+      expected_output = File.read('spec/fixtures/forecast.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/forecast?lat=39.45&lon=-104.58").to_return(status: 200, body: expected_output, headers: {})
 
       visit dashboard_path
 
