@@ -15,33 +15,29 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 204
+      message: No Content
     headers:
       Server:
       - Cowboy
       Date:
-      - Sat, 31 Oct 2020 21:05:14 GMT
+      - Mon, 16 Nov 2020 18:57:57 GMT
+      Content-Length:
+      - '0'
       Connection:
       - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"fc0efbc6cb353d2ccb8a5c8a44ca37b9"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - c2f60de4-aaf3-4447-ae10-6d64443d5b79
+      - eb575735-1ec8-4d9c-9676-a26fb8be142e
       X-Runtime:
-      - '0.010750'
+      - '0.013648'
       Vary:
       - Origin
-      Transfer-Encoding:
-      - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"id":1,"email":"billy@gmail.com"},"relationships":{"user_gardens":{"data":[]},"gardens":{"data":[]}}}}'
-  recorded_at: Sat, 31 Oct 2020 21:05:14 GMT
+      string: ''
+  recorded_at: Mon, 16 Nov 2020 18:57:58 GMT
 recorded_with: VCR 6.0.0

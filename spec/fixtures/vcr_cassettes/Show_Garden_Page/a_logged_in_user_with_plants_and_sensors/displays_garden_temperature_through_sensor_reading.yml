@@ -2,227 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/248
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 05 Nov 2020 01:49:33 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"dfabb7e567ccb58f122159a07782fbef"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 1ed314bf-be77-4da8-b3b0-c5525a80d77e
-      X-Runtime:
-      - '0.048250'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"248","type":"garden","attributes":{"latitude":3.0,"longitude":3.0,"name":"Onion
-        Garden","description":"Boggest onions in the land","private":false},"relationships":{"user_gardens":{"data":[{"id":"241","type":"user_garden"}]},"users":{"data":[{"id":"10","type":"user"}]},"sensors":{"data":[{"id":"89","type":"sensor"}]},"garden_plants":{"data":[]},"plants":{"data":[]}}}}'
-  recorded_at: Thu, 05 Nov 2020 01:49:34 GMT
-- request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/248/sensors
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 05 Nov 2020 01:49:34 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"67c1a516c43e86fd029d82f35fa89592"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 445382c6-3a09-4a0e-8f90-7fa363522134
-      X-Runtime:
-      - '0.021162'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"89","type":"sensor","attributes":{"min_threshold":6,"max_threshold":7,"sensor_type":"temperature"},"relationships":{"garden":{"data":{"id":"248","type":"garden"}},"garden_healths":{"data":[{"id":"57","type":"garden_health"},{"id":"58","type":"garden_health"}]}}}]}'
-  recorded_at: Thu, 05 Nov 2020 01:49:34 GMT
-- request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/sensors/89/garden_healths/last
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 05 Nov 2020 01:49:34 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"a77c0e508b217d91690acb5fdc770af6"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 151ea513-fa9c-4394-9ad5-553fb254a8c9
-      X-Runtime:
-      - '0.017200'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"57","type":"garden_health","attributes":{"id":57,"reading_type":null,"reading":99.0,"created_at":"2020-11-04T00:00:00.000Z"}}]}'
-  recorded_at: Thu, 05 Nov 2020 01:49:35 GMT
-- request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/57
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 05 Nov 2020 19:36:19 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"5ddb228cf2af1920a956ff78eadfd3b7"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - d506a064-c55c-44cb-a68b-7ef1d4d90225
-      X-Runtime:
-      - '0.027788'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"57","type":"garden_health","attributes":{"id":57,"reading_type":null,"reading":99.0,"created_at":"2020-11-04T00:00:00.000Z"}}}'
-  recorded_at: Thu, 05 Nov 2020 19:36:20 GMT
-- request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/58
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 05 Nov 2020 19:36:20 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"c21493c8230e49ec5e536bef42404019"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - d99f04b6-caef-4afd-974d-e9966c1ba3f1
-      X-Runtime:
-      - '0.054674'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"58","type":"garden_health","attributes":{"id":58,"reading_type":null,"reading":680.0,"created_at":"2020-11-03T00:00:00.000Z"}}}'
-  recorded_at: Thu, 05 Nov 2020 19:36:20 GMT
-- request:
-    method: get
     uri: https://api.openweathermap.org/data/2.5/onecall?appid=d56c5a1373ab072efa767c9937038b8e&exclude=minutely,hourly&lat=3.0&lon=3.0&units=imperial
     body:
       encoding: US-ASCII
@@ -414,6 +193,3580 @@ http_interactions:
   recorded_at: Thu, 05 Nov 2020 23:21:27 GMT
 - request:
     method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/248
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:46 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3a2e291f7e37ebce60816208b2a37c76"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d7b6716a-a7ad-4b66-882f-834292eed562
+      X-Runtime:
+      - '0.022993'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"248","type":"garden","attributes":{"latitude":41.0,"longitude":86.0,"name":"Onion
+        Garden","description":"Boggest onions in the land","private":false},"relationships":{"user_gardens":{"data":[{"id":"241","type":"user_garden"}]},"users":{"data":[{"id":"10","type":"user"}]},"sensors":{"data":[{"id":"101","type":"sensor"},{"id":"89","type":"sensor"}]},"garden_plants":{"data":[{"id":"77","type":"garden_plant"}]},"plants":{"data":[{"id":"18","type":"plant"}]}}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:46 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/248/sensors
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:46 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c14d7f4e35553dedb0e5556daf86bc3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ffd8eec0-f839-487d-9c17-86a65cb216da
+      X-Runtime:
+      - '0.021129'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"101","type":"sensor","attributes":{"min_threshold":6,"max_threshold":7,"sensor_type":"light"},"relationships":{"garden":{"data":{"id":"248","type":"garden"}},"garden_healths":{"data":[{"id":"362","type":"garden_health"},{"id":"364","type":"garden_health"},{"id":"366","type":"garden_health"},{"id":"368","type":"garden_health"},{"id":"370","type":"garden_health"},{"id":"372","type":"garden_health"},{"id":"374","type":"garden_health"},{"id":"376","type":"garden_health"},{"id":"378","type":"garden_health"},{"id":"380","type":"garden_health"},{"id":"382","type":"garden_health"},{"id":"384","type":"garden_health"},{"id":"386","type":"garden_health"},{"id":"388","type":"garden_health"},{"id":"390","type":"garden_health"},{"id":"392","type":"garden_health"},{"id":"394","type":"garden_health"},{"id":"396","type":"garden_health"},{"id":"398","type":"garden_health"},{"id":"400","type":"garden_health"},{"id":"402","type":"garden_health"},{"id":"404","type":"garden_health"},{"id":"406","type":"garden_health"},{"id":"408","type":"garden_health"},{"id":"410","type":"garden_health"},{"id":"412","type":"garden_health"},{"id":"414","type":"garden_health"},{"id":"416","type":"garden_health"},{"id":"418","type":"garden_health"},{"id":"420","type":"garden_health"},{"id":"422","type":"garden_health"},{"id":"424","type":"garden_health"},{"id":"426","type":"garden_health"},{"id":"428","type":"garden_health"},{"id":"430","type":"garden_health"},{"id":"432","type":"garden_health"},{"id":"434","type":"garden_health"}]}}},{"id":"89","type":"sensor","attributes":{"min_threshold":6,"max_threshold":7,"sensor_type":"temperature"},"relationships":{"garden":{"data":{"id":"248","type":"garden"}},"garden_healths":{"data":[{"id":"57","type":"garden_health"},{"id":"58","type":"garden_health"},{"id":"363","type":"garden_health"},{"id":"365","type":"garden_health"},{"id":"367","type":"garden_health"},{"id":"369","type":"garden_health"},{"id":"371","type":"garden_health"},{"id":"373","type":"garden_health"},{"id":"375","type":"garden_health"},{"id":"377","type":"garden_health"},{"id":"379","type":"garden_health"},{"id":"381","type":"garden_health"},{"id":"383","type":"garden_health"},{"id":"385","type":"garden_health"},{"id":"387","type":"garden_health"},{"id":"389","type":"garden_health"},{"id":"391","type":"garden_health"},{"id":"393","type":"garden_health"},{"id":"395","type":"garden_health"},{"id":"397","type":"garden_health"},{"id":"399","type":"garden_health"},{"id":"401","type":"garden_health"},{"id":"403","type":"garden_health"},{"id":"405","type":"garden_health"},{"id":"407","type":"garden_health"},{"id":"409","type":"garden_health"},{"id":"411","type":"garden_health"},{"id":"413","type":"garden_health"},{"id":"415","type":"garden_health"},{"id":"417","type":"garden_health"},{"id":"419","type":"garden_health"},{"id":"421","type":"garden_health"},{"id":"423","type":"garden_health"},{"id":"425","type":"garden_health"},{"id":"427","type":"garden_health"},{"id":"429","type":"garden_health"},{"id":"431","type":"garden_health"},{"id":"433","type":"garden_health"},{"id":"435","type":"garden_health"}]}}}]}'
+  recorded_at: Mon, 16 Nov 2020 19:01:47 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/362
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:47 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"babbdaabb09e29a2f1ed5a92990d01b7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 85bd5b6c-f85d-4a43-a4ec-21376b3f2ce6
+      X-Runtime:
+      - '0.010157'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"362","type":"garden_health","attributes":{"id":362,"reading_type":"light","reading":293.0,"created_at":"2020-11-06T15:34:42.012Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:47 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/364
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:46 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d3124b327901e91714c084a1177a637f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - '08b73355-7878-4638-a1ad-cce9bc0ee319'
+      X-Runtime:
+      - '0.011467'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"364","type":"garden_health","attributes":{"id":364,"reading_type":"light","reading":287.0,"created_at":"2020-11-06T15:34:45.029Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:47 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/366
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:47 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"123ccd41c7e51666328d8abc6b52c346"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a995e0ed-a969-427b-a415-75e0f3286e47
+      X-Runtime:
+      - '0.017162'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"366","type":"garden_health","attributes":{"id":366,"reading_type":"light","reading":286.0,"created_at":"2020-11-06T15:34:48.097Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:47 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/368
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:47 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"049fac25949874b33391b337c3cdd07e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 219d1eca-7993-4a2f-b04f-8d3d7adde1f4
+      X-Runtime:
+      - '0.014368'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"368","type":"garden_health","attributes":{"id":368,"reading_type":"light","reading":287.0,"created_at":"2020-11-06T15:34:51.088Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:48 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/370
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:47 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"967239faa3bb8e44345ca188d5930c99"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2317b309-0c09-411a-bf62-dc6a3688c83e
+      X-Runtime:
+      - '0.013439'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"370","type":"garden_health","attributes":{"id":370,"reading_type":"light","reading":282.0,"created_at":"2020-11-06T15:34:54.090Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:48 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/372
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:48 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"57e76ed8d06e5012876deafa78a784aa"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b8ae46fc-3167-4264-bf88-d093d4386470
+      X-Runtime:
+      - '0.041214'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"372","type":"garden_health","attributes":{"id":372,"reading_type":"light","reading":284.0,"created_at":"2020-11-06T15:34:57.084Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:48 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/374
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:48 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6bb2b64968213832980aa5242248f618"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5a147971-9f76-49d1-83d3-32938c5ea1d4
+      X-Runtime:
+      - '0.020118'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"374","type":"garden_health","attributes":{"id":374,"reading_type":"light","reading":282.0,"created_at":"2020-11-06T15:35:00.099Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:49 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/376
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:49 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"805389eeea7298c90cd6b1e56bde1192"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6fbdb8e2-6357-4c93-a66c-bec71b259346
+      X-Runtime:
+      - '0.011550'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"376","type":"garden_health","attributes":{"id":376,"reading_type":"light","reading":285.0,"created_at":"2020-11-06T15:35:03.112Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:49 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/378
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:51 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"593237f552c9e1a93293215c2e7ae38e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 73bfd193-8962-44e1-952c-dca040dcd323
+      X-Runtime:
+      - '0.019590'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"378","type":"garden_health","attributes":{"id":378,"reading_type":"light","reading":290.0,"created_at":"2020-11-06T15:35:06.125Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:51 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/380
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:51 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c06592caa367ae8e36cbfc93e406a279"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4728e06b-d73a-4b6a-9a27-9ed314fd399b
+      X-Runtime:
+      - '0.012552'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"380","type":"garden_health","attributes":{"id":380,"reading_type":"light","reading":289.0,"created_at":"2020-11-06T15:35:09.119Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:51 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/382
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:51 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b7ccabd08edaf11ba1df5bc54d194d2a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f7502487-f9a3-404b-88d9-d5d2630bb35b
+      X-Runtime:
+      - '0.009945'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"382","type":"garden_health","attributes":{"id":382,"reading_type":"light","reading":294.0,"created_at":"2020-11-06T15:35:12.129Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:52 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/384
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:51 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9361010c720350c52296cfb4b893b29a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e40787bf-60e6-4fd7-8df0-a5db93a421f9
+      X-Runtime:
+      - '0.013562'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"384","type":"garden_health","attributes":{"id":384,"reading_type":"light","reading":303.0,"created_at":"2020-11-06T15:35:15.192Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:52 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/386
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:52 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"97ec2170f9eae60aefee92cd7c5d69a6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b4b64fa0-c901-4851-ba5f-d1437eef9343
+      X-Runtime:
+      - '0.012958'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"386","type":"garden_health","attributes":{"id":386,"reading_type":"light","reading":308.0,"created_at":"2020-11-06T15:35:18.202Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:52 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/388
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:52 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"478edd5c936701380daee36783aa61bf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6ed69cb4-d5b6-43f2-aa21-ebfe55aeac91
+      X-Runtime:
+      - '0.013873'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"388","type":"garden_health","attributes":{"id":388,"reading_type":"light","reading":310.0,"created_at":"2020-11-06T15:35:21.337Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:53 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/390
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:52 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8b058a4c7bb894d16be26c7b77c6e71e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 978758da-2059-4dd0-bec4-9a03df77d009
+      X-Runtime:
+      - '0.009317'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"390","type":"garden_health","attributes":{"id":390,"reading_type":"light","reading":311.0,"created_at":"2020-11-06T15:35:24.333Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:53 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/392
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:53 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b96c1b05d484f294e41238334e26eadd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 182ebb2c-a702-4030-9ab9-72fb71664870
+      X-Runtime:
+      - '0.013292'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"392","type":"garden_health","attributes":{"id":392,"reading_type":"light","reading":313.0,"created_at":"2020-11-06T15:35:27.329Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:53 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/394
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:53 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"cf1099bb564845bbe0e8d5fcf8c95981"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3cb35ecc-b9d7-4832-bf7d-41cca1a09e2d
+      X-Runtime:
+      - '0.014388'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"394","type":"garden_health","attributes":{"id":394,"reading_type":"light","reading":313.0,"created_at":"2020-11-06T15:35:30.294Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:54 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/396
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:53 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"96ccad3ad2915af4930169c2c30be41f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 53d06531-9954-462d-95e3-0519439a437f
+      X-Runtime:
+      - '0.016279'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"396","type":"garden_health","attributes":{"id":396,"reading_type":"light","reading":311.0,"created_at":"2020-11-06T15:35:33.339Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:54 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/398
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:54 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0bc9ad3b93548224ff093426ac2ae3b5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - adfff618-b4f1-4570-87d5-0863a34c7914
+      X-Runtime:
+      - '0.016790'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"398","type":"garden_health","attributes":{"id":398,"reading_type":"light","reading":309.0,"created_at":"2020-11-06T15:35:36.337Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:54 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/400
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:54 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5280731b560466be74f0a68568f8a96c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 58ac426d-1be1-45cf-8a4d-c3b3be4a5952
+      X-Runtime:
+      - '0.017562'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"400","type":"garden_health","attributes":{"id":400,"reading_type":"light","reading":298.0,"created_at":"2020-11-06T15:35:39.357Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:54 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/402
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:54 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0d165fb24e25d8681bfac7875c96e1b3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d8832a00-c48c-4f1a-8988-e5928b9e33f0
+      X-Runtime:
+      - '0.031231'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"402","type":"garden_health","attributes":{"id":402,"reading_type":"light","reading":303.0,"created_at":"2020-11-06T15:35:42.532Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:55 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/404
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:55 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f8b3adb339741656801f91a0bbcb4146"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b1b07248-1f8a-44f9-a4d6-f383b73cb8a8
+      X-Runtime:
+      - '0.008456'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"404","type":"garden_health","attributes":{"id":404,"reading_type":"light","reading":310.0,"created_at":"2020-11-06T15:35:45.538Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:55 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/406
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:55 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"aed86957312e07a6221eae2739cf8738"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7fb40d41-4776-4109-a6c1-73ee04c1f011
+      X-Runtime:
+      - '0.009855'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"406","type":"garden_health","attributes":{"id":406,"reading_type":"light","reading":308.0,"created_at":"2020-11-06T15:35:48.542Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:55 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/408
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:55 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"87e70dd08e59d5cc04ec4bddea3d6bd8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - edd92aa0-8930-4554-bdfb-8c54da68a884
+      X-Runtime:
+      - '0.016852'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"408","type":"garden_health","attributes":{"id":408,"reading_type":"light","reading":311.0,"created_at":"2020-11-06T15:35:51.557Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:56 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/410
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:55 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2476355096b09c1c94c72f290e76779d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2803cb89-b0c0-42f8-a28f-55723e6a0a89
+      X-Runtime:
+      - '0.012934'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"410","type":"garden_health","attributes":{"id":410,"reading_type":"light","reading":309.0,"created_at":"2020-11-06T15:35:54.566Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:56 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/412
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:56 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2980ce0de068033d44e9557bf170f771"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 373d149c-e49b-428a-a329-47503bb1a3f2
+      X-Runtime:
+      - '0.010786'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"412","type":"garden_health","attributes":{"id":412,"reading_type":"light","reading":312.0,"created_at":"2020-11-06T15:35:59.363Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:56 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/414
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:56 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"174f5fcb9742fce04c957f5a5822465a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4ed4a905-ccf2-4f5d-bd9c-4aec6cf1ef33
+      X-Runtime:
+      - '0.009220'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"414","type":"garden_health","attributes":{"id":414,"reading_type":"light","reading":215.0,"created_at":"2020-11-06T15:36:02.395Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:57 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/416
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:57 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f37b9f5d24a04898c308be54231e5ac5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c530ef4a-bace-426c-88de-29a910a477ac
+      X-Runtime:
+      - '0.021138'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"416","type":"garden_health","attributes":{"id":416,"reading_type":"light","reading":158.0,"created_at":"2020-11-06T15:36:05.418Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:57 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/418
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:56 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"60ef8da8fedb16457ec8012f3c6c72f5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 28d032a1-4a90-4e5d-a0c5-775d9c54d3e9
+      X-Runtime:
+      - '0.011394'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"418","type":"garden_health","attributes":{"id":418,"reading_type":"light","reading":158.0,"created_at":"2020-11-06T15:36:08.418Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:57 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/420
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:57 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d7a86214d688f9c03e65977a812bbf89"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 89568e85-1356-4a80-8424-eb3f37416b10
+      X-Runtime:
+      - '0.019820'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"420","type":"garden_health","attributes":{"id":420,"reading_type":"light","reading":194.0,"created_at":"2020-11-06T15:36:11.423Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:58 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/422
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:57 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9349ea920bf9988fd0a3c67f196a3e1a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c4820c22-d1f0-4a92-87b1-50993036ce92
+      X-Runtime:
+      - '0.014015'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"422","type":"garden_health","attributes":{"id":422,"reading_type":"light","reading":203.0,"created_at":"2020-11-06T15:36:14.422Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:58 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/424
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:57 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"30b5086e34f576f61e64c8a7c38d945f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 85b61dd0-cf59-450b-88e3-4de56c3fc7a1
+      X-Runtime:
+      - '0.012262'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"424","type":"garden_health","attributes":{"id":424,"reading_type":"light","reading":219.0,"created_at":"2020-11-06T15:36:17.417Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:58 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/426
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:58 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fd2a8570900952d884e7048a3d613d60"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 70e424ab-e21f-4b11-a27d-e0d34a7583b0
+      X-Runtime:
+      - '0.012599'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"426","type":"garden_health","attributes":{"id":426,"reading_type":"light","reading":219.0,"created_at":"2020-11-06T15:36:20.466Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:58 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/428
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:58 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e39371a4b61bf1ac9f1e61874424ce94"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 12f4eeb5-323c-465d-985f-baa6d1a2de71
+      X-Runtime:
+      - '0.014896'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"428","type":"garden_health","attributes":{"id":428,"reading_type":"light","reading":215.0,"created_at":"2020-11-06T15:36:23.498Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:59 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/430
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:58 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"af80301bbeb2483447a7f5d98f8608a1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6887231e-9cd7-4ec0-8fe9-7d345e6ff6a3
+      X-Runtime:
+      - '0.016499'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"430","type":"garden_health","attributes":{"id":430,"reading_type":"light","reading":231.0,"created_at":"2020-11-06T15:36:26.501Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:59 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/432
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:59 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4156d74a5b07c9d4de03c4c645b0b20b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e7eb662a-65af-4c72-958d-b5782733a9b2
+      X-Runtime:
+      - '0.010182'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"432","type":"garden_health","attributes":{"id":432,"reading_type":"light","reading":225.0,"created_at":"2020-11-06T15:36:29.507Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:01:59 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/434
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:59 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"36b289bc6b19c8b3958d4fbd0dbe2b1e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 32ebfd3e-ccd8-45e8-a58e-1f38a787a405
+      X-Runtime:
+      - '0.011291'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"434","type":"garden_health","attributes":{"id":434,"reading_type":"light","reading":225.0,"created_at":"2020-11-06T15:36:32.509Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:00 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/57
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:01:59 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5ddb228cf2af1920a956ff78eadfd3b7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b062be17-b0ca-4f93-9334-511e60052f84
+      X-Runtime:
+      - '0.010652'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"57","type":"garden_health","attributes":{"id":57,"reading_type":null,"reading":99.0,"created_at":"2020-11-04T00:00:00.000Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:00 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/58
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:00 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c21493c8230e49ec5e536bef42404019"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5ca06a2f-8a66-4846-8c2e-1f90f7ce0afe
+      X-Runtime:
+      - '0.013728'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"58","type":"garden_health","attributes":{"id":58,"reading_type":null,"reading":680.0,"created_at":"2020-11-03T00:00:00.000Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:00 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/363
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:00 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0b0367bededdb0e0c66e8b13c6a2f00f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 78fd8246-52da-49b9-9a87-b980fb256990
+      X-Runtime:
+      - '0.015257'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"363","type":"garden_health","attributes":{"id":363,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:34:42.623Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:01 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/365
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:00 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8bc4bbe8bd137b70204a42ace1feb93c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 39966fb9-1dde-499f-80b1-9934e5eaf564
+      X-Runtime:
+      - '0.011543'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"365","type":"garden_health","attributes":{"id":365,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:34:45.685Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:01 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/367
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:01 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e4acdea9b220c08f4c686396fe39876b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - '0379b912-8451-4a9a-8092-426dc5a1723a'
+      X-Runtime:
+      - '0.013831'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"367","type":"garden_health","attributes":{"id":367,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:34:48.688Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:02 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/369
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:01 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9f09e74bede3a0648a0ed0c47b80b3d4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 11c4b8fc-0e4a-4f09-a8b7-257beb64932d
+      X-Runtime:
+      - '0.008191'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"369","type":"garden_health","attributes":{"id":369,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:34:51.689Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:02 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/371
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:02 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"515928a33cc47a9430bc9c7f4d6f21b0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 68c8c5fc-17f6-4780-a9f3-973b067e16d2
+      X-Runtime:
+      - '0.009591'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"371","type":"garden_health","attributes":{"id":371,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:34:54.686Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:02 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/373
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:01 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e711a50618d6def2ad6f8658a718c7b7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e07d8388-a635-4f9c-8dd5-cbac8288bc3b
+      X-Runtime:
+      - '0.010556'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"373","type":"garden_health","attributes":{"id":373,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:34:57.686Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:02 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/375
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:02 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b9cd4f973548ffb8656f8071b7ba949e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0da8bb75-f2df-439c-9a90-a34c15e3bde7
+      X-Runtime:
+      - '0.018337'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"375","type":"garden_health","attributes":{"id":375,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:00.715Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:03 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/377
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:03 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6a3da39c009712f3484404acef0c904d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1df4b10b-4e2c-44c9-8c49-bf545732fccf
+      X-Runtime:
+      - '0.015000'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"377","type":"garden_health","attributes":{"id":377,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:03.717Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:03 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/379
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:03 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"df70be4a4e7b3383e9142c91668f2034"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2c711e26-5a5c-4021-a5eb-a30dc53cd422
+      X-Runtime:
+      - '0.009129'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"379","type":"garden_health","attributes":{"id":379,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:06.717Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:03 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/381
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:03 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5818d29662361d893e86cf390226b132"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7b0bbb61-711c-4e2c-bb8e-12f64c356afb
+      X-Runtime:
+      - '0.013322'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"381","type":"garden_health","attributes":{"id":381,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:09.729Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:04 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/383
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:04 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"61eb0a176d733609e1ac3f441198e337"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b9b15943-c6b3-4f62-bd54-627c5d64c016
+      X-Runtime:
+      - '0.012326'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"383","type":"garden_health","attributes":{"id":383,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:12.746Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:04 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/385
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:04 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"bf596a23a4061d41b77034cd0e4065f5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - aa8ea916-0710-4ac0-8609-c196eb859513
+      X-Runtime:
+      - '0.028844'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"385","type":"garden_health","attributes":{"id":385,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:15.801Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:04 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/387
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:04 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"95aa3616a0b50dc35e208d5a1363d505"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3d6d4fda-b45c-4dd5-9351-7c8b74a61cba
+      X-Runtime:
+      - '0.014364'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"387","type":"garden_health","attributes":{"id":387,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:18.904Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:05 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/389
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:04 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"dc8d42727906e4a8f712c44b8a2e8f11"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6225457b-0667-4531-a55a-0834995658b4
+      X-Runtime:
+      - '0.008507'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"389","type":"garden_health","attributes":{"id":389,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:21.934Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:05 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/391
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:04 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c5c7624caf3365767ac6b82a26bc29db"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8f7b433b-b8cb-4177-9b65-f5f72ff5686d
+      X-Runtime:
+      - '0.022508'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"391","type":"garden_health","attributes":{"id":391,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:24.927Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:05 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/393
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:06 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"99d552b058318640d0ea85c81dfee6bd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fea29b00-be19-47ab-914c-918655591aa0
+      X-Runtime:
+      - '0.014865'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"393","type":"garden_health","attributes":{"id":393,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:27.920Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:06 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/395
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:06 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6874ce515010763a9c0ca18f4d45e9c1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e7130e52-8c0e-4ed8-ac57-31c4e34c0758
+      X-Runtime:
+      - '0.018958'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"395","type":"garden_health","attributes":{"id":395,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:30.933Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:06 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/397
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:06 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8ad1b32ba7044d0cce0aecc9adf28c04"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 266b00ad-a8a4-4533-a36d-222a2ae42d67
+      X-Runtime:
+      - '0.023638'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"397","type":"garden_health","attributes":{"id":397,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:33.933Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:07 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/399
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:06 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"941bc84495d4d667064449caf0d7d80e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e2260595-0107-4b76-ad64-c058ec06f344
+      X-Runtime:
+      - '0.013251'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"399","type":"garden_health","attributes":{"id":399,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:36.941Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:07 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/401
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:07 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8e0c6c8dc8c729e62b81013cf7836bb3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5d5a6373-2c6f-414d-a0d1-64ca30604b67
+      X-Runtime:
+      - '0.012309'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"401","type":"garden_health","attributes":{"id":401,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:40.146Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:07 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/403
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:07 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8549bacce1b175edfcd76a81fce5fedf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - '09208c64-c542-4f9a-a14a-c7f7064bf2e5'
+      X-Runtime:
+      - '0.009788'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"403","type":"garden_health","attributes":{"id":403,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:43.136Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:08 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/405
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:08 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f9a3c6df3c5b22fb74362b9223fe4672"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b60804b1-5c41-4a97-a5de-2f5e07b284c1
+      X-Runtime:
+      - '0.008956'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"405","type":"garden_health","attributes":{"id":405,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:46.136Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:08 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/407
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:07 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ab1b2de2513d55e04277341069aca2ed"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ebef52e8-04ff-42df-aec7-bc4b49699601
+      X-Runtime:
+      - '0.010429'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"407","type":"garden_health","attributes":{"id":407,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:49.151Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:08 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/409
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:08 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5ac46d73036e50b7458e97557f596502"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ebe188fc-05c9-436c-a50e-3c6439dde23b
+      X-Runtime:
+      - '0.023955'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"409","type":"garden_health","attributes":{"id":409,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:52.165Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:09 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/411
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:09 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1ad2492af8ed99cc725f7bbe797d1726"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 905a9df8-b659-4835-b625-7021a5ac681d
+      X-Runtime:
+      - '0.022879'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"411","type":"garden_health","attributes":{"id":411,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:55.166Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:09 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/413
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:08 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f3a8d6759f6d573eacf43decc0bef41a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6fd0001a-4094-4091-80aa-770e3e011a4a
+      X-Runtime:
+      - '0.009154'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"413","type":"garden_health","attributes":{"id":413,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:35:59.988Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:09 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/415
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:09 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6ec983ad3b912579c83ada9e5707b7ac"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6823a267-b455-404b-9f4e-8833ef8984dd
+      X-Runtime:
+      - '0.012486'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"415","type":"garden_health","attributes":{"id":415,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:36:03.003Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:10 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/417
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:10 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"04fe0bce77129823b9a52b06ffdb2b38"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 03e432fa-ce02-42e0-9e40-63ac36f10d6e
+      X-Runtime:
+      - '0.009158'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"417","type":"garden_health","attributes":{"id":417,"reading_type":"moisture","reading":22.0,"created_at":"2020-11-06T15:36:06.008Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:10 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/419
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:09 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4ec3937b0474cff1d06ad60baa1ea795"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5e119af3-b6bf-4930-8827-4537203334d0
+      X-Runtime:
+      - '0.010044'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"419","type":"garden_health","attributes":{"id":419,"reading_type":"moisture","reading":23.0,"created_at":"2020-11-06T15:36:09.023Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:10 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/421
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:10 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f52dfb70234dae588cd17598c672d891"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c97d26e8-709e-42ef-9821-33551494d043
+      X-Runtime:
+      - '0.009186'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"421","type":"garden_health","attributes":{"id":421,"reading_type":"moisture","reading":24.0,"created_at":"2020-11-06T15:36:12.021Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:11 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/423
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:11 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4da0a2482cf920ae1328755c7cb791f7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a644fefd-3677-49f6-b0c4-59aec5cc8efd
+      X-Runtime:
+      - '0.017629'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"423","type":"garden_health","attributes":{"id":423,"reading_type":"moisture","reading":25.0,"created_at":"2020-11-06T15:36:15.018Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:11 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/425
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:11 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2aac2b89d4a7563a9ff0d9f15c88129f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8978e626-4955-4fb2-99ac-8d19fae57115
+      X-Runtime:
+      - '0.012117'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"425","type":"garden_health","attributes":{"id":425,"reading_type":"moisture","reading":25.0,"created_at":"2020-11-06T15:36:18.041Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:11 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/427
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:11 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4e659593a45c11f68d636e6355d561b7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b5afec2f-27fb-42ed-813f-d4abeb648753
+      X-Runtime:
+      - '0.010329'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"427","type":"garden_health","attributes":{"id":427,"reading_type":"moisture","reading":25.0,"created_at":"2020-11-06T15:36:21.092Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:11 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/429
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:11 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c4b78f8bd844752ba4f9987b1ad93a78"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1b1e8f9c-d6f4-4d6d-9fbe-740b1c5208b3
+      X-Runtime:
+      - '0.021570'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"429","type":"garden_health","attributes":{"id":429,"reading_type":"moisture","reading":25.0,"created_at":"2020-11-06T15:36:24.098Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:12 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/431
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:12 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5ca1118a09ca116cd93ad3ae746bb286"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 68a58bd8-d0df-4342-9821-fcaa5ee9dba8
+      X-Runtime:
+      - '0.011499'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"431","type":"garden_health","attributes":{"id":431,"reading_type":"moisture","reading":25.0,"created_at":"2020-11-06T15:36:27.104Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:12 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/433
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:12 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"63f7a6c4214f67a57b7dda519cf1787b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6fb33b82-e59c-4e3e-b5ca-e512d15b1404
+      X-Runtime:
+      - '0.011934'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"433","type":"garden_health","attributes":{"id":433,"reading_type":"moisture","reading":25.0,"created_at":"2020-11-06T15:36:30.105Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:12 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/435
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:13 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2a6121365cf4cc6c022e503c3ceb9820"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 65b89e86-0606-4308-a6db-3d0fc86f7736
+      X-Runtime:
+      - '0.008515'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"435","type":"garden_health","attributes":{"id":435,"reading_type":"moisture","reading":25.0,"created_at":"2020-11-06T15:36:33.113Z"}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:13 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/forecast?lat=41.0&lon=86.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:13 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"27078a1150dd31003197c971f19e9d20"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 741077ac-0a8e-45a6-bfd8-17c2384d948c
+      X-Runtime:
+      - '0.155206'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"weather","attributes":{"id":null,"description":"broken
+        clouds","humidity":85,"temperature":32.99,"daily":[{"date":"2020-11-17T06:00:00.000+00:00","temperature":47.14,"humidity":47,"description":"few
+        clouds"},{"date":"2020-11-18T06:00:00.000+00:00","temperature":44.6,"humidity":52,"description":"broken
+        clouds"},{"date":"2020-11-19T06:00:00.000+00:00","temperature":42.4,"humidity":57,"description":"overcast
+        clouds"},{"date":"2020-11-20T06:00:00.000+00:00","temperature":37.8,"humidity":59,"description":"clear
+        sky"},{"date":"2020-11-21T06:00:00.000+00:00","temperature":35.13,"humidity":54,"description":"overcast
+        clouds"},{"date":"2020-11-22T06:00:00.000+00:00","temperature":36.64,"humidity":57,"description":"broken
+        clouds"},{"date":"2020-11-23T06:00:00.000+00:00","temperature":37.38,"humidity":58,"description":"overcast
+        clouds"},{"date":"2020-11-24T06:00:00.000+00:00","temperature":37.99,"humidity":58,"description":"overcast
+        clouds"}]}}}'
+  recorded_at: Mon, 16 Nov 2020 19:02:13 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/sensors/89/garden_healths/last
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:13 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"889457145d227936960fd3c4ea741e40"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4f313a84-12f4-4eec-b111-46c72048db89
+      X-Runtime:
+      - '0.006616'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"435","type":"garden_health","attributes":{"id":435,"reading_type":"moisture","reading":25.0,"created_at":"2020-11-06T15:36:33.113Z"}}]}'
+  recorded_at: Mon, 16 Nov 2020 19:02:13 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/sensors/101/garden_healths/last
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 16 Nov 2020 19:02:13 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"13c6bd762ef28ab2164b52852aba8a64"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e897a081-eb5a-4369-9a09-803866659cc4
+      X-Runtime:
+      - '0.012999'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"434","type":"garden_health","attributes":{"id":434,"reading_type":"light","reading":225.0,"created_at":"2020-11-06T15:36:32.509Z"}}]}'
+  recorded_at: Mon, 16 Nov 2020 19:02:14 GMT
+- request:
+    method: get
     uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/248/plants
     body:
       encoding: US-ASCII
@@ -433,19 +3786,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 06 Nov 2020 03:15:57 GMT
+      - Mon, 16 Nov 2020 19:02:14 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"568e388623cd43c07fb06fac4fac9650"
+      - W/"7dba6bb28b1b255d3b1b27049f0ba80f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 20d5f836-25dc-4dad-b346-cb36d0587069
+      - ab53c693-8a7b-4893-8d94-8807a864fff7
       X-Runtime:
-      - '0.048897'
+      - '0.019263'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -455,6 +3808,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJkYXRhIjpbeyJpZCI6IjE4IiwidHlwZSI6InBsYW50IiwiYXR0cmlidXRlcyI6eyJpbWFnZSI6ImhhcnZlc3RfaGVscGVyX3Byb2R1Y3Rpb24vMThfb25pb24iLCJuYW1lIjoiT25pb24iLCJzcGVjaWVzIjoiIiwiZGVzY3JpcHRpb24iOiJPbmlvbnMgYXJlIGEgY29sZC1zZWFzb24gY3JvcCwgZWFzeSB0byBncm93IGJlY2F1c2Ugb2YgdGhlaXIgaGFyZGluZXNzLiBXZSByZWNvbW1lbmQgdXNpbmcgb25pb24gc2V0cywgd2hpY2ggY2FuIGJlIHBsYW50ZWQgd2l0aG91dCB3b3JyeSBvZiBmcm9zdCBkYW1hZ2UgYW5kIGhhdmUgYSBoaWdoZXIgc3VjY2VzcyByYXRlIHRoYW4gZGlyZWN0IHNlZWQgb3IgdHJhbnNwbGFudHMuIE9uaW9ucyBncm93IHdlbGwgb24gcmFpc2VkIGJlZHMgb3IgcmFpc2VkIHJvd3MgYXQgbGVhc3QgNCBpbmNoZXMgaGlnaC4iLCJsaWdodF9yZXF1aXJlbWVudHMiOiJGdWxsIFN1bihhdCBsZWFzdCA2IGhvdXJzIGEgZGF5KSIsIndhdGVyX3JlcXVpcmVtZW50cyI6IkdlbmVyYWxseSwgb25pb25zIGRvIG5vdCBuZWVkIGNvbnNpc3RlbnQgd2F0ZXJpbmcgaWYgbXVsY2ggaXMgdXNlZC4gQWJvdXQgb25lIGluY2ggb2Ygd2F0ZXIgcGVyIHdlZWsgKGluY2x1ZGluZyByYWluIHdhdGVyKSBpcyBzdWZmaWNpZW50LiBJZiB5b3Ugd2FudCBzd2VldGVyIG9uaW9ucywgd2F0ZXIgbW9yZS4gT25pb25zIHdpbGwgbG9vayBoZWFsdGh5IGV2ZW4gaWYgdGhleSBhcmUgYm9uZSBkcnksIGJlIHN1cmUgdG8gd2F0ZXIgZHVyaW5nIGRyb3VnaHQgY29uZGl0aW9ucy4iLCJ3aGVuX3RvX3BsYW50IjoiUGxhbnQgb25pb25zIGFzIHNvb24gYXMgdGhlIGdyb3VuZCBjYW4gYmUgd29ya2VkIGluIHRoZSBzcHJpbmcsIHVzdWFsbHkgbGF0ZSBNYXJjaCBvciBBcHJpbC4gTWFrZSBzdXJlIHRlbXBlcmF0dXJlIGRvZXNu4oCZdCBnbyBiZWxvdyAyMCBkZWdyZWVzIEYuIiwiaGFydmVzdF90aW1lIjoiV2hlbiB0b3BzIGFyZSBicm93biwgcHVsbCB0aGUgb25pb25zLiBCZSBzdXJlIHRvIGhhcnZlc3QgaW4gbGF0ZSBzdW1tZXIsIGJlZm9yZSBjb29sIHdlYXRoZXIuIE1hdHVyZSBvbmlvbnMgbWF5IHNwb2lsIGluIGZhbGwgd2VhdGhlci4iLCJjb21tb25fcGVzdHMiOiJPbmlvbiBNYWdnb3RzIiwiaWQiOjE4fSwicmVsYXRpb25zaGlwcyI6eyJnYXJkZW5fcGxhbnRzIjp7ImRhdGEiOlt7ImlkIjoiNzciLCJ0eXBlIjoiZ2FyZGVuX3BsYW50In0seyJpZCI6Ijg3IiwidHlwZSI6ImdhcmRlbl9wbGFudCJ9LHsiaWQiOiIxMTAiLCJ0eXBlIjoiZ2FyZGVuX3BsYW50In1dfSwiZ2FyZGVucyI6eyJkYXRhIjpbeyJpZCI6IjI0OCIsInR5cGUiOiJnYXJkZW4ifSx7ImlkIjoiNDg5IiwidHlwZSI6ImdhcmRlbiJ9LHsiaWQiOiI3IiwidHlwZSI6ImdhcmRlbiJ9XX19fV19
-  recorded_at: Fri, 06 Nov 2020 03:15:58 GMT
+        eyJkYXRhIjpbeyJpZCI6IjE4IiwidHlwZSI6InBsYW50IiwiYXR0cmlidXRlcyI6eyJpbWFnZSI6ImhhcnZlc3RfaGVscGVyX3Byb2R1Y3Rpb24vMThfb25pb24iLCJuYW1lIjoiT25pb24iLCJzcGVjaWVzIjoiIiwiZGVzY3JpcHRpb24iOiJPbmlvbnMgYXJlIGEgY29sZC1zZWFzb24gY3JvcCwgZWFzeSB0byBncm93IGJlY2F1c2Ugb2YgdGhlaXIgaGFyZGluZXNzLiBXZSByZWNvbW1lbmQgdXNpbmcgb25pb24gc2V0cywgd2hpY2ggY2FuIGJlIHBsYW50ZWQgd2l0aG91dCB3b3JyeSBvZiBmcm9zdCBkYW1hZ2UgYW5kIGhhdmUgYSBoaWdoZXIgc3VjY2VzcyByYXRlIHRoYW4gZGlyZWN0IHNlZWQgb3IgdHJhbnNwbGFudHMuIE9uaW9ucyBncm93IHdlbGwgb24gcmFpc2VkIGJlZHMgb3IgcmFpc2VkIHJvd3MgYXQgbGVhc3QgNCBpbmNoZXMgaGlnaC4iLCJsaWdodF9yZXF1aXJlbWVudHMiOiJGdWxsIFN1bihhdCBsZWFzdCA2IGhvdXJzIGEgZGF5KSIsIndhdGVyX3JlcXVpcmVtZW50cyI6IkdlbmVyYWxseSwgb25pb25zIGRvIG5vdCBuZWVkIGNvbnNpc3RlbnQgd2F0ZXJpbmcgaWYgbXVsY2ggaXMgdXNlZC4gQWJvdXQgb25lIGluY2ggb2Ygd2F0ZXIgcGVyIHdlZWsgKGluY2x1ZGluZyByYWluIHdhdGVyKSBpcyBzdWZmaWNpZW50LiBJZiB5b3Ugd2FudCBzd2VldGVyIG9uaW9ucywgd2F0ZXIgbW9yZS4gT25pb25zIHdpbGwgbG9vayBoZWFsdGh5IGV2ZW4gaWYgdGhleSBhcmUgYm9uZSBkcnksIGJlIHN1cmUgdG8gd2F0ZXIgZHVyaW5nIGRyb3VnaHQgY29uZGl0aW9ucy4iLCJ3aGVuX3RvX3BsYW50IjoiUGxhbnQgb25pb25zIGFzIHNvb24gYXMgdGhlIGdyb3VuZCBjYW4gYmUgd29ya2VkIGluIHRoZSBzcHJpbmcsIHVzdWFsbHkgbGF0ZSBNYXJjaCBvciBBcHJpbC4gTWFrZSBzdXJlIHRlbXBlcmF0dXJlIGRvZXNu4oCZdCBnbyBiZWxvdyAyMCBkZWdyZWVzIEYuIiwiaGFydmVzdF90aW1lIjoiV2hlbiB0b3BzIGFyZSBicm93biwgcHVsbCB0aGUgb25pb25zLiBCZSBzdXJlIHRvIGhhcnZlc3QgaW4gbGF0ZSBzdW1tZXIsIGJlZm9yZSBjb29sIHdlYXRoZXIuIE1hdHVyZSBvbmlvbnMgbWF5IHNwb2lsIGluIGZhbGwgd2VhdGhlci4iLCJjb21tb25fcGVzdHMiOiJPbmlvbiBNYWdnb3RzIiwiaWQiOjE4fSwicmVsYXRpb25zaGlwcyI6eyJnYXJkZW5fcGxhbnRzIjp7ImRhdGEiOlt7ImlkIjoiNzciLCJ0eXBlIjoiZ2FyZGVuX3BsYW50In0seyJpZCI6Ijg3IiwidHlwZSI6ImdhcmRlbl9wbGFudCJ9LHsiaWQiOiIxMzQiLCJ0eXBlIjoiZ2FyZGVuX3BsYW50In1dfSwiZ2FyZGVucyI6eyJkYXRhIjpbeyJpZCI6IjI0OCIsInR5cGUiOiJnYXJkZW4ifSx7ImlkIjoiNDg5IiwidHlwZSI6ImdhcmRlbiJ9LHsiaWQiOiI0OTYiLCJ0eXBlIjoiZ2FyZGVuIn1dfX19XX0=
+  recorded_at: Mon, 16 Nov 2020 19:02:14 GMT
 recorded_with: VCR 6.0.0
