@@ -172,6 +172,17 @@ height: auto;
   border-bottom-right-radius:15px;
 }
 
+.weather-card {
+  width: 20rem;
+  border: solid 1px #999;
+  // box-shadow:  0 0 10px  rgba(0,50,0,0.6);
+  // -moz-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  // -webkit-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  // -o-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  border-bottom-left-radius:15px;
+  border-bottom-right-radius:15px;
+}
+
 .margin-30-bottom {
   margin-bottom: 30px;
 }
