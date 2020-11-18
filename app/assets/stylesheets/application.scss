@@ -117,17 +117,17 @@ ul {
   padding-bottom: 40px;
 }
 
-.garden-plants {
-  margin-bottom: 20px;
-  width: 40%;
-  padding-bottom: 10px;
-}
+// .garden-plants {
+//   margin-bottom: 20px;
+//   width: 40%;
+//   padding-bottom: 10px;
+// }
 
-.garden-sensors {
-  margin-bottom: 20px;
-  width: 40%;
-  padding-bottom: 10px;
-}
+// .garden-sensors {
+//   margin-bottom: 20px;
+//   width: 40%;
+//   padding-bottom: 10px;
+// }
 
 .profile {
   padding-top: 10px;
@@ -175,12 +175,21 @@ height: auto;
 .weather-card {
   width: 20rem;
   border: solid 1px #999;
-  // box-shadow:  0 0 10px  rgba(0,50,0,0.6);
-  // -moz-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
-  // -webkit-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
-  // -o-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
-  border-bottom-left-radius:15px;
-  border-bottom-right-radius:15px;
+  box-shadow:  0 0 10px  rgba(0,50,0,0.6);
+  -moz-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  -webkit-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  -o-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  border-radius:15px;
+}
+
+.sensor-card {
+  width: 20rem;
+  border: solid 1px #999;
+  box-shadow:  0 0 10px  rgba(0,50,0,0.6);
+  -moz-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  -webkit-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  -o-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  border-radius:15px;
 }
 
 .margin-30-bottom {
