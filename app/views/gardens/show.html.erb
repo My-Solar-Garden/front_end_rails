@@ -1,9 +1,9 @@
 <center>
-  <article class='left-col text-primary'>
-    <section class='garden-info'>
+  <article class="left-col text-primary">
+    <section class="garden-info">
       <h1><%= @garden.name %></h1><br>
       <h3><%= @garden.description %></h3><br>
-      <div class='garden-image'>
+      <div class="garden-image">
         <%= image_tag('default-garden.png') %>
       </div><br>
       <p>Latitude: <%= @garden.latitude %></p>
@@ -11,7 +11,7 @@
       <%= render :partial => "shared/edit_delete_icons", locals: {
         garden: @garden } %>
     </section>
-    <section class='garden-plants card'>
+    <section class="garden-plants card">
       <h1>Your Garden Plants</h1>
       <% if @plants.empty? %>
         <p>You have no plants</p>
@@ -22,12 +22,12 @@
           </div>
         <% end %>
       <% end %>
-      <%= form_tag '/plants/search', method: :get do %>
+      <%= form_tag "/plants/search", method: :get do %>
         <%= search_field_tag :search_term, nil, placeholder: 'Search to add plants' %>
         <%= submit_tag 'Find Plants', data: { disable_with: "Please enter keyword" }, :class => "btn btn-primary" %>
       <% end %>
     </section>
-    <section class='garden-sensors card'>
+    <section class="garden-sensors card">
       <h1>Your Garden Sensors</h1>
 
       <% if @sensors.empty? %>
@@ -47,18 +47,18 @@
   </article>
 
   <% if @temperature %>
-    <section class='garden-temperature'>
+    <section class="garden-temperature">
       <p>Current Garden Temperature: <%= @temperature.reading %>°C </p>
     </section>
   <% end %>
 
   <% if @light %>
-    <section class='garden-temperature'>
+    <section class="garden-temperature">
       <p>Current Garden Light Percentage: <%= @light.reading %></p>
     </section>
   <% end %>
 
-  <article class='Weather card text-primary card' style="width: 40%;">
+  <article class="Weather card text-primary card" style="width: 40%;">
     <h1>Weather Information</h1>
 
     <h2>Forecast:</h2>
@@ -69,7 +69,7 @@
 
     <h3>The Next Eight Days:</h3>
     <% @weather.daily.each do |day|%>
-    <section class='day' id='day-<%= day.date %>'>
+    <section class="day" id='day-<%= day.date %>'>
 
       <p>Date: <%= day.date %></p>
       <p><%= day.description %></p>
