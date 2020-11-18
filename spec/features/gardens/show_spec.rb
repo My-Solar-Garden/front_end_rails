@@ -267,7 +267,7 @@ RSpec.describe 'Show Garden Page' do
       visit garden_path(248)
 
       expect(page).to have_content('Current Garden Light Percentage:')
-      expect(page).to have_content('90.91%')
+      expect(page).to have_content('29.22%')
     end
 
     it "has search for plants field and add button" do
