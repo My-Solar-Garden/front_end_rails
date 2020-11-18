@@ -653,194 +653,6 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 16 Nov 2020 18:57:52 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"ae76c6af38d6be7f5ff658eb9c54e723"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 81cab36f-2097-45b7-85e5-cbb00734956e
-      X-Runtime:
-      - '0.028517'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"4","type":"garden","attributes":{"latitude":39.45,"longitude":-104.58,"name":"Denver
-        Community Garden","description":"A diverse, dedicated group of students and
-        neighbors who believe in bettering ourselves, our food supply and our community
-        through urban gardening.","private":false},"relationships":{"user_gardens":{"data":[]},"users":{"data":[]},"sensors":{"data":[]},"garden_plants":{"data":[]},"plants":{"data":[]}}}}'
-  recorded_at: Mon, 16 Nov 2020 18:57:53 GMT
-- request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/4/sensors
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Mon, 16 Nov 2020 18:57:53 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 86885561-06ac-41eb-a6d9-a5aeeba7ff91
-      X-Runtime:
-      - '0.013447'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Mon, 16 Nov 2020 18:57:53 GMT
-- request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/forecast?lat=39.45&lon=-104.58
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Mon, 16 Nov 2020 18:57:53 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"1a32a2743bb023bc1ee7dda5e5dd2568"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 1166e577-bc21-46ee-ad67-61106fb27270
-      X-Runtime:
-      - '0.110074'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":null,"type":"weather","attributes":{"id":null,"description":"clear
-        sky","humidity":22,"temperature":60.94,"daily":[{"date":"2020-11-16T18:00:00.000+00:00","temperature":60.94,"humidity":22,"description":"clear
-        sky"},{"date":"2020-11-17T18:00:00.000+00:00","temperature":60.39,"humidity":28,"description":"clear
-        sky"},{"date":"2020-11-18T18:00:00.000+00:00","temperature":63.66,"humidity":27,"description":"broken
-        clouds"},{"date":"2020-11-19T18:00:00.000+00:00","temperature":58.24,"humidity":33,"description":"broken
-        clouds"},{"date":"2020-11-20T18:00:00.000+00:00","temperature":46,"humidity":55,"description":"scattered
-        clouds"},{"date":"2020-11-21T18:00:00.000+00:00","temperature":30.34,"humidity":99,"description":"light
-        snow"},{"date":"2020-11-22T18:00:00.000+00:00","temperature":32.22,"humidity":96,"description":"clear
-        sky"},{"date":"2020-11-23T18:00:00.000+00:00","temperature":35.35,"humidity":86,"description":"broken
-        clouds"}]}}}'
-  recorded_at: Mon, 16 Nov 2020 18:57:53 GMT
-- request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/4/plants
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Mon, 16 Nov 2020 18:57:53 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 6c03f97d-11c0-40c9-b395-8f917cdd4a19
-      X-Runtime:
-      - '0.024498'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Mon, 16 Nov 2020 18:57:54 GMT
-- request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/4
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
       - Mon, 16 Nov 2020 19:03:19 GMT
       Connection:
       - keep-alive
@@ -1008,4 +820,192 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":[]}'
   recorded_at: Mon, 16 Nov 2020 19:03:21 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 18 Nov 2020 22:07:54 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ae76c6af38d6be7f5ff658eb9c54e723"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 220c1a9c-31d3-4c55-a419-fe77a30baaf1
+      X-Runtime:
+      - '0.902036'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"garden","attributes":{"latitude":39.45,"longitude":-104.58,"name":"Denver
+        Community Garden","description":"A diverse, dedicated group of students and
+        neighbors who believe in bettering ourselves, our food supply and our community
+        through urban gardening.","private":false},"relationships":{"user_gardens":{"data":[]},"users":{"data":[]},"sensors":{"data":[]},"garden_plants":{"data":[]},"plants":{"data":[]}}}}'
+  recorded_at: Wed, 18 Nov 2020 22:07:55 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/4/sensors
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 18 Nov 2020 22:07:55 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8763cb28-d0f9-4597-a3f4-1f8ca1cc52dd
+      X-Runtime:
+      - '0.030753'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Wed, 18 Nov 2020 22:07:55 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/forecast?lat=39.45&lon=-104.58
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 18 Nov 2020 22:07:56 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f73e3e87af59ec86e13ba031deefdc45"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7c731b2d-9e27-49e0-b087-6e7a6cbe2a15
+      X-Runtime:
+      - '0.090661'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"weather","attributes":{"id":null,"description":"overcast
+        clouds","humidity":20,"temperature":67.98,"daily":[{"date":"2020-11-18T18:00:00.000+00:00","temperature":62.87,"humidity":29,"description":"broken
+        clouds"},{"date":"2020-11-19T18:00:00.000+00:00","temperature":61.86,"humidity":28,"description":"clear
+        sky"},{"date":"2020-11-20T18:00:00.000+00:00","temperature":43.43,"humidity":53,"description":"scattered
+        clouds"},{"date":"2020-11-21T18:00:00.000+00:00","temperature":43.05,"humidity":60,"description":"overcast
+        clouds"},{"date":"2020-11-22T18:00:00.000+00:00","temperature":41.14,"humidity":55,"description":"clear
+        sky"},{"date":"2020-11-23T18:00:00.000+00:00","temperature":50.05,"humidity":42,"description":"scattered
+        clouds"},{"date":"2020-11-24T18:00:00.000+00:00","temperature":47.28,"humidity":43,"description":"clear
+        sky"},{"date":"2020-11-25T18:00:00.000+00:00","temperature":57.56,"humidity":31,"description":"clear
+        sky"}]}}}'
+  recorded_at: Wed, 18 Nov 2020 22:07:56 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/4/plants
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 18 Nov 2020 22:07:56 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 65f0614a-9aa7-4a9a-9821-14ffc2767bc7
+      X-Runtime:
+      - '0.012497'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Wed, 18 Nov 2020 22:07:56 GMT
 recorded_with: VCR 6.0.0
