@@ -251,7 +251,7 @@ RSpec.describe 'Show Garden Page' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit garden_path(248)
 
-      expect(page).to have_content('Current Garden Temperature:')
+      expect(page).to have_content('Current Temperature:')
       expect(page).to have_content('99')
     end
 
@@ -266,7 +266,7 @@ RSpec.describe 'Show Garden Page' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit garden_path(248)
 
-      expect(page).to have_content('Current Garden Light Percentage:')
+      expect(page).to have_content('Current Light:')
       expect(page).to have_content('90.91%')
     end
 
