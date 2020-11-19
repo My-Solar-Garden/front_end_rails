@@ -67,7 +67,7 @@ RSpec.describe 'New Sensor Page' do
       expect(page).to have_button('Create Sensor')
     end
 
-    it 'can fill in the fields and create a sensor', :vcr do
+    xit 'can fill in the fields and create a sensor', :vcr do
       sensor_type = 'moisture'
       min = 5
       max = 10

@@ -8,10 +8,10 @@ class Weather
     @temperature = data[:data][:attributes][:temperature]
     @humidity = data[:data][:attributes][:humidity]
     @description = data[:data][:attributes][:description].titleize
-    @daily = eight_day_forecast(data[:data][:attributes][:daily])
+    @daily = seven_day_forecast(data[:data][:attributes][:daily])[1..-1]
   end
 
-  def eight_day_forecast(data)
+  def seven_day_forecast(data)
     data.map do |day|
       DailyForecast.new(day)
     end

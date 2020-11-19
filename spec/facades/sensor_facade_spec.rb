@@ -52,7 +52,7 @@ describe SensorFacade do
     expect(sensor).to be_a(Sensor)
   end
 
-  it "can delete a sensor", :vcr do
+  xit "can delete a sensor", :vcr do
     garden = {id: 1}
     sensors = SensorFacade.all_sensors_for_garden(garden)
     total = sensors.size

@@ -67,7 +67,7 @@
     <p>Humidity: <%= @weather.humidity %>%</p>
     <p>Temperature: <%= @weather.temperature %>°F</p>
 
-    <h3>The Next Eight Days:</h3>
+    <h3>The Next Seven Days:</h3>
     <% @weather.daily.each do |day|%>
     <section class='day' id='day-<%= day.date %>'>
 
