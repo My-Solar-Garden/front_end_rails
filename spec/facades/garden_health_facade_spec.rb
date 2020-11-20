@@ -51,6 +51,6 @@ describe GardenHealthFacade do
 
     reading = GardenHealthFacade.last_reading(sensor)
 
-    expect(reading.reading).to eq(99)
+    expect(reading.reading).to eq(25.0)
   end
 end
