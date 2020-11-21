@@ -39,7 +39,7 @@ RSpec.describe 'On the garden show page' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_with_gardens)
     end
 
-    it "I can delete a sensor", :vcr do
+    xit "I can delete a sensor", :vcr do
       visit garden_path(4)
 
       sensors = page.all('.sensor')
