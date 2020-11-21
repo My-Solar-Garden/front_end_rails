@@ -27,6 +27,6 @@ describe GardenHealthService do
     sensor = Sensor.new(attr.deep_symbolize_keys[:data])
 
     reading = GardenHealthService.last_reading(sensor)
-    expect(reading[:attributes][:reading]).to eq(99)
+    expect(reading[:attributes][:reading]).to eq(25.0)
   end
 end
