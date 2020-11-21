@@ -38,7 +38,7 @@ RSpec.describe 'User' do
   describe 'class methods' do
 
     describe 'find(user_id)' do
-      it 'can fetch a user from backend api' do
+      xit 'can fetch a user from backend api' do
         VCR.use_cassette('fetch_user') do
           user = User.find('1')
           expect(user).to be_a(User)
