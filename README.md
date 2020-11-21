@@ -1,4 +1,4 @@
-# README for My Solar Garden FE
+# [My Solar Garden](https://solar-garden-fe.herokuapp.com/) - Frontend
 
 ### Overview
 My Solar Garden is an impact driven app here to support you in helping to keep our planet thriving.  By signing up with My Solar Garden, you will be able to track your personal garden's health, as well as your personal carbon impact.
@@ -10,7 +10,35 @@ My Solar Garden also allows you to see the growing community of Solar Gardeners,
 We want to live in balance with the diversity of our environment. It all starts with healthy soil, and that's what we will help you learn how to cultivate. It starts with one person.
 That person, is you.
 
+### Repos
+For access to all the repos that make up the Service Oriented Architecture of this application please visit our [origanization page](https://github.com/My-Solar-Garden).
 
+### Local Setup
+- Fork and Clone the repo
+- Obtain Google OAuth credentials
+    * Visit https://console.developers.google.com/ and create a new project
+    * Select the project and on the left click OAuth consent screen, choose external, click create, and proceed with the required fields (if a field is not required you can skip it)
+    * Click on Credentials on the left then click '+Create Credentials' at the top. Choose OAuth client ID, choose Web application, and under Authorized redirect URIs if you plan on testing Google OAuth with localhost you will want to include:
+    * `http://localhost:3000/auth/google_oauth2/callback`
+    * Click Create and you should receive a Client ID and Client secret. These will go in your application.yml file as:
+
+    * `GOOGLE_CLIENT_ID: '< your ID >'`
+    * `GOOGLE_CLIENT_SECRET: '< your ID >'`
+
+### Versions
+![](https://img.shields.io/badge/Rails-5.2.4-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/Ruby-2.5.3-orange) ![](https://img.shields.io/badge/Code-HTML-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) ![](https://travis-ci.com/My-Solar-Garden/front_end_rails.svg?branch=main)
+
+### Database creation
+  * My Solar Garden's Front End repository does not have a database that holds any sort of information. Any and all information that is depicted on the My Solar Garden FE repo is gained through API connections to the [My Solar Garden BE Repo](https://github.com/My-Solar-Garden/rails_backend). With this being said, My Solar Garden FE Repo uses an empty database for testing purposes.
+
+### How to run the test suite
+  * Clone the My Solar Garden FE repo
+    * My Solar Garden FE connects to the Back End Repository via the the [Backend Heroku App](https://solar-garden-be.herokuapp.com/)
+  * In the terminal while ```CD'd``` into the FE repo, run ```bundle exec rspec```. This will run all of the tests within the FE repository
+
+### Link to My Solar Garden App on Heroku
+1. [Follow this link to visit My Solar Garden](https://solar-garden-fe.herokuapp.com/)
+    
 ### Learning Goals
   * Consume two or more external APIs
   * Build APIs that return JSON responses
@@ -68,36 +96,3 @@ That person, is you.
   * Roberto Rodriguez 
     * [GitHub](https://github.com/robertorodriguez12)
     * [LinkedIn](https://www.linkedin.com/in/roberto-j-rodriguez12/)
-
-### Versions
-![](https://img.shields.io/badge/Rails-5.2.4-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) 
-
-![](https://img.shields.io/badge/Ruby-2.5.3-orange) 
-
-![](https://img.shields.io/badge/Code-HTML-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) 
-
-![](https://travis-ci.com/My-Solar-Garden/front_end_rails.svg?branch=main)
-
-### Database creation
-  * My Solar Garden's Front End repository does not have a database that holds any sort of information. Any and all information that is depicted on the My Solar Garden FE repo is gained through API connections to the [My Solar Garden BE Repo](https://github.com/My-Solar-Garden/rails_backend). With this being said, My Solar Garden FE Repo uses an empty database for testing purposes.
-
-### How to run the test suite
-  * Clone the My Solar Garden FE repo
-    * My Solar Garden FE connects to the Back End Repository via the the [Backend Heroku App](https://solar-garden-be.herokuapp.com/)
-  * In the terminal while ```CD'd``` into the FE repo, run ```bundle exec rspec```. This will run all of the tests within the FE repository
-
-### Link to My Solar Garden App on Heroku
-1. [Follow this link to visit My Solar Garden](https://solar-garden-fe.herokuapp.com/)
-
-### Local Setup
-1. Fork and Clone the repo
-2. Obtain Google OAuth credentials
-
-  * Visit https://console.developers.google.com/ and create a new project
-  * Select the project and on the left click OAuth consent screen, choose external, click create, and proceed with the required fields (if a field is not required you can skip it)
-  * Click on Credentials on the left then click '+Create Credentials' at the top. Choose OAuth client ID, choose Web application, and under Authorized redirect URIs if you plan on testing Google OAuth with localhost you will want to include:
-  * `http://localhost:3000/auth/google_oauth2/callback`
-  * Click Create and you should receive a Client ID and Client secret. These will go in your application.yml file as:
-
-  * `GOOGLE_CLIENT_ID: '< your ID >'`
-  * `GOOGLE_CLIENT_SECRET: '< your ID >'`

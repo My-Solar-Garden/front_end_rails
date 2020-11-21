@@ -53,7 +53,6 @@ describe SensorFacade do
   end
 
   xit "can delete a sensor", :vcr do
-    require "pry"; binding.pry
     garden = {id: 1}
     sensors = SensorFacade.all_sensors_for_garden(garden)
     total = sensors.size

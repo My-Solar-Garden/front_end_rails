@@ -86,6 +86,7 @@
 
   <h3>The Next Seven Days:</h3>
   <div class="row row-cols-3 row-cols-md-4">
+    
     <% @weather.daily.each do |day|%>
     <div class="col mb-4">
       <div class="card weather-card" id="day-<%= day.date %>">
