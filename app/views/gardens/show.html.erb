@@ -48,20 +48,20 @@
       <% @sensors.each do |sensor| %>
         <div class="card p-3 sensor-card sensor">
           <div class="pad-10">
-          <h4><strong>Current Garden Sensor: </strong><%= sensor.id %></h4>
-          <% if sensor.sensor_type == "temperature" && @temperature %>
-            <p>Current Temperature: <%= @temperature.reading %>°C </p>
-          <% elsif sensor.sensor_type == "light" && @light %>
-          <p>Current Light: <%= @light.reading %>% </p>
-          <% end %>
-          <h4 class="card-title text-primary"><%= link_to sensor.sensor_type, "/gardens/#{@garden.id}/sensors/#{sensor.id}" %></h4><br>
-          <%= button_to 'Delete', "/gardens/#{@garden.id}/sensors/#{sensor.id}", method: :delete, :class => "btn btn-primary margin-30-bottom" %>
-        </div>
+            <h4><strong>Current Garden Sensor: </strong><%= sensor.id %></h4>
+            <% if sensor.sensor_type == "temperature" && @temperature %>
+              <p>Current Temperature: <%= @temperature.reading %>°C </p>
+            <% elsif sensor.sensor_type == "light" && @light %>
+            <p>Current Light: <%= @light.reading %>% </p>
+            <% end %>
+            <h4 class="card-title text-primary"><%= link_to sensor.sensor_type, "/gardens/#{@garden.id}/sensors/#{sensor.id}" %></h4><br>
+            <%= button_to 'Delete', "/gardens/#{@garden.id}/sensors/#{sensor.id}", method: :delete, :class => "btn btn-primary margin-30-bottom" %>
+          </div>
         </div>
       <% end %>
     <% end %>
     <br>
-  </div>
+    </div>
   </section>
 
 </article>
