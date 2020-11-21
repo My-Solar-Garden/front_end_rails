@@ -106,7 +106,7 @@ RSpec.describe 'Show Garden Page' do
         end
       end
 
-      xit "expects to see the see an 9 day forcast including today" do
+      xit "expects to see the see an 8 day forcast including today" do
         visit "/gardens/#{@public_garden.id}"
 
         expect(@weather.temperature).to be_a(Numeric)
