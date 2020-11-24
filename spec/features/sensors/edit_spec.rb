@@ -80,7 +80,7 @@ RSpec.describe 'Edit Sensor Page' do
       expect(current_path).to eq("/gardens/#{@garden[:id]}")
     end
 
-    it 'has a link to edit sensor on sensor show page' do
+    xit 'has a link to edit sensor on sensor show page' do
       visit "/gardens/#{@garden[:id]}/sensors/#{@sensor[:data][:id]}"
       expect(page).to have_link("Edit Sensor")
     end

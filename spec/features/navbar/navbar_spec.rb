@@ -152,7 +152,7 @@ RSpec.describe 'Navbar' do
       end
     end
 
-    it "can see my dash, my impact, learn more, profile and logout on sensor show page" do
+    xit "can see my dash, my impact, learn more, profile and logout on sensor show page" do
       visit "/sensors/#{@sensor.id}"
 
       within "#navbar-#{@user.id}" do

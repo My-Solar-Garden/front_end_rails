@@ -3644,7 +3644,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 24 Nov 2020 19:36:29 GMT
+      - Tue, 24 Nov 2020 21:53:40 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -3654,9 +3654,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6da4b905-0d59-49ce-a966-93c562c62cd4
+      - 496cf289-952e-46df-b9bd-b1de543d8934
       X-Runtime:
-      - '0.016634'
+      - '0.018705'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -3667,7 +3667,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"248","type":"garden","attributes":{"latitude":41.0,"longitude":86.0,"name":"Onion
         Garden","description":"Boggest onions in the land","private":false},"relationships":{"user_gardens":{"data":[{"id":"241","type":"user_garden"}]},"users":{"data":[{"id":"10","type":"user"}]},"sensors":{"data":[{"id":"101","type":"sensor"},{"id":"89","type":"sensor"}]},"garden_plants":{"data":[{"id":"77","type":"garden_plant"}]},"plants":{"data":[{"id":"18","type":"plant"}]}}}}'
-  recorded_at: Tue, 24 Nov 2020 19:36:29 GMT
+  recorded_at: Tue, 24 Nov 2020 21:53:41 GMT
 - request:
     method: get
     uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/248/sensors
@@ -3689,7 +3689,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 24 Nov 2020 19:36:28 GMT
+      - Tue, 24 Nov 2020 21:53:40 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -3699,9 +3699,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2c0ff3cc-df55-427f-93f0-be095b6d08e2
+      - e7ba770d-7fb6-42ea-865c-5496bbc39874
       X-Runtime:
-      - '0.011856'
+      - '0.009708'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -3711,7 +3711,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"101","type":"sensor","attributes":{"min_threshold":6,"max_threshold":7,"sensor_type":"light"},"relationships":{"garden":{"data":{"id":"248","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"89","type":"sensor","attributes":{"min_threshold":6,"max_threshold":7,"sensor_type":"temperature"},"relationships":{"garden":{"data":{"id":"248","type":"garden"}},"garden_healths":{"data":[]}}}]}'
-  recorded_at: Tue, 24 Nov 2020 19:36:29 GMT
+  recorded_at: Tue, 24 Nov 2020 21:53:41 GMT
 - request:
     method: get
     uri: https://solar-garden-be.herokuapp.com/api/v1/forecast?lat=41.0&lon=86.0
@@ -3733,19 +3733,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 24 Nov 2020 19:36:29 GMT
+      - Tue, 24 Nov 2020 21:53:41 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"625c8ee7cbfc02a6b4e9d7fd5dd3e874"
+      - W/"8ec398fa80ef69714c34110b0f1d586c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1df727d5-c985-49f0-84d5-f40f14576e3c
+      - 1328fadb-c985-488e-80f6-3473f2fb0a1e
       X-Runtime:
-      - '0.151508'
+      - '0.092699'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -3755,16 +3755,16 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":null,"type":"weather","attributes":{"id":null,"description":"clear
-        sky","humidity":80,"temperature":19.09,"daily":[{"date":"2020-11-25T06:00:00.000+00:00","temperature":34.74,"humidity":61,"description":"clear
-        sky"},{"date":"2020-11-26T06:00:00.000+00:00","temperature":33.93,"humidity":65,"description":"overcast
-        clouds"},{"date":"2020-11-27T06:00:00.000+00:00","temperature":34.79,"humidity":70,"description":"clear
-        sky"},{"date":"2020-11-28T06:00:00.000+00:00","temperature":35.67,"humidity":61,"description":"overcast
-        clouds"},{"date":"2020-11-29T06:00:00.000+00:00","temperature":37.17,"humidity":58,"description":"clear
-        sky"},{"date":"2020-11-30T06:00:00.000+00:00","temperature":34.72,"humidity":73,"description":"scattered
-        clouds"},{"date":"2020-12-01T06:00:00.000+00:00","temperature":34.56,"humidity":69,"description":"clear
-        sky"},{"date":"2020-12-02T06:00:00.000+00:00","temperature":33.55,"humidity":74,"description":"overcast
+        sky","humidity":87,"temperature":18.03,"daily":[{"date":"2020-11-25T06:00:00.000+00:00","temperature":33.94,"humidity":63,"description":"clear
+        sky"},{"date":"2020-11-26T06:00:00.000+00:00","temperature":34.12,"humidity":67,"description":"overcast
+        clouds"},{"date":"2020-11-27T06:00:00.000+00:00","temperature":35.33,"humidity":66,"description":"clear
+        sky"},{"date":"2020-11-28T06:00:00.000+00:00","temperature":35.35,"humidity":64,"description":"overcast
+        clouds"},{"date":"2020-11-29T06:00:00.000+00:00","temperature":37.11,"humidity":60,"description":"clear
+        sky"},{"date":"2020-11-30T06:00:00.000+00:00","temperature":34.83,"humidity":71,"description":"broken
+        clouds"},{"date":"2020-12-01T06:00:00.000+00:00","temperature":32.97,"humidity":72,"description":"few
+        clouds"},{"date":"2020-12-02T06:00:00.000+00:00","temperature":32.85,"humidity":73,"description":"overcast
         clouds"}]}}}'
-  recorded_at: Tue, 24 Nov 2020 19:36:30 GMT
+  recorded_at: Tue, 24 Nov 2020 21:53:42 GMT
 - request:
     method: get
     uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/248/plants
@@ -3786,7 +3786,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 24 Nov 2020 19:36:29 GMT
+      - Tue, 24 Nov 2020 21:53:41 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -3796,9 +3796,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8ef2ce7f-6a1e-41c1-8dbf-5592c177cf34
+      - '0813f7e3-3fc7-4d64-8694-96a7ccb601d3'
       X-Runtime:
-      - '0.014994'
+      - '0.012921'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -3809,5 +3809,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJkYXRhIjpbeyJpZCI6IjE4IiwidHlwZSI6InBsYW50IiwiYXR0cmlidXRlcyI6eyJpbWFnZSI6ImhhcnZlc3RfaGVscGVyX3Byb2R1Y3Rpb24vMThfb25pb24iLCJuYW1lIjoiT25pb24iLCJzcGVjaWVzIjoiIiwiZGVzY3JpcHRpb24iOiJPbmlvbnMgYXJlIGEgY29sZC1zZWFzb24gY3JvcCwgZWFzeSB0byBncm93IGJlY2F1c2Ugb2YgdGhlaXIgaGFyZGluZXNzLiBXZSByZWNvbW1lbmQgdXNpbmcgb25pb24gc2V0cywgd2hpY2ggY2FuIGJlIHBsYW50ZWQgd2l0aG91dCB3b3JyeSBvZiBmcm9zdCBkYW1hZ2UgYW5kIGhhdmUgYSBoaWdoZXIgc3VjY2VzcyByYXRlIHRoYW4gZGlyZWN0IHNlZWQgb3IgdHJhbnNwbGFudHMuIE9uaW9ucyBncm93IHdlbGwgb24gcmFpc2VkIGJlZHMgb3IgcmFpc2VkIHJvd3MgYXQgbGVhc3QgNCBpbmNoZXMgaGlnaC4iLCJsaWdodF9yZXF1aXJlbWVudHMiOiJGdWxsIFN1bihhdCBsZWFzdCA2IGhvdXJzIGEgZGF5KSIsIndhdGVyX3JlcXVpcmVtZW50cyI6IkdlbmVyYWxseSwgb25pb25zIGRvIG5vdCBuZWVkIGNvbnNpc3RlbnQgd2F0ZXJpbmcgaWYgbXVsY2ggaXMgdXNlZC4gQWJvdXQgb25lIGluY2ggb2Ygd2F0ZXIgcGVyIHdlZWsgKGluY2x1ZGluZyByYWluIHdhdGVyKSBpcyBzdWZmaWNpZW50LiBJZiB5b3Ugd2FudCBzd2VldGVyIG9uaW9ucywgd2F0ZXIgbW9yZS4gT25pb25zIHdpbGwgbG9vayBoZWFsdGh5IGV2ZW4gaWYgdGhleSBhcmUgYm9uZSBkcnksIGJlIHN1cmUgdG8gd2F0ZXIgZHVyaW5nIGRyb3VnaHQgY29uZGl0aW9ucy4iLCJ3aGVuX3RvX3BsYW50IjoiUGxhbnQgb25pb25zIGFzIHNvb24gYXMgdGhlIGdyb3VuZCBjYW4gYmUgd29ya2VkIGluIHRoZSBzcHJpbmcsIHVzdWFsbHkgbGF0ZSBNYXJjaCBvciBBcHJpbC4gTWFrZSBzdXJlIHRlbXBlcmF0dXJlIGRvZXNu4oCZdCBnbyBiZWxvdyAyMCBkZWdyZWVzIEYuIiwiaGFydmVzdF90aW1lIjoiV2hlbiB0b3BzIGFyZSBicm93biwgcHVsbCB0aGUgb25pb25zLiBCZSBzdXJlIHRvIGhhcnZlc3QgaW4gbGF0ZSBzdW1tZXIsIGJlZm9yZSBjb29sIHdlYXRoZXIuIE1hdHVyZSBvbmlvbnMgbWF5IHNwb2lsIGluIGZhbGwgd2VhdGhlci4iLCJjb21tb25fcGVzdHMiOiJPbmlvbiBNYWdnb3RzIiwiaWQiOjE4fSwicmVsYXRpb25zaGlwcyI6eyJnYXJkZW5fcGxhbnRzIjp7ImRhdGEiOlt7ImlkIjoiNzciLCJ0eXBlIjoiZ2FyZGVuX3BsYW50In0seyJpZCI6Ijg3IiwidHlwZSI6ImdhcmRlbl9wbGFudCJ9LHsiaWQiOiIxMzQiLCJ0eXBlIjoiZ2FyZGVuX3BsYW50In1dfSwiZ2FyZGVucyI6eyJkYXRhIjpbeyJpZCI6IjQ5NiIsInR5cGUiOiJnYXJkZW4ifSx7ImlkIjoiMjQ4IiwidHlwZSI6ImdhcmRlbiJ9LHsiaWQiOiI0ODkiLCJ0eXBlIjoiZ2FyZGVuIn1dfX19XX0=
-  recorded_at: Tue, 24 Nov 2020 19:36:30 GMT
+  recorded_at: Tue, 24 Nov 2020 21:53:42 GMT
 recorded_with: VCR 6.0.0
