@@ -1,9 +1,10 @@
-<center>
-  <section class='plants-search'>
+  <section class="plants-search pad-25-top">
+    <div class="card-columns">
     <% @plants.each do |plant| %>
-      <section class="plant-<%= plant.id %>">
-        <h2><%= plant.name %></h2>
-        <p><%= plant.description %></p>
+    <div class="card p-3 plant-card plant-<%= plant.id%>">
+      <div class="card-body">
+        <h2 class="card-title text-primary"><%= plant.name %></h2>
+        <p class="card-text text-primary"><%= plant.description %></p>
         <%= form_tag "/gardens/#{@garden_id}/plants/#{plant.id}", method: :post do %>
           <%= hidden_field_tag 'name', plant.name %>
           <%= hidden_field_tag 'image', plant.image %>
@@ -14,9 +15,10 @@
           <%= hidden_field_tag 'when_to_plant', plant.when_to_plant %>
           <%= hidden_field_tag 'harvest_time', plant.harvest_time %>
           <%= hidden_field_tag 'common_pests', plant.common_pests %>
-          <%= submit_tag "Add To Garden" %>
+          <%= submit_tag "Add To Garden", class: "btn btn-primary" %>
         <% end %>
-      </section>
+      </div>
+      </div>
     <% end %>
+    </div>
   </section>
-</center>

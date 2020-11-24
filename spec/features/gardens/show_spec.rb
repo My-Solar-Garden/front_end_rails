@@ -106,7 +106,7 @@ RSpec.describe 'Show Garden Page' do
         end
       end
 
-      xit "expects to see the see an 9 day forcast including today" do
+      xit "expects to see the see an 8 day forcast including today" do
         visit "/gardens/#{@public_garden.id}"
 
         expect(@weather.temperature).to be_a(Numeric)
@@ -251,7 +251,7 @@ RSpec.describe 'Show Garden Page' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit garden_path(248)
 
-      expect(page).to have_content('Current Garden Temperature:')
+      expect(page).to have_content('Current Temperature:')
       expect(page).to have_content('25.0')
     end
 
@@ -266,7 +266,7 @@ RSpec.describe 'Show Garden Page' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit garden_path(248)
 
-      expect(page).to have_content('Current Garden Light Percentage:')
+      expect(page).to have_content('Current Light:')
       expect(page).to have_content('29.22%')
     end
 

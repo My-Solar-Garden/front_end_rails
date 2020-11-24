@@ -139,95 +139,6 @@ http_interactions:
   recorded_at: Thu, 05 Nov 2020 23:21:28 GMT
 - request:
     method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/248
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Wed, 18 Nov 2020 23:44:44 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"3a2e291f7e37ebce60816208b2a37c76"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - e89d24da-e16a-4840-ab07-7ae2e7856baf
-      X-Runtime:
-      - '0.016518'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"248","type":"garden","attributes":{"latitude":41.0,"longitude":86.0,"name":"Onion
-        Garden","description":"Boggest onions in the land","private":false},"relationships":{"user_gardens":{"data":[{"id":"241","type":"user_garden"}]},"users":{"data":[{"id":"10","type":"user"}]},"sensors":{"data":[{"id":"101","type":"sensor"},{"id":"89","type":"sensor"}]},"garden_plants":{"data":[{"id":"77","type":"garden_plant"}]},"plants":{"data":[{"id":"18","type":"plant"}]}}}}'
-  recorded_at: Wed, 18 Nov 2020 23:44:44 GMT
-- request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/248/sensors
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Wed, 18 Nov 2020 23:44:44 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"c14d7f4e35553dedb0e5556daf86bc3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - c3d44c3c-548b-472f-9e39-402ff7703d03
-      X-Runtime:
-      - '0.013886'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"101","type":"sensor","attributes":{"min_threshold":6,"max_threshold":7,"sensor_type":"light"},"relationships":{"garden":{"data":{"id":"248","type":"garden"}},"garden_healths":{"data":[{"id":"362","type":"garden_health"},{"id":"364","type":"garden_health"},{"id":"366","type":"garden_health"},{"id":"368","type":"garden_health"},{"id":"370","type":"garden_health"},{"id":"372","type":"garden_health"},{"id":"374","type":"garden_health"},{"id":"376","type":"garden_health"},{"id":"378","type":"garden_health"},{"id":"380","type":"garden_health"},{"id":"382","type":"garden_health"},{"id":"384","type":"garden_health"},{"id":"386","type":"garden_health"},{"id":"388","type":"garden_health"},{"id":"390","type":"garden_health"},{"id":"392","type":"garden_health"},{"id":"394","type":"garden_health"},{"id":"396","type":"garden_health"},{"id":"398","type":"garden_health"},{"id":"400","type":"garden_health"},{"id":"402","type":"garden_health"},{"id":"404","type":"garden_health"},{"id":"406","type":"garden_health"},{"id":"408","type":"garden_health"},{"id":"410","type":"garden_health"},{"id":"412","type":"garden_health"},{"id":"414","type":"garden_health"},{"id":"416","type":"garden_health"},{"id":"418","type":"garden_health"},{"id":"420","type":"garden_health"},{"id":"422","type":"garden_health"},{"id":"424","type":"garden_health"},{"id":"426","type":"garden_health"},{"id":"428","type":"garden_health"},{"id":"430","type":"garden_health"},{"id":"432","type":"garden_health"},{"id":"434","type":"garden_health"}]}}},{"id":"89","type":"sensor","attributes":{"min_threshold":6,"max_threshold":7,"sensor_type":"temperature"},"relationships":{"garden":{"data":{"id":"248","type":"garden"}},"garden_healths":{"data":[{"id":"57","type":"garden_health"},{"id":"58","type":"garden_health"},{"id":"363","type":"garden_health"},{"id":"365","type":"garden_health"},{"id":"367","type":"garden_health"},{"id":"369","type":"garden_health"},{"id":"371","type":"garden_health"},{"id":"373","type":"garden_health"},{"id":"375","type":"garden_health"},{"id":"377","type":"garden_health"},{"id":"379","type":"garden_health"},{"id":"381","type":"garden_health"},{"id":"383","type":"garden_health"},{"id":"385","type":"garden_health"},{"id":"387","type":"garden_health"},{"id":"389","type":"garden_health"},{"id":"391","type":"garden_health"},{"id":"393","type":"garden_health"},{"id":"395","type":"garden_health"},{"id":"397","type":"garden_health"},{"id":"399","type":"garden_health"},{"id":"401","type":"garden_health"},{"id":"403","type":"garden_health"},{"id":"405","type":"garden_health"},{"id":"407","type":"garden_health"},{"id":"409","type":"garden_health"},{"id":"411","type":"garden_health"},{"id":"413","type":"garden_health"},{"id":"415","type":"garden_health"},{"id":"417","type":"garden_health"},{"id":"419","type":"garden_health"},{"id":"421","type":"garden_health"},{"id":"423","type":"garden_health"},{"id":"425","type":"garden_health"},{"id":"427","type":"garden_health"},{"id":"429","type":"garden_health"},{"id":"431","type":"garden_health"},{"id":"433","type":"garden_health"},{"id":"435","type":"garden_health"}]}}}]}'
-  recorded_at: Wed, 18 Nov 2020 23:44:44 GMT
-- request:
-    method: get
     uri: https://solar-garden-be.herokuapp.com/api/v1/garden_healths/362
     body:
       encoding: US-ASCII
@@ -3572,59 +3483,6 @@ http_interactions:
   recorded_at: Wed, 18 Nov 2020 23:45:09 GMT
 - request:
     method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/forecast?lat=41.0&lon=86.0
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Wed, 18 Nov 2020 23:45:09 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"74db747819f04049dbf7789d293a5350"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - f73922d6-17ea-4972-ab15-f30f4de989a1
-      X-Runtime:
-      - '0.204244'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":null,"type":"weather","attributes":{"id":null,"description":"overcast
-        clouds","humidity":79,"temperature":34.29,"daily":[{"date":"2020-11-19T06:00:00.000+00:00","temperature":44.65,"humidity":52,"description":"overcast
-        clouds"},{"date":"2020-11-20T06:00:00.000+00:00","temperature":36.66,"humidity":60,"description":"scattered
-        clouds"},{"date":"2020-11-21T06:00:00.000+00:00","temperature":33.1,"humidity":56,"description":"few
-        clouds"},{"date":"2020-11-22T06:00:00.000+00:00","temperature":33.94,"humidity":58,"description":"broken
-        clouds"},{"date":"2020-11-23T06:00:00.000+00:00","temperature":33.98,"humidity":62,"description":"overcast
-        clouds"},{"date":"2020-11-24T06:00:00.000+00:00","temperature":35.13,"humidity":70,"description":"scattered
-        clouds"},{"date":"2020-11-25T06:00:00.000+00:00","temperature":35.73,"humidity":64,"description":"few
-        clouds"},{"date":"2020-11-26T06:00:00.000+00:00","temperature":38.5,"humidity":54,"description":"scattered
-        clouds"}]}}}'
-  recorded_at: Wed, 18 Nov 2020 23:45:09 GMT
-- request:
-    method: get
     uri: https://solar-garden-be.herokuapp.com/api/v1/sensors/89/garden_healths/last
     body:
       encoding: US-ASCII
@@ -3713,6 +3571,148 @@ http_interactions:
   recorded_at: Wed, 18 Nov 2020 23:45:10 GMT
 - request:
     method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/248
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 24 Nov 2020 19:36:30 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3a2e291f7e37ebce60816208b2a37c76"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6323429a-da53-4a80-bda7-b0efa9cd7ac1
+      X-Runtime:
+      - '0.016874'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"248","type":"garden","attributes":{"latitude":41.0,"longitude":86.0,"name":"Onion
+        Garden","description":"Boggest onions in the land","private":false},"relationships":{"user_gardens":{"data":[{"id":"241","type":"user_garden"}]},"users":{"data":[{"id":"10","type":"user"}]},"sensors":{"data":[{"id":"101","type":"sensor"},{"id":"89","type":"sensor"}]},"garden_plants":{"data":[{"id":"77","type":"garden_plant"}]},"plants":{"data":[{"id":"18","type":"plant"}]}}}}'
+  recorded_at: Tue, 24 Nov 2020 19:36:30 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/248/sensors
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 24 Nov 2020 19:36:30 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6641658f5993fe8e54cd689dd557f0f5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5ca2d63b-e982-486c-a702-84fc3a39ec80
+      X-Runtime:
+      - '0.008857'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"101","type":"sensor","attributes":{"min_threshold":6,"max_threshold":7,"sensor_type":"light"},"relationships":{"garden":{"data":{"id":"248","type":"garden"}},"garden_healths":{"data":[]}}},{"id":"89","type":"sensor","attributes":{"min_threshold":6,"max_threshold":7,"sensor_type":"temperature"},"relationships":{"garden":{"data":{"id":"248","type":"garden"}},"garden_healths":{"data":[]}}}]}'
+  recorded_at: Tue, 24 Nov 2020 19:36:30 GMT
+- request:
+    method: get
+    uri: https://solar-garden-be.herokuapp.com/api/v1/forecast?lat=41.0&lon=86.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 24 Nov 2020 19:36:30 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"48666ea180ceed4f26cd28d2b4c52e79"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f6c79f50-2acb-47a6-83f5-115ba4ebb801
+      X-Runtime:
+      - '0.126073'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"weather","attributes":{"id":null,"description":"clear
+        sky","humidity":82,"temperature":19.45,"daily":[{"date":"2020-11-25T06:00:00.000+00:00","temperature":34.9,"humidity":62,"description":"clear
+        sky"},{"date":"2020-11-26T06:00:00.000+00:00","temperature":34.12,"humidity":67,"description":"overcast
+        clouds"},{"date":"2020-11-27T06:00:00.000+00:00","temperature":35.33,"humidity":66,"description":"clear
+        sky"},{"date":"2020-11-28T06:00:00.000+00:00","temperature":35.35,"humidity":64,"description":"overcast
+        clouds"},{"date":"2020-11-29T06:00:00.000+00:00","temperature":37.11,"humidity":60,"description":"clear
+        sky"},{"date":"2020-11-30T06:00:00.000+00:00","temperature":34.83,"humidity":71,"description":"broken
+        clouds"},{"date":"2020-12-01T06:00:00.000+00:00","temperature":32.97,"humidity":72,"description":"few
+        clouds"},{"date":"2020-12-02T06:00:00.000+00:00","temperature":32.85,"humidity":73,"description":"overcast
+        clouds"}]}}}'
+  recorded_at: Tue, 24 Nov 2020 19:36:31 GMT
+- request:
+    method: get
     uri: https://solar-garden-be.herokuapp.com/api/v1/gardens/248/plants
     body:
       encoding: US-ASCII
@@ -3732,7 +3732,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 18 Nov 2020 23:45:09 GMT
+      - Tue, 24 Nov 2020 19:36:31 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -3742,9 +3742,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 322ad86a-c664-4cb0-8021-f62187d20fad
+      - c90ae194-c703-4731-b93c-609079ab6216
       X-Runtime:
-      - '0.009784'
+      - '0.013406'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -3755,5 +3755,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJkYXRhIjpbeyJpZCI6IjE4IiwidHlwZSI6InBsYW50IiwiYXR0cmlidXRlcyI6eyJpbWFnZSI6ImhhcnZlc3RfaGVscGVyX3Byb2R1Y3Rpb24vMThfb25pb24iLCJuYW1lIjoiT25pb24iLCJzcGVjaWVzIjoiIiwiZGVzY3JpcHRpb24iOiJPbmlvbnMgYXJlIGEgY29sZC1zZWFzb24gY3JvcCwgZWFzeSB0byBncm93IGJlY2F1c2Ugb2YgdGhlaXIgaGFyZGluZXNzLiBXZSByZWNvbW1lbmQgdXNpbmcgb25pb24gc2V0cywgd2hpY2ggY2FuIGJlIHBsYW50ZWQgd2l0aG91dCB3b3JyeSBvZiBmcm9zdCBkYW1hZ2UgYW5kIGhhdmUgYSBoaWdoZXIgc3VjY2VzcyByYXRlIHRoYW4gZGlyZWN0IHNlZWQgb3IgdHJhbnNwbGFudHMuIE9uaW9ucyBncm93IHdlbGwgb24gcmFpc2VkIGJlZHMgb3IgcmFpc2VkIHJvd3MgYXQgbGVhc3QgNCBpbmNoZXMgaGlnaC4iLCJsaWdodF9yZXF1aXJlbWVudHMiOiJGdWxsIFN1bihhdCBsZWFzdCA2IGhvdXJzIGEgZGF5KSIsIndhdGVyX3JlcXVpcmVtZW50cyI6IkdlbmVyYWxseSwgb25pb25zIGRvIG5vdCBuZWVkIGNvbnNpc3RlbnQgd2F0ZXJpbmcgaWYgbXVsY2ggaXMgdXNlZC4gQWJvdXQgb25lIGluY2ggb2Ygd2F0ZXIgcGVyIHdlZWsgKGluY2x1ZGluZyByYWluIHdhdGVyKSBpcyBzdWZmaWNpZW50LiBJZiB5b3Ugd2FudCBzd2VldGVyIG9uaW9ucywgd2F0ZXIgbW9yZS4gT25pb25zIHdpbGwgbG9vayBoZWFsdGh5IGV2ZW4gaWYgdGhleSBhcmUgYm9uZSBkcnksIGJlIHN1cmUgdG8gd2F0ZXIgZHVyaW5nIGRyb3VnaHQgY29uZGl0aW9ucy4iLCJ3aGVuX3RvX3BsYW50IjoiUGxhbnQgb25pb25zIGFzIHNvb24gYXMgdGhlIGdyb3VuZCBjYW4gYmUgd29ya2VkIGluIHRoZSBzcHJpbmcsIHVzdWFsbHkgbGF0ZSBNYXJjaCBvciBBcHJpbC4gTWFrZSBzdXJlIHRlbXBlcmF0dXJlIGRvZXNu4oCZdCBnbyBiZWxvdyAyMCBkZWdyZWVzIEYuIiwiaGFydmVzdF90aW1lIjoiV2hlbiB0b3BzIGFyZSBicm93biwgcHVsbCB0aGUgb25pb25zLiBCZSBzdXJlIHRvIGhhcnZlc3QgaW4gbGF0ZSBzdW1tZXIsIGJlZm9yZSBjb29sIHdlYXRoZXIuIE1hdHVyZSBvbmlvbnMgbWF5IHNwb2lsIGluIGZhbGwgd2VhdGhlci4iLCJjb21tb25fcGVzdHMiOiJPbmlvbiBNYWdnb3RzIiwiaWQiOjE4fSwicmVsYXRpb25zaGlwcyI6eyJnYXJkZW5fcGxhbnRzIjp7ImRhdGEiOlt7ImlkIjoiNzciLCJ0eXBlIjoiZ2FyZGVuX3BsYW50In0seyJpZCI6Ijg3IiwidHlwZSI6ImdhcmRlbl9wbGFudCJ9LHsiaWQiOiIxMzQiLCJ0eXBlIjoiZ2FyZGVuX3BsYW50In1dfSwiZ2FyZGVucyI6eyJkYXRhIjpbeyJpZCI6IjQ5NiIsInR5cGUiOiJnYXJkZW4ifSx7ImlkIjoiMjQ4IiwidHlwZSI6ImdhcmRlbiJ9LHsiaWQiOiI0ODkiLCJ0eXBlIjoiZ2FyZGVuIn1dfX19XX0=
-  recorded_at: Wed, 18 Nov 2020 23:45:10 GMT
+  recorded_at: Tue, 24 Nov 2020 19:36:31 GMT
 recorded_with: VCR 6.0.0

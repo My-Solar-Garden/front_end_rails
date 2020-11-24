@@ -1,7 +1,6 @@
 <center>
   <div class="text-primary">
     <h2>Your <%= @sensor.sensor_type %> sensor</h2><br>
-    <%= link_to "Edit Sensor", "/gardens/#{@sensor.garden_id}/sensors/#{@sensor.id}" %>
   </div><br>
 
   <% if !@sensor.garden_healths.nil? %>
@@ -84,5 +83,8 @@
                 });
             }, 100);
           </script>
-    <% end %>
+    <% end %><br>
+    <div class="text-primary">
+      <%= link_to "Edit Sensor", "/gardens/#{@sensor.garden_id}/sensors/#{@sensor.id}/edit" %><br>
+    </div><br>
 </center>
