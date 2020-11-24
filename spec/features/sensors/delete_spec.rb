@@ -42,13 +42,14 @@ RSpec.describe 'On the garden show page' do
     xit "I can delete a sensor", :vcr do
       visit garden_path(4)
 
-      sensors = page.all('.sensor')
+      sensors = page.all('.garden-sensors') # I tried to change this to garden-sensors from the gardens show.html.erb line 41
       total = sensors.size
 
-      first('.sensor').click_button('Delete')
+      first('.garden-sensors').click_on('Delete') # Error: Capybara::ElementNotFound:
+       # Unable to find link or button "Delete" within #<Capybara::Node::Element tag="section" path="/html/body/div[3]/div/div/article/section[3]"
 
       expect(current_path).to eq(garden_path(4))
-      expect(page.all('.sensor').size).to eq(total - 1)
+      expect(page.all('.garden-sensors').size).to eq(total - 1)
     end
   end
 end

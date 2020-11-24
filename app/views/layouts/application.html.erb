@@ -9,19 +9,11 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-      body {font-family: "Lato", sans-serif}
-      .mySlides {display: none}
-    </style>
     <%= javascript_include_tag 'application' %>
 </head>
-<style>
-  body {
-    background-color: aliceblue;
-  }
-</style>
 <body>
   <% if !current_user.nil? %>
+  <div class="container">
     <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top" id="navbar-<%= current_user.id %>">
       <a class="navbar-brand" href="<%=root_path%>">Welcome</a>
         <ul class="navbar-nav">
@@ -41,14 +33,23 @@
           </li>
         </ul>
     </nav>
+  </div>
   <% end %>
-  <center>
-    <div class="nav-item w3-light-green" style="width:500px">
-      <% flash.each do |type, message| %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm w3-light-green">
+        <% flash.each do |type, message| %>
         <p><%= message %></p>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </center>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl">
   <%= yield %>
+    </div>
+  </div>
+</div>
 </body>
 </html>

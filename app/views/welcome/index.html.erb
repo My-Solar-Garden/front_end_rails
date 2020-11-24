@@ -1,9 +1,7 @@
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-
   <!-- The App description Section -->
-  <div class="w3-container w3-content w3-center " style="max-width:950px" id="app_info">
-    <%= image_tag "solar_garden_logo.png", alt: "logo", id: "welcome-logo" %>
-    <h3 class="w3-opacity"><i>We love the planet</i></h3><br>
+  <div id="app_info">
+    <%= image_tag "solar_garden_logo.png", alt: "logo", id: "welcome-logo", class: "mx-auto d-block img-fluid img-60"%>
+    <h3 class="w3-opacity pad-25-top"><i>We love the planet</i></h3>
     <p class="w3-justify">
       My Solar Garden is an impact driven app here to support you in helping to keep our planet thriving.  By signing up with My Solar Garden, you will be able to track your personal garden's health, as well as your personal carbon impact.<br><br>
 
@@ -24,8 +22,8 @@
   <% images = ['ESOXGPn', 'JZzjPUH', 'y8P9c7q', '5gjnhlp', 'Yl4Zwic', 'Ewyct7X', 'E9nPGky', 'r1IZlFr', '43ja22n', 'v2jd9mo', 'rjBlkqp', 'yxPE2zw', 'vxkPqcp', 'RCxvJMX', '4EOtT70', 'MbOwjJK', 'LidCyvh', 'n4Rlajh', 'TiNcO3V', 'ORgmfoY', 'IqmfCSG','uf6q7DV']%>
 
   <% images.each do |image|  %>
-    <div class="mySlides w3-display-container w3-center">
-      <img src=<%= "https://i.imgur.com/#{image}.jpg" %> style="width:916px">
+    <div class="mySlides w3-display-container pad-25-top">
+      <img src="https://i.imgur.com/<%= image %>.jpg" class="mx-auto d-block img-fluid img-80">
     </div>
   <% end %>
 
@@ -37,7 +35,6 @@
       </div>
     </div>
   </div>
-</div>
 <script>
 
 // Automatic Slideshow - change image every 6 seconds

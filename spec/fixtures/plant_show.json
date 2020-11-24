@@ -1,0 +1,26 @@
+{
+    "data": {
+        "id": "1",
+        "type": "plant",
+        "attributes": {
+            "image": "sdsds",
+            "name": "tomato",
+            "species": "tomatous redus",
+            "description": "the red kind",
+            "light_requirements": "some",
+            "water_requirements": "some",
+            "when_to_plant": "fall",
+            "harvest_time": "spring",
+            "common_pests": "bugs",
+            "id": 1
+        },
+        "relationships": {
+            "garden_plants": {
+                "data": []
+            },
+            "gardens": {
+                "data": []
+            }
+        }
+    }
+}
