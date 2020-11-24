@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe GardenHealthFacade do
-  it "should return garden_health details for specific garden_health" do
+  xit "should return garden_health details for specific garden_health" do
     params = {id: 36}
     garden_health = GardenHealthFacade.garden_health_details(params, 1)
 
@@ -24,7 +24,7 @@ describe GardenHealthFacade do
     expect(garden_health).to be_a(GardenHealth)
   end
 
-  it "returns last reading" do
+  xit "returns last reading" do
     attr = {
     "data": {
         "id": "89",

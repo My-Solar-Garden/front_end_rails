@@ -1,25 +1,43 @@
 <center>
   <div class="text-primary">
     <h2>Your <%= @sensor.sensor_type %> sensor</h2><br>
-    <%= link_to "Edit Sensor", "/gardens/#{@sensor.garden_id}/sensors/#{@sensor.id}" %>
   </div><br>
-    <% if !@sensor.garden_healths.nil? %>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="single category">
-                <h3 class="side-title">Last 5 Readings</h3>
-                  <ul class="list-unstyled">
-                    <% @sensor.garden_healths.reverse.take(5).each do |reading| %>
-                        <% time = reading.created_at.to_time.to_s.split(" ")[1] %>
-                        <%= reading.created_at.to_date %> <%= time %><span class="pull-right"><%= reading.reading %></span><br>
-                    <% end %>
-                  </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %><br>
+
+  <% if !@sensor.garden_healths.nil? %>
+    <p>Last 5 Readings</p>
+      <div id=sensor_type><%= @type %></div>
+      <div id='readings'><%= @last_five_readings %></div>
+        <div id="chart"></div>
+          <script>
+            var sensor_type = document.getElementById("sensor_type").textContent;
+            var readings = document.getElementById("readings").textContent;
+            readings = readings.replace('[', '').replace(']', '').split(', ');
+
+            var chart = c3.generate({
+              bindto: '#chart',
+              data: {
+                  columns: [
+                      ['readings']
+                    ]
+                  },
+              axis: {
+                  y: {
+                    label: { // ADD
+                      text: sensor_type,
+                      position: 'outer-middle'
+                    }
+                  }
+                }
+              });
+            setTimeout(function() {
+                chart.load({
+                    columns: [
+                      ['readings', ...readings]
+                    ]
+                });
+            }, 100);
+          </script>
+  <% end %><br>
 
     <div class="dropdown">
       <button class="btn btn-primary">Sensor History</button>
@@ -33,21 +51,40 @@
       </div>
     </div><br><br>
 
-    <% if @history %>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="single category">
-                <h4 class="side-title text-primary">History</h4>
-                  <ul class="list-unstyled">
-                    <% @history.each do |reading| %>
-                        <% time = reading.created_at.to_time.to_s.split(" ")[1] %>
-                        <%= reading.created_at.to_date %> <%= time %><span class="pull-right"><%= reading.reading %></span><br>
-                    <% end %>
-                  </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    <% if @previous_readings %>
+      <div id='previous_readings'><%= @previous_readings %></div>
+        <div id="chart2"></div>
+          <script>
+            var sensor_type = document.getElementById("sensor_type").textContent;
+            var previous_readings = document.getElementById("previous_readings").textContent;
+            previous_readings = previous_readings.replace('[', '').replace(']', '').split(', ');
+
+            var chart2 = c3.generate({
+              bindto: '#chart2',
+              data: {
+                  columns: [
+                      ['readings']
+                    ]
+                  },
+              axis: {
+                  y: {
+                    label: { // ADD
+                      text: sensor_type,
+                      position: 'outer-middle'
+                    }
+                  }
+                }
+              });
+            setTimeout(function() {
+                chart2.load({
+                    columns: [
+                      ['readings', ...previous_readings]
+                    ]
+                });
+            }, 100);
+          </script>
+    <% end %><br>
+    <div class="text-primary">
+      <%= link_to "Edit Sensor", "/gardens/#{@sensor.garden_id}/sensors/#{@sensor.id}/edit" %><br>
+    </div><br>
 </center>

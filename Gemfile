@@ -41,7 +41,8 @@ gem 'omniauth-google-oauth2'
 gem 'google-api-client', require: 'google/apis/people_v1'
 gem 'figaro', '~> 1.2.0'
 gem 'jquery-rails'
-
+gem 'd3_rails'
+gem 'c3-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

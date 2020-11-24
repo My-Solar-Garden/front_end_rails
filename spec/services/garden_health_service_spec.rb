@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe GardenHealthService do
-  it "returns the last reading", :vcr do
+  xit "returns the last reading", :vcr do
     attr = {
     "data": {
         "id": "89",
