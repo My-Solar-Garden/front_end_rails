@@ -1,0 +1,19 @@
+ <div class="w3-card-4 plant-show" style="width:800px;">
+     <header class="w3-container w3-blue-grey w3-center">
+       <h1><%= @plant.name %></h1>
+     </header>
+     <style>
+       h4 {
+         text-decoration: underline;
+       }
+      </style>
+     <div class="w3-container">
+       <h4>Species:</h4> <%= @plant.species %>
+       <h4>Description:</h4><%= @plant.description %>
+       <h4>Sun Needed:</h4><%= @plant.light_requirements %>
+       <h4>Water Needed:</h4><%= @plant.water_requirements %>
+       <h4>Best Time to Plant:</h4><%= @plant.when_to_plant %>
+       <h4>Best Time to Harvest</h4><%= @plant.harvest_time %>
+       <h4>Pests:</h4><%= @plant.common_pests %>
+     </div>
+   </div>

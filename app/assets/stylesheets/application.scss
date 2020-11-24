@@ -19,14 +19,23 @@
 @import "theme";
 
 // .solar-nav {float: right}
+body {
+  font-family: "Lato", sans-serif;
+  background-color: aliceblue;
+}
+.mySlides {display: none}
 
-
+.plant-show {
+   margin-left: auto;
+   margin-right: auto;
+   width: 8em
+}
 .col-sm-4 {
   border-style: solid;
 }
 
 .row {
-  display: block;
+  // display: block;
   margin-inline-end: auto;
 }
 
@@ -85,39 +94,46 @@ ul {
   margin: 5px;
 }
 
-.card {
-  margin-bottom: 20px;
-}
-
-.card img {
-  width: 100%;
-  padding: 0px;
-}
-
-.card-body {
-  padding: 15px;
-}
+// .card {
+//   margin-bottom: 20px;
+// }
+//
+// .card img {
+//   width: 100%;
+//   padding: 0px;
+// }
+//
+// .card-body {
+//   padding: 15px;
+// }
 
 #welcome-logo {
-  width: 60%;
+  // width: 60%;
 }
 
 .garden-info {
   margin-bottom: 20px;
-  width: 40%;
+  padding: 15px;
   padding-bottom: 40px;
+}
+
+.garden-image {
+  max-width: 60%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .garden-plants {
   margin-bottom: 20px;
-  width: 40%;
-  padding-bottom: 10px;
+  padding: 15px;
+  padding-bottom: 40px;
 }
 
 .garden-sensors {
   margin-bottom: 20px;
-  width: 40%;
-  padding-bottom: 10px;
+  padding: 15px;
+  padding-bottom: 40px;
 }
 
 .profile {
@@ -132,4 +148,80 @@ ul {
   width: 40%;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.img-60 {
+  max-width: 60%;
+  height: auto;
+}
+
+.img-80 {
+max-width: 80%;
+height: auto;
+}
+
+.pad-25-top {
+  padding-top: 25px;
+}
+
+.pad-50-bottom {
+  padding-bottom: 50px;
+}
+
+.garden-card {
+  width: 20rem;
+  border: solid 1px #999;
+  // box-shadow:  0 0 10px  rgba(0,50,0,0.6);
+  // -moz-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  // -webkit-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  // -o-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  border-bottom-left-radius:15px;
+  border-bottom-right-radius:15px;
+}
+
+.weather-card {
+  // width: 20rem;
+  border: solid 1px #999;
+  // box-shadow:  0 0 10px  rgba(0,50,0,0.6);
+  // -moz-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  // -webkit-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  // -o-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  border-radius:15px;
+}
+
+.sensor-card {
+  width: 20rem;
+  border: solid 1px #999;
+  // box-shadow:  0 0 10px  rgba(0,50,0,0.6);
+  // -moz-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  // -webkit-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  // -o-box-shadow: 0 0 10px  rgba(0,50,0,0.6);
+  border-radius:15px;
+}
+.pad-10 {
+  padding: 10px;
+}
+
+.margin-30-bottom {
+  margin-bottom: 30px;
+}
+
+.card-columns .card {
+  padding: 0 !important;
+}
+
+.float-right {
+  float: right;
+  margin-right: 25px;
+  margin-top: 25px;
+}
+
+.float-left {
+  float: left;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+.list-group-item {
+  border: 0;
 }
