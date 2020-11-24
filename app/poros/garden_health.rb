@@ -16,7 +16,7 @@ class GardenHealth
 
   def determine_type
     if @reading_type == 'light'
-      @reading = "#{((@reading / 770) * 100).round(2)}%"
+      @reading = ((@reading / 770) * 100).round(2)
     end
   end
 end
