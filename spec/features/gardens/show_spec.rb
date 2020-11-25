@@ -158,7 +158,7 @@ RSpec.describe 'Show Garden Page' do
                   :attributes=>{
                     :min_threshold=>2,
                     :max_threshold=>15,
-                    :sensor_type=>"moisture"
+                    :sensor_type=>"light"
                     },
                   :relationships=>{
                     :garden=>{:data=>{:id=> 3, :type=>"garden"}}, :garden_healths=>{:data=>[]}
@@ -181,7 +181,7 @@ RSpec.describe 'Show Garden Page' do
                   :attributes=>{
                     :min_threshold=>2,
                     :max_threshold=>15,
-                    :sensor_type=>"light"
+                    :sensor_type=>"moisture"
                     },
                   :relationships=>{
                     :garden=>{:data=>{:id=> 3, :type=>"garden"}}, :garden_healths=>{:data=>[]}
@@ -204,19 +204,35 @@ RSpec.describe 'Show Garden Page' do
       sensors = File.read('spec/fixtures/sensors.json')
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3/sensors").to_return(status: 200, body: sensors)
 
-      visit "/gardens/3"
+      sensor = File.read('spec/fixtures/garden_healths_936.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/garden_healths/936").to_return(status: 200, body: sensor)
 
+      sensor = File.read('spec/fixtures/garden_healths_935.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/garden_healths/935").to_return(status: 200, body: sensor)
+
+      sensor = File.read('spec/fixtures/last_reading_5.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/5/garden_healths/last").to_return(status: 200, body: sensor)
+
+      sensor = File.read('spec/fixtures/last_reading_4.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/4/garden_healths/last").to_return(status: 200, body: sensor)
+
+      visit "/gardens/3"
+      
       within '.garden-sensors' do
-        expect(page).to have_content(@sensor1[:id])
-        expect(page).to have_content(@sensor1[:attributes][:sensor_type])
-        expect(page).to have_link(@sensor1[:attributes][:sensor_type])
-        expect(page).to have_content(@sensor2[:id])
-        expect(page).to have_content(@sensor2[:attributes][:sensor_type])
-        expect(page).to have_link(@sensor2[:attributes][:sensor_type])
+        within("#sensor-#{@sensor1[:id]}") do
+          expect(page).to have_content("Sensor ID: #{@sensor1[:id]}")
+          expect(page).to have_content("Sensor Type: #{@sensor1[:attributes][:sensor_type]}")
+          expect(page).to have_link "See charts of sensor data"
+        end
+        within("#sensor-#{@sensor2[:id]}") do
+          expect(page).to have_content("Sensor ID: #{@sensor2[:id]}")
+          expect(page).to have_content("Sensor Type: #{@sensor2[:attributes][:sensor_type]}")
+          expect(page).to have_link "See charts of sensor data"
+        end
       end
     end
 
-    xit "expects sensor link to link to sensor show page" do
+    it "expects sensor link to link to sensor show page" do
       json_response = File.read('spec/fixtures/garden_with_sensors.json')
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: json_response)
 
@@ -227,10 +243,23 @@ RSpec.describe 'Show Garden Page' do
       sensor = File.read('spec/fixtures/sensor.json')
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/#{@sensor1[:id]}").to_return(status: 200, body: sensor)
 
+      sensor = File.read('spec/fixtures/garden_healths_936.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/garden_healths/936").to_return(status: 200, body: sensor)
+
+      sensor = File.read('spec/fixtures/garden_healths_935.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/garden_healths/935").to_return(status: 200, body: sensor)
+
+      sensor = File.read('spec/fixtures/last_reading_5.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/5/garden_healths/last").to_return(status: 200, body: sensor)
+
+      sensor = File.read('spec/fixtures/last_reading_4.json')
+      stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/4/garden_healths/last").to_return(status: 200, body: sensor)
+
       visit "/gardens/3"
 
-      click_link @sensor1[:attributes][:sensor_type]
-
+      within("#sensor-#{@sensor1[:id]}") do
+        click_link "See charts of sensor data"
+      end
       expect(current_path).to eq("/gardens/1/sensors/#{@sensor1[:id]}")
     end
 

@@ -1,231 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/users/2
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sat, 31 Oct 2020 21:01:49 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"2ffd6464deffa12f420210774c62e61c"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 8f3c0492-5747-4916-bfaf-7437db8e7a90
-      X-Runtime:
-      - '0.026410'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"2","type":"user","attributes":{"id":2,"email":"john@example.com"},"relationships":{"user_gardens":{"data":[]},"gardens":{"data":[]}}}}'
-  recorded_at: Sat, 31 Oct 2020 21:01:50 GMT
-- request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/users/2
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 01 Nov 2020 02:27:36 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"2ffd6464deffa12f420210774c62e61c"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 227b3c15-9130-43d3-b166-33e232ff1ed5
-      X-Runtime:
-      - '0.009217'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"2","type":"user","attributes":{"id":2,"email":"john@example.com"},"relationships":{"user_gardens":{"data":[]},"gardens":{"data":[]}}}}'
-  recorded_at: Sun, 01 Nov 2020 02:27:36 GMT
-- request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/users/9
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 05 Nov 2020 21:30:19 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"1acff4d14528fd9691e35b05d2cd5167"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 4e80b5b7-fe3f-4867-9150-6e9bb4b0bb0c
-      X-Runtime:
-      - '0.039734'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"9","type":"user","attributes":{"id":9,"email":"lkriffell@gmail.com"},"relationships":{"user_gardens":{"data":[{"id":"1","type":"user_garden"},{"id":"481","type":"user_garden"},{"id":"176","type":"user_garden"}]},"gardens":{"data":[{"id":"7","type":"garden"},{"id":"488","type":"garden"},{"id":"183","type":"garden"}]}}}}'
-  recorded_at: Thu, 05 Nov 2020 21:30:19 GMT
-- request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/users/9
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 05 Nov 2020 21:30:19 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"1acff4d14528fd9691e35b05d2cd5167"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 6bae2edc-4084-4960-8e8d-ac264b528494
-      X-Runtime:
-      - '0.047856'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"9","type":"user","attributes":{"id":9,"email":"lkriffell@gmail.com"},"relationships":{"user_gardens":{"data":[{"id":"1","type":"user_garden"},{"id":"481","type":"user_garden"},{"id":"176","type":"user_garden"}]},"gardens":{"data":[{"id":"7","type":"garden"},{"id":"488","type":"garden"},{"id":"183","type":"garden"}]}}}}'
-  recorded_at: Thu, 05 Nov 2020 21:30:20 GMT
-- request:
-    method: get
-    uri: https://solar-garden-be.herokuapp.com/api/v1/users/9
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.1.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 05 Nov 2020 21:30:20 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"1acff4d14528fd9691e35b05d2cd5167"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 45e2becd-ce5e-4c4c-9df9-041c140086ea
-      X-Runtime:
-      - '0.052559'
-      Vary:
-      - Origin
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"9","type":"user","attributes":{"id":9,"email":"lkriffell@gmail.com"},"relationships":{"user_gardens":{"data":[{"id":"1","type":"user_garden"},{"id":"481","type":"user_garden"},{"id":"176","type":"user_garden"}]},"gardens":{"data":[{"id":"7","type":"garden"},{"id":"488","type":"garden"},{"id":"183","type":"garden"}]}}}}'
-  recorded_at: Thu, 05 Nov 2020 21:30:20 GMT
-- request:
     method: post
     uri: https://solar-garden-be.herokuapp.com/api/v1/users
     body:
       encoding: UTF-8
-      string: credentials%5Bexpires%5D=true&credentials%5Bexpires_at%5D=2020-11-24T17%3A00%3A29-05%3A00&credentials%5Brefresh_token%5D=MOCK_OMNIAUTH_GOOGLE_REFRESH+TOKEN&credentials%5Btoken%5D=MOCK_OMNIAUTH_GOOGLE_TOKEN&info%5Bemail%5D=john%40example.com&info%5Bfirst_name%5D=John&info%5Bimage%5D=https%3A%2F%2Flh4.googleusercontent.com%2Fphoto.jpg&info%5Blast_name%5D=Smith&info%5Bname%5D=John+Smith&info%5Burls%5D%5Bgoogle%5D=https%3A%2F%2Fplus.google.com%2F%2BJohnSmith&provider=google_oauth2&uid=100000000000000000000
+      string: credentials%5Bexpires%5D=true&credentials%5Bexpires_at%5D=2020-11-25T15%3A23%3A55-06%3A00&credentials%5Brefresh_token%5D=MOCK_OMNIAUTH_GOOGLE_REFRESH+TOKEN&credentials%5Btoken%5D=MOCK_OMNIAUTH_GOOGLE_TOKEN&info%5Bemail%5D=john%40example.com&info%5Bfirst_name%5D=John&info%5Bimage%5D=https%3A%2F%2Flh4.googleusercontent.com%2Fphoto.jpg&info%5Blast_name%5D=Smith&info%5Bname%5D=John+Smith&info%5Burls%5D%5Bgoogle%5D=https%3A%2F%2Fplus.google.com%2F%2BJohnSmith&provider=google_oauth2&uid=100000000000000000000
     headers:
       User-Agent:
       - Faraday v1.1.0
@@ -243,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 24 Nov 2020 22:00:29 GMT
+      - Wed, 25 Nov 2020 21:23:55 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -253,9 +33,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 82877656-9b20-4535-b0b3-e3cb66e374c1
+      - f88f4727-3eca-4cc0-824a-83552a56b825
       X-Runtime:
-      - '0.023263'
+      - '0.041919'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -265,7 +45,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"16","type":"user","attributes":{"id":16,"email":"john@example.com"},"relationships":{"user_gardens":{"data":[]},"gardens":{"data":[]}}}}'
-  recorded_at: Tue, 24 Nov 2020 22:00:29 GMT
+  recorded_at: Wed, 25 Nov 2020 21:23:55 GMT
 - request:
     method: get
     uri: https://solar-garden-be.herokuapp.com/api/v1/users/16
@@ -287,7 +67,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 24 Nov 2020 22:00:29 GMT
+      - Wed, 25 Nov 2020 21:23:55 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -297,9 +77,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 642e266e-50be-4594-a5b2-41e49be8bb1c
+      - 67f41ad5-bb47-4891-90ab-046dad1653f2
       X-Runtime:
-      - '0.018822'
+      - '0.016820'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -309,5 +89,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"16","type":"user","attributes":{"id":16,"email":"john@example.com"},"relationships":{"user_gardens":{"data":[]},"gardens":{"data":[]}}}}'
-  recorded_at: Tue, 24 Nov 2020 22:00:30 GMT
+  recorded_at: Wed, 25 Nov 2020 21:23:56 GMT
 recorded_with: VCR 6.0.0
