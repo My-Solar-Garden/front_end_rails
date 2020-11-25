@@ -23,4 +23,9 @@ class GardenHealthFacade
     parsed_json = GardenHealthService.last_reading(sensor)
     garden_health(parsed_json, sensor.id)
   end
+
+  def self.last_five_readings(sensor)
+    parsed_json = GardenHealthService.last_five_readings(sensor)
+    garden_health_mapped(parsed_json, sensor.id)
+  end
 end
