@@ -3,14 +3,13 @@ class SensorsController < ApplicationController
 
   def show
     @sensor = SensorFacade.sensor_details(params)
-    @last_five_readings = @sensor.garden_healths.reverse.take(5).map { |reading| reading.reading }
-      @last_five_readings = @last_five_readings.reverse
+    @type = determine_type(@sensor)
+    @last_five_readings = GardenHealthFacade.last_five_readings(@sensor).map { |reading| reading.reading }.reverse
     if params['history']
       stop = DateTime.now.to_s[0..9]
       start = (DateTime.now - params['history'].to_i).to_s[0..9]
-      @previous_readings = GardenHealthFacade.garden_health_search(start, stop, @sensor.id).map { |reading| reading.reading }
+      @previous_readings = GardenHealthFacade.garden_health_search(start, stop, @sensor.id).map { |reading| reading.reading }.reverse
     end
-    @type = determine_type(@sensor)
   end
 
   def new
