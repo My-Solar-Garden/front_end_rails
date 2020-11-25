@@ -1,0 +1,14 @@
+{
+  "data": [
+      {
+          "id": "961",
+          "type": "garden_health",
+          "attributes": {
+              "id": 961,
+              "reading_type": "light",
+              "reading": 206.0,
+              "created_at": "2020-11-25T20:57:43.827Z"
+          }
+      }
+  ]
+}

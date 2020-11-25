@@ -4,19 +4,24 @@
             "id": "4",
             "type": "sensor",
             "attributes": {
-                "min_threshold": 5,
-                "max_threshold": 15,
-                "sensor_type": "moisture"
+                "min_threshold": 10,
+                "max_threshold": 100,
+                "sensor_type": "light"
             },
             "relationships": {
                 "garden": {
                     "data": {
-                        "id": "3",
+                        "id": "496",
                         "type": "garden"
                     }
                 },
                 "garden_healths": {
-                    "data": []
+                    "data": [
+                        {
+                            "id": "935",
+                            "type": "garden_health"
+                        }
+                    ]
                 }
             }
         },
@@ -24,19 +29,24 @@
             "id": "5",
             "type": "sensor",
             "attributes": {
-                "min_threshold": 5,
-                "max_threshold": 15,
+                "min_threshold": 0,
+                "max_threshold": 50,
                 "sensor_type": "temperature"
             },
             "relationships": {
                 "garden": {
                     "data": {
-                        "id": "3",
+                        "id": "496",
                         "type": "garden"
                     }
                 },
                 "garden_healths": {
-                    "data": []
+                    "data": [
+                        {
+                            "id": "936",
+                            "type": "garden_health"
+                        }
+                    ]
                 }
             }
         }

@@ -46,15 +46,16 @@
     <% else %>
     <div class="card-columns">
       <% @sensors.each do |sensor| %>
-        <div class="card p-3 sensor-card sensor">
+        <div class="card p-3 sensor-card sensor" id="sensor-<%= sensor.id %>">
           <div class="pad-10">
-            <h4><strong>Current Garden Sensor: </strong><%= sensor.id %></h4>
+            <h4><strong>Sensor ID: </strong><%= sensor.id %></h4>
+            <p><strong>Sensor Type:</strong> <%= sensor.sensor_type %></p>
             <% if sensor.sensor_type == "temperature" && @temperature %>
               <p>Current Temperature: <%= @temperature.reading %>°C </p>
             <% elsif sensor.sensor_type == "light" && @light %>
-            <p>Current Light: <%= @light.reading %>% </p>
+              <p>Current Light: <%= @light.reading %>% </p>
             <% end %>
-            <h4 class="card-title text-primary"><%= link_to sensor.sensor_type, "/gardens/#{@garden.id}/sensors/#{sensor.id}" %></h4><br>
+            <h4 class="card-title text-primary"><%= link_to "See charts of sensor data", "/gardens/#{@garden.id}/sensors/#{sensor.id}" %></h4><br>
             <%= button_to 'Delete', "/gardens/#{@garden.id}/sensors/#{sensor.id}", method: :delete, :class => "btn btn-primary margin-30-bottom" %>
           </div>
         </div>
@@ -86,7 +87,7 @@
 
   <h3>The Next Seven Days:</h3>
   <div class="row row-cols-3 row-cols-md-4">
-    
+
     <% @weather.daily.each do |day|%>
     <div class="col mb-4">
       <div class="card weather-card" id="day-<%= day.date %>">
