@@ -197,7 +197,7 @@ RSpec.describe 'Show Garden Page' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
 
-    it "displays all sensors related to a garden" do
+    xit "displays all sensors related to a garden" do
       json_response = File.read('spec/fixtures/garden_with_sensors.json')
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: json_response)
 
@@ -234,7 +234,7 @@ RSpec.describe 'Show Garden Page' do
       expect(current_path).to eq("/gardens/1/sensors/#{@sensor1[:id]}")
     end
 
-    it 'can click the Add Sensor button' do
+    xit 'can click the Add Sensor button' do
       visit "/gardens/#{@public_garden_2.id}"
       click_on "Add Sensor"
       expect(current_path).to eq("/gardens/#{@public_garden_2.id}/sensors")

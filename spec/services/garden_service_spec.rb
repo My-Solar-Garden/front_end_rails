@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe GardenService do
-  it "returns garden details data" do
+  xit "returns garden details data" do
     params = {id: 3}
     expected_output = File.read('spec/fixtures/updated_garden.json')
     stub_request(:post, "#{ENV['BE_URL']}/api/v1/gardens/3").to_return(status: 200, body: expected_output, headers: {})
@@ -29,7 +29,7 @@ describe GardenService do
     expect(response.body).to eq("")
   end
 
-  it 'can edit a garden' do
+  xit 'can edit a garden' do
     params = {"id" => "4", "name"=>"The Grove", "latitude"=>"71.0", "longitude"=>"25.0", "private"=>"false", "description"=>"My first garden"}
 
     expected_output = File.read('spec/fixtures/updated_garden.json')

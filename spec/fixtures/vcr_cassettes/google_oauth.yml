@@ -225,7 +225,7 @@ http_interactions:
     uri: https://solar-garden-be.herokuapp.com/api/v1/users
     body:
       encoding: UTF-8
-      string: credentials%5Bexpires%5D=true&credentials%5Bexpires_at%5D=2020-11-24T17%3A00%3A29-05%3A00&credentials%5Brefresh_token%5D=MOCK_OMNIAUTH_GOOGLE_REFRESH+TOKEN&credentials%5Btoken%5D=MOCK_OMNIAUTH_GOOGLE_TOKEN&info%5Bemail%5D=john%40example.com&info%5Bfirst_name%5D=John&info%5Bimage%5D=https%3A%2F%2Flh4.googleusercontent.com%2Fphoto.jpg&info%5Blast_name%5D=Smith&info%5Bname%5D=John+Smith&info%5Burls%5D%5Bgoogle%5D=https%3A%2F%2Fplus.google.com%2F%2BJohnSmith&provider=google_oauth2&uid=100000000000000000000
+      string: credentials%5Bexpires%5D=true&credentials%5Bexpires_at%5D=2020-11-25T14%3A27%3A03-05%3A00&credentials%5Brefresh_token%5D=MOCK_OMNIAUTH_GOOGLE_REFRESH+TOKEN&credentials%5Btoken%5D=MOCK_OMNIAUTH_GOOGLE_TOKEN&info%5Bemail%5D=john%40example.com&info%5Bfirst_name%5D=John&info%5Bimage%5D=https%3A%2F%2Flh4.googleusercontent.com%2Fphoto.jpg&info%5Blast_name%5D=Smith&info%5Bname%5D=John+Smith&info%5Burls%5D%5Bgoogle%5D=https%3A%2F%2Fplus.google.com%2F%2BJohnSmith&provider=google_oauth2&uid=100000000000000000000
     headers:
       User-Agent:
       - Faraday v1.1.0
@@ -243,7 +243,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 24 Nov 2020 22:00:29 GMT
+      - Wed, 25 Nov 2020 19:27:02 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -253,9 +253,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 82877656-9b20-4535-b0b3-e3cb66e374c1
+      - d50fb6da-4b7f-4f76-954c-9605d4abb296
       X-Runtime:
-      - '0.023263'
+      - '0.025675'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -265,7 +265,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"16","type":"user","attributes":{"id":16,"email":"john@example.com"},"relationships":{"user_gardens":{"data":[]},"gardens":{"data":[]}}}}'
-  recorded_at: Tue, 24 Nov 2020 22:00:29 GMT
+  recorded_at: Wed, 25 Nov 2020 19:27:03 GMT
 - request:
     method: get
     uri: https://solar-garden-be.herokuapp.com/api/v1/users/16
@@ -287,7 +287,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 24 Nov 2020 22:00:29 GMT
+      - Wed, 25 Nov 2020 19:27:03 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -297,9 +297,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 642e266e-50be-4594-a5b2-41e49be8bb1c
+      - 182340b1-be89-4ac2-8514-7c020b9a1fe9
       X-Runtime:
-      - '0.018822'
+      - '0.012914'
       Vary:
       - Origin
       Transfer-Encoding:
@@ -309,5 +309,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"16","type":"user","attributes":{"id":16,"email":"john@example.com"},"relationships":{"user_gardens":{"data":[]},"gardens":{"data":[]}}}}'
-  recorded_at: Tue, 24 Nov 2020 22:00:30 GMT
+  recorded_at: Wed, 25 Nov 2020 19:27:03 GMT
 recorded_with: VCR 6.0.0
