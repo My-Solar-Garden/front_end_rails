@@ -39,7 +39,5 @@ RSpec.describe Sensor do
     expect(sensor.sensor_type).to eq('moisture')
     expect(sensor.garden_id).to be_a(String)
     expect(sensor.garden_id).to eq('1')
-    expect(sensor.garden_healths).to be_a(Array)
-    expect(sensor.garden_healths.first).to be_a(GardenHealth)
   end
 end
