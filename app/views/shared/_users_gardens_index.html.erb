@@ -7,7 +7,7 @@
       <% @gardens.each do |garden| %>
         <div class="card p-3 garden-card garden" id="garden-<%= garden.id %>">
             <a href="<%=garden_path(garden.id)%>">
-              <img class="card-img-top" alt="Image-<%= garden.id %>" src="/assets/default-garden-5bbbceb5c8def07b7a99e836154844af647a4598ec1250edaf878c68467caad9.png">
+              <img class="card-img-top" alt="Image-<%= garden.id %>" src= <%= garden.image %> >
             </a>
 
           <div class="card-body">

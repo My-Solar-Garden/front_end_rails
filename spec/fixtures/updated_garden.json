@@ -7,7 +7,8 @@
           "longitude": -104.58,
           "name": "Denver Community Garden",
           "description": "A diverse, dedicated group of students and neighbors who believe in bettering ourselves, our food supply and our community through urban gardening.",
-          "private": false
+          "private": false,
+          "image": "/assets/default-garden-5bbbceb5c8def07b7a99e836154844af647a4598ec1250edaf878c68467caad9.png"
       },
       "relationships": {
           "user_gardens": {

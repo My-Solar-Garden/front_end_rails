@@ -146,7 +146,9 @@ RSpec.describe 'Show Garden Page' do
                     latitude: 39.45,
                     longitude: -104.58,
                     description: 'A diverse, dedicated group of students and neighbors who believe in bettering ourselves, our food supply and our community through urban gardening.',
-                    private: false },
+                    private: false,
+                    image: "/assets/default-garden-5bbbceb5c8def07b7a99e836154844af647a4598ec1250edaf878c68467caad9.png" },
+
                 relationships: { plants: {
                                     data: []},
                                   users: {
@@ -217,7 +219,7 @@ RSpec.describe 'Show Garden Page' do
       stub_request(:get, "#{ENV['BE_URL']}/api/v1/sensors/4/garden_healths/last").to_return(status: 200, body: sensor)
 
       visit "/gardens/3"
-      
+
       within '.garden-sensors' do
         within("#sensor-#{@sensor1[:id]}") do
           expect(page).to have_content("Sensor ID: #{@sensor1[:id]}")
