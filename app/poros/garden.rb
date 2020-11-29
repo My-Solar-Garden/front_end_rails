@@ -7,7 +7,8 @@ class Garden
               :is_private,
               :plants,
               :sensors,
-              :user_ids
+              :user_ids,
+              :image
 
   def initialize(data)
     @id = data[:id]
@@ -16,6 +17,7 @@ class Garden
     @longitude = data[:attributes][:longitude]
     @description = data[:attributes][:description]
     @is_private = data[:attributes][:private]
+    @image = data[:attributes][:image]
     @plants = set_plants(data)
     @sensors = set_sensors(data)
     @user_ids = set_users(data)
