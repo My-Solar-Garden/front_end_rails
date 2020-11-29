@@ -7,7 +7,8 @@
             "longitude": 2.0,
             "name": "hello",
             "description": "hello",
-            "private": false
+            "private": false,
+            "image": "/assets/default-garden-5bbbceb5c8def07b7a99e836154844af647a4598ec1250edaf878c68467caad9.png"
         },
         "relationships": {
             "user_gardens": {
