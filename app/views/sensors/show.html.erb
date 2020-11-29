@@ -3,7 +3,7 @@
     <h2>Your <%= @sensor.sensor_type %> sensor</h2><br>
   </div><br>
 
-  <% if !@sensor.garden_healths.nil? %>
+  <% if !@last_five_readings.nil? %>
     <p>Last 5 Readings</p>
       <div id=sensor_type><%= @type %></div>
       <div id='readings'><%= @last_five_readings %></div>
@@ -52,6 +52,7 @@
     </div><br><br>
 
     <% if @previous_readings %>
+    <div id=sensor_type><%= @type %></div>
       <div id='previous_readings'><%= @previous_readings %></div>
         <div id="chart2"></div>
           <script>

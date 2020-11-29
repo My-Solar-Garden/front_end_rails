@@ -20,6 +20,11 @@ class GardenHealthService
     get_parsed_json("/api/v1/sensors/#{sensor.id}/garden_healths/last")
   end
 
+  def self.last_five_readings(sensor)
+    response = conn.get("/api/v1/sensors/#{sensor.id}/garden_healths/last_five")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.get_parsed_json(url)
     response = conn.get(url)
     JSON.parse(response.body, symbolize_names: true)[:data].first
