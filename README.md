@@ -9,8 +9,15 @@ My Solar Garden can give you daily updates as to how much moisture and light it'
 
 We want to live in balance with the diversity of our environment. It all starts with healthy soil, and that's what we will help you learn how to cultivate. It starts with one person. That person, is you.
 
+:3rd_place_medal:	_3rd place winner at Turing's Demo Competition. [Take a look at our presentation](https://www.youtube.com/watch?v=bh7JHxniJk8&t=1s)._
+
+-----
+
 ### Repos
 For access to all the repos that make up the Service Oriented Architecture of this application please visit our [origanization page](https://github.com/My-Solar-Garden).
+
+### Live app
+https://solar-garden-fe.herokuapp.com/
 
 ### Local Setup
 - Versions
@@ -43,9 +50,6 @@ rails s
   * Clone the My Solar Garden FE repo
     * My Solar Garden FE connects to the Back End Repository via the the [Backend Heroku App](https://solar-garden-be.herokuapp.com/)
   * In the terminal while ```CD'd``` into the FE repo, run ```bundle exec rspec```. This will run all of the tests within the FE repository
-
-### Link to My Solar Garden App on Heroku
-1. [Follow this link to visit My Solar Garden](https://solar-garden-fe.herokuapp.com/)
     
 ### Learning Goals
   * Consume two or more external APIs
