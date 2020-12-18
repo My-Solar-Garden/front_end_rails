@@ -1,14 +1,11 @@
 # [My Solar Garden](https://solar-garden-fe.herokuapp.com/) - Frontend
 
 ### Overview
-My Solar Garden is an impact driven app here to support you in helping to keep our planet thriving.  By signing up with My Solar Garden, you will be able to track your personal garden's health, as well as your personal carbon impact.
+My Solar Garden is an impact driven app here to support you in helping to keep our planet thriving.  By signing up with My Solar Garden, you will be able to track your garden's health and, eventually, how much carbon is it offsetting. 
 
-My Solar Garden can give you daily updates as to how much moisture and light it's receiving.  It will also provide cultivating innovative regenerative ideas for how to get your garden healthy and thriving to continue to make a positive impact on our environment.
+My Solar Garden can give you daily updates as to how much moisture and light it's receiving.  It will also provide innovative ideas on how to keep your garden healthy and thriving to continue to make a positive impact on our environment.
 
-My Solar Garden also allows you to see the growing community of Solar Gardeners, as well as their carbon impact.
-
-We want to live in balance with the diversity of our environment. It all starts with healthy soil, and that's what we will help you learn how to cultivate. It starts with one person.
-That person, is you.
+We want to live in balance with the diversity of our environment. It all starts with healthy soil, and that's what we will help you learn how to cultivate. It starts with one person. That person, is you.
 
 ### Repos
 For access to all the repos that make up the Service Oriented Architecture of this application please visit our [origanization page](https://github.com/My-Solar-Garden).
