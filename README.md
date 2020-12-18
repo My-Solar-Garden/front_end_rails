@@ -1,5 +1,7 @@
 # [My Solar Garden](https://solar-garden-fe.herokuapp.com/) - Frontend
 
+![](https://img.shields.io/badge/Rails-5.2.4-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/Ruby-2.5.3-orange) ![](https://img.shields.io/badge/Code-HTML-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) ![](https://travis-ci.com/My-Solar-Garden/front_end_rails.svg?branch=main)
+
 ### Overview
 My Solar Garden is an impact driven app here to support you in helping to keep our planet thriving.  By signing up with My Solar Garden, you will be able to track your garden's health and, eventually, how much carbon is it offsetting. 
 
@@ -11,7 +13,13 @@ We want to live in balance with the diversity of our environment. It all starts 
 For access to all the repos that make up the Service Oriented Architecture of this application please visit our [origanization page](https://github.com/My-Solar-Garden).
 
 ### Local Setup
-- Fork and Clone the repo
+- Versions
+  - Rails 5.2.4.3
+  - Ruby 2.5.3
+
+- Fork and clone the repository and then run the following commands:
+  1. `bundle` (if this fails, try to `bundle update` and then retry)
+  1. `rails db:create && rails db:migrate`
 - Obtain Google OAuth credentials
     * Visit https://console.developers.google.com/ and create a new project
     * Select the project and on the left click OAuth consent screen, choose external, click create, and proceed with the required fields (if a field is not required you can skip it)
@@ -22,8 +30,11 @@ For access to all the repos that make up the Service Oriented Architecture of th
     * `GOOGLE_CLIENT_ID: '< your ID >'`
     * `GOOGLE_CLIENT_SECRET: '< your ID >'`
 
-### Versions
-![](https://img.shields.io/badge/Rails-5.2.4-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/Ruby-2.5.3-orange) ![](https://img.shields.io/badge/Code-HTML-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) ![](https://travis-ci.com/My-Solar-Garden/front_end_rails.svg?branch=main)
+#### Run your own development server:
+```
+rails s
+```
+- You should be able to access the app via http://localhost:3000/
 
 ### Database creation
   * My Solar Garden's Front End repository does not have a database that holds any sort of information. Any and all information that is depicted on the My Solar Garden FE repo is gained through API connections to the [My Solar Garden BE Repo](https://github.com/My-Solar-Garden/rails_backend). With this being said, My Solar Garden FE Repo uses an empty database for testing purposes.
