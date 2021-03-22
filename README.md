@@ -98,7 +98,7 @@ rails s
     * [LinkedIn](https://www.linkedin.com/in/logan-riffell/)
   * Luke Hunter James-Erickson
     * [GitHub](https://github.com/LHJE)
-    * [LinkedIn](https://www.linkedin.com/in/luke-hunter-james-erickson-b65682143/)
+    * [LinkedIn](https://www.linkedin.com/in/lhje/)
   * Nico Rithner 
     * [GitHub](https://github.com/nicorithner)
     * [LinkedIn](https://www.linkedin.com/in/nicorithner/)
